@@ -1,0 +1,607 @@
+% This is the Reed College LaTeX thesis template. Most of the work
+% for the document class was done by Sam Noble (SN), as well as this
+% template. Later comments etc. by Ben Salzberg (BTS). Additional
+% restructuring and APA support by Jess Youngberg (JY).
+% Your comments and suggestions are more than welcome; please email
+% them to cus@reed.edu
+%
+% See https://www.reed.edu/cis/help/LaTeX/index.html for help. There are a
+% great bunch of help pages there, with notes on
+% getting started, bibtex, etc. Go there and read it if you're not
+% already familiar with LaTeX.
+%
+% Any line that starts with a percent symbol is a comment.
+% They won't show up in the document, and are useful for notes
+% to yourself and explaining commands.
+% Commenting also removes a line from the document;
+% very handy for troubleshooting problems. -BTS
+
+% As far as I know, this follows the requirements laid out in
+% the 2002-2003 Senior Handbook. Ask a librarian to check the
+% document before binding. -SN
+
+%%
+%% Preamble
+%%
+% \documentclass{<something>} must begin each LaTeX document
+\documentclass[12pt,oneside]{reedthesis}
+% Packages are extensions to the basic LaTeX functions. Whatever you
+% want to typeset, there is probably a package out there for it.
+% Chemistry (chemtex), screenplays, you name it.
+% Check out CTAN to see: https://www.ctan.org/
+%%
+\usepackage{graphicx,latexsym}
+%\usepackage{amsmath}
+\usepackage{amssymb,amsthm}
+\usepackage{longtable,booktabs,setspace}
+\usepackage{chemarr} %% Useful for one reaction arrow, useless if you're not a chem major
+\usepackage[hyphens]{url}
+% Added by CII
+\usepackage{hyperref}
+\usepackage{lmodern}
+\usepackage{float}
+\floatplacement{figure}{H}
+% Thanks, @Xyv
+\usepackage{calc}
+% End of CII addition
+\usepackage{rotating}
+
+% Next line commented out by CII
+%%% \usepackage{natbib}
+% Comment out the natbib line above and uncomment the following two lines to use the new
+% biblatex-chicago style, for Chicago A. Also make some changes at the end where the
+% bibliography is included.
+%\usepackage{biblatex-chicago}
+%\bibliography{thesis}
+
+\renewcommand{\tablename}{Tabla}
+
+% Added by CII (Thanks, Hadley!)
+% Use ref for internal links
+\renewcommand{\hyperref}[2][???]{\autoref{#1}}
+\def\chapterautorefname{Capítulo}
+\def\sectionautorefname{Sección}
+\def\subsectionautorefname{Subsección}
+% End of CII addition
+
+% Added by CII
+\usepackage{caption}
+\captionsetup{width=5in}
+% End of CII addition
+
+% \usepackage{times} % other fonts are available like times, bookman, charter, palatino
+
+% Syntax highlighting #22
+  \usepackage{color}
+  \usepackage{fancyvrb}
+  \newcommand{\VerbBar}{|}
+  \newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+  \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+  % Add ',fontsize=\small' for more characters per line
+  \usepackage{framed}
+  \definecolor{shadecolor}{RGB}{248,248,248}
+  \newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+  \newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+  \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+  \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+  \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+  \newcommand{\BuiltInTok}[1]{#1}
+  \newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+  \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+  \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+  \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+  \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+  \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+  \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+  \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+  \newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+  \newcommand{\ExtensionTok}[1]{#1}
+  \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+  \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+  \newcommand{\ImportTok}[1]{#1}
+  \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+  \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+  \newcommand{\NormalTok}[1]{#1}
+  \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+  \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+  \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+  \newcommand{\RegionMarkerTok}[1]{#1}
+  \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+  \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+  \newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+  \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+  \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+  \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+
+% To pass between YAML and LaTeX the dollar signs are added by CII
+\title{Caracterización morfológica, fisiológica y molecular de entradas de algodón (\emph{Gossypium hirsutum} L.) e identificación de QTL de importancia agronómica}
+\author{Dileo Pablo Nahuel}
+% The month and year that you submit your FINAL draft TO THE LIBRARY (May or December)
+\date{Año 2025}
+\division{Facultad de Ciencias Agrarias}
+\advisor{Rodríguez Gustavo Rubén}
+\institution{Universidad Nacional del Nordeste}
+\degree{Doctorado en Recursos Naturales}
+%If you have two advisors for some reason, you can use the following
+% Uncommented out by CII
+\altadvisor{Paytas Marcelo Javier}
+% End of CII addition
+
+%%% Remember to use the correct department!
+\department{Doctorado}
+% if you're writing a thesis in an interdisciplinary major,
+% uncomment the line below and change the text as appropriate.
+% check the Senior Handbook if unsure.
+%\thedivisionof{The Established Interdisciplinary Committee for}
+% if you want the approval page to say "Approved for the Committee",
+% uncomment the next line
+%\approvedforthe{Committee}
+
+% Added by CII
+%%% Copied from knitr
+%% maxwidth is the original width if it's less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+% From {rticles}
+
+\renewcommand{\contentsname}{Tabla de Contenidos}
+% End of CII addition
+
+\setlength{\parskip}{0pt}
+
+% Added by CII
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\Acknowledgements{
+I want to thank a few people..
+}
+
+\Dedication{
+You can have a dedication here if you wish.
+}
+
+\Publications{
+This is an example of a thesis setup to use the reed thesis document class
+(for LaTeX) and the R bookdown package, in general.
+}
+
+\Resumen{
+Resumen en español.
+
+\par
+
+Second paragraph of abstract starts here.
+}
+
+\Abstract{
+Resumen en ingles.
+
+\par
+
+Second paragraph of abstract starts here.
+}
+
+    \usepackage{fontspec}
+    \setmainfont{Calibri}
+    \usepackage{amsmath}
+    \usepackage[spanish]{babel}
+    \addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
+    \addto\captionsspanish{\renewcommand{\chaptername}{Capítulo}}
+    \addto\captionsspanish{\renewcommand{\listtablename}{Índice de Tablas}}
+    \addto\captionsspanish{\renewcommand{\listfigurename}{Índice de Figuras}}
+    \addto\captionsspanish{\renewcommand{\contentsname}{Índice General}}
+    \usepackage{setspace}
+    \onehalfspacing
+    \usepackage{geometry}
+    \geometry{a4paper,left=3cm,right=3cm,top=2.5cm,bottom=2.5cm}
+    \usepackage[style=apa, backend=biber]{biblatex}
+    \addbibresource{referencias.bib}
+    \usepackage{hyperref}
+    \usepackage{xcolor}
+    \definecolor{mycolor}{rgb}{0.1,0.2,0.3}
+    \usepackage{booktabs}
+    \usepackage{longtable}
+    \usepackage{array}
+    \usepackage{multirow}
+    \usepackage{wrapfig}
+    \usepackage{float}
+    \usepackage{colortbl}
+    \usepackage{pdflscape}
+    \usepackage{tabu}
+    \usepackage{threeparttable}
+    \usepackage{threeparttablex}
+    \usepackage[normalem]{ulem}
+    \usepackage{makecell}
+    \usepackage{xcolor}
+% End of CII addition
+%%
+%% End Preamble
+%%
+%
+% Personalización de encabezado y pie de página 
+\usepackage{fancyhdr} 
+\pagestyle{fancy} 
+\fancyhf{} % Limpia todos los encabezados y pies de página
+\fancyhead{} % Limpia cualquier encabezado preexistente
+\fancyfoot[R]{\thepage} % Coloca el número de página en la parte inferior derecha
+\renewcommand{\headrulewidth}{0pt} % Eliminar línea en el encabezado 
+\renewcommand{\footrulewidth}{0pt} % Eliminar línea en el pie de página
+
+
+% Paquete necesario para configurar el espacio entre títulos
+\usepackage{titlesec}  
+
+% Configuración de interlineado general
+\setstretch{1.5}  % Interlineado general de 1.5
+
+% Configuración del espacio entre títulos y texto
+\titlespacing*{\chapter}{0pt}{20pt}{10pt}  % Ajusta el espacio antes y después de los títulos de capítulos
+\titlespacing*{\section}{0pt}{15pt}{5pt}   % Ajusta el espacio antes y después de los títulos de secciones
+\titlespacing*{\subsection}{0pt}{10pt}{5pt} % Ajusta el espacio antes y después de los títulos de subsecciones
+
+% Espacio entre párrafos
+\setlength{\parskip}{1.5ex plus 0.5ex minus 0.5ex}  % Aumenta el espacio entre párrafos
+
+
+\begin{document}
+
+% Paginación en números romanos para las secciones preliminares
+\frontmatter 
+\pagestyle{empty} % this removes page numbers from the frontmatter
+\pagenumbering{roman} 
+\fancyfoot[R]{\thepage}
+
+  \maketitle
+
+  \begin{acknowledgements}
+    I want to thank a few people..
+    \thispagestyle{fancy} % Asegura que se utiliza el estilo de paginación fancy para esta página 
+    \fancyhf{} % Limpia encabezados y pies de página 
+    \fancyhead{} % Limpia cualquier encabezado preexistente 
+    \fancyfoot[R]{\thepage} % Coloca el número de página en la parte inferior derecha
+    %\setcounter{page}{3} % Establece el contador de página en 1
+  \end{acknowledgements}
+
+  \begin{dedication}
+    You can have a dedication here if you wish.
+    \thispagestyle{fancy} % Asegura que se utiliza el estilo de paginación fancy para esta página 
+    \fancyhf{} % Limpia encabezados y pies de página 
+    \fancyhead{} % Limpia cualquier encabezado preexistente 
+    \fancyfoot[R]{\thepage} % Coloca el número de página en la parte inferior derecha
+  \end{dedication}
+
+  \begin{publications}
+    This is an example of a thesis setup to use the reed thesis document class
+    (for LaTeX) and the R bookdown package, in general.
+    \thispagestyle{fancy} % Asegura que se utiliza el estilo de paginación fancy para esta página 
+    \fancyhf{} % Limpia encabezados y pies de página 
+    \fancyhead{} % Limpia cualquier encabezado preexistente 
+    \fancyfoot[R]{\thepage} % Coloca el número de página en la parte inferior derecha
+  \end{publications}
+
+  \hypersetup{linkcolor=black}
+  \setcounter{secnumdepth}{2}
+  \setcounter{tocdepth}{2}
+  \tableofcontents
+  \thispagestyle{fancy} % Asegura que se utiliza el estilo de paginación fancy para esta página 
+    \fancyhf{} % Limpia encabezados y pies de página 
+    \fancyhead{} % Limpia cualquier encabezado preexistente 
+    \fancyfoot[R]{\thepage} % Coloca el número de página en la parte inferior derecha
+
+\chapter*{Lista de Abreviaturas}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{ll}
+                \textbf{ABC} & American Broadcasting Company \\
+                \textbf{CBS} & Colombia Broadcasting System \\
+                \textbf{CUS} & Computer User Services \\
+                \textbf{NBC} & National Broadcasting Company \\
+                \textbf{PBS} & Public Broadcasting System \\
+            \end{tabular}
+\end{table}
+\thispagestyle{fancy} % Asegura que se utiliza el estilo de paginación fancy para esta página 
+    \fancyhf{} % Limpia encabezados y pies de página 
+    \fancyhead{} % Limpia cualquier encabezado preexistente 
+    \fancyfoot[R]{\thepage} % Coloca el número de página en la parte inferior derecha
+
+  \begin{resumen}
+    Resumen en español.
+
+    \par
+
+    Second paragraph of abstract starts here.
+    \thispagestyle{fancy} % Asegura que se utiliza el estilo de paginación fancy para esta página 
+    \fancyhf{} % Limpia encabezados y pies de página 
+    \fancyhead{} % Limpia cualquier encabezado preexistente 
+    \fancyfoot[R]{\thepage} % Coloca el número de página en la parte inferior derecha
+  \end{resumen}
+
+  \begin{abstract}
+    Resumen en ingles.
+
+    \par
+
+    Second paragraph of abstract starts here.
+    \thispagestyle{fancy} % Asegura que se utiliza el estilo de paginación fancy para esta página 
+    \fancyhf{} % Limpia encabezados y pies de página 
+    \fancyhead{} % Limpia cualquier encabezado preexistente 
+    \fancyfoot[R]{\thepage} % Coloca el número de página en la parte inferior derecha
+  \end{abstract}
+
+  \listoftables
+  \thispagestyle{fancy} % Asegura que se utiliza el estilo de paginación fancy para esta página 
+  \fancyhf{} % Limpia encabezados y pies de página 
+  \fancyhead{} % Limpia cualquier encabezado preexistente 
+  \fancyfoot[R]{\thepage} % Coloca el número de página en la parte inferior derecha
+
+  \listoffigures
+  \thispagestyle{fancy} % Asegura que se utiliza el estilo de paginación fancy para esta página 
+  \fancyhf{} % Limpia encabezados y pies de página 
+  \fancyfoot[R]{\thepage} % Coloca el número de página en la parte inferior derecha
+  \renewcommand{\headrulewidth}{0pt} % Elimina la línea en el encabezado para esta sección
+
+% Configuración de encabezados y pies de página
+\pagestyle{fancy}  % Activa el estilo fancyhdr para los encabezados y pies de página
+\fancyhf{}  % Limpia los encabezados y pies de página predeterminados
+
+
+% Eliminar mayúsculas en los encabezados
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter\ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+% Configuración del encabezado
+\fancyhead[L]{\fontsize{10}{12}\selectfont \leftmark}  % Título del capítulo a la izquierda con tamaño 10
+\fancyhead[C]{\fontsize{10}{12}\selectfont}            % (Opcional) El centro puede estar vacío con tamaño 10
+\fancyhead[R]{\fontsize{10}{12}\selectfont \rightmark} % Título de la sección a la derecha con tamaño 10
+
+% Configuración del pie de página
+\fancyfoot[C]{}           % (Opcional) El centro del pie de página puede estar vacío
+\fancyfoot[L]{}           % (Opcional) El pie de página izquierdo puede estar vacío
+\fancyfoot[R]{\thepage}   % Número de página a la derecha en el pie de página
+\fancyfoot[R]{\fontsize{10}{12}\selectfont \thepage} % Coloca el número de página en la parte inferior derecha con tamaño 10
+
+\mainmatter % here the regular arabic numbering starts
+\pagestyle{fancyplain} % turns page numbering back on
+\renewcommand{\headrulewidth}{0.4pt} % Agregar línea en el encabezado
+
+
+\chapter*{Introducción}\label{introducciuxf3n}
+\addcontentsline{toc}{chapter}{Introducción}
+
+Welcome to the \emph{R Markdown} thesis template. This template is based on (and in many places copied directly from) the Reed College LaTeX template, but hopefully it will provide a nicer interface for those that have never used TeX or LaTeX before. Using \emph{R Markdown} will also allow you to easily keep track of your analyses in \textbf{R} chunks of code, with the resulting plots and output included as well. The hope is this \emph{R Markdown} template gets you in the habit of doing reproducible research, which benefits you long-term as a researcher, but also will greatly help anyone that is trying to reproduce or build onto your results down the road.
+
+Hopefully, you won't have much of a learning period to go through and you will reap the benefits of a nicely formatted thesis. The use of LaTeX in combination with \emph{Markdown} is more consistent than the output of a word processor, much less prone to corruption or crashing, and the resulting file is smaller than a Word file. While you may have never had problems using Word in the past, your thesis is likely going to be about twice as large and complex as anything you've written before, taxing Word's capabilities. After working with \emph{Markdown} and \textbf{R} together for a few weeks, we are confident this will be your reporting style of choice going forward.
+
+\textbf{Why use it?}
+
+\emph{R Markdown} creates a simple and straightforward way to interface with the beauty of LaTeX. Packages have been written in \textbf{R} to work directly with LaTeX to produce nicely formatting tables and paragraphs. In addition to creating a user friendly interface to LaTeX, \emph{R Markdown} also allows you to read in your data, to analyze it and to visualize it using \textbf{R} functions, and also to provide the documentation and commentary on the results of your project. Further, it allows for \textbf{R} results to be passed inline to the commentary of your results. You'll see more on this later.
+
+\textbf{Who should use it?}
+
+Anyone who needs to use data analysis, math, tables, a lot of figures, complex cross-references, or who just cares about the final appearance of their document should use \emph{R Markdown}. Of particular use should be anyone in the sciences, but the user-friendly nature of \emph{Markdown} and its ability to keep track of and easily include figures, automatically generate a table of contents, index, references, table of figures, etc. should make it of great benefit to nearly anyone writing a thesis project.
+
+\textbf{For additional help with bookdown}
+
+Please visit \href{https://bookdown.org/yihui/bookdown/}{the free online bookdown reference guide}.
+
+\chapter{Caracterización morfológica}\label{rmd-basics}
+
+Aquí una breve introducción del capítulo\\
+\strut \\
+
+\section{Materiales y métodos}\label{materiales-y-muxe9todos}
+
+Los ensayos se llevaron adelante en invernadero con condiciones semi-controladas de la Estación Experimental INTA Reconquista. Se utilizarán 26 entradas de \emph{Gossypium hirsutum L.}, coleccionados por el banco de germoplasma de INTA, procedentes de diversos sitios tanto nacionales como del extranjero (Tabla \ref{tab:tablaEntradas}).
+
+\begin{table}[!h]
+\centering
+\caption{\label{tab:tablaEntradas}Entradas de Gossypium hirsutum L. y su procedencia}
+\centering
+\begin{tabular}[t]{>{\raggedright\arraybackslash}p{8em}>{\raggedright\arraybackslash}p{12em}}
+\toprule
+Entradas & Procedencia\\
+\midrule
+BGSP-00177 & Argentina\\
+BGSP-00192 & Argentina\\
+BGSP-00193 & Argentina\\
+BGSP-00194 & Argentina\\
+BGSP-00166 & Argentina\\
+\addlinespace
+BGSP-00207 & Argentina\\
+BGSP-00269 & Argentina\\
+BGSP-00514 & Australia\\
+BGSP-00072 & Camerún\\
+BGSP-00088 & Camerún\\
+\addlinespace
+BGSP-00070 & Chad\\
+BGSP-00748 & China\\
+BGSP-00752 & China\\
+BGSP-00755 & China\\
+BGSP-00759 & China\\
+\addlinespace
+BGSP-00779 & China\\
+BGSP-00067 & Costa de Marfil\\
+BGSP-00028 & EEUU\\
+BGSP-00145 & EEUU\\
+BGSP-00428 & EEUU\\
+\addlinespace
+BGSP-00159 & EEUU\\
+BGSP-00425 & EEUU\\
+SP 41255 & Línea avanzada- Argentina\\
+SP 6565 & Línea avanzada- Argentina\\
+BGSP-00715 & Pakistán\\
+\addlinespace
+BGSP-00126 & Senegal\\
+\bottomrule
+\multicolumn{2}{l}{\rule{0pt}{1em}\textit{Nota} si precisa footnote}\\
+\end{tabular}
+\end{table}
+
+Variables medidas:
+
+Las variables que se mencionan a continuación fueron registradas en todas las plantas \autocite{kerby2010}: i) Precocidad: se determinará tomando el porcentaje de cápsulas abiertas a 100 días después de la emergencia (DDE); ii) Altura: se medirán las plantas desde la base del tallo hasta la punta del ápice; iii) Nº de nudos: se contará el número de nudos presentes en el tallo de cada planta muestreada; iv) Nº de ramas vegetativas: se contarán las ramas vegetativas presentes en cada momento de muestreo; v) Nº de ramas reproductivas: se contarán el número de ramas reproductivas presentes en todas las plantas de cada momento de muestreo; vi) Nudo de inserción de la primera rama reproductiva: se registrará el nudo donde se inserta la 1º rama reproductiva en cada planta muestreada; vii) Distancia de la primera posición al tallo principal: se medirá la distancia que existe entre el tallo principal y la primera posición de la primera rama reproductiva de cada una de las plantas; viii) Área foliar: para el cálculo de esta variable, se medirán todas las hojas de las plantas a través de los equipos LICOR 3000 y LICOR 3050; ix) Dinámica de la floración: junto con las mediciones de las características morfológicas mencionadas en los puntos anteriores, se realizarán mapeos de dinámica de floración en todas las plantas seleccionadas para la partición de asimilados. Este procedimiento se realiza registrando en cada una de las posiciones reproductivas que genera la planta, la presencia de un pimpollo, una flor, una bocha verde, una cápsula abierta o un aborto (Kerby \& Hake, 1996). Con estos datos se realizarán dinámicas de floración de las diferentes variedades y porcentaje de retención final a la que llegan cada una de las plantas seleccionadas para el mapeo; x) Rendimiento: Para calcular el rendimiento de las diferentes entradas y sus componentes se efectuarán las siguientes mediciones: a) Rendimiento bruto de algodón: se recolectarán la fibra-semilla de algodón de todas las cápsulas presentes en las plantas. Las muestras obtenidas serán pesadas en balanzas de precisión y se realizará una medición de la humedad de cada una de ellas; b) \% de desmote: se tomarán muestras de algodón proveniente de las mediciones de rendimiento bruto, se realizará el desmote en una minidesmotadora experimental y se pesará en una balanza de precisión la fibra y semillas por separado. El porcentaje de desmote será la relación entre el peso de la fibra sobre el peso de la fibra más la semilla; c) Rendimiento de fibra: se multiplicará el rendimiento bruto de algodón por el \% de desmote obtenido; d) Nº de cápsulas por planta: se determinará dividiendo el peso total de la muestra recolectada en cada parcela con el peso por cápsula (Wells \& Meredith., 1984c); e) N° semillas / cápsula: se contará el número de semillas presentes en la muestra (Worley et al., 1974); f) Fibra/semilla: este valor se alcanzará al dividir el peso de la fibra de algodón que resulta luego de desmotar los capullos por el número de semillas que tiene la muestra; g) Índice de semillas: se obtendrá al pesar 100 semillas de cada una de las muestras de las variedades de algodón (Pettigrew et al., 2013); x) Parámetros de calidad tecnológica de fibra de algodón. Para obtener estos parámetros se enviarán las muestras de fibra de algodón obtenidas al laboratorio de HVI (Uster 1000) en Reconquista, Santa Fe. Los parámetros de calidad tecnológica de fibra a evaluar serán: Índice de Hilabilidad (SCI, por sus siglas en inglés), Micronaire (MIC), Índice de madurez (MAC), longitud promedio de la mitad superior (UHML, por sus siglas en inglés), longitud media (ML, por sus siglas)
+
+\chapter{Caracterización fisiológica}\label{math-sci}
+
+\chapter{Caracterización molecular}\label{ref-labels}
+
+\chapter*{Conclusión}\label{conclusiuxf3n}
+\addcontentsline{toc}{chapter}{Conclusión}
+
+If we don't want Conclusion to have a chapter number next to it, we can add the \texttt{\{-\}} attribute.
+
+\textbf{More info}
+
+And here's some other random info: the first paragraph after a chapter title or section head \emph{shouldn't be} indented, because indents are to tell the reader that you're starting a new paragraph. Since that's obvious after a chapter or section title, proper typesetting doesn't add an indent there.
+
+\appendix
+
+\chapter{Primer Apéndice}\label{primer-apuxe9ndice}
+
+This first appendix includes all of the R chunks of code that were hidden throughout the document (using the \texttt{include\ =\ FALSE} chunk tag) to help with readibility and/or setup.
+
+\textbf{In the main Rmd file}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# This chunk ensures that the thesisdown package is}
+\CommentTok{\# installed and loaded. This thesisdown package includes}
+\CommentTok{\# the template files for the thesis.}
+\ControlFlowTok{if}\NormalTok{ (}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(remotes)) \{}
+  \ControlFlowTok{if}\NormalTok{ (params}\SpecialCharTok{$}\StringTok{\textasciigrave{}}\AttributeTok{Install needed packages for \{thesisdown\}}\StringTok{\textasciigrave{}}\NormalTok{) \{}
+    \FunctionTok{install.packages}\NormalTok{(}\StringTok{"remotes"}\NormalTok{, }\AttributeTok{repos =} \StringTok{"https://cran.rstudio.com"}\NormalTok{)}
+\NormalTok{  \} }\ControlFlowTok{else}\NormalTok{ \{}
+    \FunctionTok{stop}\NormalTok{(}
+      \FunctionTok{paste}\NormalTok{(}\StringTok{\textquotesingle{}You need to run install.packages("remotes")",}
+\StringTok{            "first in the Console.\textquotesingle{}}\NormalTok{)}
+\NormalTok{    )}
+\NormalTok{  \}}
+\NormalTok{\}}
+\ControlFlowTok{if}\NormalTok{ (}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(thesisdown)) \{}
+  \ControlFlowTok{if}\NormalTok{ (params}\SpecialCharTok{$}\StringTok{\textasciigrave{}}\AttributeTok{Install needed packages for \{thesisdown\}}\StringTok{\textasciigrave{}}\NormalTok{) \{}
+\NormalTok{    remotes}\SpecialCharTok{::}\FunctionTok{install\_github}\NormalTok{(}\StringTok{"ismayc/thesisdown"}\NormalTok{)}
+\NormalTok{  \} }\ControlFlowTok{else}\NormalTok{ \{}
+    \FunctionTok{stop}\NormalTok{(}
+      \FunctionTok{paste}\NormalTok{(}
+        \StringTok{"You need to run"}\NormalTok{,}
+        \StringTok{\textquotesingle{}remotes::install\_github("ismayc/thesisdown")\textquotesingle{}}\NormalTok{,}
+        \StringTok{"first in the Console."}
+\NormalTok{      )}
+\NormalTok{    )}
+\NormalTok{  \}}
+\NormalTok{\}}
+\FunctionTok{library}\NormalTok{(thesisdown)}
+\CommentTok{\# Set how wide the R output will go}
+\FunctionTok{options}\NormalTok{(}\AttributeTok{width =} \DecValTok{70}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{In Chapter \ref{ref-labels}:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# This chunk ensures that the thesisdown package is}
+\CommentTok{\# installed and loaded. This thesisdown package includes}
+\CommentTok{\# the template files for the thesis and also two functions}
+\CommentTok{\# used for labeling and referencing}
+\ControlFlowTok{if}\NormalTok{ (}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(remotes)) \{}
+  \ControlFlowTok{if}\NormalTok{ (params}\SpecialCharTok{$}\StringTok{\textasciigrave{}}\AttributeTok{Install needed packages for \{thesisdown\}}\StringTok{\textasciigrave{}}\NormalTok{) \{}
+    \FunctionTok{install.packages}\NormalTok{(}\StringTok{"remotes"}\NormalTok{, }\AttributeTok{repos =} \StringTok{"https://cran.rstudio.com"}\NormalTok{)}
+\NormalTok{  \} }\ControlFlowTok{else}\NormalTok{ \{}
+    \FunctionTok{stop}\NormalTok{(}
+      \FunctionTok{paste}\NormalTok{(}
+        \StringTok{\textquotesingle{}You need to run install.packages("remotes")\textquotesingle{}}\NormalTok{,}
+        \StringTok{"first in the Console."}
+\NormalTok{      )}
+\NormalTok{    )}
+\NormalTok{  \}}
+\NormalTok{\}}
+\ControlFlowTok{if}\NormalTok{ (}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(dplyr)) \{}
+  \ControlFlowTok{if}\NormalTok{ (params}\SpecialCharTok{$}\StringTok{\textasciigrave{}}\AttributeTok{Install needed packages for \{thesisdown\}}\StringTok{\textasciigrave{}}\NormalTok{) \{}
+    \FunctionTok{install.packages}\NormalTok{(}\StringTok{"dplyr"}\NormalTok{, }\AttributeTok{repos =} \StringTok{"https://cran.rstudio.com"}\NormalTok{)}
+\NormalTok{  \} }\ControlFlowTok{else}\NormalTok{ \{}
+    \FunctionTok{stop}\NormalTok{(}
+      \FunctionTok{paste}\NormalTok{(}
+        \StringTok{\textquotesingle{}You need to run install.packages("dplyr")\textquotesingle{}}\NormalTok{,}
+        \StringTok{"first in the Console."}
+\NormalTok{      )}
+\NormalTok{    )}
+\NormalTok{  \}}
+\NormalTok{\}}
+\ControlFlowTok{if}\NormalTok{ (}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(ggplot2)) \{}
+  \ControlFlowTok{if}\NormalTok{ (params}\SpecialCharTok{$}\StringTok{\textasciigrave{}}\AttributeTok{Install needed packages for \{thesisdown\}}\StringTok{\textasciigrave{}}\NormalTok{) \{}
+    \FunctionTok{install.packages}\NormalTok{(}\StringTok{"ggplot2"}\NormalTok{, }\AttributeTok{repos =} \StringTok{"https://cran.rstudio.com"}\NormalTok{)}
+\NormalTok{  \} }\ControlFlowTok{else}\NormalTok{ \{}
+    \FunctionTok{stop}\NormalTok{(}
+      \FunctionTok{paste}\NormalTok{(}
+        \StringTok{\textquotesingle{}You need to run install.packages("ggplot2")\textquotesingle{}}\NormalTok{,}
+        \StringTok{"first in the Console."}
+\NormalTok{      )}
+\NormalTok{    )}
+\NormalTok{  \}}
+\NormalTok{\}}
+\ControlFlowTok{if}\NormalTok{ (}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(bookdown)) \{}
+  \ControlFlowTok{if}\NormalTok{ (params}\SpecialCharTok{$}\StringTok{\textasciigrave{}}\AttributeTok{Install needed packages for \{thesisdown\}}\StringTok{\textasciigrave{}}\NormalTok{) \{}
+    \FunctionTok{install.packages}\NormalTok{(}\StringTok{"bookdown"}\NormalTok{, }\AttributeTok{repos =} \StringTok{"https://cran.rstudio.com"}\NormalTok{)}
+\NormalTok{  \} }\ControlFlowTok{else}\NormalTok{ \{}
+    \FunctionTok{stop}\NormalTok{(}
+      \FunctionTok{paste}\NormalTok{(}
+        \StringTok{\textquotesingle{}You need to run install.packages("bookdown")\textquotesingle{}}\NormalTok{,}
+        \StringTok{"first in the Console."}
+\NormalTok{      )}
+\NormalTok{    )}
+\NormalTok{  \}}
+\NormalTok{\}}
+\ControlFlowTok{if}\NormalTok{ (}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(thesisdown)) \{}
+  \ControlFlowTok{if}\NormalTok{ (params}\SpecialCharTok{$}\StringTok{\textasciigrave{}}\AttributeTok{Install needed packages for \{thesisdown\}}\StringTok{\textasciigrave{}}\NormalTok{) \{}
+\NormalTok{    remotes}\SpecialCharTok{::}\FunctionTok{install\_github}\NormalTok{(}\StringTok{"ismayc/thesisdown"}\NormalTok{)}
+\NormalTok{  \} }\ControlFlowTok{else}\NormalTok{ \{}
+    \FunctionTok{stop}\NormalTok{(}
+      \FunctionTok{paste}\NormalTok{(}
+        \StringTok{"You need to run"}\NormalTok{,}
+        \StringTok{\textquotesingle{}remotes::install\_github("ismayc/thesisdown")\textquotesingle{}}\NormalTok{,}
+        \StringTok{"first in the Console."}
+\NormalTok{      )}
+\NormalTok{    )}
+\NormalTok{  \}}
+\NormalTok{\}}
+\FunctionTok{library}\NormalTok{(thesisdown)}
+\FunctionTok{library}\NormalTok{(dplyr)}
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\FunctionTok{library}\NormalTok{(knitr)}
+\NormalTok{flights }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"data/flights.csv"}\NormalTok{, }\AttributeTok{stringsAsFactors =} \ConstantTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\chapter{Segundo Apéndice}\label{segundo-apuxe9ndice}
+
+This Second appendix
+
+\backmatter
+
+\chapter*{Referencias}\label{referencias}
+\addcontentsline{toc}{chapter}{Referencias}
+
+\printbibliography[heading=none]
+
+\markboth{Referencias}{Referencias}
+
+\noindent
+
+\setlength{\parindent}{-0.20in}
+
+
+% Index?
+
+\end{document}

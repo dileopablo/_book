@@ -1,0 +1,7 @@
+tab:tablaEntradas
+rmd-basics
+materiales-y-métodos
+math-sci
+ref-labels
+primer-apéndice
+segundo-apéndice

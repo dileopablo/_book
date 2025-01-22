@@ -362,6 +362,7 @@ Los ensayos se llevaron adelante en invernadero con condiciones semi-controladas
 \centering
 \caption{\label{tab:tablaEntradas}Entradas de Gossypium hirsutum L. y su procedencia}
 \centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
 \begin{tabular}[t]{>{\raggedright\arraybackslash}p{8em}>{\raggedright\arraybackslash}p{12em}}
 \toprule
 Entradas & Procedencia\\
@@ -399,18 +400,67 @@ BGSP-00715 & Pakistán\\
 BGSP-00126 & Senegal\\
 \bottomrule
 \multicolumn{2}{l}{\rule{0pt}{1em}\textit{Nota} si precisa footnote}\\
-\end{tabular}
+\end{tabular}}
 \end{table}
 
-Variables medidas:
+\subsection{Variables medidas:}\label{variables-medidas}
 
 Las variables que se mencionan a continuación fueron registradas en todas las plantas \autocite{kerby2010}: i) Precocidad: se determinó tomando el porcentaje de cápsulas abiertas a 100 días después de la emergencia (DDE); ii) Altura: se midieron las plantas desde la base del tallo hasta la punta del ápice; iii) Nº de nudos: se contó el número de nudos presentes en el tallo de cada planta muestreada; iv) Nº de ramas vegetativas: se contaron las ramas vegetativas presentes en cada momento de muestreo; v) Nº de ramas reproductivas: se contaron el número de ramas reproductivas presentes en todas las plantas de cada momento de muestreo; vi) Nudo de inserción de la primera rama reproductiva: se registró el nudo donde se inserta la 1º rama reproductiva en cada planta muestreada; vii) Distancia de la primera posición al tallo principal: se midió la distancia que existe entre el tallo principal y la primera posición de la primera rama reproductiva de cada una de las plantas; viii) Área foliar: para el cálculo de esta variable, se midieron todas las hojas de las plantas a través de los equipos LICOR 3000 y LICOR 3050; ix) Dinámica de la floración: junto con las mediciones de las características morfológicas mencionadas en los puntos anteriores, se realizaron mapeos de dinámica de floración en todas las plantas seleccionadas para la partición de asimilados. Este procedimiento se realiza registrando en cada una de las posiciones reproductivas que genera la planta, la presencia de un pimpollo, una flor, una bocha verde, una cápsula abierta o un aborto \autocite{kerby1996monitoring}. Con estos datos se realizó la dinámica de floración de las diferentes variedades y porcentaje de retención final a la que llegan cada una de las plantas seleccionadas para el mapeo; x) Rendimiento: Para calcular el rendimiento de las diferentes entradas y sus componentes se efectuaron las siguientes mediciones: a) Rendimiento bruto de algodón: se recolectó la fibra-semilla de algodón de todas las cápsulas presentes en las plantas. Las muestras obtenidas fueron pesadas en balanzas de precisión y se realizó medición de la humedad de cada una de ellas; b) \% de desmote: se tomó cada muestra de algodón proveniente de las mediciones de rendimiento bruto, se realizó el desmote en una mini-desmotadora experimental y se pesó en una balanza de precisión la fibra y semillas por separado. El porcentaje de desmote fue la relación entre el peso de la fibra sobre el peso de la fibra más la semilla; c) Rendimiento de fibra: se multiplicó el rendimiento bruto de algodón por el \% de desmote obtenido; d) Nº de cápsulas por planta: se determinará dividiendo el peso total de la muestra recolectada en cada parcela con el peso por cápsula \autocite{wells1984}; e) N° semillas / cápsula: se contó el número de semillas presentes en la muestra \autocite{worley1974}; f) Fibra/semilla: este valor surge al dividir el peso de la fibra de algodón que resulta luego de desmotar los capullos por el número de semillas que tiene la muestra; g) Índice de semillas: se obtuvo al pesar 100 semillas de cada una de las muestras de las variedades de algodón \autocite{pettigrew2013}; x) Parámetros de calidad tecnológica de fibra de algodón. Para obtener estos parámetros se enviaron las muestras de fibra de algodón obtenidas al laboratorio de HVI (Uster 1000) en Reconquista, Santa Fe. Los parámetros de calidad tecnológica de fibra a evaluar fueron: Índice de Hilabilidad (SCI, por sus siglas en inglés), Micronaire (MIC), Índice de madurez (MAC), longitud promedio de la mitad superior (UHML, por sus siglas en inglés), longitud media (ML, por sus siglas en inglés), \% de uniformidad, índice de fibras cortas (SFI, por sus siglas en inglés), resistencia de fibra (Str), elongación (Elg), contenido de humedad de la muestra, color (Rd y +b), grado de color (C.G) y contenido de basura; xi) Fenología. Se registró el tiempo en días necesario para que las plantas alcancen los estados de: emergencia, 1º pimpollo, 1º flor abierta, cut out y 1º bocha abierta. El estado de cut out se determinará cuando el número de nudos por encima de la última flor blanca en el tallo sea menor que 4 \autocite{bourland1992}.
 
 El ensayo se realizó en un diseño en bloque completamente aleatorizado, utilizando macetas de 5 litros (con una mezcla de suelo y sustrato comercial) en el cual se colocó 1 planta por maceta. Se utilizaron las entradas detalladas en las tablas N° \ref{tab:tablaEntradas}. \textbf{\texttt{Detallar\ el\ número\ de\ repeticiones}}
 
+\subsection{Análisis estadístico}\label{anuxe1lisis-estaduxedstico}
+
+Para la caracterización de la colección de germoplasma de algodón, se realizaron análisis de varianza (ANOVA) y análisis de correlación de Pearson de todos los rasgos medidos utilizando el software R \texttt{(R\ Core\ Team\ 2024)}. La distribución normal de cada rasgo se confirmó mediante la prueba de Shapiro-Wilk. Las diferencias estadísticas se evaluaron con un nivel de confianza del 95 \% (p ≤ 0,05) según la prueba L.S.D de Fisher, considerando las entradas como efecto fijo, mientras que el experimento y los bloques dentro de cada experimento como efectos aleatorios. A continuación, se realizó un estudio completo de la diversidad genética disponible en ese conjunto de entradas mediante el análisis de componentes principales.
+
 \section{Resultados}\label{resultados}
 
-Aquí los resultados del capítulo 1
+\subsection{Characterisation of cotton germplasm collection}\label{characterisation-of-cotton-germplasm-collection}
+
+Cotton accessions showed significant differences for all traits related to both yield and fibre quality (p \textless{} 0.05, Table \ref{tab:table-charac}).
+
+The accession SP-41255 had the highest average values for SCY, LY, LP, and BN with values of 34.2 g plant\textsuperscript{-1}, 15.8 g plant\textsuperscript{-1}, 45.8 \%, and 9.2 boll plant\textsuperscript{-1} respectively, however it had the lowest average value for SI at 7.7 g. BGSP-00159 had the lowest average for SCY with 26.2 g plant\textsuperscript{-1}. BGSP-00166 had the lowest average values for LY, LP, MIC and BN with values of 8.6 g plant\textsuperscript{-1}, 31.1 \%, 3.2 and 5.8 boll plant\textsuperscript{-1} respectively, nonetheless it also had the highest average values for BW, SI, FL, FS and FU with values of 4.6 g boll\textsuperscript{-1}, 11.5 g, 33.2 mm, 37.3 g tex\textsuperscript{-1} and 85.8 \% respectively. BGSP-00269 had the lowest average values for BW, SNPB, and FL with values of 3.4 g boll\textsuperscript{-1}, 22.8 seed boll\textsuperscript{-1}, and 28.3 mm respectively, whereas it had the highest average value for LI and MIC with values of 6.5 g and 4.3. BGSP-00425 had the highest average SNPB at 30.6 seed boll\textsuperscript{-1} while the lowest average values for LI and FU with values of 4.0 g and 82.2 \%, respectively. BGSP-00207 had the lowest average values for FL and FS with values of 28.3 mm and 29.2 g tex\textsuperscript{-1} respectively. In particular, the accessions BGSP-00166 and SP-41255 were significant different for almost all the traits studied except for SNPB (p \textless{} 0.01).
+
+These results indicate that there is phenotypic variation among cotton accessions in terms of both yield and fibre quality.
+
+\begin{table}[!h]
+\centering\centering
+\caption{\label{tab:table-charac}Mean values, standar error (in parentheses) and Fisher’s Least Significant Difference (LSD) test for yield components and fibre quality.}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\fontsize{14}{16}\selectfont
+\begin{tabular}[t]{>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{1cm}>{\raggedright\arraybackslash}p{1cm}>{\raggedright\arraybackslash}p{1cm}>{\raggedright\arraybackslash}p{1cm}>{\raggedright\arraybackslash}p{1cm}>{\raggedright\arraybackslash}p{1cm}>{\raggedright\arraybackslash}p{1cm}>{\raggedright\arraybackslash}p{1cm}>{\raggedright\arraybackslash}p{1cm}>{\raggedright\arraybackslash}p{1cm}>{\raggedright\arraybackslash}p{1cm}>{\raggedright\arraybackslash}p{1cm}}
+\toprule
+\multicolumn{1}{c}{ } & \multicolumn{12}{c}{Caracteres} \\
+\cmidrule(l{3pt}r{3pt}){2-13}
+\begingroup\fontsize{14}{16}\selectfont \textbf{Entradas}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{SCY}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{LY}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{LP}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{BW}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{BN}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{SI}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{LI}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{SNPB}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{FL}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{FS}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{MIC}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{FU}\endgroup\\
+\midrule
+ &  &  &  &  &  &  &  &  &  &  &  \vphantom{1} & \\
+BGSP-00126 & 30.5 (6.6) & 13.2 (2.9) & 43.1 (0.4) & 3.6 (0.4) & 8.0 (1.0) & 8.7 (0.3) & 6.2 (0.3) & 25.0 (1.6) & 29.8 (0.3) & 30.4 (1.3) & 3.5 (0.4) & 83.8 (1.0)\\
+BGSP-00159 & 26.2 (5.4) & 9.5 (1.9) & 36.3 (0.8) & 4.1 (0.5) & 6.2 (0.6) & 10.3 (1.0) & 5.6 (0.7) & 26.8 (0.7) & 28.4 (0.9) & 33.2 (2.1) & 3.7 (0.5) & 82.7 (0.5)\\
+BGSP-00166 & 27.5 (4.3) & 8.6 (1.4) & 31.2 (0.3) & 4.6 (0.4) & 5.8 (0.5) & 11.5 (0.5) & 5.0 (0.4) & 28.9 (0.8) & 33.2 (0.5) & 37.3 (2.0) & 3.2 (0.3) & 85.8 (0.6)\\
+BGSP-00207 & 30.2 (6.3) & 13.1 (2.7) & 43.5 (0.4) & 3.6 (0.4) & 8.0 (1.0) & 8.3 (0.2) & 6.2 (0.3) & 25.2 (2.0) & 28.3 (0.4) & 29.2 (0.7) & 3.4 (0.3) & 83.5 (0.4)\\
+\addlinespace
+BGSP-00269 & 29.8 (5.8) & 12.9 (2.5) & 43.4 (0.4) & 3.4 (0.2) & 8.6 (1.1) & 8.8 (0.4) & 6.5 (0.2) & 22.8 (1.9) & 28.3 (0.5) & 31.6 (1.2) & 4.3 (0.2) & 83.7 (0.3)\\
+BGSP-00425 & 31.5 (7.4) & 11.3 (2.9) & 34.2 (1.2) & 3.6 (0.4) & 8.3 (1.1) & 7.9 (0.4) & 4.0 (0.6) & 30.6 (0.9) & 30.4 (1.0) & 31.3 (1.6) & 3.4 (0.5) & 82.2 (0.2)\\
+SP-41255 & 34.2 (6.1) & 15.8 (3.0) & 45.8 (0.6) & 3.7 (0.5) & 9.2 (1.0) & 7.7 (0.1) & 6.2 (0.3) & 26.8 (2.8) & 29.8 (0.7) & 32.2 (1.2) & 3.8 (0.3) & 83.6 (0.7)\\
+SP-6565 & 30.1 (5.8) & 12.5 (2.4) & 41.4 (1.0) & 3.7 (0.6) & 8.2 (0.7) & 8.9 (0.4) & 5.9 (0.2) & 25.5 (3.0) & 30.1 (0.5) & 32.5 (0.9) & 3.7 (0.3) & 84.9 (0.6)\\
+ &  &  &  &  &  &  &  &  &  &  &  & \\
+\addlinespace
+p-value & 0.005 & <0.001 & <0.001 & 0.002 & <0.001 & <0.001 & <0.001 & 0.014 & <0.001 & 0.017 & <0.001 & 0.003\\
+Fisher’s L.S.D & 3.68 & 1.91 & 1.99 & 0.57 & 1.19 & 1.35 & 0.75 & 4.04 & 1.38 & 4.03 & 0.43 & 1.66\\
+\bottomrule
+\multicolumn{13}{l}{\textsuperscript{} \makecell[l]{SCY: Seed cotton yield in g, LY: Lint yield in g, LP: Lint percentage in \%, BW: Boll weight in g, BN: Boll number \\ per plant, SI: Seed index in g, LI: Lint index in g, SNPB: Seed number per boll, FL: Fibre length in mm, \\ FS: Fibre strength g tex\textasciicircum{}-1\textasciicircum{}, MIC: Micronaire, FU: Fibre uniformity in \%.}}\\
+\end{tabular}}
+\end{table}
+
+The first principal component explained 45.61\% of the variance in the data, while the second principal component explained 21.97\% (Figure 3). The traits most associated with the first component were SCY, MIC, LY, LI and BN, while FL, FS, FU, SI, SNPB, BW and LP were most associated with the second component. The accessions located in the upper left quadrant were BGSP-00166, BGSP-00159 and BGSP-00425 being these accessions associated with higher values of fibre quality (FL, FS, FU) and seed size (SI) and lower values in yield-related traits such as SCY, LY, LI, BN, LP. The accessions located in the lower right quadrant like SP-41255, BGSP-00269, BGSP-00207 and BGSP-00126, showed opposite performance to those described.
+
+\texttt{Figura\ 3}
+
+In particular, the accessions BGSP-00166 and SP-41255 presented more contrast in terms of the measured traits. These accessions showed different values for most of the measured traits related to both yield and fibre quality. Therefore, we selected those accessions to make a biparental cross and to generate a segregating population for estimating genetic parameters and then select promising phenotypes for yield and quality-related traits.
+
+Several phenotypic correlations were statistically significant (Table 3). For the analysis, values greater than 0.80 were considered as strong correlation, moderate correlation were those between 0.40 to 0.80, and low were those less than 0.40. The LY showed a strong positive correlation with BN. It also showed a moderate positive correlation with BW. LP showed a moderate positive correlation with LY and BN. However, it showed a moderate negative correlation with SI. The FL showed moderate negative correlations with LY, indicating that as the fibre length increases, the lint yield decreases.
 
 \section{Discusión}\label{discusiuxf3n}
 

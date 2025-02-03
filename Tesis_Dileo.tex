@@ -264,8 +264,16 @@ Segundo párrafo del resumen aquí.
     \begin{tabular}{ll}
                 \textbf{IF} & Índice de fibra \\
                 \textbf{IS} & Índice de semillas \\
+                \textbf{IU} & Índice de uniformidad de fibras \\
+                \textbf{Mic} & Micronaire \\
                 \textbf{NC} & Número de capullos \\
+                \textbf{NSC} & Numero de semillas por capullo \\
                 \textbf{PC} & Peso promedio de capullos \\
+                \textbf{RB} & Rendimiento bruto \\
+                \textbf{RF} & Rendimiento de fibra \\
+                \textbf{RFD} & Rendimiento de fibra al desmote \\
+                \textbf{Str} & Resistencia de las fibras \\
+                \textbf{UHML} & Longitud de las fibras \\
                 \textbf{zContinua...} & Otras abreviaturas \\
             \end{tabular}
 \end{table}
@@ -465,17 +473,69 @@ BGSP-00779 & China & 25 & 55 & 76 & 126 & 161\\
 \end{tabular}}
 \end{table}
 
+\subsection{Mapeo y descriptores morfológicos}\label{mapeo-y-descriptores-morfoluxf3gicos}
+
+Puede incluirse resultados morfológicos de las entradas\ldots{}
+
 \subsection{Componentes del rendimiento y calidad de fibra}\label{componentes-del-rendimiento-y-calidad-de-fibra}
-
-Cotton accessions showed significant differences for all traits related to both yield and fibre quality (p \textless{} 0.05, Table \ref{tab:table-charac}).
-
-The accession SP-41255 had the highest average values for SCY, LY, LP, and BN with values of 34.2 g plant\textsuperscript{-1}, 15.8 g plant\textsuperscript{-1}, 45.8 \%, and 9.2 boll plant\textsuperscript{-1} respectively, however it had the lowest average value for SI at 7.7 g. BGSP-00159 had the lowest average for SCY with 26.2 g plant\textsuperscript{-1}. BGSP-00166 had the lowest average values for LY, LP, MIC and BN with values of 8.6 g plant\textsuperscript{-1}, 31.1 \%, 3.2 and 5.8 boll plant\textsuperscript{-1} respectively, nonetheless it also had the highest average values for BW, SI, FL, FS and FU with values of 4.6 g boll\textsuperscript{-1}, 11.5 g, 33.2 mm, 37.3 g tex\textsuperscript{-1} and 85.8 \% respectively. BGSP-00269 had the lowest average values for BW, SNPB, and FL with values of 3.4 g boll\textsuperscript{-1}, 22.8 seed boll\textsuperscript{-1}, and 28.3 mm respectively, whereas it had the highest average value for LI and MIC with values of 6.5 g and 4.3. BGSP-00425 had the highest average SNPB at 30.6 seed boll\textsuperscript{-1} while the lowest average values for LI and FU with values of 4.0 g and 82.2 \%, respectively. BGSP-00207 had the lowest average values for FL and FS with values of 28.3 mm and 29.2 g tex\textsuperscript{-1} respectively. In particular, the accessions BGSP-00166 and SP-41255 were significant different for almost all the traits studied except for SNPB (p \textless{} 0.01).
-
-These results indicate that there is phenotypic variation among cotton accessions in terms of both yield and fibre quality.
 
 \begin{table}[!h]
 \centering\centering
-\caption{\label{tab:table-charac}Mean values, standar error (in parentheses) and Fisher’s Least Significant Difference (LSD) test for yield components and fibre quality.}
+\caption{\label{tab:tabla-rend-calidad}Valores medios, error estándar (entre paréntesis) y prueba L.S.D. (diferencia mínima significativa) de Fisher para rendimiento y sus componentes}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\fontsize{12}{14}\selectfont
+\begin{tabular}[t]{llllll}
+\toprule
+\multicolumn{1}{c}{ } & \multicolumn{5}{c}{Caracteres} \\
+\cmidrule(l{3pt}r{3pt}){2-6}
+\begingroup\fontsize{12}{14}\selectfont \textbf{Entradas}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{RB}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{RF}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{RFD}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{PC}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{NC}\endgroup\\
+\midrule
+ &  &  &  &  \vphantom{1} & \\
+BGSP-00028 & 24.1 (2.0) & 8.7 (0.6) & 36.5 (0.7) & 4.3 (0.3) & 5.7 (0.3)\\
+BGSP-00067 & 23.3 (3.3) & 8.2 (1.0) & 36.0 (1.9) & 2.8 (0.2) & 8.3 (1.2)\\
+BGSP-00070 & 19.9 (1.3) & 7.7 (0.8) & 39.6 (0.8) & 3.4 (0.3) & 6.0 (0.6)\\
+BGSP-00072 & 26.3 (2.2) & 9.8 (0.9) & 38.3 (0.6) & 3.5 (0.4) & 7.7 (0.3)\\
+\addlinespace
+BGSP-00088 & 31.0 (3.2) & 11.3 (1.1) & 37.1 (0.4) & 4.4 (0.2) & 7.0 (0.6)\\
+BGSP-00126 & 16.0 (0.6) & 6.6 (0.3) & 42.9 (0.3) & 2.7 (0.2) & 6.0 (0.3)\\
+BGSP-00145 & 16.1 (3.1) & 6.1 (1.1) & 38.6 (0.7) & 3.6 (0.6) & 4.7 (0.9)\\
+BGSP-00159 & 14.3 (0.6) & 5.1 (0.2) & 36.8 (0.6) & 2.7 (0.1) & 5.2 (0.2)\\
+BGSP-00166 & 18.2 (0.5) & 5.5 (0.2) & 31.1 (0.4) & 3.6 (0.1) & 5.1 (0.2)\\
+\addlinespace
+BGSP-00177 & 24.5 (2.2) & 7.9 (0.8) & 33.0 (0.4) & 4.2 (0.8) & 6.0 (0.6)\\
+BGSP-00192 & 18.7 (3.3) & 7.1 (1.1) & 37.9 (2.0) & 3.3 (0.4) & 5.7 (0.3)\\
+BGSP-00193 & 29.4 (3.9) & 10.9 (1.4) & 38.1 (1.8) & 4.2 (0.6) & 7.0 (0.0)\\
+BGSP-00194 & 24.0 (3.1) & 9.6 (1.4) & 40.9 (0.8) & 3.7 (0.4) & 6.7 (0.9)\\
+BGSP-00207 & 16.2 (0.6) & 6.7 (0.2) & 43.6 (0.5) & 2.8 (0.1) & 5.8 (0.2)\\
+\addlinespace
+BGSP-00269 & 16.9 (0.5) & 7.1 (0.3) & 43.7 (0.5) & 2.9 (0.2) & 6.1 (0.3)\\
+BGSP-00425 & 15.1 (0.5) & 4.6 (0.2) & 31.5 (0.3) & 2.6 (0.1) & 5.8 (0.3)\\
+BGSP-00428 & 21.4 (3.6) & 8.7 (1.4) & 40.1 (0.4) & 4.3 (0.7) & 5.0 (0.6)\\
+BGSP-00514 & 28.0 (2.8) & 11.7 (1.2) & 42.3 (0.4) & 4.2 (0.2) & 6.7 (0.9)\\
+BGSP-00715 & 24.0 (3.6) & 9.8 (1.2) & 41.6 (1.2) & 3.4 (0.4) & 7.0 (0.6)\\
+\addlinespace
+BGSP-00748 & 33.5 (1.8) & 12.3 (1.0) & 39.0 (2.4) & 4.4 (0.1) & 7.7 (0.3)\\
+BGSP-00752 & 27.2 (2.1) & 11.3 (1.2) & 42.1 (1.9) & 4.1 (0.1) & 6.7 (0.3)\\
+BGSP-00755 & 26.3 (2.0) & 10.0 (0.7) & 38.5 (0.8) & 4.7 (0.2) & 5.7 (0.7)\\
+BGSP-00759 & 24.6 (3.6) & 8.7 (1.5) & 38.3 (1.1) & 4.7 (0.6) & 5.7 (1.5)\\
+BGSP-00779 & 26.3 (1.5) & 10.4 (0.5) & 40.5 (0.7) & 3.0 (0.1) & 8.7 (0.3)\\
+\addlinespace
+SP 41255 & 20.7 (0.7) & 8.8 (0.4) & 44.7 (0.5) & 2.8 (0.1) & 7.3 (0.3)\\
+SP 6565 & 17.3 (0.5) & 6.9 (0.2) & 41.2 (0.3) & 2.6 (0.1) & 6.8 (0.3)\\
+ &  &  &  &  & \\
+p-value & <0.001 & <0.001 & <0.001 & <0.001 & <0.001\\
+Fisher’s L.S.D & 4.3 & 1.76 & 2.46 & 0.76 & 1.42\\
+\bottomrule
+\multicolumn{6}{l}{\textsuperscript{} \makecell[l]{Referencias: RB, Rendimiento bruto en g; RF, Rendimiento de fibra en \\ g; RFD, Rendimiento de fibra al desmote en \%; PC, Peso promedio de \\ capullos g; NC, Numero de capullos por planta.}}\\
+\end{tabular}}
+\end{table}
+
+Las entradas de algodón mostraron diferencias significativas en todos los rasgos relacionados con el rendimiento y la calidad de la fibra (p \textless{} 0.05, Tabla \ref{tab:table-charac}).
+
+\begin{table}[!h]
+\centering\centering
+\caption{\label{tab:table-charac}Mean values, standar error (in parentheses) and Fisher’s Least Significant Difference (L.S.D.) test for yield components and fibre quality.}
 \centering
 \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
 \fontsize{14}{16}\selectfont
@@ -483,7 +543,7 @@ These results indicate that there is phenotypic variation among cotton accession
 \toprule
 \multicolumn{1}{c}{ } & \multicolumn{12}{c}{Caracteres} \\
 \cmidrule(l{3pt}r{3pt}){2-13}
-\begingroup\fontsize{14}{16}\selectfont \textbf{Entradas}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{SCY}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{LY}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{LP}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{BW}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{BN}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{SI}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{LI}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{SNPB}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{FL}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{FS}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{MIC}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{FU}\endgroup\\
+\begingroup\fontsize{14}{16}\selectfont \textbf{Entradas}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{RB}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{RF}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{RFD}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{PC}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{NC}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{IS}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{IF}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{NSC}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{UHML}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{Str}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{Mic}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{IU}\endgroup\\
 \midrule
  &  &  &  &  &  &  &  &  &  &  &  \vphantom{1} & \\
 BGSP-00126 & 30.5 (6.6) & 13.2 (2.9) & 43.1 (0.4) & 3.6 (0.4) & 8.0 (1.0) & 8.7 (0.3) & 6.2 (0.3) & 25.0 (1.6) & 29.8 (0.3) & 30.4 (1.3) & 3.5 (0.4) & 83.8 (1.0)\\
@@ -500,17 +560,21 @@ SP-6565 & 30.1 (5.8) & 12.5 (2.4) & 41.4 (1.0) & 3.7 (0.6) & 8.2 (0.7) & 8.9 (0.
 p-value & 0.005 & <0.001 & <0.001 & 0.002 & <0.001 & <0.001 & <0.001 & 0.014 & <0.001 & 0.017 & <0.001 & 0.003\\
 Fisher’s L.S.D & 3.68 & 1.91 & 1.99 & 0.57 & 1.19 & 1.35 & 0.75 & 4.04 & 1.38 & 4.03 & 0.43 & 1.66\\
 \bottomrule
-\multicolumn{13}{l}{\textsuperscript{} \makecell[l]{SCY: Seed cotton yield in g, LY: Lint yield in g, LP: Lint percentage in \%, BW: Boll weight in g, BN: Boll number \\ per plant, SI: Seed index in g, LI: Lint index in g, SNPB: Seed number per boll, FL: Fibre length in mm, \\ FS: Fibre strength g tex\textasciicircum{}-1\textasciicircum{}, MIC: Micronaire, FU: Fibre uniformity in \%.}}\\
+\multicolumn{13}{l}{\textsuperscript{} \makecell[l]{RB: Seed cotton yield in g, LY: Lint yield in g, LP: Lint percentage in \%, BW: Boll weight in g, BN: Boll number \\ per plant, SI: Seed index in g, LI: Lint index in g, SNPB: Seed number per boll, FL: Fibre length in mm, \\ FS: Fibre strength g tex\textasciicircum{}-1\textasciicircum{}, Mic: Micronaire, FU: Fibre uniformity in \%.}}\\
 \end{tabular}}
 \end{table}
 
-The first principal component explained 45.61\% of the variance in the data, while the second principal component explained 21.97\% (Figure 3). The traits most associated with the first component were SCY, MIC, LY, LI and BN, while FL, FS, FU, SI, SNPB, BW and LP were most associated with the second component. The accessions located in the upper left quadrant were BGSP-00166, BGSP-00159 and BGSP-00425 being these accessions associated with higher values of fibre quality (FL, FS, FU) and seed size (SI) and lower values in yield-related traits such as SCY, LY, LI, BN, LP. The accessions located in the lower right quadrant like SP-41255, BGSP-00269, BGSP-00207 and BGSP-00126, showed opposite performance to those described.
+La entrada SP-41255 presentó los valores medios más elevados para RB, RF, RFD y NC, con valores de 34.2 g planta\textsuperscript{-1}, 15.8 g planta\textsuperscript{-1}, 45.8 \%, y 9.2 capullos planta\textsuperscript{-1} respectivamente, sin embargo, presentó el valor medio más bajo de IS, con 7.7 g. BGSP-00159 tuvo la media más baja de RB con 26,2 g planta\textsuperscript{-1}. BGSP-00166 tuvo los valores medios más bajos para RF, RFD, MIC y NC con valores de 8.6 g planta\textsuperscript{-1}, 31.1 \%, 3.2 y 5.8 capullos planta\textsuperscript{-1} respectivamente, no obstante, presentó los valores medios más elevados de PC, IS, UHML, Str y IU con valores de 4.6 g capullo\textsuperscript{-1}, 11.5 g, 33.2 mm, 37.3 g tex\textsuperscript{-1} y 85.8 \% respectivamiente. BGSP-00269 presentó los valores medios más bajos de PC, NSC y UHML, con valores de 3.4 g capullo\textsuperscript{-1}, 22.8 semilla capullo\textsuperscript{-1}, y 28.3 mm respectivamente, mientras que tuvo el valor medio más alto para IF y Mic con valores de 6.5 g y 4.3. BGSP-00425 tuvo la NSC media mas alta, con un 30.6 semillas cápsula\textsuperscript{-1} mientras que los valores medios más bajos para IF y IU con valores de 4.0 g y 82.2 \%, respectivamente. BGSP-00207 presentó los valores medios más bajos de UHML y Str con valores de 28.3 mm y 29.2 g tex\textsuperscript{-1} respectivamente. En particular, las accesiones BGSP-00166 y SP-41255 fueron significativamente diferentes para casi todos los caracteres estudiados excepto para NSC (p \textless{} 0,01).
+
+Estos resultados indican que existe variación fenotípica entre las accesiones de algodón tanto en términos de rendimiento como de calidad de la fibra.
+
+The first principal component explained 45.61\% of the variance in the data, while the second principal component explained 21.97\% (Figure 3). The traits most associated with the first component were RB, Mic, RF, IF and NC, while UHML, Str, IU, IS, NSC, PC and RFD were most associated with the second component. The accessions located in the upper left quadrant were BGSP-00166, BGSP-00159 and BGSP-00425 being these accessions associated with higher values of fibre quality (UHML, Str, IU) and seed size (IS) and lower values in yield-related traits such as RB, RF, IF, NC, RFD. The accessions located in the lower right quadrant like SP-41255, BGSP-00269, BGSP-00207 and BGSP-00126, showed opposite performance to those described.
 
 \texttt{Figura\ 3}
 
 In particular, the accessions BGSP-00166 and SP-41255 presented more contrast in terms of the measured traits. These accessions showed different values for most of the measured traits related to both yield and fibre quality. Therefore, we selected those accessions to make a biparental cross and to generate a segregating population for estimating genetic parameters and then select promising phenotypes for yield and quality-related traits.
 
-Several phenotypic correlations were statistically significant (Table 3). For the analysis, values greater than 0.80 were considered as strong correlation, moderate correlation were those between 0.40 to 0.80, and low were those less than 0.40. The LY showed a strong positive correlation with BN. It also showed a moderate positive correlation with BW. LP showed a moderate positive correlation with LY and BN. However, it showed a moderate negative correlation with SI. The FL showed moderate negative correlations with LY, indicating that as the fibre length increases, the lint yield decreases.
+Several phenotypic correlations were statistically significant (Table 3). For the analysis, values greater than 0.80 were considered as strong correlation, moderate correlation were those between 0.40 to 0.80, and low were those less than 0.40. The RF showed a strong positive correlation with NC. It also showed a moderate positive correlation with PC. RFD showed a moderate positive correlation with RF and NC. However, it showed a moderate negative correlation with IS. The LF showed moderate negative correlations with RF, indicating that as the fibre length increases, the lint yield decreases.
 
 \section{Discusión}\label{discusiuxf3n}
 

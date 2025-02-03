@@ -1,5 +1,6 @@
 tab:tablaEntradas
 tab:tabla-fenologia
+tab:table-charac
 rmd-basics
 introducción-1
 objetivo
@@ -8,6 +9,7 @@ variables-medidas
 análisis-estadístico
 resultados
 fenología
+mapeo-y-descriptores-morfológicos
 componentes-del-rendimiento-y-calidad-de-fibra
 discusión
 conclusión

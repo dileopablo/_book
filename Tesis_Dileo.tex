@@ -154,7 +154,7 @@ Segundo párrafo del resumen aquí.
     \usepackage{graphicx}
     \usepackage{latexsym}
     \usepackage{fontspec}
-    \setmainfont{Calibri}
+    \setmainfont[Ligatures=TeX]{Calibri}
     \usepackage{amsmath}
     \usepackage[spanish]{babel}
     \addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
@@ -269,7 +269,7 @@ Segundo párrafo del resumen aquí.
                 \textbf{NC} & Número de capullos \\
                 \textbf{NSC} & Numero de semillas por capullo \\
                 \textbf{PC} & Peso promedio de capullos \\
-                \textbf{RB} & Rendimiento bruto \\
+                \textbf{RB} & Rendimiento de algodón bruto \\
                 \textbf{RF} & Rendimiento de fibra \\
                 \textbf{RFD} & Rendimiento de fibra al desmote \\
                 \textbf{Str} & Resistencia de las fibras \\
@@ -535,7 +535,7 @@ Las entradas de algodón mostraron diferencias significativas en todos los rasgo
 
 \begin{table}[!h]
 \centering\centering
-\caption{\label{tab:table-charac}Mean values, standar error (in parentheses) and Fisher’s Least Significant Difference (L.S.D.) test for yield components and fibre quality.}
+\caption{\label{tab:table-charac}Valores medios, error estándar (entre paréntesis) y prueba L.S.D.(diferencia mínima significativa) de Fisher para rendimiento y sus compo-nentes.}
 \centering
 \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
 \fontsize{14}{16}\selectfont
@@ -571,7 +571,7 @@ Estos resultados indican que existe variación fenotípica entre las accesiones 
 El primer componente principal explicó el 45,61\% de la varianza de los datos, mientras que el segundo componente principal explicó el 21,97\% (Figura \ref{fig:img-PC}). Los rasgos más asociados con el primer componente fueron RB, Mic, RF, IF y NC, mientras que UHML, Str, IU, IS, NSC, PC y RFD fueron los más asociados con el segundo componente. Las entradas situadas en el cuadrante superior izquierdo fueron BGSP-00166, BGSP-00159 y BGSP-00425, estando estas entradas asociadas con valores más altos de calidad de fibra (UHML, Str, IU) y tamaño de semilla (IS) y valores más bajos en caracteres relacionados con el rendimiento como RB, RF, IF, NC, RFD. Las entradas situadas en el cuadrante inferior derecho como SP-41255, BGSP-00269, BGSP-00207 y BGSP-00126, mostraron un comportamiento opuesto a las descritas.
 
 \begin{figure}
-\includegraphics[width=400px]{figure/chap1/Para_compuestas/PCA_juntas} \caption{Biplot of the Principal component analysis with point representing the projections of accessions (1) and variables (2) in the space defined by the first two dimensions (Dim) or principal components.}\label{fig:img-PC}
+\includegraphics[width=400px]{figure/chap1/Para_compuestas/PCA_juntas} \caption{Biplot del análisis de componentes principales con puntos que representan las proyecciones de las accesiones (1) y las variables (2) en el espacio definido por las dos primeras dimensiones (Dim) o componentes principales. RB: Rendimiento de algodón bruto en g, RF: Rendimiento de fibra en g, RFD: Rendimiento de fibra al desmote en \%, PC: Peso promedio de capullos en g, NC: Número de capullos por planta, IS: Índice de semilla en g, IF: Índice de fibra g, NSC: Número de semilla por capullo, UHML: Longitud de la fibra en mm, Str: Resistencia de la fibra en g tex$^{-1}$, MIC: Micronaire, FU: Fibre uniformity in \%.}\label{fig:img-PC}
 \end{figure}
 
 En particular, las entradas BGSP-00166 y SP-41255 presentaron más contraste en cuanto a los rasgos medidos. Estas accesiones mostraron valores diferentes para la mayoría de los rasgos medidos relacionados tanto con el rendimiento como con la calidad de la fibra. Por lo tanto, seleccionamos estas accesiones para realizar un cruce biparental y generar una población segregante para estimar los parámetros genéticos y, a continuación, seleccionar fenotipos prometedores para el rendimiento y los rasgos relacionados con la calidad.
@@ -599,9 +599,10 @@ Mic & .85*** & .84*** & .32* & .67*** & .75*** & .19 & .73*** & .34* & -.52*** &
 \addlinespace
 IU & -.07 & -.08 & -.07 & .09 & -.14 & .29* & .09 & -.08 & .40** & .50*** & -.07\\
 \bottomrule
-\multicolumn{12}{l}{\textsuperscript{} *p < 0.05, **p < 0.01 and *** p < 0.001. SCY: Seed cotton yield in g, LY: Lint yield in g, LP: Lint percentage in \%, BW: Boll}\\
-\multicolumn{12}{l}{weight in g, BN: Boll number per plant , SI: Seed index in g, LI: Lint index in g, SNPB: Seed number per boll, FL: Fibre length in}\\
-\multicolumn{12}{l}{mm, FS: Fibre strength g tex\textasciicircum{}-1\textasciicircum{}, MIC: Micronaire, FU: Fibre uniformity in \%.}\\
+\multicolumn{12}{l}{\textsuperscript{} *p < 0.05, **p < 0.01 and *** p < 0.001. RB: Rendimiento de algodón bruto en g, RF: Rendimiento de fibra en g, RFD: Rendimiento de}\\
+\multicolumn{12}{l}{fibra al desmote en \%, PC: Peso promedio de capullos en g, NC: Número de capullos por planta, IS: Índice de semilla en g, IF:}\\
+\multicolumn{12}{l}{Índice de fibra g, NSC: Número de semilla por capullo, UHML: Longitud de la fibra en mm, Str: Resistencia de la fibra en g}\\
+\multicolumn{12}{l}{tex\textasciicircum{}-1\textasciicircum{}, Mic: Micronaire, IU: Índice de uniformidad de fibras \%.}\\
 \end{tabular}}
 \end{table}
 
@@ -662,16 +663,67 @@ Se caracterizaron marcadores moleculares del tipo SSR (Single Sequence Repeats o
 \begin{enumerate}
 \def\labelenumi{\roman{enumi}.}
 \item
-  Obtención de la poblacion segregante para los loci de los marcadores (M) y los QTLs. Luego de la caracterización morfológica y fisiológica, las entradas fueron seleccionadas para ser utilizadas como parentales contrastantes en los respectivos cruzamientos de este estudio. Para los mismos se utilizaron las entradas de alto porcentaje de desmote como parentales masculinos. Considerando que por cada bocha se obtiene, en promedio, 20 semillas \autocite{naeem2017} se tomó una flor de cada parental para dicho cruzamiento, para la generación de la población F\textsubscript{1} (20 plantas). La población segregante (F\textsubscript{2}) resultó de la autofecundación de las F\textsubscript{1}, para llegar a una población F\textsubscript{2} aproximada de 200 plantas \autocite{bardak2018,zhang2003}.
+  Obtención de la poblacion segregante para los loci de los marcadores (M) y los QTLs. Luego de la caracterización morfológica y fisiológica, las entradas fueron seleccionadas para ser utilizadas como parentales contrastantes en los respectivos cruzamientos de este estudio. Para los mismos se utilizaron las entradas de alto porcentaje de desmote como parentales masculinos. Considerando que por cada bocha se obtiene, en promedio, 20 semillas \autocite{naeem2017} se tomó una flor de cada parental para dicho cruzamiento, para la generación de la población F\textsubscript{1} (20 plantas). La población segregante (F\textsubscript{2}) resultó de la autofecundación de las F\textsubscript{1}, para llegar a una población F\textsubscript{2} aproximada de 200 plantas \autocite{bardak2018,zhang2003}. BGSP-00166 and SP-41255 were the selected parental genotypes. Both parents have Argentine origin. The first parent is an inbreed line derived from the cross between Chaco 510 x SP 6269, while the second parent is other inbreed line selected from the cross between SP-81270-7 x Mij. 3\textbf{.} Morphologically, they differ in their plant structure (Figure \ref{fig:img-parental}). BGSP-00166 is more compact with a shorter distance between the first fruiting position and the stem, SP-41255 has a plant structure more open. The crossing was performed in both directions to evaluate the existence of reciprocal effect. The emasculation was performed in the plants used as female parent by removing the stamens with tweezers before flower anthesis (candle shape stage), during the afternoon hours. The next day, the crossing was performed by transferring pollen from male to female parents (emasculated flowers) as described in \textcite{acquaah2012}. Then F\textsubscript{1} seeds from the cotton crosses were sown under greenhouse conditions and self-pollinated to produce F\textsubscript{2}. In the 2019-2020 growing season, the F\textsubscript{2} population was sown in non-replicated rows under field conditions. Each row was 10 m long and spaced 1 m apart, with 50 plants per row (Figure \ref{fig:img-croquis}). The non-segregating generations (both F\textsubscript{1,} SP-41255 x BGSP-00166 and BGSP-00166 x SP-41255, and the parental genotypes) were also sown under the same conditions. All these generations were subjected to phenotypic evaluation. In the crossbreeding direction of SP-41255 x BGSP-00166, an F\textsubscript{2} segregating population of 205 plants was achieved, while for the reverse crossbreeding direction, 234 plants were obtained. In the same trial, as shown in Figure \ref{fig:img-croquis}, 17 plants from the BGSP-00166 parent, 19 plants from the SP-41255 parent, and 11 plants from the F\textsubscript{1} (half and half generated from a cross direction and its reciprocal) were evenly sown and achieved.
 \item
-  Medición de la característica fenotípica controlada por los QTL. Se realizarán las mediciones de rendimiento y calidad de fibra detalladas en el apartado ¨Caracterización morfológica¨.
+  Medición de la característica fenotípica controlada por los QTL. Se realizarán las mediciones de rendimiento y calidad de fibra detalladas en el apartado ¨Caracterización morfológica¨.For the experiment of the biparental cross, each plant (from both segregating and non-segregating populations) was also individually harvested at maturity stage to evaluate yield and quality-related characteristics: SCY, LY, LP, BW, BN, FL, FS, FU and MIC were measured as described above.
 \item
-  Caracterización molecular por SSR de los de los parentales y cada planta de la población F\textsubscript{2}. El ADN genómico se aisló utilizando hojas jóvenes procedentes de los progenitores y la población segregante, mediante método CTAB modificado \autocite{zhang2000,paterson1993}. Se evaluó la cantidad y calidad del ADN mediante espectrofotometría para comparación. La amplificación por PCR y la tinción con plata se realizó según \textcite{lin2005} . Los productos de PCR de los SSR se separaron en geles de poliacrilamida desnaturalizantes al \texttt{6\%} y revelados con carbonato de sodio\autocite{lin2005}.
+  Caracterización molecular por SSR de los de los parentales y cada planta de la población F\textsubscript{2}. El ADN genómico se aisló utilizando hojas jóvenes procedentes de los progenitores y la población segregante, mediante método CTAB modificado \autocite{zhang2000,paterson1993}. Se evaluó la cantidad y calidad del ADN mediante espectrofotometría para comparación. La amplificación por PCR y la tinción con plata se realizó según \textcite{lin2005} . Los productos de PCR de los SSR se separaron en geles de poliacrilamida desnaturalizantes al \texttt{2\%} y revelados con carbonato de sodio\autocite{lin2005}.
 \end{enumerate}
+
+\begin{figure}
+\includegraphics[width=400px]{figure/chap3/croquis_campo} \caption{Description of the field trial, showing the two populations generated from the cross in the direction SP-41255 x BGSP-00166 and its reciprocal. Within the trial, plants from the parent SP-41255 (1), Filial 1 (2), and parent BGSP-00166 (3) were randomly distributed.}\label{fig:img-croquis}
+\end{figure}
+
+\subsection{Análisis estadístico}\label{anuxe1lisis-estaduxedstico-1}
+
+For the biparental cross experiment, a Levene´s test was done to confirm homogeneous variance in non-segregating generations, while normal distribution was confirmed by the Shapiro-Wilk´s test. Fisher's L.S.D test was conducted to compare the parentals P\textsubscript{1}, P\textsubscript{2} and the F\textsubscript{1} generation. In addition, a comparison of the means of the reciprocal F\textsubscript{1} and F\textsubscript{2} generations was also performed to detect the existence of a reciprocal effect on the characteristics under study. A Chi-Square goodness of fit test was performed to detect transgressive segregation following the approach proposed by \textcite{rodriguez2005}. Thus, it was considered that the parent generation had a size equal to that of the F\textsubscript{2} generation. The expected frequencies were calculated assuming equal size between the parent generation and the F\textsubscript{2}, and extreme phenotypes were considered to be those individuals in the F\textsubscript{2} that exceeded the average of the trait in the parent generation and two standard deviations (one-tailed test, the 2.5\% of individuals in a normal distribution). Under these assumptions, when the observed proportion of extreme individuals in the F\textsubscript{2} generation exceeded this expected proportion (a significant χ\textsuperscript{2}), it was considered that the trait showed a transgressive inheritance pattern.
+
+The broad sense heritability (\(h_{bs}^{2}\)) was estimated from the variance components of the non-segregating generations (P\textsubscript{1}, P\textsubscript{2} and F\textsubscript{1}) and the F\textsubscript{2} generation as follows \autocite{kearsey1996}:
+
+\[ h_{bs}^{2}=\frac{\sigma^{^2}G}{\sigma^{2}Ph}\times100 \]
+
+Where \(h_{bs}^{2}\)= broad sense heritability, \(\sigma^{2}G\) = Genotypic variance, \(\sigma^{2}Ph\) = Phenotypic variance.
+
+Variance among plants within the F\textsubscript{1}´s and the parents P\textsubscript{1} and P\textsubscript{2} was equated to environmental variance and subtracted from the variance among F\textsubscript{2} plants to obtain estimates of genotypic variance.
+
+\[ \sigma^{2} E = \frac{\sigma^{2}P_1 + \sigma^{2}P_2 + \sigma^{2}F_1}{3} \]
+
+Where \(\sigma^{2}E\) = Environmental variance, \(\sigma^{2}P_1\) = Variance of parent 1, \(\sigma^{2}P_2\) = Variance of parent 2, \(\sigma^{2}F_1\) = Variance of F\textsubscript{1} generation.
+
+\[ \sigma^{2}G = \sigma^{2}Ph - \sigma^{2}E \]
+
+To estimate the genetic correlation among traits the methodology proposed by \textcite{kearsey1996} was used.
 
 \section{Resultados}\label{resultados-2}
 
-Aquí los resultados del capítulo 3
+\begin{figure}
+\includegraphics[width=400px]{figure/chap3/Parentales} \caption{Plant of the parental genotypes SP-41255 and BGSP-00166}\label{fig:img-parental}
+\end{figure}
+
+\subsection{Generation of variability from the biparental cross BGSP-00166 x SP-41255}\label{generation-of-variability-from-the-biparental-cross-bgsp-00166-x-sp-41255}
+
+The parental genotypes BGSP-00166 and SP-41255 were significant different for all the evaluated traits with exception of SCY (Table \ref{tab:table-generations-two}). On the other hand, the mean values for all traits did not show significant differences between the F\textsubscript{1} and F\textsubscript{2} reciprocal (p \textgreater{} 0.05) as shown in Table S1. This means no existence the reciprocal effect in this cross for the analyzed traits. Therefore, we then decided to merge both the F\textsubscript{1} and F\textsubscript{2} reciprocal populations.
+
+\begin{table}[!h]
+\centering\centering
+\caption{\label{tab:table-generations-two}Mean and variance (in parentheses) of the traits in the non-segregating generations (BGSP-00166, SP-41255 and F1) and the segregating generation F2}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\fontsize{14}{16}\selectfont
+\begin{tabular}[t]{>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{1cm}>{\raggedright\arraybackslash}p{1cm}>{\raggedright\arraybackslash}p{1cm}>{\raggedright\arraybackslash}p{1cm}>{\raggedright\arraybackslash}p{1cm}>{\raggedright\arraybackslash}p{1cm}>{\raggedright\arraybackslash}p{1cm}>{\raggedright\arraybackslash}p{1cm}>{\raggedright\arraybackslash}p{1cm}>{}p{1cm}>{}p{1cm}>{}p{1cm}}
+\toprule
+\multicolumn{1}{c}{ } & \multicolumn{9}{c}{Caracteres} \\
+\cmidrule(l{3pt}r{3pt}){2-10}
+\begingroup\fontsize{14}{16}\selectfont \textbf{Generations}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{SCY}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{LY}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{LP}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{BW}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{BN}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{FL}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{FS}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{MIC}\endgroup & \begingroup\fontsize{14}{16}\selectfont \textbf{FU}\endgroup\\
+\midrule
+BGSP-00166 & 89.5a (1266.4) & 25.8a (110.3) & 30.9a (0.9) & 6.2b (0.4) & 14.5a (29.8) & 32.5b (0.3) & 37.1b (2.8) & 3.9a (0.1) & 85.5b (1.8)\\
+SP-41255 & 86.9a (761.8) & 36.6b (126.1) & 43.4c (0.8) & 4.6a (0.3) & 19.1b (29.6) & 26.9a (0.6) & 30.7a (2.9) & 4.8c (0.1) & 82.0a (2.1)\\
+F\textasciitilde{}1\textasciitilde{} & 123.5b (1013.1) & 44.1b (126.6) & 37.4b (0.4) & 6.4b (0.6) & 19.4b (26.7) & 32.0b (0.3) & 37.4b (0.9) & 4.2b (0.1) & 86.1b (0.9)\\
+F\textasciitilde{}2\textasciitilde{} & 114.1 (1957.2) & 37.5 (227.3) & 37.2 (4.4) & 5.9 (0.9) & 19.7 (52.5) & 31.3 (1.5) & 36.1 (5.2) & 4.3 (0.2) & 84.9 (1.7)\\
+\bottomrule
+\multicolumn{10}{l}{\textsuperscript{} \makecell[l]{RB: Seed cotton yield in g, LY: Lint yield in g, LP: Lint percentage in \%, BW: Boll weight in g, BN: Boll number \\ per plant, SI: Seed index in g, LI: Lint index in g, SNPB: Seed number per boll, FL: Fibre length in mm, \\ FS: Fibre strength g tex\textasciicircum{}-1\textasciicircum{}, Mic: Micronaire, FU: Fibre uniformity in \%.}}\\
+\end{tabular}}
+\end{table}
 
 \section{Discusión}\label{discusiuxf3n-2}
 

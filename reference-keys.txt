@@ -30,7 +30,7 @@ objetivo-2
 materiales-y-métodos-2
 análisis-estadístico-1
 resultados-2
-generation-of-variability-from-the-biparental-cross-bgsp-00166-x-sp-41255
+generación-de-variabilidad-a-partir-del-cruce-biparental-bgsp-00166-x-sp-41255
 discusión-2
 conclusión-2
 primer-apéndice

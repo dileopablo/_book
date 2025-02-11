@@ -1,10 +1,13 @@
 tab:tablaEntradas
 tab:tabla-fenologia
+tab:tabla-mapeo
+tab:tabla-rend-calidad
 tab:table-charac
 fig:img-PC
 tab:correlation-greenhouse
 fig:img-croquis
 fig:img-parental
+tab:table-generations-two
 rmd-basics
 introducción-1
 objetivo

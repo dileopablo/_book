@@ -443,37 +443,37 @@ La fenología se muestra en la tabla \ref{tab:tabla-fenologia}
 \toprule
 Entrada & DPP & DPF & DCO & DPCA & DFC\\
 \midrule
-BGSP-00159 & 22 & 49 & 74 & 114 & 161\\
-BGSP-00428 & 23 & 49 & 74 & 113 & 163\\
 BGSP-00028 & 25 & 51 & 74 & 118 & 163\\
-BGSP-00207 & 23 & 52 & 79 & 135 & 164\\
-BGSP-00269 & 23 & 52 & 75 & 133 & 163\\
-\addlinespace
-SP 41255 & 23 & 52 & 76 & 124 & 162\\
-BGSP-00166 & 23 & 52 & 74 & 124 & 163\\
-BGSP-00145 & 25 & 52 & 73 & 121 & 163\\
-BGSP-00514 & 23 & 52 & 76 & 117 & 161\\
-BGSP-00748 & 23 & 52 & 74 & 135 & 164\\
-\addlinespace
-BGSP-00425 & 25 & 53 & 73 & 130 & 163\\
-BGSP-00177 & 26 & 53 & 75 & 127 & 164\\
-BGSP-00070 & 27 & 53 & 76 & 128 & 163\\
-BGSP-00755 & 25 & 53 & 75 & 124 & 163\\
-BGSP-00126 & 25 & 54 & 79 & 132 & 163\\
-\addlinespace
 BGSP-00067 & 25 & 54 & 74 & 128 & 163\\
-BGSP-00192 & 25 & 54 & 76 & 124 & 162\\
-BGSP-00759 & 25 & 54 & 77 & 134 & 163\\
+BGSP-00070 & 27 & 53 & 76 & 128 & 163\\
 BGSP-00072 & 25 & 54 & 80 & 130 & 162\\
 BGSP-00088 & 25 & 54 & 78 & 135 & 163\\
 \addlinespace
-SP 6565 & 25 & 55 & 79 & 131 & 162\\
-BGSP-00715 & 24 & 55 & 78 & 134 & 163\\
-BGSP-00752 & 25 & 55 & 79 & 135 & 162\\
-BGSP-00194 & 25 & 55 & 75 & 118 & 163\\
-BGSP-00193 & 25 & 55 & 78 & 137 & 162\\
+BGSP-00126 & 25 & 54 & 79 & 132 & 163\\
+BGSP-00145 & 25 & 52 & 73 & 121 & 163\\
+BGSP-00159 & 22 & 49 & 74 & 114 & 161\\
+BGSP-00166 & 23 & 52 & 74 & 124 & 163\\
+BGSP-00177 & 26 & 53 & 75 & 127 & 164\\
 \addlinespace
+BGSP-00192 & 25 & 54 & 76 & 124 & 162\\
+BGSP-00193 & 25 & 55 & 78 & 137 & 162\\
+BGSP-00194 & 25 & 55 & 75 & 118 & 163\\
+BGSP-00207 & 23 & 52 & 79 & 135 & 164\\
+BGSP-00269 & 23 & 52 & 75 & 133 & 163\\
+\addlinespace
+BGSP-00425 & 25 & 53 & 73 & 130 & 163\\
+BGSP-00428 & 23 & 49 & 74 & 113 & 163\\
+BGSP-00514 & 23 & 52 & 76 & 117 & 161\\
+BGSP-00715 & 24 & 55 & 78 & 134 & 163\\
+BGSP-00748 & 23 & 52 & 74 & 135 & 164\\
+\addlinespace
+BGSP-00752 & 25 & 55 & 79 & 135 & 162\\
+BGSP-00755 & 25 & 53 & 75 & 124 & 163\\
+BGSP-00759 & 25 & 54 & 77 & 134 & 163\\
 BGSP-00779 & 25 & 55 & 76 & 126 & 161\\
+SP 41255 & 23 & 52 & 76 & 124 & 162\\
+\addlinespace
+SP 6565 & 25 & 55 & 79 & 131 & 162\\
 \bottomrule
 \multicolumn{6}{l}{\textsuperscript{} DPP: Días a primer pimpollo, DPF: Días a}\\
 \multicolumn{6}{l}{primera flor, DCO: Días a Cut Out, DPCA: Días a}\\
@@ -701,7 +701,8 @@ En particular, las entradas BGSP-00166 y SP-41255 presentaron más contraste en 
 \caption{\label{tab:correlation-greenhouse}Correlación de Pearson entre los rasgos evaluados en el germoplasma de colección}
 \centering
 \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
-\begin{tabular}[t]{>{\raggedright\arraybackslash}p{4em}>{\raggedright\arraybackslash}p{4em}>{\raggedright\arraybackslash}p{4em}>{\raggedright\arraybackslash}p{4em}>{\raggedright\arraybackslash}p{4em}>{\raggedright\arraybackslash}p{4em}>{\raggedright\arraybackslash}p{4em}>{\raggedright\arraybackslash}p{4em}>{\raggedright\arraybackslash}p{4em}>{\raggedright\arraybackslash}p{4em}>{\raggedright\arraybackslash}p{4em}l}
+\begin{threeparttable}
+\begin{tabular}[t]{>{\raggedright\arraybackslash}p{3em}lllllllllll}
 \toprule
   & RB & RF & RFD & PC & NC & IS & IF & NSC & UHML & Str & Mic\\
 \midrule
@@ -719,14 +720,72 @@ Mic & .85*** & .84*** & .32* & .67*** & .75*** & .19 & .73*** & .34* & -.52*** &
 \addlinespace
 IU & -.07 & -.08 & -.07 & .09 & -.14 & .29* & .09 & -.08 & .40** & .50*** & -.07\\
 \bottomrule
-\multicolumn{12}{l}{\textsuperscript{} *p < 0.05, **p < 0.01 and *** p < 0.001. RB: Rendimiento de algodón bruto en g, RF: Rendimiento de fibra en g, RFD: Rendimiento de}\\
-\multicolumn{12}{l}{fibra al desmote en \%, PC: Peso promedio de capullos en g, NC: Número de capullos por planta, IS: Índice de semilla en g, IF:}\\
-\multicolumn{12}{l}{Índice de fibra g, NSC: Número de semilla por capullo, UHML: Longitud de la fibra en mm, Str: Resistencia de la fibra en g}\\
-\multicolumn{12}{l}{tex\textasciicircum{}-1\textasciicircum{}, Mic: Micronaire, IU: Índice de uniformidad de fibras \%.}\\
-\end{tabular}}
+\end{tabular}
+\begin{tablenotes}[para]
+\item \textit{Referencias:} 
+\item *p < 0.05, **p < 0.01 and *** p < 0.001. RB: Rendimiento de algodón bruto en g, RF: Rendimiento de fibra en g, RFD: Rendimiento de fibra al desmote en \%, PC: Peso promedio de capullos en g, NC: Número de capullos por planta, IS: Índice de semilla en g, IF: Índice de fibra g, NSC: Número de semilla por capullo, UHML: Longitud de la fibra en mm, Str: Resistencia de la fibra en g tex\textasciicircum{}-1\textasciicircum{}, Mic: Micronaire, IU: Índice de uniformidad de fibras \%.
+\end{tablenotes}
+\end{threeparttable}}
 \end{table}
 
 Varias correlaciones fenotípicas fueron estadísticamente significativas (Tabla \ref{tab:correlation-greenhouse}). Para el análisis, se consideraron correlaciones fuertes los valores superiores a 0,80, moderadas las comprendidas entre 0,40 y 0,80, y bajas las inferiores a 0,40. El RF mostró una fuerte correlación positiva con el NC. También mostró una correlación positiva moderada con PC. La RFD mostró una correlación positiva moderada con el RF y el NC. Sin embargo, mostró una correlación negativa moderada con IS. El UHML mostró correlaciones negativas moderadas con el RF, lo que indica que, a medida que aumenta el rendimiento de fibra, disminuye la longitud de la misma.
+
+\begin{landscape}\begin{table}[!h]
+\centering
+\caption{\label{tab:tabla-datos-conjuntos}Datos conjuntos...}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{threeparttable}
+\begin{tabular}[t]{>{\raggedright\arraybackslash}p{6em}lllllllllllllllllllllllll}
+\toprule
+\multicolumn{1}{c}{ } & \multicolumn{5}{c}{Fenología} & \multicolumn{3}{c}{Característica de planta} & \multicolumn{3}{c}{Característica de hoja} & \multicolumn{1}{c}{Bráctea} & \multicolumn{1}{c}{Cápsula} & \multicolumn{12}{c}{Características morfológicas, rendimiento y sus componentes} \\
+\cmidrule(l{3pt}r{3pt}){2-6} \cmidrule(l{3pt}r{3pt}){7-9} \cmidrule(l{3pt}r{3pt}){10-12} \cmidrule(l{3pt}r{3pt}){13-13} \cmidrule(l{3pt}r{3pt}){14-14} \cmidrule(l{3pt}r{3pt}){15-26}
+Entradas & DPP & DPF & DCO & DPCA & DFC & Forma & Canopia & Tipo Floración & Forma & Lámina & Pubescencia & Tipo & Forma & AP & NN & NRV & NRR & N1RR & A1RR & D1P & RB & RF & RFD & PC & NC\\
+\midrule
+ &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \vphantom{1} & \\
+BGSP-00028 & 25 & 51 & 74 & 118 & 163 & Cónica & Abierta & Individual & Palmada & Plana & Escasa & Normal & Cónica & 106.3 (5.5) & 13.3 (0.9) & 1.0 (0.6) & 10.7 (0.7) & 3.7 (0.3) & 25.3 (0.7) & 9.3 (0.7) & 24.1 (2.0) & 8.7 (0.6) & 36.5 (0.7) & 4.3 (0.3) & 5.7 (0.3)\\
+BGSP-00067 & 25 & 54 & 74 & 128 & 163 & Cónica & Abierta & Individual & Palmada & Plana & Escasa & Normal & Cónica & 102.0 (4.0) & 14.7 (0.7) & 1.3 (0.3) & 11.0 (0.6) & 4.7 (0.3) & 27.0 (1.7) & 11.0 (1.5) & 23.3 (3.3) & 8.2 (1.0) & 36.0 (1.9) & 2.8 (0.2) & 8.3 (1.2)\\
+BGSP-00070 & 27 & 53 & 76 & 128 & 163 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica & 109.3 (0.3) & 14.3 (0.3) & 1.3 (0.3) & 9.7 (0.3) & 5.7 (0.7) & 40.7 (4.2) & 9.7 (1.9) & 19.9 (1.3) & 7.7 (0.8) & 39.6 (0.8) & 3.4 (0.3) & 6.0 (0.6)\\
+BGSP-00072 & 25 & 54 & 80 & 130 & 162 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica & 113.3 (4.3) & 17.0 (0.0) & 1.3 (0.3) & 13.3 (0.3) & 4.7 (0.3) & 27.3 (3.2) & 7.3 (1.8) & 26.3 (2.2) & 9.8 (0.9) & 38.3 (0.6) & 3.5 (0.4) & 7.7 (0.3)\\
+\addlinespace
+BGSP-00088 & 25 & 54 & 78 & 135 & 163 & Cónica & Medio & Individual & Palmada & Plana & Fuerte & Normal & Cónica & 104.3 (5.8) & 14.3 (0.7) & 1.7 (0.3) & 10.7 (0.3) & 4.7 (0.3) & 28.3 (2.7) & 14.3 (1.2) & 31.0 (3.2) & 11.3 (1.1) & 37.1 (0.4) & 4.4 (0.2) & 7.0 (0.6)\\
+BGSP-00126 & 25 & 54 & 79 & 132 & 163 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Escasa & Normal & Cónica & 126.3 (3.8) & 14.9 (0.2) & 1.5 (0.2) & 11.3 (0.3) & 4.6 (0.1) & 37.4 (1.4) & 8.9 (0.9) & 16.0 (0.6) & 6.6 (0.3) & 42.9 (0.3) & 2.7 (0.2) & 6.0 (0.3)\\
+BGSP-00145 & 25 & 52 & 73 & 121 & 163 & Cónica & Medio & Individual & Palmada & Plana & Media & Normal & Cónica & 89.0 (4.5) & 14.3 (0.3) & 1.0 (0.6) & 11.3 (0.3) & 4.0 (0.0) & 25.7 (0.9) & 9.7 (1.8) & 16.1 (3.1) & 6.1 (1.1) & 38.6 (0.7) & 3.6 (0.6) & 4.7 (0.9)\\
+BGSP-00159 & 22 & 49 & 74 & 114 & 161 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica & 104.3 (3.6) & 14.3 (0.3) & 1.1 (0.2) & 11.0 (0.2) & 4.3 (0.2) & 31.8 (1.9) & 11.4 (0.6) & 14.3 (0.6) & 5.1 (0.2) & 36.8 (0.6) & 2.7 (0.1) & 5.2 (0.2)\\
+BGSP-00166 & 23 & 52 & 74 & 124 & 163 & Cilíndrica & Compacta & Agrupada & Palmada & Plana & Media & Normal & Cónica & 109.0 (3.0) & 15.2 (0.2) & 0.8 (0.2) & 11.8 (0.3) & 4.4 (0.2) & 30.6 (1.2) & 3.9 (0.6) & 18.2 (0.5) & 5.5 (0.2) & 31.1 (0.4) & 3.6 (0.1) & 5.1 (0.2)\\
+\addlinespace
+BGSP-00177 & 26 & 53 & 75 & 127 & 164 & Cónica & Abierta & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica & 103.7 (3.3) & 14.3 (0.3) & 1.7 (0.3) & 10.7 (0.3) & 4.7 (0.3) & 32.7 (3.4) & 13.7 (1.7) & 24.5 (2.2) & 7.9 (0.8) & 33.0 (0.4) & 4.2 (0.8) & 6.0 (0.6)\\
+BGSP-00192 & 25 & 54 & 76 & 124 & 162 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica & 101.3 (5.8) & 15.0 (0.0) & 1.7 (0.3) & 11.0 (0.0) & 5.0 (0.0) & 29.0 (2.1) & 11.3 (0.9) & 18.7 (3.3) & 7.1 (1.1) & 37.9 (2.0) & 3.3 (0.4) & 5.7 (0.3)\\
+BGSP-00193 & 25 & 55 & 78 & 137 & 162 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica & 106.7 (5.5) & 15.3 (0.3) & 2.7 (0.3) & 11.3 (0.3) & 5.0 (0.0) & 30.7 (0.9) & 8.0 (1.7) & 29.4 (3.9) & 10.9 (1.4) & 38.1 (1.8) & 4.2 (0.6) & 7.0 (0.0)\\
+BGSP-00194 & 25 & 55 & 75 & 118 & 163 & Cilíndrica & Compacta & Agrupada & Palmada & Plana & Media & Normal & Cónica & 92.7 (3.2) & 14.7 (0.3) & 2.3 (0.3) & 10.7 (0.3) & 5.0 (0.0) & 31.3 (0.7) & 5.7 (3.2) & 24.0 (3.1) & 9.6 (1.4) & 40.9 (0.8) & 3.7 (0.4) & 6.7 (0.9)\\
+BGSP-00207 & 23 & 52 & 79 & 135 & 164 & Cónica & Abierta & Individual & Palmada & Plana & Fuerte & Normal & Cónica & 105.0 (8.5) & 15.3 (0.2) & 0.7 (0.2) & 12.2 (0.2) & 4.2 (0.1) & 29.4 (0.8) & 10.1 (1.0) & 16.2 (0.6) & 6.7 (0.2) & 43.6 (0.5) & 2.8 (0.1) & 5.8 (0.2)\\
+\addlinespace
+BGSP-00269 & 23 & 52 & 75 & 133 & 163 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica & 113.0 (3.7) & 14.7 (0.2) & 1.2 (0.2) & 11.2 (0.2) & 4.4 (0.1) & 34.2 (1.6) & 8.3 (0.8) & 16.9 (0.5) & 7.1 (0.3) & 43.7 (0.5) & 2.9 (0.2) & 6.1 (0.3)\\
+BGSP-00425 & 25 & 53 & 73 & 130 & 163 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica & 105.2 (3.3) & 13.8 (0.1) & 0.9 (0.3) & 10.8 (0.1) & 4.0 (0.0) & 25.5 (0.7) & 8.4 (0.9) & 15.1 (0.5) & 4.6 (0.2) & 31.5 (0.3) & 2.6 (0.1) & 5.8 (0.3)\\
+BGSP-00428 & 23 & 49 & 74 & 113 & 163 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Redonda & 105.3 (7.3) & 15.3 (0.3) & 0.7 (0.3) & 12.0 (0.6) & 4.3 (0.3) & 28.0 (2.9) & 8.7 (2.4) & 21.4 (3.6) & 8.7 (1.4) & 40.1 (0.4) & 4.3 (0.7) & 5.0 (0.6)\\
+BGSP-00514 & 23 & 52 & 76 & 117 & 161 & Cónica & Abierta & Individual & Digitada (Okra) & Plana & Media & Normal & Cónica & 99.0 (8.0) & 16.0 (0.0) & 2.7 (0.3) & 12.3 (0.3) & 4.7 (0.3) & 25.0 (1.5) & 11.7 (1.7) & 28.0 (2.8) & 11.7 (1.2) & 42.3 (0.4) & 4.2 (0.2) & 6.7 (0.9)\\
+BGSP-00715 & 24 & 55 & 78 & 134 & 163 & Cónica & Medio & Medio Agrupada & Palmada & Plana & Fuerte & Normal & Cónica & 102.0 (8.5) & 14.7 (0.9) & 0.3 (0.3) & 11.7 (0.9) & 4.0 (0.0) & 27.3 (2.3) & 13.0 (1.2) & 24.0 (3.6) & 9.8 (1.2) & 41.6 (1.2) & 3.4 (0.4) & 7.0 (0.6)\\
+\addlinespace
+BGSP-00748 & 23 & 52 & 74 & 135 & 164 & Cónica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Elíptica & 105.7 (0.9) & 15.0 (0.0) & 1.7 (0.3) & 12.0 (0.0) & 4.0 (0.0) & 25.7 (1.2) & 12.0 (0.6) & 33.5 (1.8) & 12.3 (1.0) & 39.0 (2.4) & 4.4 (0.1) & 7.7 (0.3)\\
+BGSP-00752 & 25 & 55 & 79 & 135 & 162 & Cónica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica & 103.3 (5.2) & 15.3 (0.3) & 2.7 (0.3) & 11.3 (0.3) & 5.0 (0.0) & 29.3 (0.7) & 10.3 (0.9) & 27.2 (2.1) & 11.3 (1.2) & 42.1 (1.9) & 4.1 (0.1) & 6.7 (0.3)\\
+BGSP-00755 & 25 & 53 & 75 & 124 & 163 & Cilíndrica & Medio & Medio Agrupadas & Palmada & Plana & Media & Normal & Cónica & 97.3 (3.3) & 13.0 (0.0) & 2.7 (0.3) & 10.0 (0.0) & 4.0 (0.0) & 28.7 (0.3) & 10.3 (0.7) & 26.3 (2.0) & 10.0 (0.7) & 38.5 (0.8) & 4.7 (0.2) & 5.7 (0.7)\\
+BGSP-00759 & 25 & 54 & 77 & 134 & 163 & Cilíndrica & Abierta & Medio Agrupada & Palmada & En copa & Media & Normal & Redonda & 108.3 (5.0) & 14.0 (0.6) & 1.0 (0.6) & 10.0 (1.0) & 5.0 (0.6) & 38.3 (5.5) & 9.7 (2.4) & 24.6 (3.6) & 8.7 (1.5) & 38.3 (1.1) & 4.7 (0.6) & 5.7 (1.5)\\
+BGSP-00779 & 25 & 55 & 76 & 126 & 161 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica & 112.3 (1.9) & 16.0 (0.0) & 1.3 (0.3) & 12.3 (0.3) & 4.7 (0.3) & 30.3 (1.8) & 11.7 (0.7) & 26.3 (1.5) & 10.4 (0.5) & 40.5 (0.7) & 3.0 (0.1) & 8.7 (0.3)\\
+\addlinespace
+SP 41255 & 23 & 52 & 76 & 124 & 162 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica & 122.3 (2.9) & 15.2 (0.1) & 1.2 (0.2) & 11.8 (0.2) & 4.4 (0.1) & 32.7 (1.1) & 11.2 (0.8) & 20.7 (0.7) & 8.8 (0.4) & 44.7 (0.5) & 2.8 (0.1) & 7.3 (0.3)\\
+SP 6565 & 25 & 55 & 79 & 131 & 162 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica & 120.8 (1.9) & 15.7 (0.2) & 1.3 (0.2) & 12.2 (0.2) & 4.5 (0.2) & 35.8 (1.6) & 8.4 (0.6) & 17.3 (0.5) & 6.9 (0.2) & 41.2 (0.3) & 2.6 (0.1) & 6.8 (0.3)\\
+ &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \\
+p-valor & - & - & - & - & - & - & - & - & - & - & - & - & - & <0.001 & <0.001 & <0.001 & <0.001 & <0.001 & <0.001 & <0.001 & <0.001 & <0.001 & <0.001 & <0.001 & <0.001\\
+L.S.D Fisher & - & - & - & - & - & - & - & - & - & - & - & - & - & 17.96 & 1 & 0.99 & 1.05 & 0.74 & 6.29 & 3.89 & 4.3 & 1.76 & 2.46 & 0.76 & 1.42\\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[para]
+\item \textit{Referencias:} 
+\item DPP, días a primer pimpollo; DPF, días a primera flor; DCO, días a Cut Out; DPCA, días a primer cápsula abierta; DFC, días a fin de ciclo. AP, altura de planta en cm; NN, número de nudos totales en tallo; NRV, Número de ramas vegetativas; NRR, Número de ramas reproductivas; N1RR, Nudos a la primera rama reproductiva; A1RR, Altura a la primera rama reproductiva en cm; D1P, Distancia de la primera posición al tallo principal en cm. RB, Rendimiento bruto en g; RF, Rendimiento de fibra en g; RFD, Rendimiento de fibra al desmote en \%; PC, Peso promedio de capullos g; NC, Numero de capullos por planta.
+\end{tablenotes}
+\end{threeparttable}}
+\end{table}
+\end{landscape}
 
 \section{Discusión}\label{discusiuxf3n}
 

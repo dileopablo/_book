@@ -84,6 +84,7 @@ div.csl-indent {
 }
 </style>
 
+<link rel="stylesheet" href="css/custom.css" type="text/css" />
 </head>
 
 <body>
@@ -172,6 +173,28 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
+<script>
+function openTableInNewWindow(tableId) {
+  var tableContent = document.getElementById(tableId).innerHTML;
+  var newWindow = window.open("", "Tabla", "fullscreen=yes");
+  newWindow.document.write('<html><head><title>Tabla</title>');
+  newWindow.document.write('<link rel="stylesheet" type="text/css" href="css/custom.css">');
+  newWindow.document.write('<style>');
+  newWindow.document.write('body { margin: 0; padding: 0; width: 100vw; height: 100vh; }');
+  newWindow.document.write('.scrollable-table { overflow-x: auto; overflow-y: auto; max-height: 90vh; display: block; }');
+  newWindow.document.write('table { display: table; width: 100% !important; height: 100% !important; table-layout: auto; border-collapse: collapse; font-size: 14px; background-color: #f9f9f9; }');
+  newWindow.document.write('th, td { padding: 8px; white-space: nowrap; border: 1px solid #ddd; }');
+  newWindow.document.write('th { background-color: #007bff; color: white; font-weight: bold; }');
+  newWindow.document.write('caption { caption-side: top; font-weight: bold; margin-bottom: 10px; font-size: 16px; }');
+  newWindow.document.write('</style>');
+  newWindow.document.write('</head><body>');
+  newWindow.document.write('<div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">');
+  newWindow.document.write('<div style="width: 100%; height: 100%; overflow: auto;">');
+  newWindow.document.write(tableContent);
+  newWindow.document.write('</div></div></body></html>');
+  newWindow.document.close();
+}
+</script>
 <div id="rmd-basics" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Capítulo 1</span> Caracterización morfológica<a href="1-rmd-basics.html#rmd-basics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="introducción-1" class="section level2 hasAnchor" number="1.1">
@@ -433,7 +456,7 @@ Senegal
 <div id="fenología" class="section level3 hasAnchor" number="1.4.1">
 <h3><span class="header-section-number">1.4.1</span> Fenología<a href="1-rmd-basics.html#fenología" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>La fenología se muestra en la tabla <a href="1-rmd-basics.html#tab:tabla-fenologia">1.2</a></p>
-<table class="table" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0;">
 <caption>
 <span id="tab:tabla-fenologia">Table 1.2: </span>Fenología de las entradas evaluadas
 </caption>
@@ -462,6 +485,146 @@ DFC
 <tbody>
 <tr>
 <td style="text-align:left;width: 8em; ">
+BGSP-00028
+</td>
+<td style="text-align:right;width: 12em; ">
+25
+</td>
+<td style="text-align:right;">
+51
+</td>
+<td style="text-align:right;">
+74
+</td>
+<td style="text-align:right;">
+118
+</td>
+<td style="text-align:right;">
+163
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 8em; ">
+BGSP-00067
+</td>
+<td style="text-align:right;width: 12em; ">
+25
+</td>
+<td style="text-align:right;">
+54
+</td>
+<td style="text-align:right;">
+74
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+163
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 8em; ">
+BGSP-00070
+</td>
+<td style="text-align:right;width: 12em; ">
+27
+</td>
+<td style="text-align:right;">
+53
+</td>
+<td style="text-align:right;">
+76
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+163
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 8em; ">
+BGSP-00072
+</td>
+<td style="text-align:right;width: 12em; ">
+25
+</td>
+<td style="text-align:right;">
+54
+</td>
+<td style="text-align:right;">
+80
+</td>
+<td style="text-align:right;">
+130
+</td>
+<td style="text-align:right;">
+162
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 8em; ">
+BGSP-00088
+</td>
+<td style="text-align:right;width: 12em; ">
+25
+</td>
+<td style="text-align:right;">
+54
+</td>
+<td style="text-align:right;">
+78
+</td>
+<td style="text-align:right;">
+135
+</td>
+<td style="text-align:right;">
+163
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 8em; ">
+BGSP-00126
+</td>
+<td style="text-align:right;width: 12em; ">
+25
+</td>
+<td style="text-align:right;">
+54
+</td>
+<td style="text-align:right;">
+79
+</td>
+<td style="text-align:right;">
+132
+</td>
+<td style="text-align:right;">
+163
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 8em; ">
+BGSP-00145
+</td>
+<td style="text-align:right;width: 12em; ">
+25
+</td>
+<td style="text-align:right;">
+52
+</td>
+<td style="text-align:right;">
+73
+</td>
+<td style="text-align:right;">
+121
+</td>
+<td style="text-align:right;">
+163
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 8em; ">
 BGSP-00159
 </td>
 <td style="text-align:right;width: 12em; ">
@@ -482,19 +645,19 @@ BGSP-00159
 </tr>
 <tr>
 <td style="text-align:left;width: 8em; ">
-BGSP-00428
+BGSP-00166
 </td>
 <td style="text-align:right;width: 12em; ">
 23
 </td>
 <td style="text-align:right;">
-49
+52
 </td>
 <td style="text-align:right;">
 74
 </td>
 <td style="text-align:right;">
-113
+124
 </td>
 <td style="text-align:right;">
 163
@@ -502,16 +665,76 @@ BGSP-00428
 </tr>
 <tr>
 <td style="text-align:left;width: 8em; ">
-BGSP-00028
+BGSP-00177
+</td>
+<td style="text-align:right;width: 12em; ">
+26
+</td>
+<td style="text-align:right;">
+53
+</td>
+<td style="text-align:right;">
+75
+</td>
+<td style="text-align:right;">
+127
+</td>
+<td style="text-align:right;">
+164
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 8em; ">
+BGSP-00192
 </td>
 <td style="text-align:right;width: 12em; ">
 25
 </td>
 <td style="text-align:right;">
-51
+54
 </td>
 <td style="text-align:right;">
-74
+76
+</td>
+<td style="text-align:right;">
+124
+</td>
+<td style="text-align:right;">
+162
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 8em; ">
+BGSP-00193
+</td>
+<td style="text-align:right;width: 12em; ">
+25
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+78
+</td>
+<td style="text-align:right;">
+137
+</td>
+<td style="text-align:right;">
+162
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 8em; ">
+BGSP-00194
+</td>
+<td style="text-align:right;width: 12em; ">
+25
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+75
 </td>
 <td style="text-align:right;">
 118
@@ -562,39 +785,19 @@ BGSP-00269
 </tr>
 <tr>
 <td style="text-align:left;width: 8em; ">
-SP 41255
+BGSP-00425
 </td>
 <td style="text-align:right;width: 12em; ">
-23
+25
 </td>
 <td style="text-align:right;">
-52
+53
 </td>
 <td style="text-align:right;">
-76
+73
 </td>
 <td style="text-align:right;">
-124
-</td>
-<td style="text-align:right;">
-162
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 8em; ">
-BGSP-00166
-</td>
-<td style="text-align:right;width: 12em; ">
-23
-</td>
-<td style="text-align:right;">
-52
-</td>
-<td style="text-align:right;">
-74
-</td>
-<td style="text-align:right;">
-124
+130
 </td>
 <td style="text-align:right;">
 163
@@ -602,19 +805,19 @@ BGSP-00166
 </tr>
 <tr>
 <td style="text-align:left;width: 8em; ">
-BGSP-00145
+BGSP-00428
 </td>
 <td style="text-align:right;width: 12em; ">
-25
+23
 </td>
 <td style="text-align:right;">
-52
+49
 </td>
 <td style="text-align:right;">
-73
+74
 </td>
 <td style="text-align:right;">
-121
+113
 </td>
 <td style="text-align:right;">
 163
@@ -642,246 +845,6 @@ BGSP-00514
 </tr>
 <tr>
 <td style="text-align:left;width: 8em; ">
-BGSP-00748
-</td>
-<td style="text-align:right;width: 12em; ">
-23
-</td>
-<td style="text-align:right;">
-52
-</td>
-<td style="text-align:right;">
-74
-</td>
-<td style="text-align:right;">
-135
-</td>
-<td style="text-align:right;">
-164
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 8em; ">
-BGSP-00425
-</td>
-<td style="text-align:right;width: 12em; ">
-25
-</td>
-<td style="text-align:right;">
-53
-</td>
-<td style="text-align:right;">
-73
-</td>
-<td style="text-align:right;">
-130
-</td>
-<td style="text-align:right;">
-163
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 8em; ">
-BGSP-00177
-</td>
-<td style="text-align:right;width: 12em; ">
-26
-</td>
-<td style="text-align:right;">
-53
-</td>
-<td style="text-align:right;">
-75
-</td>
-<td style="text-align:right;">
-127
-</td>
-<td style="text-align:right;">
-164
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 8em; ">
-BGSP-00070
-</td>
-<td style="text-align:right;width: 12em; ">
-27
-</td>
-<td style="text-align:right;">
-53
-</td>
-<td style="text-align:right;">
-76
-</td>
-<td style="text-align:right;">
-128
-</td>
-<td style="text-align:right;">
-163
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 8em; ">
-BGSP-00755
-</td>
-<td style="text-align:right;width: 12em; ">
-25
-</td>
-<td style="text-align:right;">
-53
-</td>
-<td style="text-align:right;">
-75
-</td>
-<td style="text-align:right;">
-124
-</td>
-<td style="text-align:right;">
-163
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 8em; ">
-BGSP-00126
-</td>
-<td style="text-align:right;width: 12em; ">
-25
-</td>
-<td style="text-align:right;">
-54
-</td>
-<td style="text-align:right;">
-79
-</td>
-<td style="text-align:right;">
-132
-</td>
-<td style="text-align:right;">
-163
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 8em; ">
-BGSP-00067
-</td>
-<td style="text-align:right;width: 12em; ">
-25
-</td>
-<td style="text-align:right;">
-54
-</td>
-<td style="text-align:right;">
-74
-</td>
-<td style="text-align:right;">
-128
-</td>
-<td style="text-align:right;">
-163
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 8em; ">
-BGSP-00192
-</td>
-<td style="text-align:right;width: 12em; ">
-25
-</td>
-<td style="text-align:right;">
-54
-</td>
-<td style="text-align:right;">
-76
-</td>
-<td style="text-align:right;">
-124
-</td>
-<td style="text-align:right;">
-162
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 8em; ">
-BGSP-00759
-</td>
-<td style="text-align:right;width: 12em; ">
-25
-</td>
-<td style="text-align:right;">
-54
-</td>
-<td style="text-align:right;">
-77
-</td>
-<td style="text-align:right;">
-134
-</td>
-<td style="text-align:right;">
-163
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 8em; ">
-BGSP-00072
-</td>
-<td style="text-align:right;width: 12em; ">
-25
-</td>
-<td style="text-align:right;">
-54
-</td>
-<td style="text-align:right;">
-80
-</td>
-<td style="text-align:right;">
-130
-</td>
-<td style="text-align:right;">
-162
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 8em; ">
-BGSP-00088
-</td>
-<td style="text-align:right;width: 12em; ">
-25
-</td>
-<td style="text-align:right;">
-54
-</td>
-<td style="text-align:right;">
-78
-</td>
-<td style="text-align:right;">
-135
-</td>
-<td style="text-align:right;">
-163
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 8em; ">
-SP 6565
-</td>
-<td style="text-align:right;width: 12em; ">
-25
-</td>
-<td style="text-align:right;">
-55
-</td>
-<td style="text-align:right;">
-79
-</td>
-<td style="text-align:right;">
-131
-</td>
-<td style="text-align:right;">
-162
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 8em; ">
 BGSP-00715
 </td>
 <td style="text-align:right;width: 12em; ">
@@ -898,6 +861,26 @@ BGSP-00715
 </td>
 <td style="text-align:right;">
 163
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 8em; ">
+BGSP-00748
+</td>
+<td style="text-align:right;width: 12em; ">
+23
+</td>
+<td style="text-align:right;">
+52
+</td>
+<td style="text-align:right;">
+74
+</td>
+<td style="text-align:right;">
+135
+</td>
+<td style="text-align:right;">
+164
 </td>
 </tr>
 <tr>
@@ -922,19 +905,19 @@ BGSP-00752
 </tr>
 <tr>
 <td style="text-align:left;width: 8em; ">
-BGSP-00194
+BGSP-00755
 </td>
 <td style="text-align:right;width: 12em; ">
 25
 </td>
 <td style="text-align:right;">
-55
+53
 </td>
 <td style="text-align:right;">
 75
 </td>
 <td style="text-align:right;">
-118
+124
 </td>
 <td style="text-align:right;">
 163
@@ -942,22 +925,22 @@ BGSP-00194
 </tr>
 <tr>
 <td style="text-align:left;width: 8em; ">
-BGSP-00193
+BGSP-00759
 </td>
 <td style="text-align:right;width: 12em; ">
 25
 </td>
 <td style="text-align:right;">
-55
+54
 </td>
 <td style="text-align:right;">
-78
+77
 </td>
 <td style="text-align:right;">
-137
+134
 </td>
 <td style="text-align:right;">
-162
+163
 </td>
 </tr>
 <tr>
@@ -980,11 +963,51 @@ BGSP-00779
 161
 </td>
 </tr>
+<tr>
+<td style="text-align:left;width: 8em; ">
+SP 41255
+</td>
+<td style="text-align:right;width: 12em; ">
+23
+</td>
+<td style="text-align:right;">
+52
+</td>
+<td style="text-align:right;">
+76
+</td>
+<td style="text-align:right;">
+124
+</td>
+<td style="text-align:right;">
+162
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 8em; ">
+SP 6565
+</td>
+<td style="text-align:right;width: 12em; ">
+25
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+79
+</td>
+<td style="text-align:right;">
+131
+</td>
+<td style="text-align:right;">
+162
+</td>
+</tr>
 </tbody>
 <tfoot>
 <tr>
-<td style="padding: 0; border:0;" colspan="100%">
-<sup></sup> DPP: Días a primer pimpollo, DPF: Días a primera flor, DCO: Días a Cut Out, DPCA: Días a primer cápsula abierta, DFC: días a fin de ciclo
+<td style="padding: 0; " colspan="100%">
+<span style="font-style: italic;">Referencias:</span> <sup></sup> DPP: Días a primer pimpollo, DPF: Días a primera flor, DCO: Días a Cut Out, DPCA: Días a primer cápsula abierta, DFC: días a fin de ciclo
 </td>
 </tr>
 </tfoot>
@@ -1798,829 +1821,325 @@ Fisher’s L.S.D
 </tr>
 </tfoot>
 </table>
-<table class="table" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
-<caption>
-<span id="tab:tabla-descriptores">Table 1.4: </span>Descriptores morfológicos…
-</caption>
-<thead>
+<div id="table-container-descrip">
+<div class="scrollable-table"><table class="table" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>(\#tab:tabla-descriptores)Descriptores</caption>
+ <thead>
 <tr>
-<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
-</th>
-<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="3">
-<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
-Característica de planta
-</div>
-</th>
-<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="3">
-<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
-Característica de hoja
-</div>
-</th>
-<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
-<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
-Bráctea
-</div>
-</th>
-<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
-<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
-Cápsula
-</div>
-</th>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1"></th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="3"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">Característica de planta</div></th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="3"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">Característica de hoja</div></th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">Bráctea</div></th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">Cápsula</div></th>
 </tr>
-<tr>
-<th style="text-align:left;">
-Entradas
-</th>
-<th style="text-align:left;">
-Forma
-</th>
-<th style="text-align:left;">
-Canopia
-</th>
-<th style="text-align:left;">
-Tipo Floración
-</th>
-<th style="text-align:left;">
-Forma
-</th>
-<th style="text-align:left;">
-Lámina
-</th>
-<th style="text-align:left;">
-Pubescencia
-</th>
-<th style="text-align:left;">
-Tipo
-</th>
-<th style="text-align:left;">
-Forma
-</th>
-</tr>
-</thead>
+  <tr>
+   <th style="text-align:left;"> Entradas </th>
+   <th style="text-align:left;"> Forma </th>
+   <th style="text-align:left;"> Canopia </th>
+   <th style="text-align:left;"> Tipo Floración </th>
+   <th style="text-align:left;"> Forma   </th>
+   <th style="text-align:left;"> Lámina </th>
+   <th style="text-align:left;"> Pubescencia </th>
+   <th style="text-align:left;"> Tipo </th>
+   <th style="text-align:left;"> Forma  </th>
+  </tr>
+ </thead>
 <tbody>
-<tr>
-<td style="text-align:left;width: 6em; ">
-BGSP-00028
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-<td style="text-align:left;">
-Abierta
-</td>
-<td style="text-align:left;">
-Individual
-</td>
-<td style="text-align:left;">
-Palmada
-</td>
-<td style="text-align:left;">
-Plana
-</td>
-<td style="text-align:left;">
-Escasa
-</td>
-<td style="text-align:left;">
-Normal
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 6em; ">
-BGSP-00067
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-<td style="text-align:left;">
-Abierta
-</td>
-<td style="text-align:left;">
-Individual
-</td>
-<td style="text-align:left;">
-Palmada
-</td>
-<td style="text-align:left;">
-Plana
-</td>
-<td style="text-align:left;">
-Escasa
-</td>
-<td style="text-align:left;">
-Normal
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 6em; ">
-BGSP-00070
-</td>
-<td style="text-align:left;">
-Cilíndrica
-</td>
-<td style="text-align:left;">
-Medio
-</td>
-<td style="text-align:left;">
-Medio Agrupada
-</td>
-<td style="text-align:left;">
-Palmada
-</td>
-<td style="text-align:left;">
-Plana
-</td>
-<td style="text-align:left;">
-Media
-</td>
-<td style="text-align:left;">
-Normal
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 6em; ">
-BGSP-00072
-</td>
-<td style="text-align:left;">
-Cilíndrica
-</td>
-<td style="text-align:left;">
-Medio
-</td>
-<td style="text-align:left;">
-Medio Agrupada
-</td>
-<td style="text-align:left;">
-Palmada
-</td>
-<td style="text-align:left;">
-Plana
-</td>
-<td style="text-align:left;">
-Media
-</td>
-<td style="text-align:left;">
-Normal
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 6em; ">
-BGSP-00088
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-<td style="text-align:left;">
-Medio
-</td>
-<td style="text-align:left;">
-Individual
-</td>
-<td style="text-align:left;">
-Palmada
-</td>
-<td style="text-align:left;">
-Plana
-</td>
-<td style="text-align:left;">
-Fuerte
-</td>
-<td style="text-align:left;">
-Normal
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 6em; ">
-BGSP-00126
-</td>
-<td style="text-align:left;">
-Cilíndrica
-</td>
-<td style="text-align:left;">
-Medio
-</td>
-<td style="text-align:left;">
-Medio Agrupada
-</td>
-<td style="text-align:left;">
-Palmada
-</td>
-<td style="text-align:left;">
-Plana
-</td>
-<td style="text-align:left;">
-Escasa
-</td>
-<td style="text-align:left;">
-Normal
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 6em; ">
-BGSP-00145
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-<td style="text-align:left;">
-Medio
-</td>
-<td style="text-align:left;">
-Individual
-</td>
-<td style="text-align:left;">
-Palmada
-</td>
-<td style="text-align:left;">
-Plana
-</td>
-<td style="text-align:left;">
-Media
-</td>
-<td style="text-align:left;">
-Normal
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 6em; ">
-BGSP-00159
-</td>
-<td style="text-align:left;">
-Cilíndrica
-</td>
-<td style="text-align:left;">
-Medio
-</td>
-<td style="text-align:left;">
-Medio Agrupada
-</td>
-<td style="text-align:left;">
-Palmada
-</td>
-<td style="text-align:left;">
-Plana
-</td>
-<td style="text-align:left;">
-Media
-</td>
-<td style="text-align:left;">
-Normal
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 6em; ">
-BGSP-00166
-</td>
-<td style="text-align:left;">
-Cilíndrica
-</td>
-<td style="text-align:left;">
-Compacta
-</td>
-<td style="text-align:left;">
-Agrupada
-</td>
-<td style="text-align:left;">
-Palmada
-</td>
-<td style="text-align:left;">
-Plana
-</td>
-<td style="text-align:left;">
-Media
-</td>
-<td style="text-align:left;">
-Normal
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 6em; ">
-BGSP-00177
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-<td style="text-align:left;">
-Abierta
-</td>
-<td style="text-align:left;">
-Medio Agrupada
-</td>
-<td style="text-align:left;">
-Palmada
-</td>
-<td style="text-align:left;">
-Plana
-</td>
-<td style="text-align:left;">
-Media
-</td>
-<td style="text-align:left;">
-Normal
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 6em; ">
-BGSP-00192
-</td>
-<td style="text-align:left;">
-Cilíndrica
-</td>
-<td style="text-align:left;">
-Medio
-</td>
-<td style="text-align:left;">
-Medio Agrupada
-</td>
-<td style="text-align:left;">
-Palmada
-</td>
-<td style="text-align:left;">
-Plana
-</td>
-<td style="text-align:left;">
-Media
-</td>
-<td style="text-align:left;">
-Normal
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 6em; ">
-BGSP-00193
-</td>
-<td style="text-align:left;">
-Cilíndrica
-</td>
-<td style="text-align:left;">
-Medio
-</td>
-<td style="text-align:left;">
-Medio Agrupada
-</td>
-<td style="text-align:left;">
-Palmada
-</td>
-<td style="text-align:left;">
-Plana
-</td>
-<td style="text-align:left;">
-Media
-</td>
-<td style="text-align:left;">
-Normal
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 6em; ">
-BGSP-00194
-</td>
-<td style="text-align:left;">
-Cilíndrica
-</td>
-<td style="text-align:left;">
-Compacta
-</td>
-<td style="text-align:left;">
-Agrupada
-</td>
-<td style="text-align:left;">
-Palmada
-</td>
-<td style="text-align:left;">
-Plana
-</td>
-<td style="text-align:left;">
-Media
-</td>
-<td style="text-align:left;">
-Normal
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 6em; ">
-BGSP-00207
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-<td style="text-align:left;">
-Abierta
-</td>
-<td style="text-align:left;">
-Individual
-</td>
-<td style="text-align:left;">
-Palmada
-</td>
-<td style="text-align:left;">
-Plana
-</td>
-<td style="text-align:left;">
-Fuerte
-</td>
-<td style="text-align:left;">
-Normal
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 6em; ">
-BGSP-00269
-</td>
-<td style="text-align:left;">
-Cilíndrica
-</td>
-<td style="text-align:left;">
-Medio
-</td>
-<td style="text-align:left;">
-Medio Agrupada
-</td>
-<td style="text-align:left;">
-Palmada
-</td>
-<td style="text-align:left;">
-Plana
-</td>
-<td style="text-align:left;">
-Media
-</td>
-<td style="text-align:left;">
-Normal
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 6em; ">
-BGSP-00425
-</td>
-<td style="text-align:left;">
-Cilíndrica
-</td>
-<td style="text-align:left;">
-Medio
-</td>
-<td style="text-align:left;">
-Medio Agrupada
-</td>
-<td style="text-align:left;">
-Palmada
-</td>
-<td style="text-align:left;">
-Plana
-</td>
-<td style="text-align:left;">
-Media
-</td>
-<td style="text-align:left;">
-Normal
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 6em; ">
-BGSP-00428
-</td>
-<td style="text-align:left;">
-Cilíndrica
-</td>
-<td style="text-align:left;">
-Medio
-</td>
-<td style="text-align:left;">
-Medio Agrupada
-</td>
-<td style="text-align:left;">
-Palmada
-</td>
-<td style="text-align:left;">
-Plana
-</td>
-<td style="text-align:left;">
-Media
-</td>
-<td style="text-align:left;">
-Normal
-</td>
-<td style="text-align:left;">
-Redonda
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 6em; ">
-BGSP-00514
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-<td style="text-align:left;">
-Abierta
-</td>
-<td style="text-align:left;">
-Individual
-</td>
-<td style="text-align:left;">
-Digitada (Okra)
-</td>
-<td style="text-align:left;">
-Plana
-</td>
-<td style="text-align:left;">
-Media
-</td>
-<td style="text-align:left;">
-Normal
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 6em; ">
-BGSP-00715
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-<td style="text-align:left;">
-Medio
-</td>
-<td style="text-align:left;">
-Medio Agrupada
-</td>
-<td style="text-align:left;">
-Palmada
-</td>
-<td style="text-align:left;">
-Plana
-</td>
-<td style="text-align:left;">
-Fuerte
-</td>
-<td style="text-align:left;">
-Normal
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 6em; ">
-BGSP-00748
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-<td style="text-align:left;">
-Medio
-</td>
-<td style="text-align:left;">
-Medio Agrupada
-</td>
-<td style="text-align:left;">
-Palmada
-</td>
-<td style="text-align:left;">
-Plana
-</td>
-<td style="text-align:left;">
-Media
-</td>
-<td style="text-align:left;">
-Normal
-</td>
-<td style="text-align:left;">
-Elíptica
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 6em; ">
-BGSP-00752
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-<td style="text-align:left;">
-Medio
-</td>
-<td style="text-align:left;">
-Medio Agrupada
-</td>
-<td style="text-align:left;">
-Palmada
-</td>
-<td style="text-align:left;">
-Plana
-</td>
-<td style="text-align:left;">
-Media
-</td>
-<td style="text-align:left;">
-Normal
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 6em; ">
-BGSP-00755
-</td>
-<td style="text-align:left;">
-Cilíndrica
-</td>
-<td style="text-align:left;">
-Medio
-</td>
-<td style="text-align:left;">
-Medio Agrupadas
-</td>
-<td style="text-align:left;">
-Palmada
-</td>
-<td style="text-align:left;">
-Plana
-</td>
-<td style="text-align:left;">
-Media
-</td>
-<td style="text-align:left;">
-Normal
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 6em; ">
-BGSP-00759
-</td>
-<td style="text-align:left;">
-Cilíndrica
-</td>
-<td style="text-align:left;">
-Abierta
-</td>
-<td style="text-align:left;">
-Medio Agrupada
-</td>
-<td style="text-align:left;">
-Palmada
-</td>
-<td style="text-align:left;">
-En copa
-</td>
-<td style="text-align:left;">
-Media
-</td>
-<td style="text-align:left;">
-Normal
-</td>
-<td style="text-align:left;">
-Redonda
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 6em; ">
-BGSP-00779
-</td>
-<td style="text-align:left;">
-Cilíndrica
-</td>
-<td style="text-align:left;">
-Medio
-</td>
-<td style="text-align:left;">
-Medio Agrupada
-</td>
-<td style="text-align:left;">
-Palmada
-</td>
-<td style="text-align:left;">
-Plana
-</td>
-<td style="text-align:left;">
-Media
-</td>
-<td style="text-align:left;">
-Normal
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 6em; ">
-SP 41255
-</td>
-<td style="text-align:left;">
-Cilíndrica
-</td>
-<td style="text-align:left;">
-Medio
-</td>
-<td style="text-align:left;">
-Medio Agrupada
-</td>
-<td style="text-align:left;">
-Palmada
-</td>
-<td style="text-align:left;">
-Plana
-</td>
-<td style="text-align:left;">
-Media
-</td>
-<td style="text-align:left;">
-Normal
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 6em; ">
-SP 6565
-</td>
-<td style="text-align:left;">
-Cilíndrica
-</td>
-<td style="text-align:left;">
-Medio
-</td>
-<td style="text-align:left;">
-Medio Agrupada
-</td>
-<td style="text-align:left;">
-Palmada
-</td>
-<td style="text-align:left;">
-Plana
-</td>
-<td style="text-align:left;">
-Media
-</td>
-<td style="text-align:left;">
-Normal
-</td>
-<td style="text-align:left;">
-Cónica
-</td>
-</tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00028 </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> Abierta </td>
+   <td style="text-align:left;"> Individual </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Escasa </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00067 </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> Abierta </td>
+   <td style="text-align:left;"> Individual </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Escasa </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00070 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00072 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00088 </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Individual </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Fuerte </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00126 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Escasa </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00145 </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Individual </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00159 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00166 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Compacta </td>
+   <td style="text-align:left;"> Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00177 </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> Abierta </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00192 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00193 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00194 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Compacta </td>
+   <td style="text-align:left;"> Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00207 </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> Abierta </td>
+   <td style="text-align:left;"> Individual </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Fuerte </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00269 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00425 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00428 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Redonda </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00514 </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> Abierta </td>
+   <td style="text-align:left;"> Individual </td>
+   <td style="text-align:left;"> Digitada (Okra) </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00715 </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Fuerte </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00748 </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Elíptica </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00752 </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00755 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupadas </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00759 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Abierta </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> En copa </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Redonda </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00779 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> SP 41255 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> SP 6565 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+  </tr>
 </tbody>
 <tfoot>
 <tr>
-<td style="padding: 0; border:0;" colspan="100%">
-<sup></sup> aquí footnote
-</td>
+<td style = 'padding: 0; border:0;' colspan='100%'><sup></sup> aquí footnote</td>
 </tr>
 </tfoot>
-</table>
+</table></div>
+</div>
+<button type="button" onclick="openTableInNewWindow(&#39;table-container-descrip&#39;)">Ver tabla en ventana más grande</button>
 <p>Considerar colocar los siguiente datos obtenidos del mapeo:</p>
 <p>Altura N° nudos totales</p>
 <p>N° ramas vegetativas</p>
@@ -2633,7 +2152,7 @@ Cónica
 <h3><span class="header-section-number">1.4.3</span> Componentes del rendimiento y calidad de fibra<a href="1-rmd-basics.html#componentes-del-rendimiento-y-calidad-de-fibra" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <table class="table table-striped table-hover table-condensed table-responsive" style="color: black; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:tabla-rend-calidad">Table 1.5: </span>Valores medios, error estándar (entre paréntesis) y prueba L.S.D. (diferencia mínima significativa) de Fisher para rendimiento y sus componentes
+<span id="tab:tabla-rend-calidad">Table 1.4: </span>Valores medios, error estándar (entre paréntesis) y prueba L.S.D. (diferencia mínima significativa) de Fisher para rendimiento y sus componentes
 </caption>
 <thead>
 <tr>
@@ -3255,10 +2774,10 @@ Fisher’s L.S.D
 </tr>
 </tfoot>
 </table>
-<p>Las entradas de algodón mostraron diferencias significativas en todos los rasgos relacionados con el rendimiento y la calidad de la fibra (p &lt; 0.05, Tabla <a href="1-rmd-basics.html#tab:table-charac">1.6</a>).</p>
+<p>Las entradas de algodón mostraron diferencias significativas en todos los rasgos relacionados con el rendimiento y la calidad de la fibra (p &lt; 0.05, Tabla <a href="1-rmd-basics.html#tab:table-charac">1.5</a>).</p>
 <table class="table table-striped table-hover table-condensed table-responsive" style="color: black; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:table-charac">Table 1.6: </span>Valores medios, error estándar (entre paréntesis) y prueba L.S.D. (diferencia mínima significativa) de Fisher para rendimiento de fibra, sus componentes y calidad.
+<span id="tab:table-charac">Table 1.5: </span>Valores medios, error estándar (entre paréntesis) y prueba L.S.D. (diferencia mínima significativa) de Fisher para rendimiento de fibra, sus componentes y calidad.
 </caption>
 <thead>
 <tr>
@@ -3774,7 +3293,7 @@ Fisher’s L.S.D
 <tfoot>
 <tr>
 <td style="padding: 0; border:0;" colspan="100%">
-<sup></sup> RB: Seed cotton yield in g, LY: Lint yield in g, LP: Lint percentage in %, BW: Boll weight in g, BN: Boll number <br /> per plant, SI: Seed index in g, LI: Lint index in g, SNPB: Seed number per boll, FL: Fibre length in mm, <br /> FS: Fibre strength g tex<sup>-1</sup>, Mic: Micronaire, FU: Fibre uniformity in %.
+<sup></sup> RB: Seed cotton yield in g, LY: Lint yield in g, LP: Lint percentage in %, BW: Boll weight in g, BN: Boll number per plant, SI: Seed index in g, LI: Lint index in g, SNPB: Seed number per boll, FL: Fibre length in mm, FS: Fibre strength g tex<sup>-1</sup>, Mic: Micronaire, FU: Fibre uniformity in %.
 </td>
 </tr>
 </tfoot>
@@ -3789,9 +3308,9 @@ Figure 1.1: Biplot del análisis de componentes principales con puntos que repre
 </p>
 </div>
 <p>En particular, las entradas BGSP-00166 y SP-41255 presentaron más contraste en cuanto a los rasgos medidos. Estas accesiones mostraron valores diferentes para la mayoría de los rasgos medidos relacionados tanto con el rendimiento como con la calidad de la fibra. Por lo tanto, seleccionamos estas accesiones para realizar un cruce biparental y generar una población segregante para estimar los parámetros genéticos y, a continuación, seleccionar fenotipos prometedores para el rendimiento y los rasgos relacionados con la calidad.</p>
-<table class="table" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0;">
 <caption>
-<span id="tab:correlation-greenhouse">Table 1.7: </span>Correlación de Pearson entre los rasgos evaluados en el germoplasma de colección
+<span id="tab:correlation-greenhouse">Table 1.6: </span>Correlación de Pearson entre los rasgos evaluados en el germoplasma de colección
 </caption>
 <thead>
 <tr>
@@ -4209,8 +3728,8 @@ IU
 </tbody>
 <tfoot>
 <tr>
-<td style="padding: 0; border:0;" colspan="100%">
-<sup></sup> <em>p &lt; 0.05, <strong>p &lt; 0.01 and </strong></em> p &lt; 0.001. RB: Rendimiento de algodón bruto en g, RF: Rendimiento de fibra en g, RFD: Rendimiento de fibra al desmote en %, PC: Peso promedio de capullos en g, NC: Número de capullos por planta, IS: Índice de semilla en g, IF: Índice de fibra g, NSC: Número de semilla por capullo, UHML: Longitud de la fibra en mm, Str: Resistencia de la fibra en g tex<sup>-1</sup>, Mic: Micronaire, IU: Índice de uniformidad de fibras %.
+<td style="padding: 0; " colspan="100%">
+<span style="font-style: italic;">Referencias:</span> <sup></sup> <em>p &lt; 0.05, <strong>p &lt; 0.01 and </strong></em> p &lt; 0.001. RB: Rendimiento de algodón bruto en g, <br> RF: Rendimiento de fibra en g, RFD: Rendimiento de fibra al desmote en %, <br> PC: Peso promedio de capullos en g, NC: Número de capullos por planta, <br> IS: Índice de semilla en g, IF: Índice de fibra g, NSC: Número de semilla por capullo, <br> UHML: Longitud de la fibra en mm, Str: Resistencia de la fibra en g tex<sup>-1</sup>, Mic: <br> Micronaire, IU: Índice de uniformidad de fibras %.
 </td>
 </tr>
 </tfoot>
@@ -4225,7 +3744,895 @@ IU
 </ul></li>
 </ul></li>
 </ul>
-<p>Varias correlaciones fenotípicas fueron estadísticamente significativas (Tabla <a href="1-rmd-basics.html#tab:correlation-greenhouse">1.7</a>). Para el análisis, se consideraron correlaciones fuertes los valores superiores a 0,80, moderadas las comprendidas entre 0,40 y 0,80, y bajas las inferiores a 0,40. El RF mostró una fuerte correlación positiva con el NC. También mostró una correlación positiva moderada con PC. La RFD mostró una correlación positiva moderada con el RF y el NC. Sin embargo, mostró una correlación negativa moderada con IS. El UHML mostró correlaciones negativas moderadas con el RF, lo que indica que, a medida que aumenta el rendimiento de fibra, disminuye la longitud de la misma.</p>
+<p>Varias correlaciones fenotípicas fueron estadísticamente significativas (Tabla <a href="1-rmd-basics.html#tab:correlation-greenhouse">1.6</a>). Para el análisis, se consideraron correlaciones fuertes los valores superiores a 0,80, moderadas las comprendidas entre 0,40 y 0,80, y bajas las inferiores a 0,40. El RF mostró una fuerte correlación positiva con el NC. También mostró una correlación positiva moderada con PC. La RFD mostró una correlación positiva moderada con el RF y el NC. Sin embargo, mostró una correlación negativa moderada con IS. El UHML mostró correlaciones negativas moderadas con el RF, lo que indica que, a medida que aumenta el rendimiento de fibra, disminuye la longitud de la misma.</p>
+<div id="table-container-conjuntos">
+<div class="scrollable-table"><table class="table" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>(\#tab:tabla-datos-conjuntos)Datos conjuntos...</caption>
+ <thead>
+<tr>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1"></th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="5"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">Fenología</div></th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="3"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">Característica de planta</div></th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="3"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">Característica de hoja</div></th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">Bráctea</div></th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">Cápsula</div></th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="12"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">Características morfológicas, rendimiento y sus componentes</div></th>
+</tr>
+  <tr>
+   <th style="text-align:left;"> Entradas </th>
+   <th style="text-align:left;"> DPP </th>
+   <th style="text-align:left;"> DPF </th>
+   <th style="text-align:left;"> DCO </th>
+   <th style="text-align:left;"> DPCA </th>
+   <th style="text-align:left;"> DFC </th>
+   <th style="text-align:left;"> Forma </th>
+   <th style="text-align:left;"> Canopia </th>
+   <th style="text-align:left;"> Tipo Floración </th>
+   <th style="text-align:left;"> Forma </th>
+   <th style="text-align:left;"> Lámina </th>
+   <th style="text-align:left;"> Pubescencia </th>
+   <th style="text-align:left;"> Tipo </th>
+   <th style="text-align:left;"> Forma </th>
+   <th style="text-align:left;"> AP </th>
+   <th style="text-align:left;"> NN </th>
+   <th style="text-align:left;"> NRV </th>
+   <th style="text-align:left;"> NRR </th>
+   <th style="text-align:left;"> N1RR </th>
+   <th style="text-align:left;"> A1RR </th>
+   <th style="text-align:left;"> D1P </th>
+   <th style="text-align:left;"> RB </th>
+   <th style="text-align:left;"> RF </th>
+   <th style="text-align:left;"> RFD </th>
+   <th style="text-align:left;"> PC </th>
+   <th style="text-align:left;"> NC </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00028 </td>
+   <td style="text-align:left;"> 25 </td>
+   <td style="text-align:left;"> 51 </td>
+   <td style="text-align:left;"> 74 </td>
+   <td style="text-align:left;"> 118 </td>
+   <td style="text-align:left;"> 163 </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> Abierta </td>
+   <td style="text-align:left;"> Individual </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Escasa </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> 106.3 (5.5) </td>
+   <td style="text-align:left;"> 13.3 (0.9) </td>
+   <td style="text-align:left;"> 1.0 (0.6) </td>
+   <td style="text-align:left;"> 10.7 (0.7) </td>
+   <td style="text-align:left;"> 3.7 (0.3) </td>
+   <td style="text-align:left;"> 25.3 (0.7) </td>
+   <td style="text-align:left;"> 9.3 (0.7) </td>
+   <td style="text-align:left;"> 24.1 (2.0) </td>
+   <td style="text-align:left;"> 8.7 (0.6) </td>
+   <td style="text-align:left;"> 36.5 (0.7) </td>
+   <td style="text-align:left;"> 4.3 (0.3) </td>
+   <td style="text-align:left;"> 5.7 (0.3) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00067 </td>
+   <td style="text-align:left;"> 25 </td>
+   <td style="text-align:left;"> 54 </td>
+   <td style="text-align:left;"> 74 </td>
+   <td style="text-align:left;"> 128 </td>
+   <td style="text-align:left;"> 163 </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> Abierta </td>
+   <td style="text-align:left;"> Individual </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Escasa </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> 102.0 (4.0) </td>
+   <td style="text-align:left;"> 14.7 (0.7) </td>
+   <td style="text-align:left;"> 1.3 (0.3) </td>
+   <td style="text-align:left;"> 11.0 (0.6) </td>
+   <td style="text-align:left;"> 4.7 (0.3) </td>
+   <td style="text-align:left;"> 27.0 (1.7) </td>
+   <td style="text-align:left;"> 11.0 (1.5) </td>
+   <td style="text-align:left;"> 23.3 (3.3) </td>
+   <td style="text-align:left;"> 8.2 (1.0) </td>
+   <td style="text-align:left;"> 36.0 (1.9) </td>
+   <td style="text-align:left;"> 2.8 (0.2) </td>
+   <td style="text-align:left;"> 8.3 (1.2) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00070 </td>
+   <td style="text-align:left;"> 27 </td>
+   <td style="text-align:left;"> 53 </td>
+   <td style="text-align:left;"> 76 </td>
+   <td style="text-align:left;"> 128 </td>
+   <td style="text-align:left;"> 163 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> 109.3 (0.3) </td>
+   <td style="text-align:left;"> 14.3 (0.3) </td>
+   <td style="text-align:left;"> 1.3 (0.3) </td>
+   <td style="text-align:left;"> 9.7 (0.3) </td>
+   <td style="text-align:left;"> 5.7 (0.7) </td>
+   <td style="text-align:left;"> 40.7 (4.2) </td>
+   <td style="text-align:left;"> 9.7 (1.9) </td>
+   <td style="text-align:left;"> 19.9 (1.3) </td>
+   <td style="text-align:left;"> 7.7 (0.8) </td>
+   <td style="text-align:left;"> 39.6 (0.8) </td>
+   <td style="text-align:left;"> 3.4 (0.3) </td>
+   <td style="text-align:left;"> 6.0 (0.6) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00072 </td>
+   <td style="text-align:left;"> 25 </td>
+   <td style="text-align:left;"> 54 </td>
+   <td style="text-align:left;"> 80 </td>
+   <td style="text-align:left;"> 130 </td>
+   <td style="text-align:left;"> 162 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> 113.3 (4.3) </td>
+   <td style="text-align:left;"> 17.0 (0.0) </td>
+   <td style="text-align:left;"> 1.3 (0.3) </td>
+   <td style="text-align:left;"> 13.3 (0.3) </td>
+   <td style="text-align:left;"> 4.7 (0.3) </td>
+   <td style="text-align:left;"> 27.3 (3.2) </td>
+   <td style="text-align:left;"> 7.3 (1.8) </td>
+   <td style="text-align:left;"> 26.3 (2.2) </td>
+   <td style="text-align:left;"> 9.8 (0.9) </td>
+   <td style="text-align:left;"> 38.3 (0.6) </td>
+   <td style="text-align:left;"> 3.5 (0.4) </td>
+   <td style="text-align:left;"> 7.7 (0.3) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00088 </td>
+   <td style="text-align:left;"> 25 </td>
+   <td style="text-align:left;"> 54 </td>
+   <td style="text-align:left;"> 78 </td>
+   <td style="text-align:left;"> 135 </td>
+   <td style="text-align:left;"> 163 </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Individual </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Fuerte </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> 104.3 (5.8) </td>
+   <td style="text-align:left;"> 14.3 (0.7) </td>
+   <td style="text-align:left;"> 1.7 (0.3) </td>
+   <td style="text-align:left;"> 10.7 (0.3) </td>
+   <td style="text-align:left;"> 4.7 (0.3) </td>
+   <td style="text-align:left;"> 28.3 (2.7) </td>
+   <td style="text-align:left;"> 14.3 (1.2) </td>
+   <td style="text-align:left;"> 31.0 (3.2) </td>
+   <td style="text-align:left;"> 11.3 (1.1) </td>
+   <td style="text-align:left;"> 37.1 (0.4) </td>
+   <td style="text-align:left;"> 4.4 (0.2) </td>
+   <td style="text-align:left;"> 7.0 (0.6) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00126 </td>
+   <td style="text-align:left;"> 25 </td>
+   <td style="text-align:left;"> 54 </td>
+   <td style="text-align:left;"> 79 </td>
+   <td style="text-align:left;"> 132 </td>
+   <td style="text-align:left;"> 163 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Escasa </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> 126.3 (3.8) </td>
+   <td style="text-align:left;"> 14.9 (0.2) </td>
+   <td style="text-align:left;"> 1.5 (0.2) </td>
+   <td style="text-align:left;"> 11.3 (0.3) </td>
+   <td style="text-align:left;"> 4.6 (0.1) </td>
+   <td style="text-align:left;"> 37.4 (1.4) </td>
+   <td style="text-align:left;"> 8.9 (0.9) </td>
+   <td style="text-align:left;"> 16.0 (0.6) </td>
+   <td style="text-align:left;"> 6.6 (0.3) </td>
+   <td style="text-align:left;"> 42.9 (0.3) </td>
+   <td style="text-align:left;"> 2.7 (0.2) </td>
+   <td style="text-align:left;"> 6.0 (0.3) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00145 </td>
+   <td style="text-align:left;"> 25 </td>
+   <td style="text-align:left;"> 52 </td>
+   <td style="text-align:left;"> 73 </td>
+   <td style="text-align:left;"> 121 </td>
+   <td style="text-align:left;"> 163 </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Individual </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> 89.0 (4.5) </td>
+   <td style="text-align:left;"> 14.3 (0.3) </td>
+   <td style="text-align:left;"> 1.0 (0.6) </td>
+   <td style="text-align:left;"> 11.3 (0.3) </td>
+   <td style="text-align:left;"> 4.0 (0.0) </td>
+   <td style="text-align:left;"> 25.7 (0.9) </td>
+   <td style="text-align:left;"> 9.7 (1.8) </td>
+   <td style="text-align:left;"> 16.1 (3.1) </td>
+   <td style="text-align:left;"> 6.1 (1.1) </td>
+   <td style="text-align:left;"> 38.6 (0.7) </td>
+   <td style="text-align:left;"> 3.6 (0.6) </td>
+   <td style="text-align:left;"> 4.7 (0.9) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00159 </td>
+   <td style="text-align:left;"> 22 </td>
+   <td style="text-align:left;"> 49 </td>
+   <td style="text-align:left;"> 74 </td>
+   <td style="text-align:left;"> 114 </td>
+   <td style="text-align:left;"> 161 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> 104.3 (3.6) </td>
+   <td style="text-align:left;"> 14.3 (0.3) </td>
+   <td style="text-align:left;"> 1.1 (0.2) </td>
+   <td style="text-align:left;"> 11.0 (0.2) </td>
+   <td style="text-align:left;"> 4.3 (0.2) </td>
+   <td style="text-align:left;"> 31.8 (1.9) </td>
+   <td style="text-align:left;"> 11.4 (0.6) </td>
+   <td style="text-align:left;"> 14.3 (0.6) </td>
+   <td style="text-align:left;"> 5.1 (0.2) </td>
+   <td style="text-align:left;"> 36.8 (0.6) </td>
+   <td style="text-align:left;"> 2.7 (0.1) </td>
+   <td style="text-align:left;"> 5.2 (0.2) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00166 </td>
+   <td style="text-align:left;"> 23 </td>
+   <td style="text-align:left;"> 52 </td>
+   <td style="text-align:left;"> 74 </td>
+   <td style="text-align:left;"> 124 </td>
+   <td style="text-align:left;"> 163 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Compacta </td>
+   <td style="text-align:left;"> Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> 109.0 (3.0) </td>
+   <td style="text-align:left;"> 15.2 (0.2) </td>
+   <td style="text-align:left;"> 0.8 (0.2) </td>
+   <td style="text-align:left;"> 11.8 (0.3) </td>
+   <td style="text-align:left;"> 4.4 (0.2) </td>
+   <td style="text-align:left;"> 30.6 (1.2) </td>
+   <td style="text-align:left;"> 3.9 (0.6) </td>
+   <td style="text-align:left;"> 18.2 (0.5) </td>
+   <td style="text-align:left;"> 5.5 (0.2) </td>
+   <td style="text-align:left;"> 31.1 (0.4) </td>
+   <td style="text-align:left;"> 3.6 (0.1) </td>
+   <td style="text-align:left;"> 5.1 (0.2) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00177 </td>
+   <td style="text-align:left;"> 26 </td>
+   <td style="text-align:left;"> 53 </td>
+   <td style="text-align:left;"> 75 </td>
+   <td style="text-align:left;"> 127 </td>
+   <td style="text-align:left;"> 164 </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> Abierta </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> 103.7 (3.3) </td>
+   <td style="text-align:left;"> 14.3 (0.3) </td>
+   <td style="text-align:left;"> 1.7 (0.3) </td>
+   <td style="text-align:left;"> 10.7 (0.3) </td>
+   <td style="text-align:left;"> 4.7 (0.3) </td>
+   <td style="text-align:left;"> 32.7 (3.4) </td>
+   <td style="text-align:left;"> 13.7 (1.7) </td>
+   <td style="text-align:left;"> 24.5 (2.2) </td>
+   <td style="text-align:left;"> 7.9 (0.8) </td>
+   <td style="text-align:left;"> 33.0 (0.4) </td>
+   <td style="text-align:left;"> 4.2 (0.8) </td>
+   <td style="text-align:left;"> 6.0 (0.6) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00192 </td>
+   <td style="text-align:left;"> 25 </td>
+   <td style="text-align:left;"> 54 </td>
+   <td style="text-align:left;"> 76 </td>
+   <td style="text-align:left;"> 124 </td>
+   <td style="text-align:left;"> 162 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> 101.3 (5.8) </td>
+   <td style="text-align:left;"> 15.0 (0.0) </td>
+   <td style="text-align:left;"> 1.7 (0.3) </td>
+   <td style="text-align:left;"> 11.0 (0.0) </td>
+   <td style="text-align:left;"> 5.0 (0.0) </td>
+   <td style="text-align:left;"> 29.0 (2.1) </td>
+   <td style="text-align:left;"> 11.3 (0.9) </td>
+   <td style="text-align:left;"> 18.7 (3.3) </td>
+   <td style="text-align:left;"> 7.1 (1.1) </td>
+   <td style="text-align:left;"> 37.9 (2.0) </td>
+   <td style="text-align:left;"> 3.3 (0.4) </td>
+   <td style="text-align:left;"> 5.7 (0.3) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00193 </td>
+   <td style="text-align:left;"> 25 </td>
+   <td style="text-align:left;"> 55 </td>
+   <td style="text-align:left;"> 78 </td>
+   <td style="text-align:left;"> 137 </td>
+   <td style="text-align:left;"> 162 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> 106.7 (5.5) </td>
+   <td style="text-align:left;"> 15.3 (0.3) </td>
+   <td style="text-align:left;"> 2.7 (0.3) </td>
+   <td style="text-align:left;"> 11.3 (0.3) </td>
+   <td style="text-align:left;"> 5.0 (0.0) </td>
+   <td style="text-align:left;"> 30.7 (0.9) </td>
+   <td style="text-align:left;"> 8.0 (1.7) </td>
+   <td style="text-align:left;"> 29.4 (3.9) </td>
+   <td style="text-align:left;"> 10.9 (1.4) </td>
+   <td style="text-align:left;"> 38.1 (1.8) </td>
+   <td style="text-align:left;"> 4.2 (0.6) </td>
+   <td style="text-align:left;"> 7.0 (0.0) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00194 </td>
+   <td style="text-align:left;"> 25 </td>
+   <td style="text-align:left;"> 55 </td>
+   <td style="text-align:left;"> 75 </td>
+   <td style="text-align:left;"> 118 </td>
+   <td style="text-align:left;"> 163 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Compacta </td>
+   <td style="text-align:left;"> Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> 92.7 (3.2) </td>
+   <td style="text-align:left;"> 14.7 (0.3) </td>
+   <td style="text-align:left;"> 2.3 (0.3) </td>
+   <td style="text-align:left;"> 10.7 (0.3) </td>
+   <td style="text-align:left;"> 5.0 (0.0) </td>
+   <td style="text-align:left;"> 31.3 (0.7) </td>
+   <td style="text-align:left;"> 5.7 (3.2) </td>
+   <td style="text-align:left;"> 24.0 (3.1) </td>
+   <td style="text-align:left;"> 9.6 (1.4) </td>
+   <td style="text-align:left;"> 40.9 (0.8) </td>
+   <td style="text-align:left;"> 3.7 (0.4) </td>
+   <td style="text-align:left;"> 6.7 (0.9) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00207 </td>
+   <td style="text-align:left;"> 23 </td>
+   <td style="text-align:left;"> 52 </td>
+   <td style="text-align:left;"> 79 </td>
+   <td style="text-align:left;"> 135 </td>
+   <td style="text-align:left;"> 164 </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> Abierta </td>
+   <td style="text-align:left;"> Individual </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Fuerte </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> 105.0 (8.5) </td>
+   <td style="text-align:left;"> 15.3 (0.2) </td>
+   <td style="text-align:left;"> 0.7 (0.2) </td>
+   <td style="text-align:left;"> 12.2 (0.2) </td>
+   <td style="text-align:left;"> 4.2 (0.1) </td>
+   <td style="text-align:left;"> 29.4 (0.8) </td>
+   <td style="text-align:left;"> 10.1 (1.0) </td>
+   <td style="text-align:left;"> 16.2 (0.6) </td>
+   <td style="text-align:left;"> 6.7 (0.2) </td>
+   <td style="text-align:left;"> 43.6 (0.5) </td>
+   <td style="text-align:left;"> 2.8 (0.1) </td>
+   <td style="text-align:left;"> 5.8 (0.2) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00269 </td>
+   <td style="text-align:left;"> 23 </td>
+   <td style="text-align:left;"> 52 </td>
+   <td style="text-align:left;"> 75 </td>
+   <td style="text-align:left;"> 133 </td>
+   <td style="text-align:left;"> 163 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> 113.0 (3.7) </td>
+   <td style="text-align:left;"> 14.7 (0.2) </td>
+   <td style="text-align:left;"> 1.2 (0.2) </td>
+   <td style="text-align:left;"> 11.2 (0.2) </td>
+   <td style="text-align:left;"> 4.4 (0.1) </td>
+   <td style="text-align:left;"> 34.2 (1.6) </td>
+   <td style="text-align:left;"> 8.3 (0.8) </td>
+   <td style="text-align:left;"> 16.9 (0.5) </td>
+   <td style="text-align:left;"> 7.1 (0.3) </td>
+   <td style="text-align:left;"> 43.7 (0.5) </td>
+   <td style="text-align:left;"> 2.9 (0.2) </td>
+   <td style="text-align:left;"> 6.1 (0.3) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00425 </td>
+   <td style="text-align:left;"> 25 </td>
+   <td style="text-align:left;"> 53 </td>
+   <td style="text-align:left;"> 73 </td>
+   <td style="text-align:left;"> 130 </td>
+   <td style="text-align:left;"> 163 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> 105.2 (3.3) </td>
+   <td style="text-align:left;"> 13.8 (0.1) </td>
+   <td style="text-align:left;"> 0.9 (0.3) </td>
+   <td style="text-align:left;"> 10.8 (0.1) </td>
+   <td style="text-align:left;"> 4.0 (0.0) </td>
+   <td style="text-align:left;"> 25.5 (0.7) </td>
+   <td style="text-align:left;"> 8.4 (0.9) </td>
+   <td style="text-align:left;"> 15.1 (0.5) </td>
+   <td style="text-align:left;"> 4.6 (0.2) </td>
+   <td style="text-align:left;"> 31.5 (0.3) </td>
+   <td style="text-align:left;"> 2.6 (0.1) </td>
+   <td style="text-align:left;"> 5.8 (0.3) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00428 </td>
+   <td style="text-align:left;"> 23 </td>
+   <td style="text-align:left;"> 49 </td>
+   <td style="text-align:left;"> 74 </td>
+   <td style="text-align:left;"> 113 </td>
+   <td style="text-align:left;"> 163 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Redonda </td>
+   <td style="text-align:left;"> 105.3 (7.3) </td>
+   <td style="text-align:left;"> 15.3 (0.3) </td>
+   <td style="text-align:left;"> 0.7 (0.3) </td>
+   <td style="text-align:left;"> 12.0 (0.6) </td>
+   <td style="text-align:left;"> 4.3 (0.3) </td>
+   <td style="text-align:left;"> 28.0 (2.9) </td>
+   <td style="text-align:left;"> 8.7 (2.4) </td>
+   <td style="text-align:left;"> 21.4 (3.6) </td>
+   <td style="text-align:left;"> 8.7 (1.4) </td>
+   <td style="text-align:left;"> 40.1 (0.4) </td>
+   <td style="text-align:left;"> 4.3 (0.7) </td>
+   <td style="text-align:left;"> 5.0 (0.6) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00514 </td>
+   <td style="text-align:left;"> 23 </td>
+   <td style="text-align:left;"> 52 </td>
+   <td style="text-align:left;"> 76 </td>
+   <td style="text-align:left;"> 117 </td>
+   <td style="text-align:left;"> 161 </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> Abierta </td>
+   <td style="text-align:left;"> Individual </td>
+   <td style="text-align:left;"> Digitada (Okra) </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> 99.0 (8.0) </td>
+   <td style="text-align:left;"> 16.0 (0.0) </td>
+   <td style="text-align:left;"> 2.7 (0.3) </td>
+   <td style="text-align:left;"> 12.3 (0.3) </td>
+   <td style="text-align:left;"> 4.7 (0.3) </td>
+   <td style="text-align:left;"> 25.0 (1.5) </td>
+   <td style="text-align:left;"> 11.7 (1.7) </td>
+   <td style="text-align:left;"> 28.0 (2.8) </td>
+   <td style="text-align:left;"> 11.7 (1.2) </td>
+   <td style="text-align:left;"> 42.3 (0.4) </td>
+   <td style="text-align:left;"> 4.2 (0.2) </td>
+   <td style="text-align:left;"> 6.7 (0.9) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00715 </td>
+   <td style="text-align:left;"> 24 </td>
+   <td style="text-align:left;"> 55 </td>
+   <td style="text-align:left;"> 78 </td>
+   <td style="text-align:left;"> 134 </td>
+   <td style="text-align:left;"> 163 </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Fuerte </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> 102.0 (8.5) </td>
+   <td style="text-align:left;"> 14.7 (0.9) </td>
+   <td style="text-align:left;"> 0.3 (0.3) </td>
+   <td style="text-align:left;"> 11.7 (0.9) </td>
+   <td style="text-align:left;"> 4.0 (0.0) </td>
+   <td style="text-align:left;"> 27.3 (2.3) </td>
+   <td style="text-align:left;"> 13.0 (1.2) </td>
+   <td style="text-align:left;"> 24.0 (3.6) </td>
+   <td style="text-align:left;"> 9.8 (1.2) </td>
+   <td style="text-align:left;"> 41.6 (1.2) </td>
+   <td style="text-align:left;"> 3.4 (0.4) </td>
+   <td style="text-align:left;"> 7.0 (0.6) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00748 </td>
+   <td style="text-align:left;"> 23 </td>
+   <td style="text-align:left;"> 52 </td>
+   <td style="text-align:left;"> 74 </td>
+   <td style="text-align:left;"> 135 </td>
+   <td style="text-align:left;"> 164 </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Elíptica </td>
+   <td style="text-align:left;"> 105.7 (0.9) </td>
+   <td style="text-align:left;"> 15.0 (0.0) </td>
+   <td style="text-align:left;"> 1.7 (0.3) </td>
+   <td style="text-align:left;"> 12.0 (0.0) </td>
+   <td style="text-align:left;"> 4.0 (0.0) </td>
+   <td style="text-align:left;"> 25.7 (1.2) </td>
+   <td style="text-align:left;"> 12.0 (0.6) </td>
+   <td style="text-align:left;"> 33.5 (1.8) </td>
+   <td style="text-align:left;"> 12.3 (1.0) </td>
+   <td style="text-align:left;"> 39.0 (2.4) </td>
+   <td style="text-align:left;"> 4.4 (0.1) </td>
+   <td style="text-align:left;"> 7.7 (0.3) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00752 </td>
+   <td style="text-align:left;"> 25 </td>
+   <td style="text-align:left;"> 55 </td>
+   <td style="text-align:left;"> 79 </td>
+   <td style="text-align:left;"> 135 </td>
+   <td style="text-align:left;"> 162 </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> 103.3 (5.2) </td>
+   <td style="text-align:left;"> 15.3 (0.3) </td>
+   <td style="text-align:left;"> 2.7 (0.3) </td>
+   <td style="text-align:left;"> 11.3 (0.3) </td>
+   <td style="text-align:left;"> 5.0 (0.0) </td>
+   <td style="text-align:left;"> 29.3 (0.7) </td>
+   <td style="text-align:left;"> 10.3 (0.9) </td>
+   <td style="text-align:left;"> 27.2 (2.1) </td>
+   <td style="text-align:left;"> 11.3 (1.2) </td>
+   <td style="text-align:left;"> 42.1 (1.9) </td>
+   <td style="text-align:left;"> 4.1 (0.1) </td>
+   <td style="text-align:left;"> 6.7 (0.3) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00755 </td>
+   <td style="text-align:left;"> 25 </td>
+   <td style="text-align:left;"> 53 </td>
+   <td style="text-align:left;"> 75 </td>
+   <td style="text-align:left;"> 124 </td>
+   <td style="text-align:left;"> 163 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupadas </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> 97.3 (3.3) </td>
+   <td style="text-align:left;"> 13.0 (0.0) </td>
+   <td style="text-align:left;"> 2.7 (0.3) </td>
+   <td style="text-align:left;"> 10.0 (0.0) </td>
+   <td style="text-align:left;"> 4.0 (0.0) </td>
+   <td style="text-align:left;"> 28.7 (0.3) </td>
+   <td style="text-align:left;"> 10.3 (0.7) </td>
+   <td style="text-align:left;"> 26.3 (2.0) </td>
+   <td style="text-align:left;"> 10.0 (0.7) </td>
+   <td style="text-align:left;"> 38.5 (0.8) </td>
+   <td style="text-align:left;"> 4.7 (0.2) </td>
+   <td style="text-align:left;"> 5.7 (0.7) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00759 </td>
+   <td style="text-align:left;"> 25 </td>
+   <td style="text-align:left;"> 54 </td>
+   <td style="text-align:left;"> 77 </td>
+   <td style="text-align:left;"> 134 </td>
+   <td style="text-align:left;"> 163 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Abierta </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> En copa </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Redonda </td>
+   <td style="text-align:left;"> 108.3 (5.0) </td>
+   <td style="text-align:left;"> 14.0 (0.6) </td>
+   <td style="text-align:left;"> 1.0 (0.6) </td>
+   <td style="text-align:left;"> 10.0 (1.0) </td>
+   <td style="text-align:left;"> 5.0 (0.6) </td>
+   <td style="text-align:left;"> 38.3 (5.5) </td>
+   <td style="text-align:left;"> 9.7 (2.4) </td>
+   <td style="text-align:left;"> 24.6 (3.6) </td>
+   <td style="text-align:left;"> 8.7 (1.5) </td>
+   <td style="text-align:left;"> 38.3 (1.1) </td>
+   <td style="text-align:left;"> 4.7 (0.6) </td>
+   <td style="text-align:left;"> 5.7 (1.5) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BGSP-00779 </td>
+   <td style="text-align:left;"> 25 </td>
+   <td style="text-align:left;"> 55 </td>
+   <td style="text-align:left;"> 76 </td>
+   <td style="text-align:left;"> 126 </td>
+   <td style="text-align:left;"> 161 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> 112.3 (1.9) </td>
+   <td style="text-align:left;"> 16.0 (0.0) </td>
+   <td style="text-align:left;"> 1.3 (0.3) </td>
+   <td style="text-align:left;"> 12.3 (0.3) </td>
+   <td style="text-align:left;"> 4.7 (0.3) </td>
+   <td style="text-align:left;"> 30.3 (1.8) </td>
+   <td style="text-align:left;"> 11.7 (0.7) </td>
+   <td style="text-align:left;"> 26.3 (1.5) </td>
+   <td style="text-align:left;"> 10.4 (0.5) </td>
+   <td style="text-align:left;"> 40.5 (0.7) </td>
+   <td style="text-align:left;"> 3.0 (0.1) </td>
+   <td style="text-align:left;"> 8.7 (0.3) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> SP 41255 </td>
+   <td style="text-align:left;"> 23 </td>
+   <td style="text-align:left;"> 52 </td>
+   <td style="text-align:left;"> 76 </td>
+   <td style="text-align:left;"> 124 </td>
+   <td style="text-align:left;"> 162 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> 122.3 (2.9) </td>
+   <td style="text-align:left;"> 15.2 (0.1) </td>
+   <td style="text-align:left;"> 1.2 (0.2) </td>
+   <td style="text-align:left;"> 11.8 (0.2) </td>
+   <td style="text-align:left;"> 4.4 (0.1) </td>
+   <td style="text-align:left;"> 32.7 (1.1) </td>
+   <td style="text-align:left;"> 11.2 (0.8) </td>
+   <td style="text-align:left;"> 20.7 (0.7) </td>
+   <td style="text-align:left;"> 8.8 (0.4) </td>
+   <td style="text-align:left;"> 44.7 (0.5) </td>
+   <td style="text-align:left;"> 2.8 (0.1) </td>
+   <td style="text-align:left;"> 7.3 (0.3) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> SP 6565 </td>
+   <td style="text-align:left;"> 25 </td>
+   <td style="text-align:left;"> 55 </td>
+   <td style="text-align:left;"> 79 </td>
+   <td style="text-align:left;"> 131 </td>
+   <td style="text-align:left;"> 162 </td>
+   <td style="text-align:left;"> Cilíndrica </td>
+   <td style="text-align:left;"> Medio </td>
+   <td style="text-align:left;"> Medio Agrupada </td>
+   <td style="text-align:left;"> Palmada </td>
+   <td style="text-align:left;"> Plana </td>
+   <td style="text-align:left;"> Media </td>
+   <td style="text-align:left;"> Normal </td>
+   <td style="text-align:left;"> Cónica </td>
+   <td style="text-align:left;"> 120.8 (1.9) </td>
+   <td style="text-align:left;"> 15.7 (0.2) </td>
+   <td style="text-align:left;"> 1.3 (0.2) </td>
+   <td style="text-align:left;"> 12.2 (0.2) </td>
+   <td style="text-align:left;"> 4.5 (0.2) </td>
+   <td style="text-align:left;"> 35.8 (1.6) </td>
+   <td style="text-align:left;"> 8.4 (0.6) </td>
+   <td style="text-align:left;"> 17.3 (0.5) </td>
+   <td style="text-align:left;"> 6.9 (0.2) </td>
+   <td style="text-align:left;"> 41.2 (0.3) </td>
+   <td style="text-align:left;"> 2.6 (0.1) </td>
+   <td style="text-align:left;"> 6.8 (0.3) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> p-valor </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> &lt;0.001 </td>
+   <td style="text-align:left;"> &lt;0.001 </td>
+   <td style="text-align:left;"> &lt;0.001 </td>
+   <td style="text-align:left;"> &lt;0.001 </td>
+   <td style="text-align:left;"> &lt;0.001 </td>
+   <td style="text-align:left;"> &lt;0.001 </td>
+   <td style="text-align:left;"> &lt;0.001 </td>
+   <td style="text-align:left;"> &lt;0.001 </td>
+   <td style="text-align:left;"> &lt;0.001 </td>
+   <td style="text-align:left;"> &lt;0.001 </td>
+   <td style="text-align:left;"> &lt;0.001 </td>
+   <td style="text-align:left;"> &lt;0.001 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> L.S.D Fisher </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> - </td>
+   <td style="text-align:left;"> 17.96 </td>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> 0.99 </td>
+   <td style="text-align:left;"> 1.05 </td>
+   <td style="text-align:left;"> 0.74 </td>
+   <td style="text-align:left;"> 6.29 </td>
+   <td style="text-align:left;"> 3.89 </td>
+   <td style="text-align:left;"> 4.3 </td>
+   <td style="text-align:left;"> 1.76 </td>
+   <td style="text-align:left;"> 2.46 </td>
+   <td style="text-align:left;"> 0.76 </td>
+   <td style="text-align:left;"> 1.42 </td>
+  </tr>
+</tbody>
+</table></div>
+<div class="footnote"><strong>Referencias:</strong>  DPP, días a primer pimpollo; DPF, días a primera flor; DCO, días a Cut Out; DPCA, días a primer cápsula abierta; DFC, días a fin de ciclo. AP, altura de planta en cm; NN, número de nudos totales en tallo; NRV, Número de ramas vegetativas; NRR, Número de ramas reproductivas; N1RR, Nudos a la primera rama reproductiva; A1RR, Altura a la primera rama reproductiva en cm; D1P, Distancia de la primera posición al tallo principal en cm. RB, Rendimiento bruto en g; RF, Rendimiento de fibra en g; RFD, Rendimiento de fibra al desmote en %; PC, Peso promedio de capullos g; NC, Numero de capullos por planta.</div>
+</div>
+<button type="button" onclick="openTableInNewWindow(&#39;table-container-conjuntos&#39;)">Ver tabla en ventana más grande</button>
 </div>
 </div>
 <div id="discusión" class="section level2 hasAnchor" number="1.5">

@@ -84,6 +84,7 @@ div.csl-indent {
 }
 </style>
 
+<link rel="stylesheet" href="css/custom.css" type="text/css" />
 </head>
 
 <body>
@@ -172,6 +173,28 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
+<script>
+function openTableInNewWindow(tableId) {
+  var tableContent = document.getElementById(tableId).innerHTML;
+  var newWindow = window.open("", "Tabla", "fullscreen=yes");
+  newWindow.document.write('<html><head><title>Tabla</title>');
+  newWindow.document.write('<link rel="stylesheet" type="text/css" href="css/custom.css">');
+  newWindow.document.write('<style>');
+  newWindow.document.write('body { margin: 0; padding: 0; width: 100vw; height: 100vh; }');
+  newWindow.document.write('.scrollable-table { overflow-x: auto; overflow-y: auto; max-height: 90vh; display: block; }');
+  newWindow.document.write('table { display: table; width: 100% !important; height: 100% !important; table-layout: auto; border-collapse: collapse; font-size: 14px; background-color: #f9f9f9; }');
+  newWindow.document.write('th, td { padding: 8px; white-space: nowrap; border: 1px solid #ddd; }');
+  newWindow.document.write('th { background-color: #007bff; color: white; font-weight: bold; }');
+  newWindow.document.write('caption { caption-side: top; font-weight: bold; margin-bottom: 10px; font-size: 16px; }');
+  newWindow.document.write('</style>');
+  newWindow.document.write('</head><body>');
+  newWindow.document.write('<div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">');
+  newWindow.document.write('<div style="width: 100%; height: 100%; overflow: auto;">');
+  newWindow.document.write(tableContent);
+  newWindow.document.write('</div></div></body></html>');
+  newWindow.document.close();
+}
+</script>
 <div id="header">
 <h1 class="title">Caracterización morfológica, fisiológica y molecular de entradas de algodón (<em>Gossypium hirsutum</em> L.) e identificación de QTL de importancia agronómica</h1>
 <p class="author"><em>Ing. Agr. Pablo Nahuel Dileo</em></p>

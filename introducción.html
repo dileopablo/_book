@@ -84,6 +84,7 @@ div.csl-indent {
 }
 </style>
 
+<link rel="stylesheet" href="css/custom.css" type="text/css" />
 </head>
 
 <body>
@@ -172,6 +173,28 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
+<script>
+function openTableInNewWindow(tableId) {
+  var tableContent = document.getElementById(tableId).innerHTML;
+  var newWindow = window.open("", "Tabla", "fullscreen=yes");
+  newWindow.document.write('<html><head><title>Tabla</title>');
+  newWindow.document.write('<link rel="stylesheet" type="text/css" href="css/custom.css">');
+  newWindow.document.write('<style>');
+  newWindow.document.write('body { margin: 0; padding: 0; width: 100vw; height: 100vh; }');
+  newWindow.document.write('.scrollable-table { overflow-x: auto; overflow-y: auto; max-height: 90vh; display: block; }');
+  newWindow.document.write('table { display: table; width: 100% !important; height: 100% !important; table-layout: auto; border-collapse: collapse; font-size: 14px; background-color: #f9f9f9; }');
+  newWindow.document.write('th, td { padding: 8px; white-space: nowrap; border: 1px solid #ddd; }');
+  newWindow.document.write('th { background-color: #007bff; color: white; font-weight: bold; }');
+  newWindow.document.write('caption { caption-side: top; font-weight: bold; margin-bottom: 10px; font-size: 16px; }');
+  newWindow.document.write('</style>');
+  newWindow.document.write('</head><body>');
+  newWindow.document.write('<div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">');
+  newWindow.document.write('<div style="width: 100%; height: 100%; overflow: auto;">');
+  newWindow.document.write(tableContent);
+  newWindow.document.write('</div></div></body></html>');
+  newWindow.document.close();
+}
+</script>
 <div id="introducción" class="section level1 unnumbered hasAnchor">
 <h1>Introducción<a href="introducción.html#introducción" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>El algodón (<em>Gossypium hirsutum</em> L.) se cultiva en más de 80 países y desempeña un papel crucial en la producción textil como fuente de fibra. Argentina es el segundo productor de algodón de América Latina después de Brasil y desempeña un papel clave en los sistemas productivos de la región noreste del país. La producción de fibra cubre la demanda interna a la vez que facilita la exportación a países como Vietnam, Pakistán, Turquía, China, Indonesia, Colombia e India <span class="citation">(ICAC, 2023; Paytas &amp; Ploschuk, 2013)</span>. Se han desarrollado nuevas variedades y sistemas de producción para adaptarse a diversas condiciones medioambientales. En Argentina, el Instituto Nacional de Tecnología Agropecuaria (INTA) cuenta con un programa de mejora genética del algodón que utiliza el germoplasma disponible para desarrollar variedades que mejoren el rendimiento y la calidad de la fibra. El programa ha logrado aumentar tanto el rendimiento como la calidad de la fibra y también ha incorporado la resistencia genética a enfermedades importantes como mancha angular, enfermedad azul y marchitez por fusarium, en numerosas variedades <span class="citation">(Royo et al., 2007; Scarpin et al., 2022; Scarpin et al., 2023)</span>.</p>

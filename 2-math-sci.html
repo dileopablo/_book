@@ -84,6 +84,7 @@ div.csl-indent {
 }
 </style>
 
+<link rel="stylesheet" href="css/custom.css" type="text/css" />
 </head>
 
 <body>
@@ -172,6 +173,30 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
+<script>
+function openTableInNewWindow(tableId) {
+  var tableContent = document.getElementById(tableId).innerHTML;
+  var newWindow = window.open("", "Tabla", "fullscreen=yes");
+  newWindow.document.write('<html><head><title>Tabla</title>');
+  newWindow.document.write('<link rel="stylesheet" type="text/css" href="css/custom.css">');
+  newWindow.document.write('<style>');
+  newWindow.document.write('body { margin: 0; padding: 0; width: 100vw; height: 100vh; }');
+  newWindow.document.write('.scrollable-table { overflow-x: auto; overflow-y: auto; max-height: 90vh; display: block; width: 100%; }');
+  newWindow.document.write('table { display: table; width: 100% !important; height: 100% !important; table-layout: auto; border-collapse: collapse; font-size: 14px; background-color: #f9f9f9; }');
+  newWindow.document.write('th, td { padding: 8px; white-space: nowrap; border: 1px solid #ddd; }');
+  newWindow.document.write('th { background-color: #808080; color: white; font-weight: bold; }');  // Cambié el color de fondo a gris (#808080)
+  newWindow.document.write('caption { caption-side: top; font-weight: bold; margin-bottom: 10px; font-size: 16px; }');
+  newWindow.document.write('</style>');
+  newWindow.document.write('</head><body>');
+  newWindow.document.write('<div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">');
+  newWindow.document.write('<div style="width: 100%; height: 100%; overflow: auto;">');
+  newWindow.document.write(tableContent);
+  newWindow.document.write('</div></div></body></html>');
+  newWindow.document.close();
+}
+</script>
+
+
 <div id="math-sci" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">Capítulo 2</span> Caracterización fisiológica<a href="2-math-sci.html#math-sci" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="introducción-2" class="section level2 hasAnchor" number="2.1">
@@ -186,6 +211,7 @@ div.csl-indent {
 <h2><span class="header-section-number">2.3</span> Materiales y métodos<a href="2-math-sci.html#materiales-y-métodos-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Variables medidas:</p>
 <p>La medición de las variables fisiológicas se llevaron a cabo en un ensayo en invernadero. Las mediciones se realizaron en seis momentos durante el ciclo de la planta siguiendo lo propuesto por <span class="citation">(Luo et al., 2017)</span>. Los equipos utilizados para las mediciones propuestas fueron a) Fotosíntesis: LICOR 6400; b) Contenido de clorofila: Minolta SPAD 502; c) Apertura y cierre estomático: LICOR 6400. Para las mediciones de estas variables, se utilizaron las entradas <strong><code>detallar entradas</code></strong> del diseño planteado en “Caracterización morfológica”.</p>
+<p>De mapeo (Ajustar al texto) vii) Área foliar: para el cálculo de esta variable, se midieron todas las hojas de las plantas a través de los equipos LICOR 3000 y LICOR 3050; viii) Dinámica de la floración: junto con las mediciones de las características morfológicas mencionadas en los puntos anteriores, se realizaron mapeos de dinámica de floración en todas las plantas seleccionadas para la partición de asimilados. Este procedimiento se realiza registrando en cada una de las posiciones reproductivas que genera la planta, la presencia de un pimpollo, una flor, una bocha verde, una cápsula abierta o un aborto <span class="citation">(Kerby &amp; Hake, 1996)</span>. Con estos datos se realizó la dinámica de floración de las diferentes entradas y porcentaje de retención final a la que llegan cada una de las plantas seleccionadas para el mapeo;</p>
 <p>Por otra parte, se realizaron muestreos destructivos de plantas para la determinación de materia seca y partición de los asimilados. Los cortes se realizaron a los 30, 60, 90 y 120 días (correspondientes a los estados fenológicos 1er pimpollo, 1era flor, 1era bocha abierta y fin de ciclo). En cada uno de estos momentos se seccionaron las plantas en tallo, ramas reproductivas, ramas vegetativas, pimpollos y flores, bochas cerradas, capsulas abiertas, fibra y rebrote de tallo según el momento de muestreo. Todas las muestras de las partes de la planta fueron llevadas a estufa a 65 º C hasta peso constante (96 horas). El ensayo se realizó en un diseño en bloques al azar con arreglo en parcelas divididas, con los 4 momentos de corte y las entradas incluidas en cada parcela, con cuatro repeticiones. Se utilizaron macetas de 5 litros (con una mezcla de suelo y sustrato comercial), en el cual se colocó 1 planta por maceta.</p>
 </div>
 <div id="resultados-1" class="section level2 hasAnchor" number="2.4">

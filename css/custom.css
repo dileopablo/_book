@@ -1,0 +1,32 @@
+/* Estilo para hacer las tablas desplazables */
+.scrollable-table {
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 400px; /* Ajusta esta altura según tus necesidades */
+  display: block;
+}
+
+table {
+  display: table;
+  width: auto !important; /* Permite ajustar el ancho automáticamente */
+  table-layout: auto; /* Ajuste automático de columnas */
+  border-collapse: collapse; /* Elimina los espacios entre las celdas */
+  font-size: 12px; /* Reduce el tamaño de la fuente */
+}
+
+th, td {
+  padding: 4px; /* Reduce el relleno dentro de las celdas */
+  white-space: nowrap; /* Evita el salto de línea dentro de las celdas */
+  border: 1px solid #ddd; /* Añade borde a las celdas */
+}
+
+th {
+  background-color: #f2f2f2; /* Fondo de encabezados */
+  font-weight: bold; /* Negrita para encabezados */
+}
+
+caption {
+  caption-side: top;
+  font-weight: bold;
+  margin-bottom: 10px;
+}

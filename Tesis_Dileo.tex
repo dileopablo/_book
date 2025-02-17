@@ -184,12 +184,6 @@ Segundo párrafo del resumen aquí.
     \usepackage[normalem]{ulem}
     \usepackage{makecell}
     \usepackage{xcolor}
-    \usepackage{fontspec}
-    \usepackage{multicol}
-    \usepackage{hhline}
-    \newlength\Oldarrayrulewidth
-    \newlength\Oldtabcolsep
-    \usepackage{hyperref}
 % End of CII addition
 %%
 %% End Preamble
@@ -365,7 +359,57 @@ Recientemente, \textcite{scarpin2022} informaron de un progreso genético en el 
 
 En un programa de mejora genética del algodón, combinar un alto rendimiento y calidad de la fibra es un reto clave. El primer paso crucial para un programa de mejora eficaz es caracterizar el germoplasma del algodón. \textcite{kearsey1996} destacaron la importancia de comprender las diferencias genéticas y la heredabilidad de los rasgos a la hora de cruzar plantas. La heredabilidad muestra en qué medida los rasgos están influidos por la genética y puede estimarse comparando las varianzas de las generaciones segregantes y no segregantes. En el algodón, se han notificado estimaciones de heredabilidad para varios rasgos, como el rendimiento de fibra, los componentes del rendimiento, la calidad de la fibra, la altura de la planta, el aceite de semilla, el nudo de la primera rama reproductiva, la cápsulas a prueba de tormentas, entre otros \autocite{meredith1984,tang1996,ribeiro2017,decarvalho2022,nidagundi2023}. Estos estimadores ayudan a los mejoradores a decidir la selección individual y a predecir cuánto pueden mejorar ciertos rasgos. Sin embargo, merece la pena tener en cuenta que el nivel de heredabilidad cambia en función del rasgo, la población y el ambiente en el que se cultivan.
 
-\chapter{Caracterización morfológica}\label{rmd-basics}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\chapter{\texorpdfstring{Caracterización de entradas de algodón (\emph{Gossypium hirsutum} L.) del banco de germoplasma de INTA mediante caracteres morfológicos}{Caracterización de entradas de algodón (Gossypium hirsutum L.) del banco de germoplasma de INTA mediante caracteres morfológicos}}\label{rmd-basics}
 
 \section{Introducción}\label{introducciuxf3n-1}
 
@@ -377,58 +421,39 @@ Caracterizar entradas de algodón del banco de germoplasma de INTA con diferente
 
 \section{Materiales y métodos}\label{materiales-y-muxe9todos}
 
-Los ensayos se llevaron adelante en invernadero con condiciones semi-controladas de la Estación Experimental INTA Reconquista. Se utilizaron 26 entradas de \emph{Gossypium hirsutum L.}, coleccionados por el banco de germoplasma de INTA, procedentes de diversos sitios tanto nacionales como del extranjero (Tabla \ref{tab:tablaEntradas}).
+Se utilizaron 26 entradas de \emph{Gossypium hirsutum} L\emph{.}, coleccionados por el banco de germoplasma de INTA, procedentes de diversos sitios tanto nacionales como del extranjero (Tabla \ref{tab:tablaEntradas}). Los ensayos se llevaron a delante en invernadero con condiciones controladas en la Estación Experimental INTA Reconquista. El ensayo se realizó en un diseño en bloque completamente aleatorizado, utilizando macetas de 5 litros con 2200 g de suelo (pH: 6.7, P disp: 165.7 mg Kg\textsuperscript{-1}, Na\textsuperscript{+} 0.6 cmol\textsuperscript{+}Kg\textsuperscript{-1}, K\textsuperscript{+}: 0.8 cmol\textsuperscript{+}Kg\textsuperscript{-1}, Ca\textsuperscript{+2}: 27.0 cmol\textsuperscript{+}Kg\textsuperscript{-1}, Mg\textsuperscript{+2}: 2.2 cmol\textsuperscript{+}Kg\textsuperscript{-1}, NH\textsubscript{4}: 76.30 mg kg\textsuperscript{-1}, NO\textsubscript{3}: 86.1 mg Kg\textsuperscript{-1}) y de 400 g de sustrato comercial (GrowMix Multipro), en el cual se colocó 1 planta por maceta. \textbf{\texttt{Detallar\ el\ número\ de\ repeticiones}}
 
 \begin{table}[!h]
 \centering
-\caption{\label{tab:tablaEntradas}Entradas de Gossypium hirsutum L. y su procedencia}
+\caption{\label{tab:tablaEntradas}Entradas de \emph{Gossypium hirsutum} L. y su procedencia}
 \centering
 \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
-\begin{tabular}[t]{>{\raggedright\arraybackslash}p{8em}>{\raggedright\arraybackslash}p{12em}}
+\begin{tabular}[t]{>{\raggedright\arraybackslash}p{8em}>{\raggedright\arraybackslash}p{12em}ll}
 \toprule
-Entradas & Procedencia\\
+Entradas  & Procedencia  & Entradas & Procedencia\\
 \midrule
-BGSP-00166 & Argentina\\
-BGSP-00177 & Argentina\\
-BGSP-00192 & Argentina\\
-BGSP-00193 & Argentina\\
-BGSP-00194 & Argentina\\
+BGSP-00166 & Argentina & BGSP-00748 & China\\
+BGSP-00177 & Argentina & BGSP-00752 & China\\
+BGSP-00192 & Argentina & BGSP-00755 & China\\
+BGSP-00193 & Argentina & BGSP-00759 & China\\
+BGSP-00194 & Argentina & BGSP-00779 & China\\
 \addlinespace
-BGSP-00207 & Argentina\\
-BGSP-00269 & Argentina\\
-SP 41255 & Argentina-Línea avanzada\\
-SP 6565 & Argentina-Línea avanzada\\
-BGSP-00514 & Australia\\
+BGSP-00207 & Argentina & BGSP-00067 & Costa de Marfil\\
+BGSP-00269 & Argentina & BGSP-00028 & EEUU\\
+SP 41255 & Argentina-Línea avanzada & BGSP-00145 & EEUU\\
+SP 6565 & Argentina-Línea avanzada & BGSP-00159 & EEUU\\
+BGSP-00514 & Australia & BGSP-00425 & EEUU\\
 \addlinespace
-BGSP-00072 & Camerún\\
-BGSP-00088 & Camerún\\
-BGSP-00070 & Chad\\
-BGSP-00748 & China\\
-BGSP-00752 & China\\
-\addlinespace
-BGSP-00755 & China\\
-BGSP-00759 & China\\
-BGSP-00779 & China\\
-BGSP-00067 & Costa de Marfil\\
-BGSP-00028 & EEUU\\
-\addlinespace
-BGSP-00145 & EEUU\\
-BGSP-00159 & EEUU\\
-BGSP-00425 & EEUU\\
-BGSP-00428 & EEUU\\
-BGSP-00715 & Pakistán\\
-\addlinespace
-BGSP-00126 & Senegal\\
+BGSP-00072 & Camerún & BGSP-00428 & EEUU\\
+BGSP-00088 & Camerún & BGSP-00715 & Pakistán\\
+BGSP-00070 & Chad & BGSP-00126 & Senegal\\
 \bottomrule
-\multicolumn{2}{l}{\textsuperscript{} aquí footnote}\\
 \end{tabular}}
 \end{table}
 
 \subsection{Variables medidas:}\label{variables-medidas}
 
 Las variables que se mencionan a continuación fueron registradas en todas las plantas: i) Altura: se midieron las plantas desde la base del tallo hasta la punta del ápice; ii) Nº de nudos: se contó el número de nudos presentes en el tallo de cada planta muestreada; iii) Nº de ramas vegetativas: se contaron las ramas vegetativas presentes en cada momento de muestreo; iv) Nº de ramas reproductivas: se contaron el número de ramas reproductivas presentes en todas las plantas de cada momento de muestreo; v) Nudo de inserción de la primera rama reproductiva: se registró el nudo donde se inserta la 1º rama reproductiva en cada planta muestreada; vi) Distancia de la primera posición al tallo principal: se midió la distancia que existe entre el tallo principal y la primera posición de la primera rama reproductiva de cada una de las plantas; vii) Rendimiento: Para calcular el rendimiento de las diferentes entradas y sus componentes se efectuaron las siguientes mediciones: a) Rendimiento bruto de algodón: se recolectó la fibra-semilla de algodón de todas las cápsulas presentes en las plantas. Las muestras obtenidas fueron pesadas en balanzas de precisión y se realizó medición de la humedad de cada una de ellas; b) \% de desmote: se tomó cada muestra de algodón proveniente de las mediciones de rendimiento bruto, se realizó el desmote en una mini-desmotadora experimental y se pesó en una balanza de precisión la fibra y semillas por separado. El porcentaje de desmote fue la relación entre el peso de la fibra sobre el peso de la fibra más la semilla; c) Rendimiento de fibra: se multiplicó el rendimiento bruto de algodón por el \% de desmote obtenido; d) Nº de cápsulas por planta: se determinará dividiendo el peso total de la muestra recolectada en cada parcela con el peso por cápsula \autocite{wells1984}; e) N° semillas / cápsula: se contó el número de semillas presentes en la muestra \autocite{worley1974}; f) Índice de fibra: peso de la fibra que provienen de 100 semillas, este valor surge al dividir el peso de la fibra de algodón que resulta luego de desmotar los capullos por el número de semillas que tiene la muestra, luego multiplicarlo por 100; g) Índice de semillas: se obtuvo al pesar 100 semillas de cada una de las muestras de las entradas de algodón \autocite{pettigrew2013}; x) Parámetros de calidad tecnológica de fibra de algodón. Para obtener estos parámetros se enviaron las muestras de fibra de algodón obtenidas al laboratorio de HVI (Uster 1000) de la Asociación para la Promoción de la Producción (APPA) en Reconquista, Santa Fe. Los parámetros de calidad tecnológica de fibra a evaluar fueron: Índice de Hilabilidad (SCI, por sus siglas en inglés), Micronaire (MIC), Índice de madurez (MAC), longitud promedio de la mitad superior (UHML, por sus siglas en inglés), longitud media (ML, por sus siglas en inglés), \% de uniformidad, índice de fibras cortas (SFI, por sus siglas en inglés), resistencia de fibra (Str), elongación (Elg), contenido de humedad de la muestra, color (Rd y +b), grado de color (C.G) y contenido de basura; xi) Fenología. Se registró el tiempo en días necesario para que las plantas alcancen los estados de: emergencia, 1º pimpollo, 1º flor abierta, cut out y 1º bocha abierta. El estado de cut out se determinará cuando el número de nudos por encima de la última flor blanca en el tallo sea menor que 4 \autocite{bourland1992}.
-
-El ensayo se realizó en un diseño en bloque completamente aleatorizado, utilizando macetas de 5 litros con 2200 g de suelo (pH: 6.7, P disp: 165.7 mg Kg\textsuperscript{-1}, Na\textsuperscript{+} 0.6 cmol\textsuperscript{+}Kg\textsuperscript{-1}, K\textsuperscript{+}: 0.8 cmol\textsuperscript{+}Kg\textsuperscript{-1}, Ca\textsuperscript{+2}: 27.0 cmol\textsuperscript{+}Kg\textsuperscript{-1}, Mg\textsuperscript{+2}: 2.2 cmol\textsuperscript{+}Kg\textsuperscript{-1}, NH\textsubscript{4}: 76.30 mg kg\textsuperscript{-1}, NO\textsubscript{3}: 86.1 mg Kg\textsuperscript{-1}) y de 400 g de sustrato comercial (GrowMix Multipro), en el cual se colocó 1 planta por maceta. Se utilizaron las entradas detalladas en las tablas N° \ref{tab:tablaEntradas}. \textbf{\texttt{Detallar\ el\ número\ de\ repeticiones}}
 
 \subsection{Análisis estadístico}\label{anuxe1lisis-estaduxedstico}
 
@@ -440,379 +465,115 @@ Para la caracterización de la colección de germoplasma de algodón, se realiza
 
 La fenología se muestra en la tabla \ref{tab:tabla-fenologia}
 
-\begin{table}[!h]
-\centering
-\caption{\label{tab:tabla-fenologia}Fenología de las entradas evaluadas}
-\centering
-\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
-\begin{tabular}[t]{>{\raggedright\arraybackslash}p{6em}rrrrr}
-\toprule
-Entrada & DPP & DPF & DCO & DPCA & DFC\\
-\midrule
-BGSP-00028 & 25 & 51 & 74 & 118 & 163\\
-BGSP-00067 & 25 & 54 & 74 & 128 & 163\\
-BGSP-00070 & 27 & 53 & 76 & 128 & 163\\
-BGSP-00072 & 25 & 54 & 80 & 130 & 162\\
-BGSP-00088 & 25 & 54 & 78 & 135 & 163\\
-\addlinespace
-BGSP-00126 & 25 & 54 & 79 & 132 & 163\\
-BGSP-00145 & 25 & 52 & 73 & 121 & 163\\
-BGSP-00159 & 22 & 49 & 74 & 114 & 161\\
-BGSP-00166 & 23 & 52 & 74 & 124 & 163\\
-BGSP-00177 & 26 & 53 & 75 & 127 & 164\\
-\addlinespace
-BGSP-00192 & 25 & 54 & 76 & 124 & 162\\
-BGSP-00193 & 25 & 55 & 78 & 137 & 162\\
-BGSP-00194 & 25 & 55 & 75 & 118 & 163\\
-BGSP-00207 & 23 & 52 & 79 & 135 & 164\\
-BGSP-00269 & 23 & 52 & 75 & 133 & 163\\
-\addlinespace
-BGSP-00425 & 25 & 53 & 73 & 130 & 163\\
-BGSP-00428 & 23 & 49 & 74 & 113 & 163\\
-BGSP-00514 & 23 & 52 & 76 & 117 & 161\\
-BGSP-00715 & 24 & 55 & 78 & 134 & 163\\
-BGSP-00748 & 23 & 52 & 74 & 135 & 164\\
-\addlinespace
-BGSP-00752 & 25 & 55 & 79 & 135 & 162\\
-BGSP-00755 & 25 & 53 & 75 & 124 & 163\\
-BGSP-00759 & 25 & 54 & 77 & 134 & 163\\
-BGSP-00779 & 25 & 55 & 76 & 126 & 161\\
-SP 41255 & 23 & 52 & 76 & 124 & 162\\
-\addlinespace
-SP 6565 & 25 & 55 & 79 & 131 & 162\\
-\bottomrule
-\multicolumn{6}{l}{\textsuperscript{} DPP: Días a primer pimpollo, DPF: Días a}\\
-\multicolumn{6}{l}{primera flor, DCO: Días a Cut Out, DPCA: Días a}\\
-\multicolumn{6}{l}{primer cápsula abierta, DFC: días a fin de}\\
-\multicolumn{6}{l}{ciclo}\\
-\end{tabular}}
-\end{table}
-
 \subsection{Mapeo y descriptores morfológicos}\label{mapeo-y-descriptores-morfoluxf3gicos}
 
 \begin{table}[!h]
 \centering\centering
-\caption{\label{tab:tabla-mapeo}Valores medios, error estándar (entre paréntesis) y prueba L.S.D. (diferencia mínima significativa) de Fisher para caracteristicas morfológicas...}
+\caption{\label{tab:tabla-descriptores}Descriptores}
 \centering
 \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
 \fontsize{12}{14}\selectfont
-\begin{tabular}[t]{llllllll}
+\begin{tabular}[t]{lllllllll}
 \toprule
-\multicolumn{1}{c}{ } & \multicolumn{7}{c}{Características morfológicas} \\
-\cmidrule(l{3pt}r{3pt}){2-8}
-\begingroup\fontsize{12}{14}\selectfont \textbf{Entradas}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{AP}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{NN}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{NRV}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{NRR}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{N1RR}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{A1RR}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{D1P}\endgroup\\
+\multicolumn{1}{c}{ } & \multicolumn{3}{c}{Característica de planta} & \multicolumn{3}{c}{Característica de hoja} & \multicolumn{1}{c}{Bráctea} & \multicolumn{1}{c}{Cápsula} \\
+\cmidrule(l{3pt}r{3pt}){2-4} \cmidrule(l{3pt}r{3pt}){5-7} \cmidrule(l{3pt}r{3pt}){8-8} \cmidrule(l{3pt}r{3pt}){9-9}
+\begingroup\fontsize{12}{14}\selectfont \textbf{Entradas}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{Forma}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{Canopia}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{Tipo Floración}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{Forma  }\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{Lámina}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{Pubescencia}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{Tipo}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{Forma }\endgroup\\
 \midrule
- &  &  &  &  &  &  \vphantom{1} & \\
-BGSP-00028 & 106.3 (5.5) & 13.3 (0.9) & 1.0 (0.6) & 10.7 (0.7) & 3.7 (0.3) & 25.3 (0.7) & 9.3 (0.7)\\
-BGSP-00067 & 102.0 (4.0) & 14.7 (0.7) & 1.3 (0.3) & 11.0 (0.6) & 4.7 (0.3) & 27.0 (1.7) & 11.0 (1.5)\\
-BGSP-00070 & 109.3 (0.3) & 14.3 (0.3) & 1.3 (0.3) & 9.7 (0.3) & 5.7 (0.7) & 40.7 (4.2) & 9.7 (1.9)\\
-BGSP-00072 & 113.3 (4.3) & 17.0 (0.0) & 1.3 (0.3) & 13.3 (0.3) & 4.7 (0.3) & 27.3 (3.2) & 7.3 (1.8)\\
+BGSP-00028 & Cónica & Abierta & Individual & Palmada & Plana & Escasa & Normal & Cónica\\
+BGSP-00067 & Cónica & Abierta & Individual & Palmada & Plana & Escasa & Normal & Cónica\\
+BGSP-00070 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica\\
+BGSP-00072 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica\\
+BGSP-00088 & Cónica & Medio & Individual & Palmada & Plana & Fuerte & Normal & Cónica\\
 \addlinespace
-BGSP-00088 & 104.3 (5.8) & 14.3 (0.7) & 1.7 (0.3) & 10.7 (0.3) & 4.7 (0.3) & 28.3 (2.7) & 14.3 (1.2)\\
-BGSP-00126 & 126.3 (3.8) & 14.9 (0.2) & 1.5 (0.2) & 11.3 (0.3) & 4.6 (0.1) & 37.4 (1.4) & 8.9 (0.9)\\
-BGSP-00145 & 89.0 (4.5) & 14.3 (0.3) & 1.0 (0.6) & 11.3 (0.3) & 4.0 (0.0) & 25.7 (0.9) & 9.7 (1.8)\\
-BGSP-00159 & 104.3 (3.6) & 14.3 (0.3) & 1.1 (0.2) & 11.0 (0.2) & 4.3 (0.2) & 31.8 (1.9) & 11.4 (0.6)\\
-BGSP-00166 & 109.0 (3.0) & 15.2 (0.2) & 0.8 (0.2) & 11.8 (0.3) & 4.4 (0.2) & 30.6 (1.2) & 3.9 (0.6)\\
+BGSP-00126 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Escasa & Normal & Cónica\\
+BGSP-00145 & Cónica & Medio & Individual & Palmada & Plana & Media & Normal & Cónica\\
+BGSP-00159 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica\\
+BGSP-00166 & Cilíndrica & Compacta & Agrupada & Palmada & Plana & Media & Normal & Cónica\\
+BGSP-00177 & Cónica & Abierta & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica\\
 \addlinespace
-BGSP-00177 & 103.7 (3.3) & 14.3 (0.3) & 1.7 (0.3) & 10.7 (0.3) & 4.7 (0.3) & 32.7 (3.4) & 13.7 (1.7)\\
-BGSP-00192 & 101.3 (5.8) & 15.0 (0.0) & 1.7 (0.3) & 11.0 (0.0) & 5.0 (0.0) & 29.0 (2.1) & 11.3 (0.9)\\
-BGSP-00193 & 106.7 (5.5) & 15.3 (0.3) & 2.7 (0.3) & 11.3 (0.3) & 5.0 (0.0) & 30.7 (0.9) & 8.0 (1.7)\\
-BGSP-00194 & 92.7 (3.2) & 14.7 (0.3) & 2.3 (0.3) & 10.7 (0.3) & 5.0 (0.0) & 31.3 (0.7) & 5.7 (3.2)\\
-BGSP-00207 & 105.0 (8.5) & 15.3 (0.2) & 0.7 (0.2) & 12.2 (0.2) & 4.2 (0.1) & 29.4 (0.8) & 10.1 (1.0)\\
+BGSP-00192 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica\\
+BGSP-00193 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica\\
+BGSP-00194 & Cilíndrica & Compacta & Agrupada & Palmada & Plana & Media & Normal & Cónica\\
+BGSP-00207 & Cónica & Abierta & Individual & Palmada & Plana & Fuerte & Normal & Cónica\\
+BGSP-00269 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica\\
 \addlinespace
-BGSP-00269 & 113.0 (3.7) & 14.7 (0.2) & 1.2 (0.2) & 11.2 (0.2) & 4.4 (0.1) & 34.2 (1.6) & 8.3 (0.8)\\
-BGSP-00425 & 105.2 (3.3) & 13.8 (0.1) & 0.9 (0.3) & 10.8 (0.1) & 4.0 (0.0) & 25.5 (0.7) & 8.4 (0.9)\\
-BGSP-00428 & 105.3 (7.3) & 15.3 (0.3) & 0.7 (0.3) & 12.0 (0.6) & 4.3 (0.3) & 28.0 (2.9) & 8.7 (2.4)\\
-BGSP-00514 & 99.0 (8.0) & 16.0 (0.0) & 2.7 (0.3) & 12.3 (0.3) & 4.7 (0.3) & 25.0 (1.5) & 11.7 (1.7)\\
-BGSP-00715 & 102.0 (8.5) & 14.7 (0.9) & 0.3 (0.3) & 11.7 (0.9) & 4.0 (0.0) & 27.3 (2.3) & 13.0 (1.2)\\
+BGSP-00425 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica\\
+BGSP-00428 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Redonda\\
+BGSP-00514 & Cónica & Abierta & Individual & Digitada (Okra) & Plana & Media & Normal & Cónica\\
+BGSP-00715 & Cónica & Medio & Medio Agrupada & Palmada & Plana & Fuerte & Normal & Cónica\\
+BGSP-00748 & Cónica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Elíptica\\
 \addlinespace
-BGSP-00748 & 105.7 (0.9) & 15.0 (0.0) & 1.7 (0.3) & 12.0 (0.0) & 4.0 (0.0) & 25.7 (1.2) & 12.0 (0.6)\\
-BGSP-00752 & 103.3 (5.2) & 15.3 (0.3) & 2.7 (0.3) & 11.3 (0.3) & 5.0 (0.0) & 29.3 (0.7) & 10.3 (0.9)\\
-BGSP-00755 & 97.3 (3.3) & 13.0 (0.0) & 2.7 (0.3) & 10.0 (0.0) & 4.0 (0.0) & 28.7 (0.3) & 10.3 (0.7)\\
-BGSP-00759 & 108.3 (5.0) & 14.0 (0.6) & 1.0 (0.6) & 10.0 (1.0) & 5.0 (0.6) & 38.3 (5.5) & 9.7 (2.4)\\
-BGSP-00779 & 112.3 (1.9) & 16.0 (0.0) & 1.3 (0.3) & 12.3 (0.3) & 4.7 (0.3) & 30.3 (1.8) & 11.7 (0.7)\\
+BGSP-00752 & Cónica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica\\
+BGSP-00755 & Cilíndrica & Medio & Medio Agrupadas & Palmada & Plana & Media & Normal & Cónica\\
+BGSP-00759 & Cilíndrica & Abierta & Medio Agrupada & Palmada & En copa & Media & Normal & Redonda\\
+BGSP-00779 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica\\
+SP 41255 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica\\
 \addlinespace
-SP 41255 & 122.3 (2.9) & 15.2 (0.1) & 1.2 (0.2) & 11.8 (0.2) & 4.4 (0.1) & 32.7 (1.1) & 11.2 (0.8)\\
-SP 6565 & 120.8 (1.9) & 15.7 (0.2) & 1.3 (0.2) & 12.2 (0.2) & 4.5 (0.2) & 35.8 (1.6) & 8.4 (0.6)\\
- &  &  &  &  &  &  & \\
-p-value & <0.001 & <0.001 & <0.001 & <0.001 & <0.001 & <0.001 & <0.001\\
-Fisher’s L.S.D & 17.96 & 1 & 0.99 & 1.05 & 0.74 & 6.29 & 3.89\\
+SP 6565 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica\\
 \bottomrule
-\multicolumn{8}{l}{\textsuperscript{} \makecell[l]{Referencias: AP, altura de planta en cm; NN, número de nudos totales en tallo; NRV, \\ Número de ramas vegetativas; NRR, Número de ramas reproductivas; N1RR, Nudos a \\ la primera rama reproductiva; A1RR, Altura a la primera rama \\ reproductiva en cm; D1P, Distancia de la primera posición al \\ tallo principal en cm}}\\
 \end{tabular}}
 \end{table}
-
-\global\setlength{\Oldarrayrulewidth}{\arrayrulewidth}
-
-\global\setlength{\Oldtabcolsep}{\tabcolsep}
-
-\setlength{\tabcolsep}{2pt}
-
-\renewcommand*{\arraystretch}{1.5}
-
-
-
-\providecommand{\ascline}[3]{\noalign{\global\arrayrulewidth #1}\arrayrulecolor[HTML]{#2}\cline{#3}}
-
-\begin{longtable}[c]{|p{1.00in}|p{0.75in}|p{0.75in}|p{0.75in}|p{0.75in}|p{0.75in}|p{0.75in}|p{0.75in}|p{0.75in}}
-
-\caption{\textcolor[HTML]{000000}{\fontsize{11}{13}\selectfont{\global\setmainfont{Arial}{Descriptores}}}}\label{tab:tabla-descriptores}\\
-
-\ascline{1.5pt}{666666}{1-9}
-
-\multicolumn{1}{>{\raggedright}m{\dimexpr 1in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{\textbf{Entradas}}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{\textbf{Forma}}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{\textbf{Canopia}}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{\textbf{Tipo\ Floración}}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{\textbf{Forma\ \ }}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{\textbf{Lámina}}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{\textbf{Pubescencia}}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{\textbf{Tipo}}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{\textbf{Forma\ }}}}} \\
-
-\ascline{1.5pt}{666666}{1-9}\endfirsthead \caption[]{\textcolor[HTML]{000000}{\fontsize{11}{13}\selectfont{\global\setmainfont{Arial}{Descriptores}}}}\label{tab:tabla-descriptores}\\
-
-\ascline{1.5pt}{666666}{1-9}
-
-\multicolumn{1}{>{\raggedright}m{\dimexpr 1in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{\textbf{Entradas}}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{\textbf{Forma}}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{\textbf{Canopia}}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{\textbf{Tipo\ Floración}}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{\textbf{Forma\ \ }}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{\textbf{Lámina}}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{\textbf{Pubescencia}}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{\textbf{Tipo}}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{\textbf{Forma\ }}}}} \\
-
-\ascline{1.5pt}{666666}{1-9}\endhead
-
-
-
-\multicolumn{9}{>{\raggedright}m{\dimexpr 7in+16\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Arial}{aquí}}}\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Arial}{\ }}}\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Arial}{footnote}}}} \\
-
-\endlastfoot
-
-
-
-\multicolumn{1}{>{\raggedright}m{\dimexpr 1in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{BGSP-00028}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Abierta}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Individual}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Palmada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Plana}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Escasa}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Normal}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} \\
-
-
-
-
-
-\multicolumn{1}{>{\raggedright}m{\dimexpr 1in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{BGSP-00067}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Abierta}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Individual}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Palmada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Plana}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Escasa}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Normal}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} \\
-
-
-
-
-
-\multicolumn{1}{>{\raggedright}m{\dimexpr 1in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{BGSP-00070}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cilíndrica}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio\ Agrupada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Palmada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Plana}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Media}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Normal}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} \\
-
-
-
-
-
-\multicolumn{1}{>{\raggedright}m{\dimexpr 1in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{BGSP-00072}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cilíndrica}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio\ Agrupada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Palmada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Plana}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Media}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Normal}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} \\
-
-
-
-
-
-\multicolumn{1}{>{\raggedright}m{\dimexpr 1in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{BGSP-00088}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Individual}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Palmada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Plana}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Fuerte}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Normal}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} \\
-
-
-
-
-
-\multicolumn{1}{>{\raggedright}m{\dimexpr 1in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{BGSP-00126}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cilíndrica}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio\ Agrupada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Palmada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Plana}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Escasa}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Normal}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} \\
-
-
-
-
-
-\multicolumn{1}{>{\raggedright}m{\dimexpr 1in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{BGSP-00145}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Individual}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Palmada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Plana}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Media}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Normal}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} \\
-
-
-
-
-
-\multicolumn{1}{>{\raggedright}m{\dimexpr 1in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{BGSP-00159}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cilíndrica}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio\ Agrupada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Palmada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Plana}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Media}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Normal}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} \\
-
-
-
-
-
-\multicolumn{1}{>{\raggedright}m{\dimexpr 1in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{BGSP-00166}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cilíndrica}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Compacta}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Agrupada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Palmada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Plana}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Media}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Normal}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} \\
-
-
-
-
-
-\multicolumn{1}{>{\raggedright}m{\dimexpr 1in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{BGSP-00177}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Abierta}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio\ Agrupada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Palmada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Plana}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Media}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Normal}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} \\
-
-
-
-
-
-\multicolumn{1}{>{\raggedright}m{\dimexpr 1in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{BGSP-00192}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cilíndrica}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio\ Agrupada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Palmada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Plana}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Media}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Normal}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} \\
-
-
-
-
-
-\multicolumn{1}{>{\raggedright}m{\dimexpr 1in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{BGSP-00193}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cilíndrica}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio\ Agrupada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Palmada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Plana}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Media}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Normal}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} \\
-
-
-
-
-
-\multicolumn{1}{>{\raggedright}m{\dimexpr 1in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{BGSP-00194}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cilíndrica}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Compacta}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Agrupada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Palmada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Plana}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Media}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Normal}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} \\
-
-
-
-
-
-\multicolumn{1}{>{\raggedright}m{\dimexpr 1in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{BGSP-00207}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Abierta}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Individual}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Palmada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Plana}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Fuerte}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Normal}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} \\
-
-
-
-
-
-\multicolumn{1}{>{\raggedright}m{\dimexpr 1in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{BGSP-00269}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cilíndrica}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio\ Agrupada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Palmada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Plana}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Media}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Normal}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} \\
-
-
-
-
-
-\multicolumn{1}{>{\raggedright}m{\dimexpr 1in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{BGSP-00425}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cilíndrica}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio\ Agrupada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Palmada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Plana}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Media}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Normal}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} \\
-
-
-
-
-
-\multicolumn{1}{>{\raggedright}m{\dimexpr 1in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{BGSP-00428}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cilíndrica}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio\ Agrupada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Palmada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Plana}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Media}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Normal}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Redonda}}}} \\
-
-
-
-
-
-\multicolumn{1}{>{\raggedright}m{\dimexpr 1in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{BGSP-00514}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Abierta}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Individual}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Digitada\ (Okra)}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Plana}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Media}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Normal}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} \\
-
-
-
-
-
-\multicolumn{1}{>{\raggedright}m{\dimexpr 1in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{BGSP-00715}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio\ Agrupada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Palmada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Plana}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Fuerte}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Normal}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} \\
-
-
-
-
-
-\multicolumn{1}{>{\raggedright}m{\dimexpr 1in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{BGSP-00748}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio\ Agrupada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Palmada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Plana}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Media}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Normal}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Elíptica}}}} \\
-
-
-
-
-
-\multicolumn{1}{>{\raggedright}m{\dimexpr 1in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{BGSP-00752}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio\ Agrupada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Palmada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Plana}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Media}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Normal}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} \\
-
-
-
-
-
-\multicolumn{1}{>{\raggedright}m{\dimexpr 1in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{BGSP-00755}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cilíndrica}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio\ Agrupadas}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Palmada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Plana}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Media}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Normal}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} \\
-
-
-
-
-
-\multicolumn{1}{>{\raggedright}m{\dimexpr 1in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{BGSP-00759}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cilíndrica}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Abierta}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio\ Agrupada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Palmada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{En\ copa}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Media}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Normal}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Redonda}}}} \\
-
-
-
-
-
-\multicolumn{1}{>{\raggedright}m{\dimexpr 1in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{BGSP-00779}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cilíndrica}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio\ Agrupada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Palmada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Plana}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Media}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Normal}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} \\
-
-
-
-
-
-\multicolumn{1}{>{\raggedright}m{\dimexpr 1in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{SP\ 41255}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cilíndrica}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio\ Agrupada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Palmada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Plana}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Media}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Normal}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} \\
-
-
-
-
-
-\multicolumn{1}{>{\raggedright}m{\dimexpr 1in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{SP\ 6565}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cilíndrica}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Medio\ Agrupada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Palmada}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Plana}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Media}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Normal}}}} & \multicolumn{1}{>{\raggedright}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{11}{11}\selectfont{\global\setmainfont{Calibri}{Cónica}}}} \\
-
-\ascline{1.5pt}{666666}{1-9}
-
-
-
-\end{longtable}
-
-
-
-\arrayrulecolor[HTML]{000000}
-
-\global\setlength{\arrayrulewidth}{\Oldarrayrulewidth}
-
-\global\setlength{\tabcolsep}{\Oldtabcolsep}
-
-\renewcommand*{\arraystretch}{1}
-
-Considerar colocar los siguiente datos obtenidos del mapeo:
-
-Altura N° nudos totales
-
-N° ramas vegetativas
-
-N° ramas reproductivas
-
-Nudo de inserción de la primera rama reproductiva
-
-Distancia de la primera posición al tallo principal
 
 plant mapping specifically refers to the recording and evaluating of plant structure and the distribution and retention of fruit on plants at a specific time \autocite{kerby2010}
 
 \subsection{Componentes del rendimiento y calidad de fibra}\label{componentes-del-rendimiento-y-calidad-de-fibra}
 
-\begin{table}[!h]
-\centering\centering
-\caption{\label{tab:tabla-rend-calidad}Valores medios, error estándar (entre paréntesis) y prueba L.S.D. (diferencia mínima significativa) de Fisher para rendimiento y sus componentes}
+\begin{landscape}\begin{table}[!h]
+\centering
+\caption{\label{tab:tabla-datos-conjuntos}Datos conjuntos...}
 \centering
 \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
-\fontsize{12}{14}\selectfont
-\begin{tabular}[t]{llllll}
+\begin{threeparttable}
+\begin{tabular}[t]{>{\raggedright\arraybackslash}p{6em}lllllllllllllllllllll}
 \toprule
-\multicolumn{1}{c}{ } & \multicolumn{5}{c}{Rendimiento y sus componentes} \\
-\cmidrule(l{3pt}r{3pt}){2-6}
-\begingroup\fontsize{12}{14}\selectfont \textbf{Entradas}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{RB}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{RF}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{RFD}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{PC}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{NC}\endgroup\\
+\multicolumn{1}{c}{ } & \multicolumn{7}{c}{Características morfológicas} & \multicolumn{5}{c}{Rendimiento y sus componentes} & \multicolumn{4}{c}{Calidad de fibra} & \multicolumn{5}{c}{Fenología} \\
+\cmidrule(l{3pt}r{3pt}){2-8} \cmidrule(l{3pt}r{3pt}){9-13} \cmidrule(l{3pt}r{3pt}){14-17} \cmidrule(l{3pt}r{3pt}){18-22}
+Entradas & AP & NN & NRV & NRR & N1RR & A1RR & D1P & RB & RF & RFD & PC & NC & UHML & Str & Mic & IU & DPP & DPF & DCO & DPCA & DFC\\
 \midrule
- &  &  &  &  \vphantom{1} & \\
-BGSP-00028 & 24.1 (2.0) & 8.7 (0.6) & 36.5 (0.7) & 4.3 (0.3) & 5.7 (0.3)\\
-BGSP-00067 & 23.3 (3.3) & 8.2 (1.0) & 36.0 (1.9) & 2.8 (0.2) & 8.3 (1.2)\\
-BGSP-00070 & 19.9 (1.3) & 7.7 (0.8) & 39.6 (0.8) & 3.4 (0.3) & 6.0 (0.6)\\
-BGSP-00072 & 26.3 (2.2) & 9.8 (0.9) & 38.3 (0.6) & 3.5 (0.4) & 7.7 (0.3)\\
+ &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \vphantom{1} & \\
+BGSP-00028 & 106,3 (5,5) & 13,3 (0,9) & 1,0 (0,6) & 10,7 (0,7) & 3,7 (0,3) & 25,3 (0,7) & 9,3 (0,7) & 24,1 (2,0) & 8,7 (0,6) & 36,5 (0,7) & 4,3 (0,3) & 5,7 (0,3) & 30,7 & 34,0 & 3,1 & 84,1 & 25 & 51 & 74 & 118 & 163\\
+BGSP-00067 & 102,0 (4,0) & 14,7 (0,7) & 1,3 (0,3) & 11,0 (0,6) & 4,7 (0,3) & 27,0 (1,7) & 11,0 (1,5) & 23,3 (3,3) & 8,2 (1,0) & 36,0 (1,9) & 2,8 (0,2) & 8,3 (1,2) & 26,8 & 37,0 & 2,9 & 80,8 & 25 & 54 & 74 & 128 & 163\\
+BGSP-00070 & 109,3 (0,3) & 14,3 (0,3) & 1,3 (0,3) & 9,7 (0,3) & 5,7 (0,7) & 40,7 (4,2) & 9,7 (1,9) & 19,9 (1,3) & 7,7 (0,8) & 39,6 (0,8) & 3,4 (0,3) & 6,0 (0,6) & 32,5 & 31,0 & 3,8 & 84,6 & 27 & 53 & 76 & 128 & 163\\
+BGSP-00072 & 113,3 (4,3) & 17,0 (0,0) & 1,3 (0,3) & 13,3 (0,3) & 4,7 (0,3) & 27,3 (3,2) & 7,3 (1,8) & 26,3 (2,2) & 9,8 (0,9) & 38,3 (0,6) & 3,5 (0,4) & 7,7 (0,3) & 28,1 & 28,2 & 4,3 & 82,6 & 25 & 54 & 80 & 130 & 162\\
 \addlinespace
-BGSP-00088 & 31.0 (3.2) & 11.3 (1.1) & 37.1 (0.4) & 4.4 (0.2) & 7.0 (0.6)\\
-BGSP-00126 & 16.0 (0.6) & 6.6 (0.3) & 42.9 (0.3) & 2.7 (0.2) & 6.0 (0.3)\\
-BGSP-00145 & 16.1 (3.1) & 6.1 (1.1) & 38.6 (0.7) & 3.6 (0.6) & 4.7 (0.9)\\
-BGSP-00159 & 14.3 (0.6) & 5.1 (0.2) & 36.8 (0.6) & 2.7 (0.1) & 5.2 (0.2)\\
-BGSP-00166 & 18.2 (0.5) & 5.5 (0.2) & 31.1 (0.4) & 3.6 (0.1) & 5.1 (0.2)\\
+BGSP-00088 & 104,3 (5,8) & 14,3 (0,7) & 1,7 (0,3) & 10,7 (0,3) & 4,7 (0,3) & 28,3 (2,7) & 14,3 (1,2) & 31,0 (3,2) & 11,3 (1,1) & 37,1 (0,4) & 4,4 (0,2) & 7,0 (0,6) & 31,6 & 36,5 & 3,5 & 86,2 & 25 & 54 & 78 & 135 & 163\\
+BGSP-00126 & 126,3 (3,8) & 14,9 (0,2) & 1,5 (0,2) & 11,3 (0,3) & 4,6 (0,1) & 37,4 (1,4) & 8,9 (0,9) & 16,0 (0,6) & 6,6 (0,3) & 42,9 (0,3) & 2,7 (0,2) & 6,0 (0,3) & 29,9 & 32,4 & 2,8 & 83,5 & 25 & 54 & 79 & 132 & 163\\
+BGSP-00145 & 89,0 (4,5) & 14,3 (0,3) & 1,0 (0,6) & 11,3 (0,3) & 4,0 (0,0) & 25,7 (0,9) & 9,7 (1,8) & 16,1 (3,1) & 6,1 (1,1) & 38,6 (0,7) & 3,6 (0,6) & 4,7 (0,9) & 26,9 & 26,6 & 3,5 & 80,8 & 25 & 52 & 73 & 121 & 163\\
+BGSP-00159 & 104,3 (3,6) & 14,3 (0,3) & 1,1 (0,2) & 11,0 (0,2) & 4,3 (0,2) & 31,8 (1,9) & 11,4 (0,6) & 14,3 (0,6) & 5,1 (0,2) & 36,8 (0,6) & 2,7 (0,1) & 5,2 (0,2) & 30,0 & 34,4 & 2,5 & 82,7 & 22 & 49 & 74 & 114 & 161\\
+BGSP-00166 & 109,0 (3,0) & 15,2 (0,2) & 0,8 (0,2) & 11,8 (0,3) & 4,4 (0,2) & 30,6 (1,2) & 3,9 (0,6) & 18,2 (0,5) & 5,5 (0,2) & 31,1 (0,4) & 3,6 (0,1) & 5,1 (0,2) & 33,9 & 37,6 & 2,5 & 86,1 & 23 & 52 & 74 & 124 & 163\\
 \addlinespace
-BGSP-00177 & 24.5 (2.2) & 7.9 (0.8) & 33.0 (0.4) & 4.2 (0.8) & 6.0 (0.6)\\
-BGSP-00192 & 18.7 (3.3) & 7.1 (1.1) & 37.9 (2.0) & 3.3 (0.4) & 5.7 (0.3)\\
-BGSP-00193 & 29.4 (3.9) & 10.9 (1.4) & 38.1 (1.8) & 4.2 (0.6) & 7.0 (0.0)\\
-BGSP-00194 & 24.0 (3.1) & 9.6 (1.4) & 40.9 (0.8) & 3.7 (0.4) & 6.7 (0.9)\\
-BGSP-00207 & 16.2 (0.6) & 6.7 (0.2) & 43.6 (0.5) & 2.8 (0.1) & 5.8 (0.2)\\
+BGSP-00177 & 103,7 (3,3) & 14,3 (0,3) & 1,7 (0,3) & 10,7 (0,3) & 4,7 (0,3) & 32,7 (3,4) & 13,7 (1,7) & 24,5 (2,2) & 7,9 (0,8) & 33,0 (0,4) & 4,2 (0,8) & 6,0 (0,6) & 29,2 & 30,7 & 4,2 & 82,9 & 26 & 53 & 75 & 127 & 164\\
+BGSP-00192 & 101,3 (5,8) & 15,0 (0,0) & 1,7 (0,3) & 11,0 (0,0) & 5,0 (0,0) & 29,0 (2,1) & 11,3 (0,9) & 18,7 (3,3) & 7,1 (1,1) & 37,9 (2,0) & 3,3 (0,4) & 5,7 (0,3) & 28,2 & 31,9 & 3,5 & 83,3 & 25 & 54 & 76 & 124 & 162\\
+BGSP-00193 & 106,7 (5,5) & 15,3 (0,3) & 2,7 (0,3) & 11,3 (0,3) & 5,0 (0,0) & 30,7 (0,9) & 8,0 (1,7) & 29,4 (3,9) & 10,9 (1,4) & 38,1 (1,8) & 4,2 (0,6) & 7,0 (0,0) & 30,2 & 33,8 & 3,5 & 85,5 & 25 & 55 & 78 & 137 & 162\\
+BGSP-00194 & 92,7 (3,2) & 14,7 (0,3) & 2,3 (0,3) & 10,7 (0,3) & 5,0 (0,0) & 31,3 (0,7) & 5,7 (3,2) & 24,0 (3,1) & 9,6 (1,4) & 40,9 (0,8) & 3,7 (0,4) & 6,7 (0,9) & 29,9 & 32,6 & 3,7 & 85,0 & 25 & 55 & 75 & 118 & 163\\
+BGSP-00207 & 105,0 (8,5) & 15,3 (0,2) & 0,7 (0,2) & 12,2 (0,2) & 4,2 (0,1) & 29,4 (0,8) & 10,1 (1,0) & 16,2 (0,6) & 6,7 (0,2) & 43,6 (0,5) & 2,8 (0,1) & 5,8 (0,2) & 28,6 & 28,4 & 2,8 & 83,2 & 23 & 52 & 79 & 135 & 164\\
 \addlinespace
-BGSP-00269 & 16.9 (0.5) & 7.1 (0.3) & 43.7 (0.5) & 2.9 (0.2) & 6.1 (0.3)\\
-BGSP-00425 & 15.1 (0.5) & 4.6 (0.2) & 31.5 (0.3) & 2.6 (0.1) & 5.8 (0.3)\\
-BGSP-00428 & 21.4 (3.6) & 8.7 (1.4) & 40.1 (0.4) & 4.3 (0.7) & 5.0 (0.6)\\
-BGSP-00514 & 28.0 (2.8) & 11.7 (1.2) & 42.3 (0.4) & 4.2 (0.2) & 6.7 (0.9)\\
-BGSP-00715 & 24.0 (3.6) & 9.8 (1.2) & 41.6 (1.2) & 3.4 (0.4) & 7.0 (0.6)\\
+BGSP-00269 & 113,0 (3,7) & 14,7 (0,2) & 1,2 (0,2) & 11,2 (0,2) & 4,4 (0,1) & 34,2 (1,6) & 8,3 (0,8) & 16,9 (0,5) & 7,1 (0,3) & 43,7 (0,5) & 2,9 (0,2) & 6,1 (0,3) & 29,2 & 33,4 & 3,9 & 84,1 & 23 & 52 & 75 & 133 & 163\\
+BGSP-00425 & 105,2 (3,3) & 13,8 (0,1) & 0,9 (0,3) & 10,8 (0,1) & 4,0 (0,0) & 25,5 (0,7) & 8,4 (0,9) & 15,1 (0,5) & 4,6 (0,2) & 31,5 (0,3) & 2,6 (0,1) & 5,8 (0,3) & 32,1 & 32,6 & 2,3 & 82,2 & 25 & 53 & 73 & 130 & 163\\
+BGSP-00428 & 105,3 (7,3) & 15,3 (0,3) & 0,7 (0,3) & 12,0 (0,6) & 4,3 (0,3) & 28,0 (2,9) & 8,7 (2,4) & 21,4 (3,6) & 8,7 (1,4) & 40,1 (0,4) & 4,3 (0,7) & 5,0 (0,6) & 25,1 & 23,1 & 4,0 & 80,0 & 23 & 49 & 74 & 113 & 163\\
+BGSP-00514 & 99,0 (8,0) & 16,0 (0,0) & 2,7 (0,3) & 12,3 (0,3) & 4,7 (0,3) & 25,0 (1,5) & 11,7 (1,7) & 28,0 (2,8) & 11,7 (1,2) & 42,3 (0,4) & 4,2 (0,2) & 6,7 (0,9) & 29,0 & 32,0 & 2,7 & 83,6 & 23 & 52 & 76 & 117 & 161\\
+BGSP-00715 & 102,0 (8,5) & 14,7 (0,9) & 0,3 (0,3) & 11,7 (0,9) & 4,0 (0,0) & 27,3 (2,3) & 13,0 (1,2) & 24,0 (3,6) & 9,8 (1,2) & 41,6 (1,2) & 3,4 (0,4) & 7,0 (0,6) & 27,2 & 31,7 & 4,0 & 83,5 & 24 & 55 & 78 & 134 & 163\\
 \addlinespace
-BGSP-00748 & 33.5 (1.8) & 12.3 (1.0) & 39.0 (2.4) & 4.4 (0.1) & 7.7 (0.3)\\
-BGSP-00752 & 27.2 (2.1) & 11.3 (1.2) & 42.1 (1.9) & 4.1 (0.1) & 6.7 (0.3)\\
-BGSP-00755 & 26.3 (2.0) & 10.0 (0.7) & 38.5 (0.8) & 4.7 (0.2) & 5.7 (0.7)\\
-BGSP-00759 & 24.6 (3.6) & 8.7 (1.5) & 38.3 (1.1) & 4.7 (0.6) & 5.7 (1.5)\\
-BGSP-00779 & 26.3 (1.5) & 10.4 (0.5) & 40.5 (0.7) & 3.0 (0.1) & 8.7 (0.3)\\
+BGSP-00748 & 105,7 (0,9) & 15,0 (0,0) & 1,7 (0,3) & 12,0 (0,0) & 4,0 (0,0) & 25,7 (1,2) & 12,0 (0,6) & 33,5 (1,8) & 12,3 (1,0) & 39,0 (2,4) & 4,4 (0,1) & 7,7 (0,3) & 26,3 & 21,5 & 3,9 & 80,9 & 23 & 52 & 74 & 135 & 164\\
+BGSP-00752 & 103,3 (5,2) & 15,3 (0,3) & 2,7 (0,3) & 11,3 (0,3) & 5,0 (0,0) & 29,3 (0,7) & 10,3 (0,9) & 27,2 (2,1) & 11,3 (1,2) & 42,1 (1,9) & 4,1 (0,1) & 6,7 (0,3) & 31,8 & 26,7 & 3,6 & 84,1 & 25 & 55 & 79 & 135 & 162\\
+BGSP-00755 & 97,3 (3,3) & 13,0 (0,0) & 2,7 (0,3) & 10,0 (0,0) & 4,0 (0,0) & 28,7 (0,3) & 10,3 (0,7) & 26,3 (2,0) & 10,0 (0,7) & 38,5 (0,8) & 4,7 (0,2) & 5,7 (0,7) & 29,8 & 31,4 & 3,3 & 84,2 & 25 & 53 & 75 & 124 & 163\\
+BGSP-00759 & 108,3 (5,0) & 14,0 (0,6) & 1,0 (0,6) & 10,0 (1,0) & 5,0 (0,6) & 38,3 (5,5) & 9,7 (2,4) & 24,6 (3,6) & 8,7 (1,5) & 38,3 (1,1) & 4,7 (0,6) & 5,7 (1,5) & 27,8 & 23,9 & 4,1 & 82,3 & 25 & 54 & 77 & 134 & 163\\
+BGSP-00779 & 112,3 (1,9) & 16,0 (0,0) & 1,3 (0,3) & 12,3 (0,3) & 4,7 (0,3) & 30,3 (1,8) & 11,7 (0,7) & 26,3 (1,5) & 10,4 (0,5) & 40,5 (0,7) & 3,0 (0,1) & 8,7 (0,3) & 30,2 & 31,5 & 2,7 & 84,4 & 25 & 55 & 76 & 126 & 161\\
 \addlinespace
-SP 41255 & 20.7 (0.7) & 8.8 (0.4) & 44.7 (0.5) & 2.8 (0.1) & 7.3 (0.3)\\
-SP 6565 & 17.3 (0.5) & 6.9 (0.2) & 41.2 (0.3) & 2.6 (0.1) & 6.8 (0.3)\\
- &  &  &  &  & \\
-p-value & <0.001 & <0.001 & <0.001 & <0.001 & <0.001\\
-Fisher’s L.S.D & 4.3 & 1.76 & 2.46 & 0.76 & 1.42\\
+SP 41255 & 122,3 (2,9) & 15,2 (0,1) & 1,2 (0,2) & 11,8 (0,2) & 4,4 (0,1) & 32,7 (1,1) & 11,2 (0,8) & 20,7 (0,7) & 8,8 (0,4) & 44,7 (0,5) & 2,8 (0,1) & 7,3 (0,3) & 30,9 & 32,3 & 3,0 & 84,1 & 23 & 52 & 76 & 124 & 162\\
+SP 6565 & 120,8 (1,9) & 15,7 (0,2) & 1,3 (0,2) & 12,2 (0,2) & 4,5 (0,2) & 35,8 (1,6) & 8,4 (0,6) & 17,3 (0,5) & 6,9 (0,2) & 41,2 (0,3) & 2,6 (0,1) & 6,8 (0,3) & 29,9 & 33,3 & 3,0 & 84,6 & 25 & 55 & 79 & 131 & 162\\
+ &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \\
+p-valor & <0,001 & <0,001 & <0,001 & <0,001 & <0,001 & <0,001 & <0,001 & <0,001 & <0,001 & <0,001 & <0,001 & <0,001 & - & - & - & - & - & - & - & - & -\\
+L.S.D Fisher & 17,96 & 1 & 0,99 & 1,05 & 0,74 & 6,29 & 3,89 & 4,3 & 1,76 & 2,46 & 0,76 & 1,42 & - & - & - & - & - & - & - & - & -\\
 \bottomrule
-\multicolumn{6}{l}{\textsuperscript{} \makecell[l]{Referencias: RB, Rendimiento bruto en g; RF, Rendimiento de fibra en \\ g; RFD, Rendimiento de fibra al desmote en \%; PC, Peso promedio de \\ capullos g; NC, Numero de capullos por planta.}}\\
-\end{tabular}}
+\end{tabular}
+\begin{tablenotes}[para]
+\item \textit{Referencias:} 
+\item AP: Altura de planta en cm; NN: Número de nudos; NRV: Número de ramas vegetativas; NRR: Número de ramas reproductivas; N1RR: Nudos a primer rama reproductiva; A1RR: Altura a primer rama reproductiva en cm; D1P: Distancia de la primera posición al tallo principal en cm. RB: Rendimiento de algodón bruto en g; RF: Rendimiento de fibra en g; RFD: Rendimiento de fibra al desmote en \%; PC: Peso promedio de capullos en g; NC: Número de capullos. UHML: Longitud promedio de fibra de la mitad superior en mm; Str: Resistencia de las fibras g tex\textsuperscript{-1}; Mic: Micronaire; IU: Índice de uniformidad de fibras en \%. DPP: Días a primer pimpollo; DPF: Días a primera flor; DCO: Días a Cut Out; DPCA: Días a primer cápsula abierta; DFC: días a fin de ciclo.
+\end{tablenotes}
+\end{threeparttable}}
 \end{table}
+\end{landscape}
 
 Las entradas de algodón mostraron diferencias significativas en todos los rasgos relacionados con el rendimiento y la calidad de la fibra (p \textless{} 0.05, Tabla \ref{tab:table-charac}).
 
@@ -822,6 +583,7 @@ Las entradas de algodón mostraron diferencias significativas en todos los rasgo
 \centering
 \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
 \fontsize{14}{16}\selectfont
+\begin{threeparttable}
 \begin{tabular}[t]{>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{1cm}>{\raggedright\arraybackslash}p{1cm}>{\raggedright\arraybackslash}p{1cm}>{\raggedright\arraybackslash}p{1cm}>{\raggedright\arraybackslash}p{1cm}>{\raggedright\arraybackslash}p{1cm}>{\raggedright\arraybackslash}p{1cm}>{\raggedright\arraybackslash}p{1cm}>{\raggedright\arraybackslash}p{1cm}>{\raggedright\arraybackslash}p{1cm}>{\raggedright\arraybackslash}p{1cm}>{\raggedright\arraybackslash}p{1cm}}
 \toprule
 \multicolumn{1}{c}{ } & \multicolumn{8}{c}{Rendimiento y sus componentes} & \multicolumn{4}{c}{Calidad de fibra} \\
@@ -843,18 +605,22 @@ SP-6565 & 30.1 (5.8) & 12.5 (2.4) & 41.4 (1.0) & 3.7 (0.6) & 8.2 (0.7) & 8.9 (0.
 p-value & 0.005 & <0.001 & <0.001 & 0.002 & <0.001 & <0.001 & <0.001 & 0.014 & <0.001 & 0.017 & <0.001 & 0.003\\
 Fisher’s L.S.D & 3.68 & 1.91 & 1.99 & 0.57 & 1.19 & 1.35 & 0.75 & 4.04 & 1.38 & 4.03 & 0.43 & 1.66\\
 \bottomrule
-\multicolumn{13}{l}{\textsuperscript{} RB: Seed cotton yield in g, LY: Lint yield in g, LP: Lint percentage in \%, BW: Boll weight in g, BN: Boll number per plant, SI: Seed index in g, LI: Lint index in g, SNPB: Seed number per boll, FL: Fibre length in mm, FS: Fibre strength g tex\textasciicircum{}-1\textasciicircum{}, Mic: Micronaire, FU: Fibre uniformity in \%.}\\
-\end{tabular}}
+\end{tabular}
+\begin{tablenotes}[para]
+\item \textit{Referencias:} 
+\item RB: Rendimiento de algodón bruto en g; RF: Rendimiento de fibra en g; RFD: Rendimiento de fibra al desmote en \%; PC: Peso promedio de capullos en g; NC: Número de capullos; IS: Índice de semillas en g; IF: Índice de fibra en g; NSC: Numero de semillas por capullo. UHML: Longitud promedio de fibra de la mitad superior en mm; Str: Resistencia de las fibras g tex\textsuperscript{-1}; Mic: Micronaire; IU: Índice de uniformidad de fibras en \%.
+\end{tablenotes}
+\end{threeparttable}}
 \end{table}
 
-La entrada SP-41255 presentó los valores medios más elevados para RB, RF, RFD y NC, con valores de 34.2 g planta\textsuperscript{-1}, 15.8 g planta\textsuperscript{-1}, 45.8 \%, y 9.2 capullos planta\textsuperscript{-1} respectivamente, sin embargo, presentó el valor medio más bajo de IS, con 7.7 g. BGSP-00159 tuvo la media más baja de RB con 26,2 g planta\textsuperscript{-1}. BGSP-00166 tuvo los valores medios más bajos para RF, RFD, MIC y NC con valores de 8.6 g planta\textsuperscript{-1}, 31.1 \%, 3.2 y 5.8 capullos planta\textsuperscript{-1} respectivamente, no obstante, presentó los valores medios más elevados de PC, IS, UHML, Str y IU con valores de 4.6 g capullo\textsuperscript{-1}, 11.5 g, 33.2 mm, 37.3 g tex\textsuperscript{-1} y 85.8 \% respectivamiente. BGSP-00269 presentó los valores medios más bajos de PC, NSC y UHML, con valores de 3.4 g capullo\textsuperscript{-1}, 22.8 semilla capullo\textsuperscript{-1}, y 28.3 mm respectivamente, mientras que tuvo el valor medio más alto para IF y Mic con valores de 6.5 g y 4.3. BGSP-00425 tuvo la NSC media mas alta, con un 30.6 semillas cápsula\textsuperscript{-1} mientras que los valores medios más bajos para IF y IU con valores de 4.0 g y 82.2 \%, respectivamente. BGSP-00207 presentó los valores medios más bajos de UHML y Str con valores de 28.3 mm y 29.2 g tex\textsuperscript{-1} respectivamente. En particular, las accesiones BGSP-00166 y SP-41255 fueron significativamente diferentes para casi todos los caracteres estudiados excepto para NSC (p \textless{} 0,01).
+La entrada SP-41255 presentó los valores medios más elevados para RB, RF, RFD y NC, con valores de 34.2 g planta\textsuperscript{-1}, 15.8 g planta\textsuperscript{-1}, 45.8 \%, y 9.2 capullos planta\textsuperscript{-1} respectivamente, sin embargo, presentó el valor medio más bajo de IS, con 7.7 g. BGSP-00159 tuvo la media más baja de RB con 26,2 g planta\textsuperscript{-1}. BGSP-00166 tuvo los valores medios más bajos para RF, RFD, MIC y NC con valores de 8.6 g planta\textsuperscript{-1}, 31.1 \%, 3.2 y 5.8 capullos planta\textsuperscript{-1} respectivamente, no obstante, presentó los valores medios más elevados de PC, IS, UHML, Str y IU con valores de 4.6 g capullo\textsuperscript{-1}, 11.5 g, 33.2 mm, 37.3 g tex\textsuperscript{-1} y 85.8 \% respectivamente. BGSP-00269 presentó los valores medios más bajos de PC, NSC y UHML, con valores de 3.4 g capullo\textsuperscript{-1}, 22.8 semilla capullo\textsuperscript{-1}, y 28.3 mm respectivamente, mientras que tuvo el valor medio más alto para IF y Mic con valores de 6.5 g y 4.3. BGSP-00425 tuvo la NSC media mas alta, con un 30.6 semillas cápsula\textsuperscript{-1} mientras que los valores medios más bajos para IF y IU con valores de 4.0 g y 82.2 \%, respectivamente. BGSP-00207 presentó los valores medios más bajos de UHML y Str con valores de 28.3 mm y 29.2 g tex\textsuperscript{-1} respectivamente. En particular, las accesiones BGSP-00166 y SP-41255 fueron significativamente diferentes para casi todos los caracteres estudiados excepto para NSC (p \textless{} 0,01).
 
 Estos resultados indican que existe variación fenotípica entre las accesiones de algodón tanto en términos de rendimiento como de calidad de la fibra.
 
 El primer componente principal explicó el 45,61\% de la varianza de los datos, mientras que el segundo componente principal explicó el 21,97\% (Figura \ref{fig:img-PC}). Los rasgos más asociados con el primer componente fueron RB, Mic, RF, IF y NC, mientras que UHML, Str, IU, IS, NSC, PC y RFD fueron los más asociados con el segundo componente. Las entradas situadas en el cuadrante superior izquierdo fueron BGSP-00166, BGSP-00159 y BGSP-00425, estando estas entradas asociadas con valores más altos de calidad de fibra (UHML, Str, IU) y tamaño de semilla (IS) y valores más bajos en caracteres relacionados con el rendimiento como RB, RF, IF, NC, RFD. Las entradas situadas en el cuadrante inferior derecho como SP-41255, BGSP-00269, BGSP-00207 y BGSP-00126, mostraron un comportamiento opuesto a las descritas.
 
 \begin{figure}
-\includegraphics[width=400px]{figure/chap1/Para_compuestas/PCA_juntas} \caption{Biplot del análisis de componentes principales con puntos que representan las proyecciones de las accesiones (1) y las variables (2) en el espacio definido por las dos primeras dimensiones (Dim) o componentes principales. RB: Rendimiento de algodón bruto en g, RF: Rendimiento de fibra en g, RFD: Rendimiento de fibra al desmote en \%, PC: Peso promedio de capullos en g, NC: Número de capullos por planta, IS: Índice de semilla en g, IF: Índice de fibra g, NSC: Número de semilla por capullo, UHML: Longitud de la fibra en mm, Str: Resistencia de la fibra en g tex$^{-1}$, MIC: Micronaire, FU: Fibre uniformity in \%.}\label{fig:img-PC}
+\includegraphics[width=400px]{figure/chap1/Para_compuestas/PCA_juntas} \caption{Biplot del análisis de componentes principales con puntos que representan las proyecciones de las accesiones (1) y las variables (2) en el espacio definido por las dos primeras dimensiones (Dim) o componentes principales. RB: Rendimiento de algodón bruto en g; RF: Rendimiento de fibra en g; RFD: Rendimiento de fibra al desmote en \%; PC: Peso promedio de capullos en g; NC: Número de capullos; IS: Índice de semillas en g; IF: Índice de fibra en g; NSC: Numero de semillas por capullo. UHML: Longitud promedio de fibra de la mitad superior en mm; Str: Resistencia de las fibras g tex\textsuperscript{-1}; Mic: Micronaire; IU: Índice de uniformidad de fibras en \%.}\label{fig:img-PC}
 \end{figure}
 
 En particular, las entradas BGSP-00166 y SP-41255 presentaron más contraste en cuanto a los rasgos medidos. Estas accesiones mostraron valores diferentes para la mayoría de los rasgos medidos relacionados tanto con el rendimiento como con la calidad de la fibra. Por lo tanto, seleccionamos estas accesiones para realizar un cruce biparental y generar una población segregante para estimar los parámetros genéticos y, a continuación, seleccionar fenotipos prometedores para el rendimiento y los rasgos relacionados con la calidad.
@@ -886,69 +652,12 @@ IU & -.07 & -.08 & -.07 & .09 & -.14 & .29* & .09 & -.08 & .40** & .50*** & -.07
 \end{tabular}
 \begin{tablenotes}[para]
 \item \textit{Referencias:} 
-\item *p < 0.05, **p < 0.01 and *** p < 0.001. RB: Rendimiento de algodón bruto en g, RF: Rendimiento de fibra en g, RFD: Rendimiento de fibra al desmote en \%, PC: Peso promedio de capullos en g, NC: Número de capullos por planta, IS: Índice de semilla en g, IF: Índice de fibra g, NSC: Número de semilla por capullo,UHML: Longitud de la fibra en mm, Str: Resistencia de la fibra en g tex\textasciicircum{}-1\textasciicircum{}, Mic: Micronaire, IU: Índice de uniformidad de fibras \%.
+\item *p < 0.05, **p < 0.01 and *** p < 0.001. RB: Rendimiento de algodón bruto en g; RF: Rendimiento de fibra en g; RFD: Rendimiento de fibra al desmote en \%; PC: Peso promedio de capullos en g; NC: Número de capullos; IS: Índice de semillas en g; IF: Índice de fibra en g; NSC: Numero de semillas por capullo. UHML: Longitud promedio de fibra de la mitad superior en mm; Str: Resistencia de las fibras g tex\textsuperscript{-1}; Mic: Micronaire; IU: Índice de uniformidad de fibras en \%.
 \end{tablenotes}
 \end{threeparttable}}
 \end{table}
 
 Varias correlaciones fenotípicas fueron estadísticamente significativas (Tabla \ref{tab:correlation-greenhouse}). Para el análisis, se consideraron correlaciones fuertes los valores superiores a 0,80, moderadas las comprendidas entre 0,40 y 0,80, y bajas las inferiores a 0,40. El RF mostró una fuerte correlación positiva con el NC. También mostró una correlación positiva moderada con PC. La RFD mostró una correlación positiva moderada con el RF y el NC. Sin embargo, mostró una correlación negativa moderada con IS. El UHML mostró correlaciones negativas moderadas con el RF, lo que indica que, a medida que aumenta el rendimiento de fibra, disminuye la longitud de la misma.
-
-\begin{landscape}\begin{table}[!h]
-\centering
-\caption{\label{tab:tabla-datos-conjuntos}Datos conjuntos...}
-\centering
-\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
-\begin{threeparttable}
-\begin{tabular}[t]{>{\raggedright\arraybackslash}p{6em}lllllllllllllllllllllllll}
-\toprule
-\multicolumn{1}{c}{ } & \multicolumn{5}{c}{Fenología} & \multicolumn{3}{c}{Característica de planta} & \multicolumn{3}{c}{Característica de hoja} & \multicolumn{1}{c}{Bráctea} & \multicolumn{1}{c}{Cápsula} & \multicolumn{12}{c}{Características morfológicas, rendimiento y sus componentes} \\
-\cmidrule(l{3pt}r{3pt}){2-6} \cmidrule(l{3pt}r{3pt}){7-9} \cmidrule(l{3pt}r{3pt}){10-12} \cmidrule(l{3pt}r{3pt}){13-13} \cmidrule(l{3pt}r{3pt}){14-14} \cmidrule(l{3pt}r{3pt}){15-26}
-Entradas & DPP & DPF & DCO & DPCA & DFC & Forma & Canopia & Tipo Floración & Forma & Lámina & Pubescencia & Tipo & Forma & AP & NN & NRV & NRR & N1RR & A1RR & D1P & RB & RF & RFD & PC & NC\\
-\midrule
- &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \vphantom{1} & \\
-BGSP-00028 & 25 & 51 & 74 & 118 & 163 & Cónica & Abierta & Individual & Palmada & Plana & Escasa & Normal & Cónica & 106.3 (5.5) & 13.3 (0.9) & 1.0 (0.6) & 10.7 (0.7) & 3.7 (0.3) & 25.3 (0.7) & 9.3 (0.7) & 24.1 (2.0) & 8.7 (0.6) & 36.5 (0.7) & 4.3 (0.3) & 5.7 (0.3)\\
-BGSP-00067 & 25 & 54 & 74 & 128 & 163 & Cónica & Abierta & Individual & Palmada & Plana & Escasa & Normal & Cónica & 102.0 (4.0) & 14.7 (0.7) & 1.3 (0.3) & 11.0 (0.6) & 4.7 (0.3) & 27.0 (1.7) & 11.0 (1.5) & 23.3 (3.3) & 8.2 (1.0) & 36.0 (1.9) & 2.8 (0.2) & 8.3 (1.2)\\
-BGSP-00070 & 27 & 53 & 76 & 128 & 163 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica & 109.3 (0.3) & 14.3 (0.3) & 1.3 (0.3) & 9.7 (0.3) & 5.7 (0.7) & 40.7 (4.2) & 9.7 (1.9) & 19.9 (1.3) & 7.7 (0.8) & 39.6 (0.8) & 3.4 (0.3) & 6.0 (0.6)\\
-BGSP-00072 & 25 & 54 & 80 & 130 & 162 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica & 113.3 (4.3) & 17.0 (0.0) & 1.3 (0.3) & 13.3 (0.3) & 4.7 (0.3) & 27.3 (3.2) & 7.3 (1.8) & 26.3 (2.2) & 9.8 (0.9) & 38.3 (0.6) & 3.5 (0.4) & 7.7 (0.3)\\
-\addlinespace
-BGSP-00088 & 25 & 54 & 78 & 135 & 163 & Cónica & Medio & Individual & Palmada & Plana & Fuerte & Normal & Cónica & 104.3 (5.8) & 14.3 (0.7) & 1.7 (0.3) & 10.7 (0.3) & 4.7 (0.3) & 28.3 (2.7) & 14.3 (1.2) & 31.0 (3.2) & 11.3 (1.1) & 37.1 (0.4) & 4.4 (0.2) & 7.0 (0.6)\\
-BGSP-00126 & 25 & 54 & 79 & 132 & 163 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Escasa & Normal & Cónica & 126.3 (3.8) & 14.9 (0.2) & 1.5 (0.2) & 11.3 (0.3) & 4.6 (0.1) & 37.4 (1.4) & 8.9 (0.9) & 16.0 (0.6) & 6.6 (0.3) & 42.9 (0.3) & 2.7 (0.2) & 6.0 (0.3)\\
-BGSP-00145 & 25 & 52 & 73 & 121 & 163 & Cónica & Medio & Individual & Palmada & Plana & Media & Normal & Cónica & 89.0 (4.5) & 14.3 (0.3) & 1.0 (0.6) & 11.3 (0.3) & 4.0 (0.0) & 25.7 (0.9) & 9.7 (1.8) & 16.1 (3.1) & 6.1 (1.1) & 38.6 (0.7) & 3.6 (0.6) & 4.7 (0.9)\\
-BGSP-00159 & 22 & 49 & 74 & 114 & 161 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica & 104.3 (3.6) & 14.3 (0.3) & 1.1 (0.2) & 11.0 (0.2) & 4.3 (0.2) & 31.8 (1.9) & 11.4 (0.6) & 14.3 (0.6) & 5.1 (0.2) & 36.8 (0.6) & 2.7 (0.1) & 5.2 (0.2)\\
-BGSP-00166 & 23 & 52 & 74 & 124 & 163 & Cilíndrica & Compacta & Agrupada & Palmada & Plana & Media & Normal & Cónica & 109.0 (3.0) & 15.2 (0.2) & 0.8 (0.2) & 11.8 (0.3) & 4.4 (0.2) & 30.6 (1.2) & 3.9 (0.6) & 18.2 (0.5) & 5.5 (0.2) & 31.1 (0.4) & 3.6 (0.1) & 5.1 (0.2)\\
-\addlinespace
-BGSP-00177 & 26 & 53 & 75 & 127 & 164 & Cónica & Abierta & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica & 103.7 (3.3) & 14.3 (0.3) & 1.7 (0.3) & 10.7 (0.3) & 4.7 (0.3) & 32.7 (3.4) & 13.7 (1.7) & 24.5 (2.2) & 7.9 (0.8) & 33.0 (0.4) & 4.2 (0.8) & 6.0 (0.6)\\
-BGSP-00192 & 25 & 54 & 76 & 124 & 162 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica & 101.3 (5.8) & 15.0 (0.0) & 1.7 (0.3) & 11.0 (0.0) & 5.0 (0.0) & 29.0 (2.1) & 11.3 (0.9) & 18.7 (3.3) & 7.1 (1.1) & 37.9 (2.0) & 3.3 (0.4) & 5.7 (0.3)\\
-BGSP-00193 & 25 & 55 & 78 & 137 & 162 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica & 106.7 (5.5) & 15.3 (0.3) & 2.7 (0.3) & 11.3 (0.3) & 5.0 (0.0) & 30.7 (0.9) & 8.0 (1.7) & 29.4 (3.9) & 10.9 (1.4) & 38.1 (1.8) & 4.2 (0.6) & 7.0 (0.0)\\
-BGSP-00194 & 25 & 55 & 75 & 118 & 163 & Cilíndrica & Compacta & Agrupada & Palmada & Plana & Media & Normal & Cónica & 92.7 (3.2) & 14.7 (0.3) & 2.3 (0.3) & 10.7 (0.3) & 5.0 (0.0) & 31.3 (0.7) & 5.7 (3.2) & 24.0 (3.1) & 9.6 (1.4) & 40.9 (0.8) & 3.7 (0.4) & 6.7 (0.9)\\
-BGSP-00207 & 23 & 52 & 79 & 135 & 164 & Cónica & Abierta & Individual & Palmada & Plana & Fuerte & Normal & Cónica & 105.0 (8.5) & 15.3 (0.2) & 0.7 (0.2) & 12.2 (0.2) & 4.2 (0.1) & 29.4 (0.8) & 10.1 (1.0) & 16.2 (0.6) & 6.7 (0.2) & 43.6 (0.5) & 2.8 (0.1) & 5.8 (0.2)\\
-\addlinespace
-BGSP-00269 & 23 & 52 & 75 & 133 & 163 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica & 113.0 (3.7) & 14.7 (0.2) & 1.2 (0.2) & 11.2 (0.2) & 4.4 (0.1) & 34.2 (1.6) & 8.3 (0.8) & 16.9 (0.5) & 7.1 (0.3) & 43.7 (0.5) & 2.9 (0.2) & 6.1 (0.3)\\
-BGSP-00425 & 25 & 53 & 73 & 130 & 163 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica & 105.2 (3.3) & 13.8 (0.1) & 0.9 (0.3) & 10.8 (0.1) & 4.0 (0.0) & 25.5 (0.7) & 8.4 (0.9) & 15.1 (0.5) & 4.6 (0.2) & 31.5 (0.3) & 2.6 (0.1) & 5.8 (0.3)\\
-BGSP-00428 & 23 & 49 & 74 & 113 & 163 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Redonda & 105.3 (7.3) & 15.3 (0.3) & 0.7 (0.3) & 12.0 (0.6) & 4.3 (0.3) & 28.0 (2.9) & 8.7 (2.4) & 21.4 (3.6) & 8.7 (1.4) & 40.1 (0.4) & 4.3 (0.7) & 5.0 (0.6)\\
-BGSP-00514 & 23 & 52 & 76 & 117 & 161 & Cónica & Abierta & Individual & Digitada (Okra) & Plana & Media & Normal & Cónica & 99.0 (8.0) & 16.0 (0.0) & 2.7 (0.3) & 12.3 (0.3) & 4.7 (0.3) & 25.0 (1.5) & 11.7 (1.7) & 28.0 (2.8) & 11.7 (1.2) & 42.3 (0.4) & 4.2 (0.2) & 6.7 (0.9)\\
-BGSP-00715 & 24 & 55 & 78 & 134 & 163 & Cónica & Medio & Medio Agrupada & Palmada & Plana & Fuerte & Normal & Cónica & 102.0 (8.5) & 14.7 (0.9) & 0.3 (0.3) & 11.7 (0.9) & 4.0 (0.0) & 27.3 (2.3) & 13.0 (1.2) & 24.0 (3.6) & 9.8 (1.2) & 41.6 (1.2) & 3.4 (0.4) & 7.0 (0.6)\\
-\addlinespace
-BGSP-00748 & 23 & 52 & 74 & 135 & 164 & Cónica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Elíptica & 105.7 (0.9) & 15.0 (0.0) & 1.7 (0.3) & 12.0 (0.0) & 4.0 (0.0) & 25.7 (1.2) & 12.0 (0.6) & 33.5 (1.8) & 12.3 (1.0) & 39.0 (2.4) & 4.4 (0.1) & 7.7 (0.3)\\
-BGSP-00752 & 25 & 55 & 79 & 135 & 162 & Cónica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica & 103.3 (5.2) & 15.3 (0.3) & 2.7 (0.3) & 11.3 (0.3) & 5.0 (0.0) & 29.3 (0.7) & 10.3 (0.9) & 27.2 (2.1) & 11.3 (1.2) & 42.1 (1.9) & 4.1 (0.1) & 6.7 (0.3)\\
-BGSP-00755 & 25 & 53 & 75 & 124 & 163 & Cilíndrica & Medio & Medio Agrupadas & Palmada & Plana & Media & Normal & Cónica & 97.3 (3.3) & 13.0 (0.0) & 2.7 (0.3) & 10.0 (0.0) & 4.0 (0.0) & 28.7 (0.3) & 10.3 (0.7) & 26.3 (2.0) & 10.0 (0.7) & 38.5 (0.8) & 4.7 (0.2) & 5.7 (0.7)\\
-BGSP-00759 & 25 & 54 & 77 & 134 & 163 & Cilíndrica & Abierta & Medio Agrupada & Palmada & En copa & Media & Normal & Redonda & 108.3 (5.0) & 14.0 (0.6) & 1.0 (0.6) & 10.0 (1.0) & 5.0 (0.6) & 38.3 (5.5) & 9.7 (2.4) & 24.6 (3.6) & 8.7 (1.5) & 38.3 (1.1) & 4.7 (0.6) & 5.7 (1.5)\\
-BGSP-00779 & 25 & 55 & 76 & 126 & 161 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica & 112.3 (1.9) & 16.0 (0.0) & 1.3 (0.3) & 12.3 (0.3) & 4.7 (0.3) & 30.3 (1.8) & 11.7 (0.7) & 26.3 (1.5) & 10.4 (0.5) & 40.5 (0.7) & 3.0 (0.1) & 8.7 (0.3)\\
-\addlinespace
-SP 41255 & 23 & 52 & 76 & 124 & 162 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica & 122.3 (2.9) & 15.2 (0.1) & 1.2 (0.2) & 11.8 (0.2) & 4.4 (0.1) & 32.7 (1.1) & 11.2 (0.8) & 20.7 (0.7) & 8.8 (0.4) & 44.7 (0.5) & 2.8 (0.1) & 7.3 (0.3)\\
-SP 6565 & 25 & 55 & 79 & 131 & 162 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Normal & Cónica & 120.8 (1.9) & 15.7 (0.2) & 1.3 (0.2) & 12.2 (0.2) & 4.5 (0.2) & 35.8 (1.6) & 8.4 (0.6) & 17.3 (0.5) & 6.9 (0.2) & 41.2 (0.3) & 2.6 (0.1) & 6.8 (0.3)\\
- &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \\
-p-valor & - & - & - & - & - & - & - & - & - & - & - & - & - & <0.001 & <0.001 & <0.001 & <0.001 & <0.001 & <0.001 & <0.001 & <0.001 & <0.001 & <0.001 & <0.001 & <0.001\\
-L.S.D Fisher & - & - & - & - & - & - & - & - & - & - & - & - & - & 17.96 & 1 & 0.99 & 1.05 & 0.74 & 6.29 & 3.89 & 4.3 & 1.76 & 2.46 & 0.76 & 1.42\\
-\bottomrule
-\end{tabular}
-\begin{tablenotes}[para]
-\item \textit{Referencias:} 
-\item DPP, días a primer pimpollo; DPF, días a primera flor; DCO, días a Cut Out; DPCA, días a primer cápsula abierta; DFC, días a fin de ciclo. AP, altura de planta en cm; NN, número de nudos totales en tallo; NRV, Número de ramas vegetativas; NRR, Número de ramas reproductivas; N1RR, Nudos a la primera rama reproductiva; A1RR, Altura a la primera rama reproductiva en cm; D1P, Distancia de la primera posición al tallo principal en cm. RB, Rendimiento bruto en g; RF, Rendimiento de fibra en g; RFD, Rendimiento de fibra al desmote en \%; PC, Peso promedio de capullos g; NC, Numero de capullos por planta.
-\end{tablenotes}
-\end{threeparttable}}
-\end{table}
-\end{landscape}
 
 \section{Discusión}\label{discusiuxf3n}
 

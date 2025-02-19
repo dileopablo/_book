@@ -1,10 +1,10 @@
 tab:tablaEntradas
+tab:tabla-descriptores
 tab:table-charac
 fig:img-PC
 tab:correlation-greenhouse
 fig:img-croquis
 fig:img-parental
-tab:table-generations-two
 rmd-basics
 introducción-1
 objetivo
@@ -14,7 +14,7 @@ análisis-estadístico
 resultados
 características-cualitativas-de-las-entradas-del-banco-de-germoplasma-de-algodón-gossypium-hirsutum-l.
 características-morfológicas-cuantitativas-componentes-del-rendimiento-y-calidad-de-fibra
-entradas-seleccionadas-para-mayor-profundización-de-las-características-de-rendimiento-y-calidad-de-fibra
+entradas-seleccionadas-para-mayor-profundización-en-el-análisis-de-las-características-de-rendimiento-y-calidad-de-fibra
 discusión
 conclusión
 math-sci

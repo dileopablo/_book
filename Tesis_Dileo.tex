@@ -77,7 +77,7 @@
 \title{Caracterización morfológica, fisiológica y molecular de entradas de algodón (\emph{Gossypium hirsutum} L.) e identificación de QTL de importancia agronómica}
 \author{Ing. Agr. Pablo Nahuel Dileo}
 % The month and year that you submit your FINAL draft TO THE LIBRARY (May or December)
-\date{Versión 1.3}
+\date{Versión 1.4}
 \division{Facultad de Ciencias Agrarias}
 \advisor{Dr.~Gustavo Rubén Rodríguez}
 \institution{Universidad Nacional del Nordeste}
@@ -613,6 +613,8 @@ L.S.D Fisher & 17,96 & 1 & 0,99 & 1,05 & 0,74 & 6,29 & 3,89 & 4,3 & 1,76 & 2,46 
 \end{table}
 \end{landscape}
 
+\includegraphics{Tesis_Dileo_files/figure-latex/cluster-1.pdf}
+
 \subsection{\texorpdfstring{Caracterización de ocho entradas seleccionadas de algodón (\emph{Gossypium hirsutum} L.)}{Caracterización de ocho entradas seleccionadas de algodón (Gossypium hirsutum L.)}}\label{caracterizaciuxf3n-de-ocho-entradas-seleccionadas-de-algoduxf3n-gossypium-hirsutum-l.-1}
 
 \subsubsection{Características de rendimiento y sus componentes y calidad de fibra}\label{caracteruxedsticas-de-rendimiento-y-sus-componentes-y-calidad-de-fibra}
@@ -706,6 +708,106 @@ IU & -.05 & -.06 & -.01 & .09 & -.10 & .40** & .09 & -.14 & .34* & .46*** & -.10
 Varias correlaciones fenotípicas fueron estadísticamente significativas (Tabla \ref{tab:correlation-greenhouse}). Para el análisis, se consideraron correlaciones fuertes los valores superiores a 0,80, moderadas las comprendidas entre 0,40 y 0,80, y bajas las inferiores a 0,40. El RF mostró una fuerte correlación positiva con el NC. También mostró una correlación positiva moderada con PC. La RFD mostró una correlación positiva moderada con el RF y el NC. Sin embargo, mostró una correlación negativa moderada con IS. El UHML mostró correlaciones negativas moderadas con el RF, lo que indica que, a medida que aumenta el rendimiento de fibra, disminuye la longitud de la misma.
 
 \subsubsection{Procesos fisiológicos que intervienen en la determinación del rendimiento de fibra}\label{procesos-fisioluxf3gicos-que-intervienen-en-la-determinaciuxf3n-del-rendimiento-de-fibra}
+
+Biomasa total y particionada
+
+\begin{table}[!h]
+\centering\centering
+\caption{\label{tab:Anova-biomasa-particion-rep2}Acumulacion de biomasa en estructuras vegetativas, tallo, hojas, peciolos, ramas vegetativas, rebrote, biomasa reproductiva, pimpollo, flor, bocha, cápsula, semilla}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\fontsize{12}{14}\selectfont
+\begin{tabular}[t]{llrrrl}
+\toprule
+\multicolumn{1}{c}{ } & \multicolumn{5}{c}{ANOVA} \\
+\cmidrule(l{3pt}r{3pt}){2-6}
+\begingroup\fontsize{12}{14}\selectfont \textbf{Rasgos}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{Fuente}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{GLNum}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{GLDen}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{F}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{p-valor}\endgroup\\
+\midrule
+Biomasa Total & (Intercept) & 1 & 193 & 62.54 & <0.0001\\
+ & Momento & 3 & 21 & 92.71 & <0.0001\\
+ & Entradas & 7 & 193 & 6.34 & <0.0001\\
+ & Momento:Entradas & 21 & 193 & 2.37 & 0.0011\\
+1 Biomasa Vegetativa & (Intercept) & 1 & 193 & 210.27 & <0.0001\\
+\addlinespace
+ & Momento & 3 & 21 & 196.04 & <0.0001\\
+ & Entradas & 7 & 193 & 4.55 & 0.0001\\
+ & Momento:Entradas & 21 & 193 & 1.65 & 0.0416\\
+1.1 Tallo & (Intercept) & 1 & 193 & 332.03 & <0.0001\\
+ & Momento & 3 & 21 & 249.72 & <0.0001\\
+\addlinespace
+ & Entradas & 7 & 193 & 6.30 & <0.0001\\
+ & Momento:Entradas & 21 & 193 & 2.41 & 0.0009\\
+1.2 Hoja & (Intercept) & 1 & 193 & 211.00 & <0.0001\\
+ & Momento & 3 & 21 & 39.10 & <0.0001\\
+ & Entradas & 7 & 193 & 0.70 & 0.6741\\
+\addlinespace
+ & Momento:Entradas & 21 & 193 & 1.81 & 0.0195\\
+1.3 Peciolo+Ramas & (Intercept) & 1 & 193 & 148.48 & <0.0001\\
+ & Momento & 3 & 21 & 123.02 & <0.0001\\
+ & Entradas & 7 & 193 & 2.73 & 0.0102\\
+ & Momento:Entradas & 21 & 193 & 1.46 & 0.0956\\
+\addlinespace
+1.4 RV+Rebrote & (Intercept) & 1 & 193 & 63.81 & <0.0001\\
+ & Momento & 3 & 21 & 21.61 & <0.0001\\
+ & Entradas & 7 & 193 & 4.02 & 0.0004\\
+ & Momento:Entradas & 21 & 193 & 1.49 & 0.0829\\
+2 Biomasa Reproductiva & (Intercept) & 1 & 193 & 10.52 & 0.0014\\
+\addlinespace
+ & Momento & 3 & 21 & 62.70 & <0.0001\\
+ & Entradas & 7 & 193 & 3.15 & 0.0035\\
+ & Momento:Entradas & 21 & 193 & 1.45 & 0.0992\\
+2.1 Prim+Flor+Bocha & (Intercept) & 1 & 193 & 132.53 & <0.0001\\
+ & Momento & 3 & 21 & 94.71 & <0.0001\\
+\addlinespace
+ & Entradas & 7 & 193 & 0.94 & 0.4797\\
+ & Momento:Entradas & 21 & 193 & 0.63 & 0.8961\\
+2.2 Cápsula (M4) & (Intercept) & 1 & 47 & 10.82 & 0.0019\\
+ & Entradas & 7 & 47 & 3.85 & 0.0022\\
+2.3 Fibra+Semilla (M4) & (Intercept) & 1 & 47 & 13.01 & 0.0007\\
+\addlinespace
+ & Entradas & 7 & 47 & 2.36 & 0.0373\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+Retención global
+
+\begin{table}[!h]
+\centering\centering
+\caption{\label{tab:Anova-retencion}Retención global, y en posiciones 1, 2 y 3, en los momentos M2, M3, y M4}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\fontsize{12}{14}\selectfont
+\begin{tabular}[t]{llrrrl}
+\toprule
+\multicolumn{1}{c}{ } & \multicolumn{5}{c}{ANOVA} \\
+\cmidrule(l{3pt}r{3pt}){2-6}
+\begingroup\fontsize{12}{14}\selectfont \textbf{Rasgos}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{Fuente}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{GLNum}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{GLDen}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{F}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{p-valor}\endgroup\\
+\midrule
+Ret\_Global & (Intercept) & 1 & 144 & 90.21 & <0.0001\\
+ & Momento & 2 & 14 & 52.91 & <0.0001\\
+ & Entradas & 7 & 144 & 3.48 & 0.0018\\
+ & Momento:Entradas & 14 & 144 & 2.21 & 0.0098\\
+Ret\_P1 & (Intercept) & 1 & 144 & 338.14 & <0.0001\\
+\addlinespace
+ & Momento & 2 & 14 & 89.26 & <0.0001\\
+ & Entradas & 7 & 144 & 1.47 & 0.1810\\
+ & Momento:Entradas & 14 & 144 & 3.05 & 0.0004\\
+Ret\_P2 & (Intercept) & 1 & 144 & 22.78 & <0.0001\\
+ & Momento & 2 & 14 & 8.89 & 0.0032\\
+\addlinespace
+ & Entradas & 7 & 144 & 2.65 & 0.0131\\
+ & Momento:Entradas & 14 & 144 & 1.29 & 0.2206\\
+Ret\_P3 & (Intercept) & 1 & 144 & 13.92 & 0.0003\\
+ & Momento & 2 & 14 & 6.59 & 0.0096\\
+ & Entradas & 7 & 144 & 1.06 & 0.3914\\
+\addlinespace
+ & Momento:Entradas & 14 & 144 & 0.92 & 0.5359\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+Fotosíntesis, conductancia estomática y SPAD
 
 \section{Discusión}\label{discusiuxf3n}
 

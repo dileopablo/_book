@@ -823,6 +823,38 @@ Ret\_P3 & (Intercept) & 1 & 144 & 13.92 & 0.0003\\
 
 Fotosíntesis, conductancia estomática y SPAD
 
+\begin{table}[!h]
+\centering\centering
+\caption{\label{tab:Anova-fotosintesis-cond-spad}Fotosintesis, conductancia estomatica y SPAD}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\fontsize{12}{14}\selectfont
+\begin{tabular}[t]{llrrrl}
+\toprule
+\multicolumn{1}{c}{ } & \multicolumn{5}{c}{ANOVA} \\
+\cmidrule(l{3pt}r{3pt}){2-6}
+\begingroup\fontsize{12}{14}\selectfont \textbf{Rasgos}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{Fuente}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{GLNum}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{GLDen}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{F}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{p-valor}\endgroup\\
+\midrule
+SPAD & (Intercept) & 1 & 56 & 139.88 & <0.0001\\
+ & DDE & 1 & 56 & 19.76 & <0.0001\\
+ & Entradas & 7 & 21 & 1.04 & 0.4363\\
+ & DDE:Entradas & 7 & 56 & 0.74 & 0.6355\\
+Cond & (Intercept) & 1 & 56 & 26.32 & <0.0001\\
+\addlinespace
+ & DDE & 1 & 56 & 1.18 & 0.2814\\
+ & Entradas & 7 & 21 & 0.90 & 0.5224\\
+ & DDE:Entradas & 7 & 56 & 0.91 & 0.5085\\
+Photo & (Intercept) & 1 & 56 & 339.17 & <0.0001\\
+ & DDE & 1 & 56 & 122.17 & <0.0001\\
+\addlinespace
+ & Entradas & 7 & 21 & 3.49 & 0.0122\\
+ & DDE:Entradas & 7 & 56 & 3.36 & 0.0046\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\includegraphics{Tesis_Dileo_files/figure-latex/Anova-fotosintesis-cond-spad-1.pdf}
+
 \section{Discusión}\label{discusiuxf3n}
 
 Aquí la discusión del capítulo 1

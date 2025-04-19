@@ -77,7 +77,7 @@
 \title{Caracterización morfológica, fisiológica y molecular de entradas de algodón (\emph{Gossypium hirsutum} L.) e identificación de QTL de importancia agronómica}
 \author{Ing. Agr. Pablo Nahuel Dileo}
 % The month and year that you submit your FINAL draft TO THE LIBRARY (May or December)
-\date{Versión 1.5}
+\date{Versión 1.6}
 \division{Facultad de Ciencias Agrarias}
 \advisor{Dr.~Gustavo Rubén Rodríguez}
 \institution{Universidad Nacional del Nordeste}
@@ -497,11 +497,11 @@ Por otra parte, se realizaron muestreos destructivos de plantas para la determin
 
 \subsection{Análisis estadístico}\label{anuxe1lisis-estaduxedstico}
 
-Análisis estadístico de 26 entradas
+\subsubsection{Caracterización morfológica de 26 entradas de algodón}\label{caracterizaciuxf3n-morfoluxf3gica-de-26-entradas-de-algoduxf3n}
 
 Para las características morfológicas cualitativas, se analizaron las frecuencias relativas de cada descriptor evaluado en las entradas del banco de germoplasma. En las características cuantitativas, se realizó un análisis de varianza (ANOVA) para determinar la significancia de las diferencias observadas entre las entradas en los parámetros evaluados. Los parámetros con diferencias significativas fueron sometidos a comparaciones múltiples mediante la prueba L.S.D. de Fisher (p ≤ 0.05). Además, se llevó a cabo un análisis de conglomerados jerárquicos utilizando la métrica de distancia de Gower y el método Ward.D, integrando las características cualitativas y cuantitativas. Este análisis permitió identificar agrupaciones homogéneas de entradas, lo cual se visualizó en dendrogramas. Para facilitar la interpretación de las relaciones entre las entradas, se utilizó un mapa de calor que incluye clustering en filas y columnas. Los análisis fueron realizados empleando el software estadístico R (versión 4.4.2) junto con paquetes como cluster, dplyr y ComplexHeatmap.
 
-Análisis estadístico de ocho entradas
+\subsubsection{Caracterización de ocho entradas seleccionadas de algodón}\label{caracterizaciuxf3n-de-ocho-entradas-seleccionadas-de-algoduxf3n}
 
 Para evaluar las diferencias entre las entradas seleccionadas de algodón (Gossypium hirsutum L.) en términos de rendimiento, componentes del rendimiento y calidad de fibra, se utilizaron modelos lineales mixtos (LMM, por sus siglas en inglés). El análisis de varianza (ANOVA) se llevó a cabo con el paquete nlme en R, empleando la metodología de Máxima Verosimilitud Restringida (REML). Los modelos incluyeron las entradas como efecto fijo y consideraron como efectos aleatorios el experimento y la repetición, con el propósito de controlar la variabilidad inherente a estas fuentes. Para identificar diferencias significativas entre las medias de las entradas (p ≤ 0.05), se realizaron comparaciones múltiples mediante el método de Mínima Diferencia Significativa (LSD, por sus siglas en inglés), utilizando la biblioteca predictmeans.
 
@@ -629,7 +629,11 @@ L.S.D Fisher & 17,96 & 1 & 0,99 & 1,05 & 0,74 & 6,29 & 3,89 & 4,3 & 1,76 & 2,46 
 \end{table}
 \end{landscape}
 
-\includegraphics{Tesis_Dileo_files/figure-latex/cluster-1.pdf} \includegraphics{Tesis_Dileo_files/figure-latex/cluster-2.pdf}
+\begin{figure}
+\centering
+\includegraphics{Tesis_Dileo_files/figure-latex/cluster-1.pdf}
+\caption{\label{fig:cluster}Heatmap que muestra las distancias calculadas entre los datos utilizando la métrica de Gower.}
+\end{figure}
 
 \subsection{\texorpdfstring{Caracterización de ocho entradas seleccionadas de algodón (\emph{Gossypium hirsutum} L.)}{Caracterización de ocho entradas seleccionadas de algodón (Gossypium hirsutum L.)}}\label{caracterizaciuxf3n-de-ocho-entradas-seleccionadas-de-algoduxf3n-gossypium-hirsutum-l.-1}
 

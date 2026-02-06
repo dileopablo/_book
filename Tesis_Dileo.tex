@@ -170,6 +170,7 @@ Segundo párrafo del resumen aquí.
     \addbibresource{referencias.bib}
     \usepackage{hyperref}
     \usepackage{csquotes}
+    \providecommand{\pandocbounded}[1]{#1}
     \usepackage{booktabs}
     \usepackage{longtable}
     \usepackage{array}
@@ -262,26 +263,32 @@ Segundo párrafo del resumen aquí.
 \begin{table}[h]
     \centering
     \begin{tabular}{ll}
-                \textbf{A1RR} & Altura a primer rama reproductiva \\
+                \textbf{A1RR} & Altura de inserción de la primera rama reproductiva \\
                 \textbf{AP} & Altura de planta \\
-                \textbf{D1P} & Distancia de la primera posición al tallo principal \\
+                \textbf{D1P} & Distancia de la primera posición reproductiva al tallo principal \\
+                \textbf{DCO} & Días desde emergencia a cut out \\
+                \textbf{DM} & Días desde emergencia a madurez \\
+                \textbf{DPCA} & Días desde emergencia a apertura del primer capullo \\
+                \textbf{DPF} & Días desde emergencia a primera flor \\
+                \textbf{DPP} & Días desde emergencia a primer botón floral \\
                 \textbf{IF} & Índice de fibra \\
-                \textbf{IS} & Índice de semillas \\
-                \textbf{IU} & Índice de uniformidad de fibras \\
+                \textbf{IS} & Índice de semilla \\
+                \textbf{IU} & Uniformidad de fibra \\
                 \textbf{Mic} & Micronaire \\
-                \textbf{N1RR} & Nudos a primer rama reproductiva \\
-                \textbf{NC} & Número de capullos \\
-                \textbf{NN} & Número de nudos \\
-                \textbf{NRR} & Número de ramas reproductivas \\
-                \textbf{NRV} & Número de ramas vegetativas \\
-                \textbf{NSC} & Numero de semillas por capullo \\
-                \textbf{PC} & Peso promedio de capullos \\
-                \textbf{RB} & Rendimiento de algodón bruto \\
+                \textbf{N1RR} & Nudo de inserción de la primera rama reproductiva \\
+                \textbf{NC} & Número de capullos por planta \\
+                \textbf{NN} & Número de nudos del tallo principal \\
+                \textbf{NRR} & Número de ramas reproductivas (simpodiales) \\
+                \textbf{NRV} & Número de ramas vegetativas (monopodiales) \\
+                \textbf{NSC} & Número de semillas por capullo \\
+                \textbf{PC} & Peso de capullo \\
+                \textbf{PN} & Fotosíntesis neta \\
+                \textbf{RB} & Rendimiento de algodón en bruto \\
                 \textbf{RF} & Rendimiento de fibra \\
-                \textbf{RFD} & Rendimiento de fibra al desmote \\
-                \textbf{Str} & Resistencia de las fibras \\
-                \textbf{UHML} & Longitud de las fibras \\
-                \textbf{zContinua...} & Otras abreviaturas \\
+                \textbf{RFD} & Porcentaje de fibra al desmote \\
+                \textbf{Str} & Resistencia de fibra \\
+                \textbf{UHML} & Longitud de fibra \\
+                \textbf{gs} & Conductancia estomática \\
             \end{tabular}
 \end{table}
 \thispagestyle{fancy} % Asegura que se utiliza el estilo de paginación fancy para esta página 
@@ -360,6 +367,10 @@ Recientemente, \textcite{scarpin2022} informaron de un progreso genético en el 
 En un programa de mejora genética del algodón, combinar un alto rendimiento y calidad de la fibra es un reto clave. El primer paso crucial para un programa de mejora eficaz es caracterizar el germoplasma del algodón. \textcite{kearsey1996} destacaron la importancia de comprender las diferencias genéticas y la heredabilidad de los rasgos al momento de cruzar plantas. La heredabilidad muestra en qué medida los rasgos están influidos por la genética y puede estimarse comparando las varianzas de las generaciones segregantes y no segregantes. En el algodón, se han notificado estimaciones de heredabilidad para varios rasgos, como el rendimiento de fibra, los componentes del rendimiento, la calidad de la fibra, la altura de la planta, el aceite de semilla, el nudo de la primera rama reproductiva, la cápsulas a prueba de tormentas, entre otros \autocite{meredith1984,tang1996,ribeiro2017,decarvalho2022,nidagundi2023}. Estos estimadores ayudan a los mejoradores a decidir la
 
 selección individual y a predecir cuánto pueden mejorar ciertos rasgos. Sin embargo, merece la pena tener en cuenta que el nivel de heredabilidad cambia en función del rasgo, la población y el ambiente en el que se cultivan.
+
+
+
+
 
 
 
@@ -629,7 +640,7 @@ L.S.D Fisher & 17,96 & 1 & 0,99 & 1,05 & 0,74 & 6,29 & 3,89 & 4,3 & 1,76 & 2,46 
 \end{tabular}
 \begin{tablenotes}[para]
 \item \textit{Referencias:} 
-\item AP: Altura de planta en cm; NN: Número de nudos; NRV: Número de ramas vegetativas; NRR: Número de ramas reproductivas; N1RR: Nudos a primer rama reproductiva; A1RR: Altura a primer rama reproductiva en cm; D1P: Distancia de la primera posición al tallo principal en cm. RB: Rendimiento de algodón bruto en g; RF: Rendimiento de fibra en g; RFD: Rendimiento de fibra al desmote en \%; PC: Peso promedio de capullos en g; NC: Número de capullos. UHML: Longitud promedio de fibra de la mitad superior en mm; Str: Resistencia de las fibras g tex\textsuperscript{-1}; Mic: Micronaire; IU: Índice de uniformidad de fibras en \%. DPP: Días a primer pimpollo; DPF: Días a primera flor; DCO: Días a Cut Out; DPCA: Días a primer cápsula abierta; DFC: días a fin de ciclo.
+\item AP: altura de planta a madurez en cm; NN: número de nudos en el tallo principal; NRV: número de ramas monopodiales (vegetativas); NRR: número de nudos de ramas simpodiales; N1RR: posición de la primera rama fructífera medida como número de nudo del tallo; A1RR: posición de la primera rama fructífera medida como altura en cm; D1P: distancia desde la primera posición reproductiva al tallo principal en cm. RB: rendimiento de algodón en bruto en g; RF: rendimiento de fibra en g; RFD: porcentaje de fibra en \%; PC: peso de capullo en g; NC: número de capullos por planta. UHML: longitud de fibra en mm; Str: resistencia de fibra en g tex-1; Mic: micronaire; IU: uniformidad de fibra en \%. DPP: días desde emergencia de plántula hasta primer botón floral; DPF: días desde emergencia hasta primera flor; DCO: días desde emergencia hasta cut out; DPCA: días desde emergencia hasta apertura del primer capullo; DM: días desde emergencia hasta madurez.
 \end{tablenotes}
 \end{threeparttable}}
 \end{table}
@@ -639,7 +650,7 @@ En la Figura \ref{fig:cluster} se muestra un \emph{heatmap} que representa las d
 
 \begin{figure}
 \centering
-\includegraphics{Tesis_Dileo_files/figure-latex/cluster-1.pdf}
+\pandocbounded{\includegraphics[keepaspectratio]{Tesis_Dileo_files/figure-latex/cluster-1.pdf}}
 \caption{\label{fig:cluster}Heatmap que muestra las distancias calculadas entre los datos utilizando la métrica de Gower.}
 \end{figure}
 
@@ -680,7 +691,7 @@ Fisher’s L.S.D & 3,68 & 1,91 & 1,99 & 0,57 & 1,19 & 1,35 & 0,75 & 4,04 & 1,38 
 \end{tabular}
 \begin{tablenotes}[para]
 \item \textit{Referencias:} 
-\item RB: Rendimiento de algodón bruto en g; RF: Rendimiento de fibra en g; RFD: Rendimiento de fibra al desmote en \%; PC: Peso promedio de capullos en g; NC: Número de capullos; IS: Índice de semillas en g; IF: Índice de fibra en g; NSC: Numero de semillas por capullo. UHML: Longitud promedio de fibra de la mitad superior en mm; Str: Resistencia de las fibras g tex\textsuperscript{-1}; Mic: Micronaire; IU: Índice de uniformidad de fibras en \%.
+\item RB: rendimiento de algodón en bruto en g; RF: rendimiento de fibra en g; RFD: porcentaje de fibra en \%; PC: peso de capullo en g; NC: número de capullos por planta; IS: índice de semilla en g; IF: índice de fibra en g; NSC: número de semillas por capullo. UHML: longitud de fibra en mm; Str: resistencia de fibra en g tex-1; Mic: micronaire; IU: uniformidad de fibra en \%.
 \end{tablenotes}
 \end{threeparttable}}
 \end{table}
@@ -694,7 +705,7 @@ Estos resultados indican que existe variación fenotípica entre las accesiones 
 En el análisis de componentes principales incluyendo todas las variables, el primer componente principal explicó el 45,6\% de la varianza de los datos, mientras que el segundo componente principal explicó el 21,9\% (Figura \ref{fig:img-PC}). Los rasgos más asociados con el primer componente fueron RB, Mic, RF, IF y NC, mientras que UHML, Str, IU, IS, NSC, PC y RFD fueron los más asociados con el segundo componente. Las entradas situadas en el cuadrante superior izquierdo fueron BGSP-00166, BGSP-00159 y BGSP-00425, estando estas entradas asociadas con valores más altos de calidad de fibra (UHML, Str, IU) y tamaño de semilla (IS) y valores más bajos en caracteres relacionados con el rendimiento como RB, RF, IF, NC, RFD. Las entradas situadas en el cuadrante inferior derecho como SP-41255, BGSP-00269, BGSP-00207 y BGSP-00126, mostraron un comportamiento opuesto a las descritas.
 
 \begin{figure}
-\includegraphics[width=400px]{figure/chap1/Para_compuestas/PCA_juntas} \caption{Biplot del análisis de componentes principales con puntos que representan las proyecciones de las accesiones (1) y las variables (2) en el espacio definido por las dos primeras dimensiones (Dim) o componentes principales. RB: Rendimiento de algodón bruto en g; RF: Rendimiento de fibra en g; RFD: Rendimiento de fibra al desmote en \%; PC: Peso promedio de capullos en g; NC: Número de capullos; IS: Índice de semillas en g; IF: Índice de fibra en g; NSC: Numero de semillas por capullo. UHML: Longitud promedio de fibra de la mitad superior en mm; Str: Resistencia de las fibras g tex\textsuperscript{-1}; Mic: Micronaire; IU: Índice de uniformidad de fibras en \%.}\label{fig:img-PC}
+\includegraphics[width=400px]{figure/chap1/Para_compuestas/PCA_juntas} \caption{Biplot del análisis de componentes principales con puntos que representan las proyecciones de las accesiones (1) y las variables (2) en el espacio definido por las dos primeras dimensiones (Dim) o componentes principales. RB: rendimiento de algodón en bruto en g; RF: rendimiento de fibra en g; RFD: porcentaje de fibra en \%; PC: peso de capullo en g; NC: número de capullos por planta; IS: índice de semilla en g; IF: índice de fibra en g; NSC: número de semillas por capullo. UHML: longitud de fibra en mm; Str: resistencia de fibra en g tex-1; Mic: micronaire; IU: uniformidad de fibra en \%.}\label{fig:img-PC}
 \end{figure}
 
 En particular, las entradas BGSP-00166 y SP-41255 presentaron más contraste en cuanto a los rasgos medidos. Estas accesiones mostraron valores diferentes para la mayoría de los rasgos medidos relacionados tanto con el rendimiento como con la calidad de la fibra. Por lo tanto, seleccionamos estas accesiones para realizar un cruce biparental y generar una población segregante para estimar los parámetros genéticos y, a continuación, seleccionar fenotipos prometedores para el rendimiento y los rasgos relacionados con la calidad.
@@ -728,7 +739,7 @@ IU & -.05 & -.06 & -.01 & .09 & -.10 & .40** & .09 & -.14 & .34* & .46*** & -.10
 \end{tabular}
 \begin{tablenotes}[para]
 \item \textit{Referencias:} 
-\item *p < 0.05, **p < 0.01 and *** p < 0.001. RB: Rendimiento de algodón bruto en g; RF: Rendimiento de fibra en g; RFD: Rendimiento de fibra al desmote en \%; PC: Peso promedio de capullos en g; NC: Número de capullos; IS: Índice de semillas en g; IF: Índice de fibra en g; NSC: Numero de semillas por capullo. UHML: Longitud promedio de fibra de la mitad superior en mm; Str: Resistencia de las fibras g tex\textsuperscript{-1}; Mic: Micronaire; IU: Índice de uniformidad de fibras en \%.
+\item *p < 0.05, **p < 0.01 and *** p < 0.001. RB: rendimiento de algodón en bruto en g; RF: rendimiento de fibra en g; RFD: porcentaje de fibra en \%; PC: peso de capullo en g; NC: número de capullos por planta; IS: índice de semilla en g; IF: índice de fibra en g; NSC: número de semillas por capullo. UHML: longitud de fibra en mm; Str: resistencia de fibra en g tex-1; Mic: micronaire; IU: uniformidad de fibra en \%.
 \end{tablenotes}
 \end{threeparttable}}
 \end{table}
@@ -798,7 +809,7 @@ Biomasa Total & (Intercept) & 1 & 193 & 62.54 & <0.0001\\
 \end{tabular}}
 \end{table}
 
-\includegraphics{Tesis_Dileo_files/figure-latex/Graficos-biomasa-1.pdf}
+\pandocbounded{\includegraphics[keepaspectratio]{Tesis_Dileo_files/figure-latex/Graficos-biomasa-1.pdf}}
 
 Retención global
 
@@ -837,7 +848,7 @@ Ret\_P3 & (Intercept) & 1 & 144 & 13.92 & 0.0003\\
 \end{tabular}}
 \end{table}
 
-\includegraphics{Tesis_Dileo_files/figure-latex/Anova-retencion-1.pdf}
+\pandocbounded{\includegraphics[keepaspectratio]{Tesis_Dileo_files/figure-latex/Anova-retencion-1.pdf}}
 
 Fotosíntesis, conductancia estomática y SPAD
 
@@ -871,7 +882,7 @@ Photo & (Intercept) & 1 & 56 & 339.17 & <0.0001\\
 \end{tabular}}
 \end{table}
 
-\includegraphics{Tesis_Dileo_files/figure-latex/Anova-fotosintesis-cond-spad-1.pdf}
+\pandocbounded{\includegraphics[keepaspectratio]{Tesis_Dileo_files/figure-latex/Anova-fotosintesis-cond-spad-1.pdf}}
 
 \section{Discusión}\label{discusiuxf3n}
 

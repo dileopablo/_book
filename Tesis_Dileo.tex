@@ -185,6 +185,12 @@ Segundo párrafo del resumen aquí.
     \usepackage[normalem]{ulem}
     \usepackage{makecell}
     \usepackage{xcolor}
+    \usepackage{fontspec}
+    \usepackage{multicol}
+    \usepackage{hhline}
+    \newlength\Oldarrayrulewidth
+    \newlength\Oldtabcolsep
+    \usepackage{hyperref}
 % End of CII addition
 %%
 %% End Preamble
@@ -471,10 +477,6 @@ El estudio se llevó a cabo en la Estación Experimental Agropecuaria Reconquist
 
 Se evaluaron 26 entradas de algodón pertenecientes al banco de germoplasma de INTA, conservado en la Estación Experimental Sáenz Peña (Chaco, Argentina). La selección de estos materiales se realizó considerando su diversidad de origen geográfico y su desempeño contrastante en rendimiento y calidad de fibra, según la información disponible en el banco de germoplasma. El conjunto incluyó materiales provenientes de Argentina, Australia, Camerún, Chad, China, Costa de Marfil, Pakistán, Senegal y Estados Unidos (Tabla \ref{tab:tablaEntradas}).
 
-Las plantas se cultivaron en macetas de 5 L conteniendo 2200 g de suelo sin disturbio (pH 6,7; P disponible: 165,7 mg kg⁻¹; Na⁺: 0,6 cmol⁺ kg⁻¹; K⁺: 0,8 cmol⁺ kg⁻¹; Ca²⁺: 27,0 cmol⁺ kg⁻¹; Mg²⁺: 2,2 cmol⁺ kg⁻¹; NH₄⁺: 76,3 mg kg⁻¹; NO₃⁻: 86,1 mg kg⁻¹) mezclado con 400 g de sustrato comercial (GrowMix® Multipro). El riego se realizó de manera regular con el fin de mantener la humedad próxima a capacidad de campo.
-
-Los experimentos se dispusieron bajo un diseño en bloques completos aleatorizados (DBCA), considerando cada maceta con una planta como unidad experimental. Este diseño permitió minimizar posibles gradientes espaciales dentro del invernadero, particularmente aquellos asociados a luz y temperatura. Se establecieron tres repeticiones independientes por entrada.
-
 \begin{table}[!h]
 \centering
 \caption{\label{tab:tablaEntradas}Entradas de \emph{Gossypium hirsutum} L. usadas en el presente estudio y su procedencia}
@@ -509,17 +511,13 @@ BGSP-00070 & Chad & BGSP-00126* & Senegal\\
 \end{threeparttable}}
 \end{table}
 
+Las plantas se cultivaron en macetas de 5 L conteniendo 2200 g de suelo sin disturbio (pH 6,7; P disponible: 165,7 mg kg⁻¹; Na⁺: 0,6 cmol⁺ kg⁻¹; K⁺: 0,8 cmol⁺ kg⁻¹; Ca²⁺: 27,0 cmol⁺ kg⁻¹; Mg²⁺: 2,2 cmol⁺ kg⁻¹; NH₄⁺: 76,3 mg kg⁻¹; NO₃⁻: 86,1 mg kg⁻¹) mezclado con 400 g de sustrato comercial (GrowMix® Multipro). El riego se realizó de manera regular con el fin de mantener la humedad próxima a capacidad de campo.
+
+Los experimentos se dispusieron bajo un diseño en bloques completos aleatorizados (DBCA), considerando cada maceta con una planta como unidad experimental. Este diseño permitió minimizar posibles gradientes espaciales dentro del invernadero, particularmente aquellos asociados a luz y temperatura. Se establecieron tres repeticiones independientes por entrada.
+
 \subsection{Diversidad fenotípica del germoplasma de algodón: caracteres morfológicos, de rendimiento y calidad de fibra}\label{diversidad-fenotuxedpica-del-germoplasma-de-algoduxf3n-caracteres-morfoluxf3gicos-de-rendimiento-y-calidad-de-fibra}
 
 Se realizó una caracterización inicial de las 26 entradas, evaluándose caracteres morfológicos, fenológicos, de rendimiento y de calidad de fibra (Tabla \ref{tab:tableVariables26Entradas})
-
-En el estado reproductivo de cut-out ---definido cuando el número de nudos por encima de la última flor blanca en el tallo principal fue menor a cuatro \autocite{bourland1992}--- se registraron caracteres morfológicos cualitativos tales como forma de planta, tipo de arquitectura de canopia, tipo de floración (observado en la primera rama fructífera y clasificado según proximidad de cápsulas), forma de hoja, densidad de tricomas, tipo de bráctea (en la primera posición fructífera) y forma de cápsula, empleando los descriptores estandarizados para algodón upland \autocite{upov2018}.
-
-A madurez fisiológica (cuando todas las cápsulas se encontraban abiertas), se determinaron caracteres cuantitativos, incluyendo altura de planta (HP), número de nudos en el tallo principal (STEMNN), número de ramas monopodiales (MONON), número de nudos en ramas simpódicas (SYMNN), distancia desde la primera posición reproductiva al tallo principal (DFRP), así como la posición de la primera rama fructífera tanto en número de nudo (FFBN) como en altura (FFBH).
-
-Cada planta fue cosechada individualmente para determinar rendimiento de algodón en bruto (SCY), rendimiento de fibra (LY), porcentaje de fibra (LP), peso de cápsula (BW) y número de cápsulas por planta (BN). La calidad de fibra ---longitud (FL), resistencia (FS), micronaire (MIC) e índice de uniformidad (FU)--- fue evaluada mediante un equipo High Volume Instrument (HVI Uster 1000, APPA -- Reconquista, Santa Fe), utilizando muestras compuestas de las tres repeticiones.
-
-Los caracteres fenológicos se determinaron como el número de días desde la emergencia hasta los siguientes estadios: primer pimpollo (DFS), primera flor (DFF), cut-out (DCO), primera cápsula abierta (DBO) y madurez (DM).
 
 \begingroup\fontsize{9}{11}\selectfont
 
@@ -567,25 +565,17 @@ Yield Components & Seed cotton yield & SCY & g plant⁻¹ & Total seed cotton we
 \end{longtable}
 \endgroup{}
 
+En el estado reproductivo de cut-out ---definido cuando el número de nudos por encima de la última flor blanca en el tallo principal fue menor a cuatro \autocite{bourland1992}--- se registraron caracteres morfológicos cualitativos tales como forma de planta, tipo de arquitectura de canopia, tipo de floración (observado en la primera rama fructífera y clasificado según proximidad de cápsulas), forma de hoja, densidad de tricomas, tipo de bráctea (en la primera posición fructífera) y forma de cápsula, empleando los descriptores estandarizados para algodón upland \autocite{upov2018}.
+
+A madurez fisiológica (cuando todas las cápsulas se encontraban abiertas), se determinaron caracteres cuantitativos, incluyendo altura de planta (HP), número de nudos en el tallo principal (STEMNN), número de ramas monopodiales (MONON), número de nudos en ramas simpódicas (SYMNN), distancia desde la primera posición reproductiva al tallo principal (DFRP), así como la posición de la primera rama fructífera tanto en número de nudo (FFBN) como en altura (FFBH).
+
+Cada planta fue cosechada individualmente para determinar rendimiento de algodón en bruto (SCY), rendimiento de fibra (LY), porcentaje de fibra (LP), peso de cápsula (BW) y número de cápsulas por planta (BN). La calidad de fibra ---longitud (FL), resistencia (FS), micronaire (MIC) e índice de uniformidad (FU)--- fue evaluada mediante un equipo High Volume Instrument (HVI Uster 1000, APPA -- Reconquista, Santa Fe), utilizando muestras compuestas de las tres repeticiones.
+
+Los caracteres fenológicos se determinaron como el número de días desde la emergencia hasta los siguientes estadios: primer pimpollo (DFS), primera flor (DFF), cut-out (DCO), primera cápsula abierta (DBO) y madurez (DM).
+
 \subsection{Análisis de rendimiento, calidad de fibra, variables fisiológicas y partición de biomasa en accesiones contrastantes de algodón}\label{anuxe1lisis-de-rendimiento-calidad-de-fibra-variables-fisioluxf3gicas-y-particiuxf3n-de-biomasa-en-accesiones-contrastantes-de-algoduxf3n}
 
-A partir de la caracterización inicial, se seleccionaron ocho entradas contrastantes en función de su desempeño en componentes del rendimiento ---especialmente porcentaje de fibra (LP)---, calidad de fibra y arquitectura de planta (particularmente bajo número de ramas monopodiales). Estas entradas fueron sometidas a una evaluación más exhaustiva.
-
-Se realizaron dos experimentos independientes en distintos momentos, cada uno con nueve repeticiones por entrada, con el objetivo de incrementar la representatividad de los parámetros de calidad de fibra y mejorar la precisión estadística. Además de las variables previamente descriptas, se registraron número de semillas por cápsula (SNPB), índice de fibra (LI) e índice de semilla (SI).
-
-\subsection{Partición de biomasa y dinámica reproductiva}\label{particiuxf3n-de-biomasa-y-dinuxe1mica-reproductiva}
-
-Las ocho entradas seleccionadas fueron evaluadas para partición de biomasa en cuatro momentos fenológicos: primer pimpollo (M1), primera flor (M2), primera cápsula abierta (M3) y madurez (M4). Se realizó muestreo destructivo, separando cada planta en componentes vegetativos (tallo, ramas vegetativas y hojas) y estructuras reproductivas (ramas simpódicas, pimpollos, flores, cápsulas verdes y abiertas, semillas y fibra). Las muestras fueron secadas en estufa a 65 °C hasta peso constante para determinar biomasa total y su distribución relativa.
-
-El diseño experimental correspondió a un DBCA con arreglo en parcelas divididas, considerando los momentos fenológicos como parcelas principales y las entradas como subparcelas.
-
-La dinámica de floración y retención de estructuras reproductivas se determinó mediante mapeo detallado de posiciones fructíferas siguiendo la metodología propuesta por \textcite{kerby2010} .
-
-\subsection{Evaluación de caracteres fisiológicos}\label{evaluaciuxf3n-de-caracteres-fisioluxf3gicos}
-
-La tasa fotosintética neta (PN), conductancia estomática (gs) y contenido relativo de clorofila (SPAD) se midieron en tres momentos: en primera flor (M2) y a los 15 y 30 días posteriores. Las determinaciones de PN y gs se realizaron con un sistema LI-COR 6400, mientras que SPAD se registró con un medidor Minolta SPAD-502.
-
-Se evaluaron cuatro repeticiones por entrada. Se seleccionaron cuatro hojas completamente expandidas del estrato superior de la canopia, las cuales fueron marcadas al inicio del experimento y medidas sucesivamente en cada fecha. Las mediciones se realizaron entre las 11:00 y 13:00 h bajo intensidades lumínicas de 900--1500 μmol fotones m⁻² s⁻¹.
+A partir de la caracterización inicial, se seleccionaron ocho entradas contrastantes en función de su desempeño en componentes del rendimiento ---especialmente porcentaje de fibra (LP)---, calidad de fibra y arquitectura de planta (particularmente bajo número de ramas monopodiales). Estas entradas fueron sometidas a una evaluación más exhaustiva (Tabla \ref{tab:tableVariables8Entradas}).
 
 \begingroup\fontsize{9}{11}\selectfont
 
@@ -620,6 +610,22 @@ Reproductive Dynamics & Global retention & GR & \% & Mapping according to Kerby 
 \end{longtable}
 \endgroup{}
 
+Se realizaron dos experimentos independientes en distintos momentos, cada uno con nueve repeticiones por entrada, con el objetivo de incrementar la representatividad de los parámetros de calidad de fibra y mejorar la precisión estadística. Además de las variables previamente descriptas, se registraron número de semillas por cápsula (SNPB), índice de fibra (LI) e índice de semilla (SI).
+
+\subsection{Partición de biomasa y dinámica reproductiva}\label{particiuxf3n-de-biomasa-y-dinuxe1mica-reproductiva}
+
+Las ocho entradas seleccionadas fueron evaluadas para partición de biomasa en cuatro momentos fenológicos: primer pimpollo (M1), primera flor (M2), primera cápsula abierta (M3) y madurez (M4). Se realizó muestreo destructivo, separando cada planta en componentes vegetativos (tallo, ramas vegetativas y hojas) y estructuras reproductivas (ramas simpódicas, pimpollos, flores, cápsulas verdes y abiertas, semillas y fibra). Las muestras fueron secadas en estufa a 65 °C hasta peso constante para determinar biomasa total y su distribución relativa.
+
+El diseño experimental correspondió a un DBCA con arreglo en parcelas divididas, considerando los momentos fenológicos como parcelas principales y las entradas como subparcelas.
+
+La dinámica de floración y retención de estructuras reproductivas se determinó mediante mapeo detallado de posiciones fructíferas siguiendo la metodología propuesta por \textcite{kerby2010} .
+
+\subsection{Evaluación de caracteres fisiológicos}\label{evaluaciuxf3n-de-caracteres-fisioluxf3gicos}
+
+La tasa fotosintética neta (PN), conductancia estomática (gs) y contenido relativo de clorofila (SPAD) se midieron en tres momentos: en primera flor (M2) y a los 15 y 30 días posteriores. Las determinaciones de PN y gs se realizaron con un sistema LI-COR 6400, mientras que SPAD se registró con un medidor Minolta SPAD-502.
+
+Se evaluaron cuatro repeticiones por entrada. Se seleccionaron cuatro hojas completamente expandidas del estrato superior de la canopia, las cuales fueron marcadas al inicio del experimento y medidas sucesivamente en cada fecha. Las mediciones se realizaron entre las 11:00 y 13:00 h bajo intensidades lumínicas de 900--1500 μmol fotones m⁻² s⁻¹.
+
 \subsection{Análisis estadístico}\label{anuxe1lisis-estaduxedstico}
 
 Todos los análisis estadísticos se realizaron mediante el software R \autocite{R2024}, adoptándose un nivel de significancia del 5\% (p ≤ 0,05).
@@ -646,85 +652,11 @@ La distribución de frecuencias de los descriptores morfológicos cualitativos e
 
 En cuanto al tipo de floración, las plantas semicompactas fueron las más frecuentes (69,2\%), seguidas por no agrupadas (23,1\%) y agrupadas (7,7\%). La lámina foliar fue mayormente plana (96,1\%) y las hojas predominantemente palmeadas (96,1\%), registrándose una pequeña proporción de hojas cóncavas (3,9\%) y tipo okra (3,9\%). La pubescencia fue principalmente intermedia (76,9\%), mientras que los niveles débil y fuerte representaron cada uno el 11,5\%. Finalmente, la forma de planta fue predominantemente cilíndrica (61,5\%) y cónica (38,5\%).
 
-Estos descriptores reflejan diferencias cualitativas observadas bajo condiciones de invernadero y deben interpretarse como indicadores exploratorios de diversidad fenotipica. La combinación de atributos tales como tipo de canopia, arquitectura de floración y morfología foliar sugiere la existencia de variabilidad estructural potencialmente relevante para la intercepción lumínica, ventilación del dosel y adaptación a sistemas de manejo intensivo. El detalle completo de los descriptores evaluados se presenta en la \textbf{Tabla S1} (Material Suplementario).
+\begin{figure}
+\includegraphics[width=300px]{figure/chap1/Para_compuestas/Graficos_Combinados_Final_recortado} \caption{ }\label{fig:frecuancia-cluster-juntos}
+\end{figure}
 
-\subsubsection{Caracteres morfológicos cuantitativos, rendimiento, sus componentes y calidad de fibra}\label{caracteres-morfoluxf3gicos-cuantitativos-rendimiento-sus-componentes-y-calidad-de-fibra}
-
-Los valores medios de los caracteres morfológicos cuantitativos se presentan en la \textbf{Tabla S2}. Se detectaron diferencias significativas entre accesiones para todos los caracteres evaluados.
-
-La altura de planta (HP) varió entre 89,0 y 126,3 cm, mientras que el número de nudos en el tallo principal (STEMNN) osciló entre 13,0 y 17,0. El número de ramas monopodiales (MONON) presentó un rango de 0,3 a 2,7, en tanto que el número de nudos en ramas simpódicas (SYMNN) varió entre 9,7 y 13,3. La posición de la primera rama fructífera en número de nudo (FFBN) fluctuó entre 3,7 y 5,7, mientras que su altura (FFBH) varió entre 25,0 y 40,7 cm. La distancia desde la primera posición reproductiva al tallo principal (DFRP) osciló entre 3,9 y 14,3 cm.
-
-El rendimiento en algodón en bruto (SCY) mostró valores entre 14,3 y 33,5 g planta⁻¹, mientras que el rendimiento de fibra (LY) varió entre 4,6 y 12,3 g planta⁻¹. El peso de cápsula (BW) osciló entre 2,6 y 4,7 g y el número de cápsulas por planta (BN) entre 4,7 y 8,7.
-
-En términos de calidad tecnológica, la longitud de fibra (FL) varió entre 25,1 y 33,9 mm y la resistencia (FS) entre 21,5 y 37,6 g tex⁻¹. Los caracteres fenológicos evidenciaron también amplia variabilidad, con rangos de 19--27 días a primer pimpollo (DFS), 47--55 días a primera flor (DFF), 68--76 días a \emph{cut-out} (DCO), 97--105 días a primera cápsula abierta (DBO) y 118--133 días a madurez (DM).
-
-Para integrar simultáneamente todos los caracteres evaluados se realizó un análisis de conglomerados jerárquicos utilizando la distancia de Gower. El mapa de calor y los dendrogramas obtenidos mediante el método Ward.D se presentan en la \textbf{Figura 1.2}. Se distinguieron dos agrupamientos principales. El primero incluyó accesiones con forma de planta cónica y floración no agrupada, algunas de las cuales exhibieron calidad de fibra superior. El segundo agrupó accesiones con canopia más compacta y floración agrupada, generalmente asociadas con mayor porcentaje de fibra y mayor número de cápsulas.
-
-La necesidad de satisfacer simultáneamente demandas de calidad de fibra, rendimiento y adaptación a prácticas intensivas de manejo requiere ampliar la base genética disponible para los programas de mejoramiento. La colección de germoplasma del INTA, con diversidad documentada en atributos morfológicos, componentes de rendimiento y calidad de fibra \autocite{royo2003,klein2011,spoljaric2018,scarpin2019,arriel2023}, constituye una fuente estratégica de parentales potenciales.
-
-La variabilidad observada en este estudio es consistente con reportes en colecciones de Estados Unidos \autocite{hinze2025} y Asia \autocite{farooq2017}, mientras que análisis genómicos recientes en China han destacado la base genética relativamente estrecha del algodón cultivado \autocite{li2023}. Iniciativas regionales como el proyecto +Algodón \autocite{fao2025} también subrayan la importancia de conservar y utilizar diversidad del germoplasma latinoamericano para mejorar resiliencia climática y calidad de fibra.
-
-\subsection{Análisis de rendimiento, calidad de fibra, variables fisiológicas y partición de biomasa en accesiones contrastantes}\label{anuxe1lisis-de-rendimiento-calidad-de-fibra-variables-fisioluxf3gicas-y-particiuxf3n-de-biomasa-en-accesiones-contrastantes}
-
-\subsubsection{Componentes del rendimiento y calidad de fibra}\label{componentes-del-rendimiento-y-calidad-de-fibra}
-
-Las accesiones seleccionadas para el análisis detallado de rendimiento y calidad de fibra se indican con un asterisco en la Tabla 1. La selección se realizó considerando su pertenencia a distintos grupos identificados en el análisis de conglomerados jerárquicos (Fig. 1), así como los valores extremos observados en la Tabla S2. Se priorizaron accesiones con contrastes marcados en rendimiento de fibra (LY), porcentaje de fibra (LP), número de cápsulas por planta (BN) y atributos tecnológicos, incorporando además genotipos con arquitectura compacta y menor desarrollo monopodial, como BGSP-00166, por su potencial interés agronómico en sistemas mecanizados.
-
-El análisis estadístico evidenció diferencias significativas (p \textless{} 0,05) entre accesiones para todos los caracteres vinculados al rendimiento y calidad de fibra (Tabla 4), lo que confirma la existencia de variabilidad genética aprovechable dentro del germoplasma evaluado.
-
-La accesión SP-41255 presentó los mayores valores medios para SCY (34,2 g planta⁻¹), LY (15,8 g planta⁻¹), LP (45,8 \%) y BN (9,2 cápsulas planta⁻¹), lo que refleja una estrategia productiva orientada a maximizar tanto la producción total como la eficiencia de desmote. Sin embargo, esta accesión exhibió el menor índice de semilla (SI = 7,7 g), indicando una mayor proporción de fibra respecto al peso de semilla.
-
-En contraste, BGSP-00159 registró el menor SCY (26,2 g planta⁻¹), mientras que BGSP-00166 presentó los valores más bajos de LY (8,6 g planta⁻¹), LP (31,1 \%), MIC (3,2) y BN (5,8 cápsulas planta⁻¹). No obstante, esta misma accesión mostró los valores más elevados de peso de cápsula (BW = 4,6 g cápsula⁻¹), SI (11,5 g), longitud de fibra (FL = 33,2 mm), resistencia (FS = 37,3 g tex⁻¹) y uniformidad (FU = 85,8 \%), configurando un perfil de alta calidad tecnológica asociado a menor productividad.
-
-BGSP-00269 presentó los menores valores de BW (3,4 g cápsula⁻¹), número de semillas por cápsula (SNPB = 22,8) y FL (28,3 mm), aunque exhibió los mayores valores de índice de fibra (LI = 6,5 g) y MIC (4,3). Por su parte, BGSP-00425 se destacó por el mayor SNPB (30,6 semillas cápsula⁻¹), pero presentó los valores más bajos de LI (4,0 g) y FU (82,2 \%). BGSP-00207 mostró los valores más bajos de FL (28,3 mm) y FS (29,2 g tex⁻¹). Es particularmente relevante que BGSP-00166 y SP-41255 difirieron significativamente en casi todos los caracteres evaluados, excepto en SNPB, lo que confirma su marcada divergencia fenotípica.
-
-Estos resultados evidencian una amplia variación fenotípica en rendimiento y calidad de fibra, en concordancia con lo reportado por \autocite{mccarty2006}, quienes documentaron amplios rangos para SCY, LY, BW, LP, MIC, FL y FS en colecciones de germoplasma estadounidense. Asimismo, refuerzan la existencia del conocido compromiso parcial entre rendimiento y calidad tecnológica \autocite{li2023}.
-
-El análisis de correlaciones de Spearman (Tabla S3) permitió profundizar en las relaciones entre caracteres. LY mostró una fuerte correlación positiva con BN, confirmando que el número de cápsulas constituye el principal determinante del rendimiento de fibra. También presentó correlaciones positivas moderadas con BW y LP, lo que indica que el incremento del rendimiento puede lograrse tanto por mayor número como por mayor peso individual de cápsulas y mayor proporción de fibra. Sin embargo, LY exhibió correlaciones negativas moderadas con FL, sugiriendo que el aumento del rendimiento puede asociarse a reducciones en longitud de fibra.
-
-LP presentó correlaciones positivas con LY y BN, pero negativas con SI, lo que sugiere que el aumento del porcentaje de fibra puede lograrse a expensas del peso de semilla. \textcite{meredith1984} reportó patrones similares, incluyendo correlaciones negativas entre LP y caracteres como FL y FS, lo que coincide parcialmente con nuestros resultados.
-
-En conjunto, estos hallazgos indican que los programas de mejoramiento orientados a incrementar LY deberían priorizar el aumento de BN, ya que constituye el principal componente asociado al rendimiento. No obstante, el incremento de BN y LP debe manejarse cuidadosamente para evitar deterioros excesivos en calidad de fibra, particularmente en FL y FS. El desafío radica en encontrar un equilibrio fisiológico y genético que permita maximizar rendimiento sin comprometer atributos tecnológicos clave.
-
-\subsubsection{Partición de biomasa, retención reproductiva y análisis fisiológico}\label{particiuxf3n-de-biomasa-retenciuxf3n-reproductiva-y-anuxe1lisis-fisioluxf3gico}
-
-La dinámica temporal de acumulación y partición de biomasa en ocho accesiones contrastantes se presenta en la Fig. 2. Durante las etapas tempranas de desarrollo (M1--M2), la biomasa vegetativa (VB), compuesta principalmente por tallos y hojas, representó la mayor proporción de materia seca total. A partir del inicio de floración (M3) y hacia madurez (M4), se observó un desplazamiento progresivo hacia una mayor asignación a estructuras reproductivas, evidenciando el cambio fisiológico desde crecimiento vegetativo hacia reproducción.
-
-El análisis estadístico mostró efectos altamente significativos (p \textless{} 0,001) del momento, la accesión y su interacción (Tabla S4), lo que indica que las accesiones no solo difieren en magnitud de acumulación de biomasa, sino también en su patrón temporal de asignación.
-
-En madurez (M4), BGSP-00207 presentó la mayor acumulación en ramas reproductivas, mientras que BGSP-00166 mostró la menor acumulación tanto en ramas vegetativas como reproductivas, consistente con su arquitectura compacta. SP-41255 y BGSP-00126 acumularon mayor biomasa en ramas vegetativas, lo que sugiere una estrategia de crecimiento más expansiva previa a la transición reproductiva.
-
-Estas diferencias en arquitectura y partición coinciden con estudios que indican que la ramificación en algodón está fuertemente determinada por factores genéticos \autocite{mcgarry2016,sun2022,huang2022}. Asimismo, la densidad de siembra modula estos patrones, ya que mayores densidades reducen la ramificación lateral y favorecen asignación reproductiva \autocite{li2019a}.
-
-La retención reproductiva (Fig. 3) mostró una disminución progresiva desde M2 hasta M4, reflejando competencia creciente por asimilados durante el llenado de cápsulas. Se observaron diferencias claras entre accesiones en retención global (GR) y de primera posición (R1P). BGSP-00269 y SP-41255 mantuvieron mayores valores de GR y R1P, indicando mayor eficiencia en establecimiento y mantenimiento de frutos tempranos, que suelen asociarse a mayor peso y mejor calidad de fibra.
-
-El análisis estadístico (Tabla S5) confirmó efectos significativos de momento y accesión para GR (p = 0,0017) y una interacción significativa momento × accesión (p = 0,0119), lo que indica diferencias genotípicas en la capacidad de retener estructuras reproductivas a lo largo del ciclo.
-
-La posición de las cápsulas dentro del dosel tiene implicancias directas sobre rendimiento y calidad. Estudios previos \autocite{davidonis2004,nie2019,zhang2021} demostraron que cápsulas ubicadas en posiciones intermedias presentan mayor longitud y resistencia de fibra, mientras que posiciones superiores tienden a producir menores valores de micronaire. Por lo tanto, accesiones con mayor retención en posiciones tempranas, como BGSP-00269 y SP-41255, no solo incrementan número de frutos sino que optimizan su calidad potencial.
-
-Las variables fisiológicas (Fig. 4) mostraron una disminución progresiva de la tasa fotosintética neta (P\_N\_), conductancia estomática (g\_s\_) y SPAD desde M2 en adelante. El efecto del momento fue altamente significativo para P\_N\_ y SPAD (p \textless{} 0,001), mientras que la accesión y la interacción fueron significativas únicamente para P\_N\_ (Tabla S6), lo que indica que las diferencias genotípicas estuvieron principalmente asociadas a capacidad fotosintética.
-
-BGSP-00425 presentó una disminución más pronunciada en P\_N\_, lo que podría explicar su menor acumulación final de biomasa. En contraste, accesiones con perfiles más estables de P\_N\_ mostraron mejor desempeño reproductivo. Estos resultados coinciden con \textcite{li2019}, quienes demostraron que la fotosíntesis neta es un determinante clave del rendimiento en algodón.
-
-En conjunto, la integración de partición de biomasa, retención reproductiva y fisiología evidencia que el rendimiento no depende exclusivamente de la formación de estructuras reproductivas, sino de la eficiencia en la provisión y asignación de carbono durante el período crítico de llenado. Las diferencias observadas reflejan estrategias genotípicas contrastantes de balance fuente--destino, con implicancias directas para la selección de parentales adaptados a sistemas mecanizados y de alta densidad.
-
-\subsubsection{Análisis de Componentes Principales}\label{anuxe1lisis-de-componentes-principales}
-
-El análisis de componentes principales (ACP) realizado a partir de las variables significativas permitió sintetizar la variabilidad fenotípica observada entre las accesiones evaluadas. El primer componente principal (CP1) explicó el 55,89 \% de la variación total, mientras que el segundo componente (CP2) explicó el 14,54 \% (Fig. 5), concentrando en conjunto más del 70 \% de la variabilidad del conjunto de datos. Esto indica que una proporción sustancial de la estructura fenotípica puede interpretarse mediante la combinación lineal de estos dos ejes principales.
-
-La distribución de las accesiones en el biplot evidenció un claro gradiente asociado a la relación entre rendimiento y calidad de fibra. Las accesiones ubicadas en los cuadrantes izquierdos del gráfico, tales como BGSP-00166, BGSP-00159 y BGSP-00425, se asociaron con mayores valores de calidad de fibra, particularmente longitud de fibra (FL), resistencia de fibra (FS) y uniformidad (FU), así como con mayor índice de semilla (SI). Sin embargo, estas accesiones presentaron valores inferiores en caracteres vinculados al rendimiento, tales como rendimiento de algodón en bruto (SCY), rendimiento de fibra (LY), índice de fibra (LI), número de cápsulas por planta (BN) y porcentaje de fibra (LP). Este patrón sugiere un perfil genotípico orientado hacia calidad tecnológica, aunque con menor expresión de componentes productivos.
-
-En contraste, las accesiones posicionadas en el lado derecho del biplot, incluyendo SP-41255, SP-6565, BGSP-00269, BGSP-00207 y BGSP-00126, se asociaron con mayor producción de biomasa (tallo, biomasa total, ramas monopodiales y simpodiales) y con un mejor desempeño en caracteres de rendimiento. Estas accesiones mostraron mayores valores de SCY, LY, LI, BN y LP, aunque con valores relativamente menores en atributos de calidad de fibra. Este comportamiento resulta coherente con los patrones previamente observados en el análisis de partición de biomasa (Fig. 2) y en la dinámica de retención reproductiva (Fig. 3), donde estos genotipos presentaron mayor acumulación de biomasa reproductiva y mayor retención global (GR) y de primera posición (R1P). Asimismo, variables fisiológicas como la tasa fotosintética neta (P\_N\_) contribuyeron positivamente al eje derecho del CP1, reforzando su asociación con el desempeño productivo.
-
-Tanto el ACP como los coeficientes de correlación de Spearman (Tabla S3) permitieron identificar relaciones estructurales entre los caracteres evaluados. En particular, el rendimiento de fibra (LY) mostró una fuerte correlación positiva con el número de cápsulas (BN), una correlación positiva moderada con el peso de cápsula (BW) y el porcentaje de fibra (LP), y una correlación negativa moderada con la longitud de fibra (FL). Este patrón confirma la existencia de una relación antagónica parcial entre rendimiento y calidad de fibra, fenómeno ampliamente documentado en algodón.
-
-El análisis de componentes principales es una herramienta de uso rutinario en la identificación de similitudes y divergencias entre genotipos de algodón en función de múltiples caracteres simultáneamente \autocite{shakeel2015,farooq2017,klein2022}. En el presente estudio, el ACP permitió identificar accesiones contrastantes desde el punto de vista productivo y tecnológico. En particular, BGSP-00166 se asoció fuertemente con mayores valores de calidad de fibra (FL, FS, FU) y mayor tamaño de semilla (SI), mientras que SP-41255 se asoció con mayores valores en caracteres vinculados al rendimiento, tales como SCY, LY, LI, BN y LP.
-
-La accesión SP-41255 se destacó por su desempeño productivo, exhibiendo los mayores valores de LP y BN y los menores valores de BW y SI, en concordancia con lo reportado por \textcite{scarpin2022} en un estudio sobre progreso genético en rendimiento y sus componentes en 20 cultivares de algodón. De manera consistente con nuestras observaciones, SP-41255 se vinculó a caracteres superiores de rendimiento, particularmente mayor porcentaje de fibra y número de cápsulas (Fig. 5). Resultados similares fueron reportados por \textcite{mccarty2006}, quienes observaron que accesiones con mayor expresión de caracteres de rendimiento tendían a presentar valores inferiores en calidad de fibra, confirmando la existencia de un compromiso fisiológico y genético entre ambos grupos de caracteres.
-
-En conjunto, el análisis multivariado respalda la identificación de líneas parentales complementarias para programas de mejoramiento genético. Los perfiles contrastantes de BGSP-00166 y SP-41255 representan una oportunidad estratégica para combinar calidad de fibra y potencial de rendimiento mediante esquemas de recombinación dirigida, contribuyendo al desarrollo de ideotipos adaptados a sistemas de producción mecanizados y de alta densidad.
-
-Este enfoque integrador, que combina la evaluación agronómica, fisiológica y tecnológica de la fibra, fortalece la caracterización temprana del germoplasma y aporta criterios objetivos para la selección de parentales en programas de mejoramiento orientados a sistemas de producción mecanizados y de alta eficiencia.
+Estos descriptores reflejan diferencias cualitativas observadas bajo condiciones de invernadero y deben interpretarse como indicadores exploratorios de diversidad fenotipica. La combinación de atributos tales como tipo de canopia, arquitectura de floración y morfología foliar sugiere la existencia de variabilidad estructural potencialmente relevante para la intercepción lumínica, ventilación del dosel y adaptación a sistemas de manejo intensivo. El detalle completo de los descriptores evaluados se presenta en la Tabla \ref{tab:tabla-descriptores}.
 
 \begin{table}[!h]
 \centering\centering
@@ -772,6 +704,10 @@ SP 6565 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Norma
 \bottomrule
 \end{tabular}}
 \end{table}
+
+\subsubsection{Caracteres morfológicos cuantitativos, rendimiento, sus componentes y calidad de fibra}\label{caracteres-morfoluxf3gicos-cuantitativos-rendimiento-sus-componentes-y-calidad-de-fibra}
+
+Los valores medios de los caracteres morfológicos cuantitativos se presentan en la Tabla \ref{tab:tabla-datos-conjuntos}. Se detectaron diferencias significativas entre accesiones para todos los caracteres evaluados.
 
 \begin{landscape}\begin{table}[!h]
 \centering
@@ -830,11 +766,23 @@ L.S.D Fisher & 17,96 & 1 & 0,99 & 1,05 & 0,74 & 6,29 & 3,89 & 4,3 & 1,76 & 2,46 
 \end{table}
 \end{landscape}
 
-\begin{figure}
-\centering
-\pandocbounded{\includegraphics[keepaspectratio]{Tesis_Dileo_files/figure-latex/cluster-1.pdf}}
-\caption{\label{fig:cluster}Heatmap que muestra las distancias calculadas entre los datos utilizando la métrica de Gower.}
-\end{figure}
+La altura de planta (HP) varió entre 89,0 y 126,3 cm, mientras que el número de nudos en el tallo principal (STEMNN) osciló entre 13,0 y 17,0. El número de ramas monopodiales (MONON) presentó un rango de 0,3 a 2,7, en tanto que el número de nudos en ramas simpódicas (SYMNN) varió entre 9,7 y 13,3. La posición de la primera rama fructífera en número de nudo (FFBN) fluctuó entre 3,7 y 5,7, mientras que su altura (FFBH) varió entre 25,0 y 40,7 cm. La distancia desde la primera posición reproductiva al tallo principal (DFRP) osciló entre 3,9 y 14,3 cm.
+
+El rendimiento en algodón en bruto (SCY) mostró valores entre 14,3 y 33,5 g planta⁻¹, mientras que el rendimiento de fibra (LY) varió entre 4,6 y 12,3 g planta⁻¹. El peso de cápsula (BW) osciló entre 2,6 y 4,7 g y el número de cápsulas por planta (BN) entre 4,7 y 8,7.
+
+En términos de calidad tecnológica, la longitud de fibra (FL) varió entre 25,1 y 33,9 mm y la resistencia (FS) entre 21,5 y 37,6 g tex⁻¹. Los caracteres fenológicos evidenciaron también amplia variabilidad, con rangos de 19--27 días a primer pimpollo (DFS), 47--55 días a primera flor (DFF), 68--76 días a \emph{cut-out} (DCO), 97--105 días a primera cápsula abierta (DBO) y 118--133 días a madurez (DM).
+
+Para integrar simultáneamente todos los caracteres evaluados se realizó un análisis de conglomerados jerárquicos utilizando la distancia de Gower. El mapa de calor y los dendrogramas obtenidos mediante el método Ward.D se presentan en la \textbf{Figura 1.2}. Se distinguieron dos agrupamientos principales. El primero incluyó accesiones con forma de planta cónica y floración no agrupada, algunas de las cuales exhibieron calidad de fibra superior. El segundo agrupó accesiones con canopia más compacta y floración agrupada, generalmente asociadas con mayor porcentaje de fibra y mayor número de cápsulas.
+
+La necesidad de satisfacer simultáneamente demandas de calidad de fibra, rendimiento y adaptación a prácticas intensivas de manejo requiere ampliar la base genética disponible para los programas de mejoramiento. La colección de germoplasma del INTA, con diversidad documentada en atributos morfológicos, componentes de rendimiento y calidad de fibra \autocite{royo2003,klein2011,spoljaric2018,scarpin2019,arriel2023}, constituye una fuente estratégica de parentales potenciales.
+
+La variabilidad observada en este estudio es consistente con reportes en colecciones de Estados Unidos \autocite{hinze2025} y Asia \autocite{farooq2017}, mientras que análisis genómicos recientes en China han destacado la base genética relativamente estrecha del algodón cultivado \autocite{li2023}. Iniciativas regionales como el proyecto +Algodón \autocite{fao2025} también subrayan la importancia de conservar y utilizar diversidad del germoplasma latinoamericano para mejorar resiliencia climática y calidad de fibra.
+
+\subsection{Análisis de rendimiento, calidad de fibra, variables fisiológicas y partición de biomasa en accesiones contrastantes}\label{anuxe1lisis-de-rendimiento-calidad-de-fibra-variables-fisioluxf3gicas-y-particiuxf3n-de-biomasa-en-accesiones-contrastantes}
+
+\subsubsection{Componentes del rendimiento y calidad de fibra}\label{componentes-del-rendimiento-y-calidad-de-fibra}
+
+Las accesiones seleccionadas para el análisis detallado de rendimiento y calidad de fibra se indican con un asterisco en la Tabla 1. La selección se realizó considerando su pertenencia a distintos grupos identificados en el análisis de conglomerados jerárquicos (Fig. 1), así como los valores extremos observados en la Tabla S2. Se priorizaron accesiones con contrastes marcados en rendimiento de fibra (LY), porcentaje de fibra (LP), número de cápsulas por planta (BN) y atributos tecnológicos, incorporando además genotipos con arquitectura compacta y menor desarrollo monopodial, como BGSP-00166, por su potencial interés agronómico en sistemas mecanizados.
 
 \begin{table}[!h]
 \centering\centering
@@ -872,9 +820,530 @@ Fisher’s L.S.D & 3,68 & 1,91 & 1,99 & 0,57 & 1,19 & 1,35 & 0,75 & 4,04 & 1,38 
 \end{threeparttable}}
 \end{table}
 
+El análisis estadístico evidenció diferencias significativas (p \textless{} 0,05) entre accesiones para todos los caracteres vinculados al rendimiento y calidad de fibra (Tabla 4), lo que confirma la existencia de variabilidad genética aprovechable dentro del germoplasma evaluado.
+
+La accesión SP-41255 presentó los mayores valores medios para SCY (34,2 g planta⁻¹), LY (15,8 g planta⁻¹), LP (45,8 \%) y BN (9,2 cápsulas planta⁻¹), lo que refleja una estrategia productiva orientada a maximizar tanto la producción total como la eficiencia de desmote. Sin embargo, esta accesión exhibió el menor índice de semilla (SI = 7,7 g), indicando una mayor proporción de fibra respecto al peso de semilla.
+
+En contraste, BGSP-00159 registró el menor SCY (26,2 g planta⁻¹), mientras que BGSP-00166 presentó los valores más bajos de LY (8,6 g planta⁻¹), LP (31,1 \%), MIC (3,2) y BN (5,8 cápsulas planta⁻¹). No obstante, esta misma accesión mostró los valores más elevados de peso de cápsula (BW = 4,6 g cápsula⁻¹), SI (11,5 g), longitud de fibra (FL = 33,2 mm), resistencia (FS = 37,3 g tex⁻¹) y uniformidad (FU = 85,8 \%), configurando un perfil de alta calidad tecnológica asociado a menor productividad.
+
+BGSP-00269 presentó los menores valores de BW (3,4 g cápsula⁻¹), número de semillas por cápsula (SNPB = 22,8) y FL (28,3 mm), aunque exhibió los mayores valores de índice de fibra (LI = 6,5 g) y MIC (4,3). Por su parte, BGSP-00425 se destacó por el mayor SNPB (30,6 semillas cápsula⁻¹), pero presentó los valores más bajos de LI (4,0 g) y FU (82,2 \%). BGSP-00207 mostró los valores más bajos de FL (28,3 mm) y FS (29,2 g tex⁻¹). Es particularmente relevante que BGSP-00166 y SP-41255 difirieron significativamente en casi todos los caracteres evaluados, excepto en SNPB, lo que confirma su marcada divergencia fenotípica.
+
+Estos resultados evidencian una amplia variación fenotípica en rendimiento y calidad de fibra, en concordancia con lo reportado por \autocite{mccarty2006}, quienes documentaron amplios rangos para SCY, LY, BW, LP, MIC, FL y FS en colecciones de germoplasma estadounidense. Asimismo, refuerzan la existencia del conocido compromiso parcial entre rendimiento y calidad tecnológica \autocite{li2023}.
+
+El análisis de correlaciones de Spearman (Tabla S3) permitió profundizar en las relaciones entre caracteres. LY mostró una fuerte correlación positiva con BN, confirmando que el número de cápsulas constituye el principal determinante del rendimiento de fibra. También presentó correlaciones positivas moderadas con BW y LP, lo que indica que el incremento del rendimiento puede lograrse tanto por mayor número como por mayor peso individual de cápsulas y mayor proporción de fibra. Sin embargo, LY exhibió correlaciones negativas moderadas con FL, sugiriendo que el aumento del rendimiento puede asociarse a reducciones en longitud de fibra.
+
+LP presentó correlaciones positivas con LY y BN, pero negativas con SI, lo que sugiere que el aumento del porcentaje de fibra puede lograrse a expensas del peso de semilla. \textcite{meredith1984} reportó patrones similares, incluyendo correlaciones negativas entre LP y caracteres como FL y FS, lo que coincide parcialmente con nuestros resultados.
+
+En conjunto, estos hallazgos indican que los programas de mejoramiento orientados a incrementar LY deberían priorizar el aumento de BN, ya que constituye el principal componente asociado al rendimiento. No obstante, el incremento de BN y LP debe manejarse cuidadosamente para evitar deterioros excesivos en calidad de fibra, particularmente en FL y FS. El desafío radica en encontrar un equilibrio fisiológico y genético que permita maximizar rendimiento sin comprometer atributos tecnológicos clave.
+
+\subsubsection{Partición de biomasa, retención reproductiva y análisis fisiológico}\label{particiuxf3n-de-biomasa-retenciuxf3n-reproductiva-y-anuxe1lisis-fisioluxf3gico}
+
+La dinámica temporal de acumulación y partición de biomasa en ocho accesiones contrastantes se presenta en la Fig. 2. Durante las etapas tempranas de desarrollo (M1--M2), la biomasa vegetativa (VB), compuesta principalmente por tallos y hojas, representó la mayor proporción de materia seca total. A partir del inicio de floración (M3) y hacia madurez (M4), se observó un desplazamiento progresivo hacia una mayor asignación a estructuras reproductivas, evidenciando el cambio fisiológico desde crecimiento vegetativo hacia reproducción.
+
 \begin{figure}
-\includegraphics[width=400px]{figure/chap1/Para_compuestas/PCA_juntas} \caption{Biplot del análisis de componentes principales con puntos que representan las proyecciones de las accesiones (1) y las variables (2) en el espacio definido por las dos primeras dimensiones (Dim) o componentes principales. RB: rendimiento de algodón en bruto en g; RF: rendimiento de fibra en g; RFD: porcentaje de fibra en \%; PC: peso de capullo en g; NC: número de capullos por planta; IS: índice de semilla en g; IF: índice de fibra en g; NSC: número de semillas por capullo. UHML: longitud de fibra en mm; Str: resistencia de fibra en g tex-1; Mic: micronaire; IU: uniformidad de fibra en \%.}\label{fig:img-PC}
+\includegraphics[width=400px]{figure/chap1/Para_compuestas/Graficos_Biomasa_Particion} \caption{ }\label{fig:img-Biomasa-Parcicion}
 \end{figure}
+
+\begin{figure}
+\includegraphics[width=400px]{figure/chap1/Para_compuestas/Graficos_Retencion_Combinada} \caption{ }\label{fig:img-Retencion-Combinada}
+\end{figure}
+
+\begin{verbatim}
+The following objects are masked from Datos_particion_mapeo_8_entradas (pos = 3):
+
+    % Apertura, % MS total, % PS Bocha, % PS Cápsula, % PS
+    Fibra, % PS Hoja, % PS Peciolo, % PS Pimp, % PS Raiz, % PS
+    Rebrote, % PS RV, % PS Tallo, % Ret según DA, %Ret R1,
+    %Ret R10, %Ret R11, %Ret R12, %Ret R13, %Ret R14, %Ret
+    R15, %Ret R16, %Ret R17, %Ret R18, %Ret R19, %Ret R2, %Ret
+    R20, %Ret R3, %Ret R4, %Ret R5, %Ret R6, %Ret R7, %Ret R8,
+    %Ret R9, Altura, Altura 1º RR, Area_Foliar, Bloque, Bocha
+    %, Capsula %, Check_Parte_Veg, cm / nudo, DDS, Diferencia,
+    Distancia a 1ª posicion, Entradas, Experimento, Fibra %,
+    Hoja %, IC_(M4), Maceta, Momento, N nudos, N RR / N RV, N°
+    Rama reproduciva 2, Nº Rama Repr, Nº RV, Nudo 1º RR, Parte
+    Rep %, Parte Veg %, Peciolo %, PF Bochas, PF Capsula, PF
+    Fibra, PF Hoja, PF Parte Reproductiva, PF Parte
+    Vegetativa, PF Peciolo, PF Pim/Flor, PF Rebrote, PF RV, PF
+    Tallo, Pimpollo %, PS_Bochas, PS_Capsula,
+    PS_Capsula_Fibra_Semilla, PS_Fibra, PS_Hoja,
+    PS_Parte_Reproductiva, PS_Parte_Vegetativa, PS_Peciolo,
+    PS_Pim_Flor, PS_Pim_Flor_Bocha, PS_Raíz, PS_Rebrote,
+    PS_RV, PS_RV_Rebrote, PS_Tallo, R_V, Raiz %, Rebrote %,
+    Ret_Global, Ret_P1, Ret_P2, Ret_P3, RV %, Sumatoria PF
+    Particionado, Sumatoria_PS, Tallo %
+\end{verbatim}
+
+\begin{verbatim}
+The following objects are masked from Datos_particion_mapeo_8_entradas (pos = 4):
+
+    % Apertura, % MS total, % PS Bocha, % PS Cápsula, % PS
+    Fibra, % PS Hoja, % PS Peciolo, % PS Pimp, % PS Raiz, % PS
+    Rebrote, % PS RV, % PS Tallo, % Ret según DA, %Ret R1,
+    %Ret R10, %Ret R11, %Ret R12, %Ret R13, %Ret R14, %Ret
+    R15, %Ret R16, %Ret R17, %Ret R18, %Ret R19, %Ret R2, %Ret
+    R20, %Ret R3, %Ret R4, %Ret R5, %Ret R6, %Ret R7, %Ret R8,
+    %Ret R9, Altura, Altura 1º RR, Area_Foliar, Bloque, Bocha
+    %, Capsula %, Check_Parte_Veg, cm / nudo, DDS, Diferencia,
+    Distancia a 1ª posicion, Entradas, Experimento, Fibra %,
+    Hoja %, IC_(M4), Maceta, Momento, N nudos, N RR / N RV, N°
+    Rama reproduciva 2, Nº Rama Repr, Nº RV, Nudo 1º RR, Parte
+    Rep %, Parte Veg %, Peciolo %, PF Bochas, PF Capsula, PF
+    Fibra, PF Hoja, PF Parte Reproductiva, PF Parte
+    Vegetativa, PF Peciolo, PF Pim/Flor, PF Rebrote, PF RV, PF
+    Tallo, Pimpollo %, PS_Bochas, PS_Capsula,
+    PS_Capsula_Fibra_Semilla, PS_Fibra, PS_Hoja,
+    PS_Parte_Reproductiva, PS_Parte_Vegetativa, PS_Peciolo,
+    PS_Pim_Flor, PS_Pim_Flor_Bocha, PS_Raíz, PS_Rebrote,
+    PS_RV, PS_RV_Rebrote, PS_Tallo, R_V, Raiz %, Rebrote %,
+    Ret_Global, Ret_P1, Ret_P2, Ret_P3, RV %, Sumatoria PF
+    Particionado, Sumatoria_PS, Tallo %
+\end{verbatim}
+
+\global\setlength{\Oldarrayrulewidth}{\arrayrulewidth}
+
+\global\setlength{\Oldtabcolsep}{\tabcolsep}
+
+\setlength{\tabcolsep}{2pt}
+
+\renewcommand*{\arraystretch}{1.5}
+
+
+
+\providecommand{\ascline}[3]{\noalign{\global\arrayrulewidth #1}\arrayrulecolor[HTML]{#2}\cline{#3}}
+
+\begin{longtable}[c]{|p{1.80in}|p{2.00in}|p{0.75in}|p{0.75in}|p{0.75in}|p{0.75in}}
+
+\caption{Table\ S4.\ Analysis\ of\ variance\ (ANOVA)\ for\ total,\ vegetative,\ and\ reproductive\ biomass\ partitioning\ across\ phenological\ stages\ (Moments\ M1–M4)\ and\ cotton\ accessions.\ Vegetative\ biomass:\ stem,\ leaves\ ,\ monopodial\ branches\ (MONON);\ and\ reproductive\ biomass:\ sympodial\ branches\ (SYMNN),\ squares\ (Sq),\ flowers\ (Fw),\ green\ bolls\ (Gb),\ capsule,\ seed\ and\ fiber\ (F+S),\ }\label{tab:AnovaBiomasaParticionRep2}\\
+
+\ascline{1pt}{666666}{1-6}
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{Trait}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{Source}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{numDF}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{denDF}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{F-value}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{p-value}}}}} \\
+
+\ascline{2.5pt}{000000}{1-6}\endfirsthead \caption[]{Table\ S4.\ Analysis\ of\ variance\ (ANOVA)\ for\ total,\ vegetative,\ and\ reproductive\ biomass\ partitioning\ across\ phenological\ stages\ (Moments\ M1–M4)\ and\ cotton\ accessions.\ Vegetative\ biomass:\ stem,\ leaves\ ,\ monopodial\ branches\ (MONON);\ and\ reproductive\ biomass:\ sympodial\ branches\ (SYMNN),\ squares\ (Sq),\ flowers\ (Fw),\ green\ bolls\ (Gb),\ capsule,\ seed\ and\ fiber\ (F+S),\ }\label{tab:AnovaBiomasaParticionRep2}\\
+
+\ascline{1pt}{666666}{1-6}
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{Trait}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{Source}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{numDF}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{denDF}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{F-value}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{p-value}}}}} \\
+
+\ascline{2.5pt}{000000}{1-6}\endhead
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Total\ Biomass}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{(Intercept)}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{68.56}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{3}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{96.60}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{5.27}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento:Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{2.14}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.0038}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1\ Vegetative\ Biomass}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{(Intercept)}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{207.54}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{3}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{173.37}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{4.86}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento:Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1.81}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.0203}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1.1\ Stem}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{(Intercept)}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{324.70}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{3}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{236.76}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{5.83}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento:Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{2.49}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.0006}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1.2\ Leaves}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{(Intercept)}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{229.43}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{3}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{40.32}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1.13}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.3468}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento:Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1.93}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.0113}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1.3\ MONON}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{(Intercept)}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{63.58}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{3}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21.54}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{4.83}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento:Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1.69}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.0357}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{2\ Reproductive\ Biomass}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{(Intercept)}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{16.17}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{3}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{63.73}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1.33}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.2365}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento:Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.81}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.7085}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{2.1\ SYMNN}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{(Intercept)}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{148.24}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{3}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{122.94}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{2.35}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.0255}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento:Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1.43}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.1076}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{2.2\ Sq+Fw+Gb}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{(Intercept)}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{84.18}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{3}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{41.99}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1.22}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.2913}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento:Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.68}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.8489}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{2.3\ Capsule\ (M4)}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{(Intercept)}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{47}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{12.16}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.0011}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{47}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1.55}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.1738}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{2.4\ F+S\ (M4)}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{(Intercept)}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{47}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{14.71}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.0004}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{47}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.68}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.6909}}}} \\
+
+\ascline{1pt}{666666}{1-6}
+
+
+
+\end{longtable}
+
+
+
+\arrayrulecolor[HTML]{000000}
+
+\global\setlength{\arrayrulewidth}{\Oldarrayrulewidth}
+
+\global\setlength{\tabcolsep}{\Oldtabcolsep}
+
+\renewcommand*{\arraystretch}{1}
+
+\begin{table}[!h]
+\centering\centering
+\caption{\label{tab:Anova-retencion}Retención global, y en posiciones 1, 2 y 3, en los momentos M2, M3, y M4}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\fontsize{12}{14}\selectfont
+\begin{tabular}[t]{llrrrl}
+\toprule
+\multicolumn{1}{c}{ } & \multicolumn{5}{c}{ANOVA} \\
+\cmidrule(l{3pt}r{3pt}){2-6}
+\begingroup\fontsize{12}{14}\selectfont \textbf{Rasgos}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{Fuente}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{GLNum}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{GLDen}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{F}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{p-valor}\endgroup\\
+\midrule
+Ret\_Global & (Intercept) & 1 & 140 & 88.80 & <0.0001\\
+ & Momento & 2 & 14 & 52.48 & <0.0001\\
+ & Entradas & 7 & 140 & 3.50 & 0.0017\\
+ & Momento:Entradas & 14 & 140 & 2.16 & 0.0119\\
+Ret\_P1 & (Intercept) & 1 & 140 & 421.93 & <0.0001\\
+\addlinespace
+ & Momento & 2 & 14 & 89.19 & <0.0001\\
+ & Entradas & 7 & 140 & 1.48 & 0.1788\\
+ & Momento:Entradas & 14 & 140 & 1.93 & 0.0281\\
+Ret\_P2 & (Intercept) & 1 & 140 & 20.48 & <0.0001\\
+ & Momento & 2 & 14 & 9.15 & 0.0029\\
+\addlinespace
+ & Entradas & 7 & 140 & 2.71 & 0.0116\\
+ & Momento:Entradas & 14 & 140 & 1.18 & 0.2938\\
+Ret\_P3 & (Intercept) & 1 & 140 & 13.96 & 0.0003\\
+ & Momento & 2 & 14 & 6.54 & 0.0099\\
+ & Entradas & 7 & 140 & 1.08 & 0.3821\\
+\addlinespace
+ & Momento:Entradas & 14 & 140 & 0.97 & 0.4843\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\pandocbounded{\includegraphics[keepaspectratio]{Tesis_Dileo_files/figure-latex/Anova-retencion-1.pdf}}
+
+El análisis estadístico mostró efectos altamente significativos (p \textless{} 0,001) del momento, la accesión y su interacción (Tabla S4), lo que indica que las accesiones no solo difieren en magnitud de acumulación de biomasa, sino también en su patrón temporal de asignación.
+
+En madurez (M4), BGSP-00207 presentó la mayor acumulación en ramas reproductivas, mientras que BGSP-00166 mostró la menor acumulación tanto en ramas vegetativas como reproductivas, consistente con su arquitectura compacta. SP-41255 y BGSP-00126 acumularon mayor biomasa en ramas vegetativas, lo que sugiere una estrategia de crecimiento más expansiva previa a la transición reproductiva.
+
+Estas diferencias en arquitectura y partición coinciden con estudios que indican que la ramificación en algodón está fuertemente determinada por factores genéticos \autocite{mcgarry2016,sun2022,huang2022}. Asimismo, la densidad de siembra modula estos patrones, ya que mayores densidades reducen la ramificación lateral y favorecen asignación reproductiva \autocite{li2019a}.
+
+La retención reproductiva (Fig. 3) mostró una disminución progresiva desde M2 hasta M4, reflejando competencia creciente por asimilados durante el llenado de cápsulas. Se observaron diferencias claras entre accesiones en retención global (GR) y de primera posición (R1P). BGSP-00269 y SP-41255 mantuvieron mayores valores de GR y R1P, indicando mayor eficiencia en establecimiento y mantenimiento de frutos tempranos, que suelen asociarse a mayor peso y mejor calidad de fibra.
+
+El análisis estadístico (Tabla S5) confirmó efectos significativos de momento y accesión para GR (p = 0,0017) y una interacción significativa momento × accesión (p = 0,0119), lo que indica diferencias genotípicas en la capacidad de retener estructuras reproductivas a lo largo del ciclo.
+
+La posición de las cápsulas dentro del dosel tiene implicancias directas sobre rendimiento y calidad. Estudios previos \autocite{davidonis2004,nie2019,zhang2021} demostraron que cápsulas ubicadas en posiciones intermedias presentan mayor longitud y resistencia de fibra, mientras que posiciones superiores tienden a producir menores valores de micronaire. Por lo tanto, accesiones con mayor retención en posiciones tempranas, como BGSP-00269 y SP-41255, no solo incrementan número de frutos sino que optimizan su calidad potencial.
+
+Las variables fisiológicas (Fig. 4) mostraron una disminución progresiva de la tasa fotosintética neta (P\_N\_), conductancia estomática (g\_s\_) y SPAD desde M2 en adelante. El efecto del momento fue altamente significativo para P\_N\_ y SPAD (p \textless{} 0,001), mientras que la accesión y la interacción fueron significativas únicamente para P\_N\_ (Tabla S6), lo que indica que las diferencias genotípicas estuvieron principalmente asociadas a capacidad fotosintética.
+
+\begin{figure}
+\includegraphics[width=3in]{figure/chap1/Photo_Cond_SPAD} \caption{ }\label{fig:Graficos-photo-cond-spad}
+\end{figure}
+
+\global\setlength{\Oldarrayrulewidth}{\arrayrulewidth}
+
+\global\setlength{\Oldtabcolsep}{\tabcolsep}
+
+\setlength{\tabcolsep}{2pt}
+
+\renewcommand*{\arraystretch}{1.5}
+
+
+
+\providecommand{\ascline}[3]{\noalign{\global\arrayrulewidth #1}\arrayrulecolor[HTML]{#2}\cline{#3}}
+
+\begin{longtable}[c]{|p{0.80in}|p{1.50in}|p{0.75in}|p{0.75in}|p{0.75in}|p{0.75in}}
+
+\caption{Table\ S6.\ Analysis\ of\ variance\ (ANOVA)\ for\ physiological\ parameters,\ net\ photosynthetic\ rate\ (PN),\ stomatal\ conductance\ (gs),\ and\ chlorophyll\ content\ (SPAD),\ measured\ across\ developmental\ stages\ (Moments\ M2,\ M2+15d\ and\ M2+30d)\ in\ eight\ cotton\ accessions.}\label{tab:Anova-fotosintesis-cond-spad}\\
+
+\ascline{1pt}{666666}{1-6}
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 0.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{Trait}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 1.5in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{Source}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{numDF}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{denDF}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{F-value}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{p-value}}}}} \\
+
+\ascline{2.5pt}{000000}{1-6}\endfirsthead \caption[]{Table\ S6.\ Analysis\ of\ variance\ (ANOVA)\ for\ physiological\ parameters,\ net\ photosynthetic\ rate\ (PN),\ stomatal\ conductance\ (gs),\ and\ chlorophyll\ content\ (SPAD),\ measured\ across\ developmental\ stages\ (Moments\ M2,\ M2+15d\ and\ M2+30d)\ in\ eight\ cotton\ accessions.}\label{tab:Anova-fotosintesis-cond-spad}\\
+
+\ascline{1pt}{666666}{1-6}
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 0.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{Trait}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 1.5in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{Source}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{numDF}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{denDF}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{F-value}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{p-value}}}}} \\
+
+\ascline{2.5pt}{000000}{1-6}\endhead
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 0.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{SPAD}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 1.5in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{(Intercept)}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{56}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{139.88}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 0.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 1.5in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Moment}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{56}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{19.76}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 0.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 1.5in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Accession}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1.04}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.4363}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 0.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 1.5in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Moment:Accession}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{56}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.74}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.6355}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 0.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Stomatal\ conductance}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 1.5in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{(Intercept)}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{56}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{26.32}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 0.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 1.5in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Moment}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{56}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1.18}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.2814}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 0.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 1.5in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Accession}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.90}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.5224}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 0.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 1.5in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Moment:Accession}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{56}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.91}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.5085}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 0.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Net\ photosynthetic\ rate}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 1.5in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{(Intercept)}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{56}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{339.17}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 0.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 1.5in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Moment}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{56}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{122.17}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 0.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 1.5in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Accession}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{3.49}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.0122}}}} \\
+
+
+
+
+
+\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 0.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 1.5in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Moment:Accession}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{56}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{3.36}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.0046}}}} \\
+
+\ascline{1pt}{666666}{1-6}
+
+
+
+\end{longtable}
+
+
+
+\arrayrulecolor[HTML]{000000}
+
+\global\setlength{\arrayrulewidth}{\Oldarrayrulewidth}
+
+\global\setlength{\tabcolsep}{\Oldtabcolsep}
+
+\renewcommand*{\arraystretch}{1}
+
+BGSP-00425 presentó una disminución más pronunciada en P\_N\_, lo que podría explicar su menor acumulación final de biomasa. En contraste, accesiones con perfiles más estables de P\_N\_ mostraron mejor desempeño reproductivo. Estos resultados coinciden con \textcite{li2019}, quienes demostraron que la fotosíntesis neta es un determinante clave del rendimiento en algodón.
+
+En conjunto, la integración de partición de biomasa, retención reproductiva y fisiología evidencia que el rendimiento no depende exclusivamente de la formación de estructuras reproductivas, sino de la eficiencia en la provisión y asignación de carbono durante el período crítico de llenado. Las diferencias observadas reflejan estrategias genotípicas contrastantes de balance fuente--destino, con implicancias directas para la selección de parentales adaptados a sistemas mecanizados y de alta densidad.
+
+\subsubsection{Análisis de Componentes Principales}\label{anuxe1lisis-de-componentes-principales}
+
+El análisis de componentes principales (ACP) realizado a partir de las variables significativas permitió sintetizar la variabilidad fenotípica observada entre las accesiones evaluadas. El primer componente principal (CP1) explicó el 55,89 \% de la variación total, mientras que el segundo componente (CP2) explicó el 14,54 \% (Fig. 5), concentrando en conjunto más del 70 \% de la variabilidad del conjunto de datos. Esto indica que una proporción sustancial de la estructura fenotípica puede interpretarse mediante la combinación lineal de estos dos ejes principales.
+
+\begin{figure}
+\includegraphics[width=400px]{figure/chap1/Para_compuestas/PCA_juntas_con_fisiologico} \caption{Biplot del análisis de componentes principales con puntos que representan las proyecciones de las accesiones (1) y las variables (2) en el espacio definido por las dos primeras dimensiones (Dim) o componentes principales. RB: rendimiento de algodón en bruto en g; RF: rendimiento de fibra en g; RFD: porcentaje de fibra en \%; PC: peso de capullo en g; NC: número de capullos por planta; IS: índice de semilla en g; IF: índice de fibra en g; NSC: número de semillas por capullo. UHML: longitud de fibra en mm; Str: resistencia de fibra en g tex-1; Mic: micronaire; IU: uniformidad de fibra en \%.}\label{fig:img-PC}
+\end{figure}
+
+La distribución de las accesiones en el biplot evidenció un claro gradiente asociado a la relación entre rendimiento y calidad de fibra. Las accesiones ubicadas en los cuadrantes izquierdos del gráfico, tales como BGSP-00166, BGSP-00159 y BGSP-00425, se asociaron con mayores valores de calidad de fibra, particularmente longitud de fibra (FL), resistencia de fibra (FS) y uniformidad (FU), así como con mayor índice de semilla (SI). Sin embargo, estas accesiones presentaron valores inferiores en caracteres vinculados al rendimiento, tales como rendimiento de algodón en bruto (SCY), rendimiento de fibra (LY), índice de fibra (LI), número de cápsulas por planta (BN) y porcentaje de fibra (LP). Este patrón sugiere un perfil genotípico orientado hacia calidad tecnológica, aunque con menor expresión de componentes productivos.
+
+En contraste, las accesiones posicionadas en el lado derecho del biplot, incluyendo SP-41255, SP-6565, BGSP-00269, BGSP-00207 y BGSP-00126, se asociaron con mayor producción de biomasa (tallo, biomasa total, ramas monopodiales y simpodiales) y con un mejor desempeño en caracteres de rendimiento. Estas accesiones mostraron mayores valores de SCY, LY, LI, BN y LP, aunque con valores relativamente menores en atributos de calidad de fibra. Este comportamiento resulta coherente con los patrones previamente observados en el análisis de partición de biomasa (Fig. 2) y en la dinámica de retención reproductiva (Fig. 3), donde estos genotipos presentaron mayor acumulación de biomasa reproductiva y mayor retención global (GR) y de primera posición (R1P). Asimismo, variables fisiológicas como la tasa fotosintética neta (P\_N\_) contribuyeron positivamente al eje derecho del CP1, reforzando su asociación con el desempeño productivo.
+
+Tanto el ACP como los coeficientes de correlación de Spearman (Tabla S3) permitieron identificar relaciones estructurales entre los caracteres evaluados. En particular, el rendimiento de fibra (LY) mostró una fuerte correlación positiva con el número de cápsulas (BN), una correlación positiva moderada con el peso de cápsula (BW) y el porcentaje de fibra (LP), y una correlación negativa moderada con la longitud de fibra (FL). Este patrón confirma la existencia de una relación antagónica parcial entre rendimiento y calidad de fibra, fenómeno ampliamente documentado en algodón.
 
 \begin{table}[!h]
 \centering
@@ -908,135 +1377,13 @@ IU & -.05 & -.06 & -.01 & .09 & -.10 & .40** & .09 & -.14 & .34* & .46*** & -.10
 \end{threeparttable}}
 \end{table}
 
-\begin{table}[!h]
-\centering\centering
-\caption{\label{tab:Anova-biomasa-particion-rep2}Acumulacion de biomasa en estructuras vegetativas, tallo, hojas, peciolos, ramas vegetativas, rebrote, biomasa reproductiva, pimpollo, flor, bocha, cápsula, semilla}
-\centering
-\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
-\fontsize{12}{14}\selectfont
-\begin{tabular}[t]{llrrrl}
-\toprule
-\multicolumn{1}{c}{ } & \multicolumn{5}{c}{ANOVA} \\
-\cmidrule(l{3pt}r{3pt}){2-6}
-\begingroup\fontsize{12}{14}\selectfont \textbf{Rasgos}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{Fuente}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{GLNum}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{GLDen}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{F}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{p-valor}\endgroup\\
-\midrule
-Biomasa Total & (Intercept) & 1 & 193 & 62.54 & <0.0001\\
- & Momento & 3 & 21 & 92.71 & <0.0001\\
- & Entradas & 7 & 193 & 6.34 & <0.0001\\
- & Momento:Entradas & 21 & 193 & 2.37 & 0.0011\\
-1 Biomasa Vegetativa & (Intercept) & 1 & 193 & 210.27 & <0.0001\\
-\addlinespace
- & Momento & 3 & 21 & 196.04 & <0.0001\\
- & Entradas & 7 & 193 & 4.55 & 0.0001\\
- & Momento:Entradas & 21 & 193 & 1.65 & 0.0416\\
-1.1 Tallo & (Intercept) & 1 & 193 & 332.03 & <0.0001\\
- & Momento & 3 & 21 & 249.72 & <0.0001\\
-\addlinespace
- & Entradas & 7 & 193 & 6.30 & <0.0001\\
- & Momento:Entradas & 21 & 193 & 2.41 & 0.0009\\
-1.2 Hoja & (Intercept) & 1 & 193 & 211.00 & <0.0001\\
- & Momento & 3 & 21 & 39.10 & <0.0001\\
- & Entradas & 7 & 193 & 0.70 & 0.6741\\
-\addlinespace
- & Momento:Entradas & 21 & 193 & 1.81 & 0.0195\\
-1.3 Peciolo+Ramas & (Intercept) & 1 & 193 & 148.48 & <0.0001\\
- & Momento & 3 & 21 & 123.02 & <0.0001\\
- & Entradas & 7 & 193 & 2.73 & 0.0102\\
- & Momento:Entradas & 21 & 193 & 1.46 & 0.0956\\
-\addlinespace
-1.4 RV+Rebrote & (Intercept) & 1 & 193 & 63.81 & <0.0001\\
- & Momento & 3 & 21 & 21.61 & <0.0001\\
- & Entradas & 7 & 193 & 4.02 & 0.0004\\
- & Momento:Entradas & 21 & 193 & 1.49 & 0.0829\\
-2 Biomasa Reproductiva & (Intercept) & 1 & 193 & 10.52 & 0.0014\\
-\addlinespace
- & Momento & 3 & 21 & 62.70 & <0.0001\\
- & Entradas & 7 & 193 & 3.15 & 0.0035\\
- & Momento:Entradas & 21 & 193 & 1.45 & 0.0992\\
-2.1 Prim+Flor+Bocha & (Intercept) & 1 & 193 & 132.53 & <0.0001\\
- & Momento & 3 & 21 & 94.71 & <0.0001\\
-\addlinespace
- & Entradas & 7 & 193 & 0.94 & 0.4797\\
- & Momento:Entradas & 21 & 193 & 0.63 & 0.8961\\
-2.2 Cápsula (M4) & (Intercept) & 1 & 47 & 10.82 & 0.0019\\
- & Entradas & 7 & 47 & 3.85 & 0.0022\\
-2.3 Fibra+Semilla (M4) & (Intercept) & 1 & 47 & 13.01 & 0.0007\\
-\addlinespace
- & Entradas & 7 & 47 & 2.36 & 0.0373\\
-\bottomrule
-\end{tabular}}
-\end{table}
+El análisis de componentes principales es una herramienta de uso rutinario en la identificación de similitudes y divergencias entre genotipos de algodón en función de múltiples caracteres simultáneamente \autocite{shakeel2015,farooq2017,klein2022}. En el presente estudio, el ACP permitió identificar accesiones contrastantes desde el punto de vista productivo y tecnológico. En particular, BGSP-00166 se asoció fuertemente con mayores valores de calidad de fibra (FL, FS, FU) y mayor tamaño de semilla (SI), mientras que SP-41255 se asoció con mayores valores en caracteres vinculados al rendimiento, tales como SCY, LY, LI, BN y LP.
 
-\pandocbounded{\includegraphics[keepaspectratio]{Tesis_Dileo_files/figure-latex/Graficos-biomasa-1.pdf}}
+La accesión SP-41255 se destacó por su desempeño productivo, exhibiendo los mayores valores de LP y BN y los menores valores de BW y SI, en concordancia con lo reportado por \textcite{scarpin2022} en un estudio sobre progreso genético en rendimiento y sus componentes en 20 cultivares de algodón. De manera consistente con nuestras observaciones, SP-41255 se vinculó a caracteres superiores de rendimiento, particularmente mayor porcentaje de fibra y número de cápsulas (Fig. 5). Resultados similares fueron reportados por \textcite{mccarty2006}, quienes observaron que accesiones con mayor expresión de caracteres de rendimiento tendían a presentar valores inferiores en calidad de fibra, confirmando la existencia de un compromiso fisiológico y genético entre ambos grupos de caracteres.
 
-\begin{table}[!h]
-\centering\centering
-\caption{\label{tab:Anova-retencion}Retención global, y en posiciones 1, 2 y 3, en los momentos M2, M3, y M4}
-\centering
-\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
-\fontsize{12}{14}\selectfont
-\begin{tabular}[t]{llrrrl}
-\toprule
-\multicolumn{1}{c}{ } & \multicolumn{5}{c}{ANOVA} \\
-\cmidrule(l{3pt}r{3pt}){2-6}
-\begingroup\fontsize{12}{14}\selectfont \textbf{Rasgos}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{Fuente}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{GLNum}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{GLDen}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{F}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{p-valor}\endgroup\\
-\midrule
-Ret\_Global & (Intercept) & 1 & 144 & 90.21 & <0.0001\\
- & Momento & 2 & 14 & 52.91 & <0.0001\\
- & Entradas & 7 & 144 & 3.48 & 0.0018\\
- & Momento:Entradas & 14 & 144 & 2.21 & 0.0098\\
-Ret\_P1 & (Intercept) & 1 & 144 & 338.14 & <0.0001\\
-\addlinespace
- & Momento & 2 & 14 & 89.26 & <0.0001\\
- & Entradas & 7 & 144 & 1.47 & 0.1810\\
- & Momento:Entradas & 14 & 144 & 3.05 & 0.0004\\
-Ret\_P2 & (Intercept) & 1 & 144 & 22.78 & <0.0001\\
- & Momento & 2 & 14 & 8.89 & 0.0032\\
-\addlinespace
- & Entradas & 7 & 144 & 2.65 & 0.0131\\
- & Momento:Entradas & 14 & 144 & 1.29 & 0.2206\\
-Ret\_P3 & (Intercept) & 1 & 144 & 13.92 & 0.0003\\
- & Momento & 2 & 14 & 6.59 & 0.0096\\
- & Entradas & 7 & 144 & 1.06 & 0.3914\\
-\addlinespace
- & Momento:Entradas & 14 & 144 & 0.92 & 0.5359\\
-\bottomrule
-\end{tabular}}
-\end{table}
+En conjunto, el análisis multivariado respalda la identificación de líneas parentales complementarias para programas de mejoramiento genético. Los perfiles contrastantes de BGSP-00166 y SP-41255 representan una oportunidad estratégica para combinar calidad de fibra y potencial de rendimiento mediante esquemas de recombinación dirigida, contribuyendo al desarrollo de ideotipos adaptados a sistemas de producción mecanizados y de alta densidad.
 
-\pandocbounded{\includegraphics[keepaspectratio]{Tesis_Dileo_files/figure-latex/Anova-retencion-1.pdf}}
-
-\begin{table}[!h]
-\centering\centering
-\caption{\label{tab:Anova-fotosintesis-cond-spad}Fotosintesis, conductancia estomatica y SPAD}
-\centering
-\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
-\fontsize{12}{14}\selectfont
-\begin{tabular}[t]{llrrrl}
-\toprule
-\multicolumn{1}{c}{ } & \multicolumn{5}{c}{ANOVA} \\
-\cmidrule(l{3pt}r{3pt}){2-6}
-\begingroup\fontsize{12}{14}\selectfont \textbf{Rasgos}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{Fuente}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{GLNum}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{GLDen}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{F}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{p-valor}\endgroup\\
-\midrule
-SPAD & (Intercept) & 1 & 56 & 139.88 & <0.0001\\
- & DDE & 1 & 56 & 19.76 & <0.0001\\
- & Entradas & 7 & 21 & 1.04 & 0.4363\\
- & DDE:Entradas & 7 & 56 & 0.74 & 0.6355\\
-Cond & (Intercept) & 1 & 56 & 26.32 & <0.0001\\
-\addlinespace
- & DDE & 1 & 56 & 1.18 & 0.2814\\
- & Entradas & 7 & 21 & 0.90 & 0.5224\\
- & DDE:Entradas & 7 & 56 & 0.91 & 0.5085\\
-Photo & (Intercept) & 1 & 56 & 339.17 & <0.0001\\
- & DDE & 1 & 56 & 122.17 & <0.0001\\
-\addlinespace
- & Entradas & 7 & 21 & 3.49 & 0.0122\\
- & DDE:Entradas & 7 & 56 & 3.36 & 0.0046\\
-\bottomrule
-\end{tabular}}
-\end{table}
-
-\pandocbounded{\includegraphics[keepaspectratio]{Tesis_Dileo_files/figure-latex/Anova-fotosintesis-cond-spad-1.pdf}}
+Este enfoque integrador, que combina la evaluación agronómica, fisiológica y tecnológica de la fibra, fortalece la caracterización temprana del germoplasma y aporta criterios objetivos para la selección de parentales en programas de mejoramiento orientados a sistemas de producción mecanizados y de alta eficiencia.
 
 \section{Conclusión}\label{conclusiuxf3n}
 

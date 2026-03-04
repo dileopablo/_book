@@ -76,7 +76,7 @@
 \title{Caracterización morfológica, fisiológica y molecular de entradas de algodón (\emph{Gossypium hirsutum} L.) e identificación de QTL de importancia agronómica}
 \author{Ing. Agr. Pablo Nahuel Dileo}
 % The month and year that you submit your FINAL draft TO THE LIBRARY (May or December)
-\date{Versión 1.6}
+\date{Versión 1.1}
 \division{Facultad de Ciencias Agrarias}
 \advisor{Dr.~Gustavo Rubén Rodríguez}
 \institution{Universidad Nacional del Nordeste}
@@ -206,6 +206,10 @@ Segundo párrafo del resumen aquí.
 
 % Configuración de interlineado general
 \setstretch{1.5}  % Interlineado general de 1.5
+
+% Reducir interlineado SOLO en tablas longtable
+\AtBeginEnvironment{longtable}{\small}
+\AtBeginEnvironment{longtable}{\setstretch{1.0}}
 
 % Configuración del espacio entre títulos y texto
 \titlespacing*{\chapter}{0pt}{20pt}{10pt}  % Ajusta el espacio antes y después de los títulos de capítulos
@@ -515,47 +519,47 @@ Se realizó una caracterización inicial de las 26 entradas, evaluándose caract
 
 \begingroup\fontsize{10}{12}\selectfont
 
-\begin{longtable}[t]{p{2.2cm}p{3.0cm}p{1.8cm}p{1.5cm}p{4.3cm}}
-\caption{\label{tab:tableVariables26Entradas}Morphological, phenological, yield, and fiber quality traits measured in 26 cotton accessions}\\
+\begin{longtable}[t]{p{2.6cm}p{3.0cm}p{1.8cm}p{1.3cm}p{4.1cm}}
+\caption{\label{tab:tableVariables26Entradas}Caracteres morfológicos, fenológicos, componentes del rendimiento y atributos de calidad de fibra evaluados en 26 entradas de algodón (Gossypium hirsutum L.)}\\
 \toprule
-Trait.Category & Trait & Abbreviation & Unit & Description\\
+Categoría del rasgo & Rasgo & Abreviatura & Unidad & Descripción\\
 \midrule
 \endfirsthead
-\caption[]{\label{tab:tableVariables26Entradas}Morphological, phenological, yield, and fiber quality traits measured in 26 cotton accessions \textit{(continued)}}\\
+\caption[]{\label{tab:tableVariables26Entradas}Caracteres morfológicos, fenológicos, componentes del rendimiento y atributos de calidad de fibra evaluados en 26 entradas de algodón (Gossypium hirsutum L.) (Continuación)}\\
 \toprule
-Trait.Category & Trait & Abbreviation & Unit & Description\\
+Categoría del rasgo & Rasgo & Abreviatura & Unidad & Descripción\\
 \midrule
 \endhead
 
 \endfoot
 \bottomrule
 \endlastfoot
-Fiber Quality & Fiber length & FL & mm & Upper half mean length (UHML), measured with HVI\\
- & Fiber strength & FS & g tex⁻¹ & Measured with HVI\\
- & Micronaire & MIC & - & Measured with HVI\\
- & Fiber uniformity & FU & \% & Uniformity index, measured with HVI\\
-Morphological (Qualitative) & Plant shape, canopy, flowering type, leaf shape, trichome density, bract type, boll shape & - & - & Scored according to Upland cotton descriptors\\
+Morfológicos (Cualitativos) & Forma de planta, aspecto de canopia, tipo de floración, forma de hoja, pubescencia, tipo de bráctea, forma de cápsula & - & - & Evaluado de acuerdo con los descriptores de algodón tipo Upland\\
+Morfológicos (Cuantitativos) & Altura de planta & HP & cm & Altura de la planta a madurez en cm\\
+ & Nudos del tallo principal & STEMNN & número & Número de nudos en el tallo principal\\
+ & Ramas monopodiales & MONON & número & Número de ramas monopodiales (vegetativas)\\
+ & Nudos de ramas simpodiales & SYMNN & número & Número de nudos en ramas simpodiales\\
 \addlinespace
-Morphological (Quantitative) & Plant height & HP & cm & Height of the plant at maturity in cm\\
- & Main stem nodes & STEMNN & count & Number of nodes on main stem\\
- & Monopodial branches & MONON & count & Number of monopodial  (vegetative) branches\\
- & Sympodial branch nodes & SYMNN & count & Number of sympodial branch nodes\\
- & First fruiting branch position (node) & FFBN & count & First fruiting branch position measured by number of stem node\\
+ & Posición de la primera rama fructífera (nudo) & FFBN & número & Posición de la primera rama fructífera medida por número de nudo del tallo\\
+ & Posición de la primera rama fructífera (altura) & FFBH & cm & Posición de la primera rama fructífera medida en altura (cm)\\
+ & Distancia a la primera posición reproductiva & DFRP & cm & Distancia desde la primera posición reproductiva al tallo principal (cm)\\
+Fenológicos & Días a primer pimpollo & DFS & días & Desde emergencia hasta primer pimpollo\\
+ & Días a primera flor & DFF & días & Desde emergencia hasta primera flor\\
 \addlinespace
- & First fruiting branch position (height) & FFBH & cm & First fruiting branch position measured by height in cm\\
- & Distance to first reproductive position & DFRP & cm & Distance from the first reproductive position to the main stem in cm\\
-Phenological & Days to first square & DFS & days & From seedling emergence to first square\\
- & Days to first flower & DFF & days & From seedling emergence to first flower\\
- & Days to cut-out & DCO & days & From seedling emergence to Cut Out (Bourland et al., 1992)\\
+ & Días a cut-out & DCO & días & Desde emergencia hasta cut-out (Bourland et al., 1992)\\
+ & Días a apertura de primera cápsula & DBO & días & Desde emergencia hasta apertura de la primera cápsula\\
+ & Días a madurez & DM & días & Desde emergencia hasta madurez fisiológica\\
+Componentes del rendimiento & Rendimiento de algodón en bruto & SCY & g planta⁻¹ & Peso total de algodón en bruto por planta\\
+ & Rendimiento de fibra & LY & g planta⁻¹ & Peso total de fibra por planta\\
 \addlinespace
- & Days to boll opening & DBO & days & From seedling emergence to first boll opening\\
- & Days to maturity & DM & days & From seedling emergence to physiological maturity\\
-Yield Components & Seed cotton yield & SCY & g plant⁻¹ & Total seed cotton weight per plant\\
- & Lint yield & LY & g plant⁻¹ & Total lint weight per plant\\
- & Lint percentage & LP & \% & (Lint weight / Seed cotton weight) × 100\\
+ & Rendimiento de fibra al desmote & LP & \% & (Peso de fibra / Peso de algodón en bruto) × 100\\
+ & Peso de cápsula & BW & g & Peso promedio de cápsulas cosechadas\\
+ & Número de cápsulas por planta & BN & cápsulas planta⁻¹ & Número total de cápsulas por planta\\
+Calidad de fibra & Longitud de fibra & FL & mm & Longitud media de la mitad superior (UHML), medida con HVI\\
+ & Resistencia de fibra & FS & g tex⁻¹ & Medida con HVI\\
 \addlinespace
- & Boll weight & BW & g & Average weight of harvested bolls\\
- & Boll number per plant & BN & bolls plant⁻¹ & Total number of bolls per plant\\*
+ & Micronaire & MIC & - & Medido con HVI\\
+ & Uniformidad de fibra & FU & \% & Índice de uniformidad, medido con HVI\\*
 \end{longtable}
 \endgroup{}
 
@@ -574,14 +578,14 @@ A partir de la caracterización inicial, se seleccionaron ocho entradas contrast
 \begingroup\fontsize{10}{12}\selectfont
 
 \begin{longtable}[t]{p{2.4cm}p{2.4cm}p{2.2cm}p{1.3cm}p{4.3cm}}
-\caption{\label{tab:tableVariables8Entradas}Physiological and biomass partitioning traits measured in eight contrasting cotton accessions}\\
+\caption{\label{tab:tableVariables8Entradas}Caracteres fisiológicos y de partición de biomasa evaluados en ocho entradas contrastantes de algodón (Gossypium hirsutum L.)}\\
 \toprule
-Trait.Category & Trait & Abbreviation & Unit & Method\\
+Categoría del rasgo & Rasgo & Abreviatura & Unidad & Método\\
 \midrule
 \endfirsthead
-\caption[]{\label{tab:tableVariables8Entradas}Physiological and biomass partitioning traits measured in eight contrasting cotton accessions \textit{(continued)}}\\
+\caption[]{\label{tab:tableVariables8Entradas}Caracteres fisiológicos y de partición de biomasa evaluados en ocho entradas contrastantes de algodón (Gossypium hirsutum L.) \textit{(continued)}}\\
 \toprule
-Trait.Category & Trait & Abbreviation & Unit & Method\\
+Categoría del rasgo & Rasgo & Abreviatura & Unidad & Método\\
 \midrule
 \endhead
 

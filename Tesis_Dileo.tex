@@ -66,7 +66,6 @@
 
 % Added by CII
 \usepackage{caption}
-\captionsetup{width=5in}
 % End of CII addition
 
 % \usepackage{times} % other fonts are available like times, bookman, charter, palatino
@@ -171,6 +170,8 @@ Segundo párrafo del resumen aquí.
     \usepackage{hyperref}
     \usepackage{csquotes}
     \providecommand{\pandocbounded}[1]{#1}
+    \usepackage{caption}
+    \captionsetup{justification=raggedright,singlelinecheck=false,font=small}
     \usepackage{booktabs}
     \usepackage{longtable}
     \usepackage{array}
@@ -185,12 +186,6 @@ Segundo párrafo del resumen aquí.
     \usepackage[normalem]{ulem}
     \usepackage{makecell}
     \usepackage{xcolor}
-    \usepackage{fontspec}
-    \usepackage{multicol}
-    \usepackage{hhline}
-    \newlength\Oldarrayrulewidth
-    \newlength\Oldtabcolsep
-    \usepackage{hyperref}
 % End of CII addition
 %%
 %% End Preamble
@@ -370,9 +365,7 @@ El algodón (\emph{Gossypium hirsutum} L.) se cultiva en más de 80 países y de
 
 Recientemente, \textcite{scarpin2022} informaron de un progreso genético en el rendimiento de fibra, el porcentaje de desmote, el rendimiento de algodón bruto y el número de cápsulas (NC), mostrando una tasa media de crecimiento anual de 3,24 kg ha\textsuperscript{-1}, 0,05 \%, 4,86 kg ha\textsuperscript{-1} y 0,12 NC, respectivamente. Como resultado, las variedades más modernas tienen un mayor rendimiento de fibra, porcentaje de desmote, rendimiento de algodón bruto y número de cápsulas que las variedades más antiguas. Estos resultados indican que los programas de mejoramiento genético del algodón en Argentina han logrado un progreso genético sustancial para el rendimiento de fibra y sus componentes. Además, \textcite{scarpin2023} enfatizaron que este progreso no resultó en una disminución de la calidad del algodón. Sin embargo, se necesita más investigación para mejorar el rendimiento de fibra, la calidad de la fibra y la adaptabilidad a diferentes ambientes. En la provincia de Santa Fe (Argentina), el cultivo de algodón se concentra en los departamentos de 9 de Julio, Vera y General Obligado, cada uno de los cuales presenta disparidades distintivas en cuanto a la composición del suelo y las condiciones ambientales. El tipo de clima en el norte de la provincia es subtropical según la clasificación climática de Köppen, con una estación seca en la región noroeste y sin estación seca en la región noreste de la provincia \autocite{anida2024}. Debido a estas diferencias, es esencial desarrollar genotipos para estas diferentes condiciones para avanzar en la mejora de los cultivos. Además, se necesitan esfuerzos adicionales para identificar genes o QTLs asociados con rasgos agronómicos y de calidad de fibra en variedades de algodón en Argentina a través de métodos de mapeo genético.
 
-En un programa de mejora genética del algodón, combinar un alto rendimiento y calidad de la fibra es un reto clave. El primer paso crucial para un programa de mejora eficaz es caracterizar el germoplasma del algodón. \textcite{kearsey1996} destacaron la importancia de comprender las diferencias genéticas y la heredabilidad de los rasgos al momento de cruzar plantas. La heredabilidad muestra en qué medida los rasgos están influidos por la genética y puede estimarse comparando las varianzas de las generaciones segregantes y no segregantes. En el algodón, se han notificado estimaciones de heredabilidad para varios rasgos, como el rendimiento de fibra, los componentes del rendimiento, la calidad de la fibra, la altura de la planta, el aceite de semilla, el nudo de la primera rama reproductiva, la cápsulas a prueba de tormentas, entre otros \autocite{meredith1984,tang1996,ribeiro2017,decarvalho2022,nidagundi2023}. Estos estimadores ayudan a los mejoradores a decidir la
-
-selección individual y a predecir cuánto pueden mejorar ciertos rasgos. Sin embargo, merece la pena tener en cuenta que el nivel de heredabilidad cambia en función del rasgo, la población y el ambiente en el que se cultivan.
+En un programa de mejora genética del algodón, combinar un alto rendimiento y calidad de la fibra es un reto clave. El primer paso crucial para un programa de mejora eficaz es caracterizar el germoplasma del algodón. \textcite{kearsey1996} destacaron la importancia de comprender las diferencias genéticas y la heredabilidad de los rasgos al momento de cruzar plantas. La heredabilidad muestra en qué medida los rasgos están influidos por la genética y puede estimarse comparando las varianzas de las generaciones segregantes y no segregantes. En el algodón, se han notificado estimaciones de heredabilidad para varios rasgos, como el rendimiento de fibra, los componentes del rendimiento, la calidad de la fibra, la altura de la planta, el aceite de semilla, el nudo de la primera rama reproductiva, la cápsulas a prueba de tormentas, entre otros \autocite{meredith1984,tang1996,ribeiro2017,decarvalho2022,nidagundi2023}. Estos estimadores ayudan a los mejoradores a decidir la selección individual y a predecir cuánto pueden mejorar ciertos rasgos. Sin embargo, merece la pena tener en cuenta que el nivel de heredabilidad cambia en función del rasgo, la población y el ambiente en el que se cultivan.
 
 
 
@@ -482,6 +475,7 @@ Se evaluaron 26 entradas de algodón pertenecientes al banco de germoplasma de I
 \caption{\label{tab:tablaEntradas}Entradas de \emph{Gossypium hirsutum} L. usadas en el presente estudio y su procedencia}
 \centering
 \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\fontsize{11}{13}\selectfont
 \begin{threeparttable}
 \begin{tabular}[t]{>{\raggedright\arraybackslash}p{8em}>{\raggedright\arraybackslash}p{12em}ll}
 \toprule
@@ -519,7 +513,7 @@ Los experimentos se dispusieron bajo un diseño en bloques completos aleatorizad
 
 Se realizó una caracterización inicial de las 26 entradas, evaluándose caracteres morfológicos, fenológicos, de rendimiento y de calidad de fibra (Tabla \ref{tab:tableVariables26Entradas})
 
-\begingroup\fontsize{9}{11}\selectfont
+\begingroup\fontsize{10}{12}\selectfont
 
 \begin{longtable}[t]{p{2.2cm}p{3.0cm}p{1.8cm}p{1.5cm}p{4.3cm}}
 \caption{\label{tab:tableVariables26Entradas}Morphological, phenological, yield, and fiber quality traits measured in 26 cotton accessions}\\
@@ -577,9 +571,9 @@ Los caracteres fenológicos se determinaron como el número de días desde la em
 
 A partir de la caracterización inicial, se seleccionaron ocho entradas contrastantes en función de su desempeño en componentes del rendimiento ---especialmente porcentaje de fibra (LP)---, calidad de fibra y arquitectura de planta (particularmente bajo número de ramas monopodiales). Estas entradas fueron sometidas a una evaluación más exhaustiva (Tabla \ref{tab:tableVariables8Entradas}).
 
-\begingroup\fontsize{9}{11}\selectfont
+\begingroup\fontsize{10}{12}\selectfont
 
-\begin{longtable}[t]{p{2.8cm}p{3.0cm}p{1.8cm}p{1.5cm}p{5.3cm}}
+\begin{longtable}[t]{p{2.4cm}p{2.4cm}p{2.2cm}p{1.3cm}p{4.3cm}}
 \caption{\label{tab:tableVariables8Entradas}Physiological and biomass partitioning traits measured in eight contrasting cotton accessions}\\
 \toprule
 Trait.Category & Trait & Abbreviation & Unit & Method\\
@@ -848,315 +842,64 @@ La dinámica temporal de acumulación y partición de biomasa en ocho accesiones
 \includegraphics[width=400px]{figure/chap1/Para_compuestas/Graficos_Retencion_Combinada} \caption{ }\label{fig:img-Retencion-Combinada}
 \end{figure}
 
-\begin{verbatim}
-The following objects are masked from Datos_particion_mapeo_8_entradas (pos = 3):
-
-    % Apertura, % MS total, % PS Bocha, % PS Cápsula, % PS
-    Fibra, % PS Hoja, % PS Peciolo, % PS Pimp, % PS Raiz, % PS
-    Rebrote, % PS RV, % PS Tallo, % Ret según DA, %Ret R1,
-    %Ret R10, %Ret R11, %Ret R12, %Ret R13, %Ret R14, %Ret
-    R15, %Ret R16, %Ret R17, %Ret R18, %Ret R19, %Ret R2, %Ret
-    R20, %Ret R3, %Ret R4, %Ret R5, %Ret R6, %Ret R7, %Ret R8,
-    %Ret R9, Altura, Altura 1º RR, Area_Foliar, Bloque, Bocha
-    %, Capsula %, Check_Parte_Veg, cm / nudo, DDS, Diferencia,
-    Distancia a 1ª posicion, Entradas, Experimento, Fibra %,
-    Hoja %, IC_(M4), Maceta, Momento, N nudos, N RR / N RV, N°
-    Rama reproduciva 2, Nº Rama Repr, Nº RV, Nudo 1º RR, Parte
-    Rep %, Parte Veg %, Peciolo %, PF Bochas, PF Capsula, PF
-    Fibra, PF Hoja, PF Parte Reproductiva, PF Parte
-    Vegetativa, PF Peciolo, PF Pim/Flor, PF Rebrote, PF RV, PF
-    Tallo, Pimpollo %, PS_Bochas, PS_Capsula,
-    PS_Capsula_Fibra_Semilla, PS_Fibra, PS_Hoja,
-    PS_Parte_Reproductiva, PS_Parte_Vegetativa, PS_Peciolo,
-    PS_Pim_Flor, PS_Pim_Flor_Bocha, PS_Raíz, PS_Rebrote,
-    PS_RV, PS_RV_Rebrote, PS_Tallo, R_V, Raiz %, Rebrote %,
-    Ret_Global, Ret_P1, Ret_P2, Ret_P3, RV %, Sumatoria PF
-    Particionado, Sumatoria_PS, Tallo %
-\end{verbatim}
-
-\begin{verbatim}
-The following objects are masked from Datos_particion_mapeo_8_entradas (pos = 4):
-
-    % Apertura, % MS total, % PS Bocha, % PS Cápsula, % PS
-    Fibra, % PS Hoja, % PS Peciolo, % PS Pimp, % PS Raiz, % PS
-    Rebrote, % PS RV, % PS Tallo, % Ret según DA, %Ret R1,
-    %Ret R10, %Ret R11, %Ret R12, %Ret R13, %Ret R14, %Ret
-    R15, %Ret R16, %Ret R17, %Ret R18, %Ret R19, %Ret R2, %Ret
-    R20, %Ret R3, %Ret R4, %Ret R5, %Ret R6, %Ret R7, %Ret R8,
-    %Ret R9, Altura, Altura 1º RR, Area_Foliar, Bloque, Bocha
-    %, Capsula %, Check_Parte_Veg, cm / nudo, DDS, Diferencia,
-    Distancia a 1ª posicion, Entradas, Experimento, Fibra %,
-    Hoja %, IC_(M4), Maceta, Momento, N nudos, N RR / N RV, N°
-    Rama reproduciva 2, Nº Rama Repr, Nº RV, Nudo 1º RR, Parte
-    Rep %, Parte Veg %, Peciolo %, PF Bochas, PF Capsula, PF
-    Fibra, PF Hoja, PF Parte Reproductiva, PF Parte
-    Vegetativa, PF Peciolo, PF Pim/Flor, PF Rebrote, PF RV, PF
-    Tallo, Pimpollo %, PS_Bochas, PS_Capsula,
-    PS_Capsula_Fibra_Semilla, PS_Fibra, PS_Hoja,
-    PS_Parte_Reproductiva, PS_Parte_Vegetativa, PS_Peciolo,
-    PS_Pim_Flor, PS_Pim_Flor_Bocha, PS_Raíz, PS_Rebrote,
-    PS_RV, PS_RV_Rebrote, PS_Tallo, R_V, Raiz %, Rebrote %,
-    Ret_Global, Ret_P1, Ret_P2, Ret_P3, RV %, Sumatoria PF
-    Particionado, Sumatoria_PS, Tallo %
-\end{verbatim}
-
-\global\setlength{\Oldarrayrulewidth}{\arrayrulewidth}
-
-\global\setlength{\Oldtabcolsep}{\tabcolsep}
-
-\setlength{\tabcolsep}{2pt}
-
-\renewcommand*{\arraystretch}{1.5}
-
-
-
-\providecommand{\ascline}[3]{\noalign{\global\arrayrulewidth #1}\arrayrulecolor[HTML]{#2}\cline{#3}}
-
-\begin{longtable}[c]{|p{1.80in}|p{2.00in}|p{0.75in}|p{0.75in}|p{0.75in}|p{0.75in}}
-
-\caption{Table\ S4.\ Analysis\ of\ variance\ (ANOVA)\ for\ total,\ vegetative,\ and\ reproductive\ biomass\ partitioning\ across\ phenological\ stages\ (Moments\ M1–M4)\ and\ cotton\ accessions.\ Vegetative\ biomass:\ stem,\ leaves\ ,\ monopodial\ branches\ (MONON);\ and\ reproductive\ biomass:\ sympodial\ branches\ (SYMNN),\ squares\ (Sq),\ flowers\ (Fw),\ green\ bolls\ (Gb),\ capsule,\ seed\ and\ fiber\ (F+S),\ }\label{tab:AnovaBiomasaParticionRep2}\\
-
-\ascline{1pt}{666666}{1-6}
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{Trait}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{Source}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{numDF}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{denDF}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{F-value}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{p-value}}}}} \\
-
-\ascline{2.5pt}{000000}{1-6}\endfirsthead \caption[]{Table\ S4.\ Analysis\ of\ variance\ (ANOVA)\ for\ total,\ vegetative,\ and\ reproductive\ biomass\ partitioning\ across\ phenological\ stages\ (Moments\ M1–M4)\ and\ cotton\ accessions.\ Vegetative\ biomass:\ stem,\ leaves\ ,\ monopodial\ branches\ (MONON);\ and\ reproductive\ biomass:\ sympodial\ branches\ (SYMNN),\ squares\ (Sq),\ flowers\ (Fw),\ green\ bolls\ (Gb),\ capsule,\ seed\ and\ fiber\ (F+S),\ }\label{tab:AnovaBiomasaParticionRep2}\\
-
-\ascline{1pt}{666666}{1-6}
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{Trait}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{Source}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{numDF}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{denDF}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{F-value}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{p-value}}}}} \\
-
-\ascline{2.5pt}{000000}{1-6}\endhead
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Total\ Biomass}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{(Intercept)}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{68.56}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{3}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{96.60}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{5.27}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento:Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{2.14}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.0038}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1\ Vegetative\ Biomass}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{(Intercept)}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{207.54}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{3}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{173.37}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{4.86}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento:Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1.81}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.0203}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1.1\ Stem}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{(Intercept)}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{324.70}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{3}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{236.76}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{5.83}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento:Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{2.49}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.0006}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1.2\ Leaves}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{(Intercept)}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{229.43}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{3}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{40.32}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1.13}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.3468}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento:Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1.93}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.0113}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1.3\ MONON}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{(Intercept)}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{63.58}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{3}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21.54}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{4.83}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento:Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1.69}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.0357}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{2\ Reproductive\ Biomass}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{(Intercept)}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{16.17}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{3}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{63.73}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1.33}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.2365}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento:Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.81}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.7085}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{2.1\ SYMNN}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{(Intercept)}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{148.24}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{3}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{122.94}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{2.35}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.0255}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento:Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1.43}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.1076}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{2.2\ Sq+Fw+Gb}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{(Intercept)}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{84.18}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{3}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{41.99}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1.22}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.2913}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Momento:Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{189}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.68}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.8489}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{2.3\ Capsule\ (M4)}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{(Intercept)}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{47}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{12.16}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.0011}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{47}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1.55}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.1738}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{2.4\ F+S\ (M4)}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{(Intercept)}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{47}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{14.71}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.0004}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 1.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 2in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Entradas}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{47}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.68}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.6909}}}} \\
-
-\ascline{1pt}{666666}{1-6}
-
-
-
-\end{longtable}
-
-
-
-\arrayrulecolor[HTML]{000000}
-
-\global\setlength{\arrayrulewidth}{\Oldarrayrulewidth}
-
-\global\setlength{\tabcolsep}{\Oldtabcolsep}
-
-\renewcommand*{\arraystretch}{1}
+\begin{table}[!h]
+\centering
+\caption{\label{tab:AnovaBiomasaParticionRep2}Table S4. Analysis of variance (ANOVA) for total, vegetative, and reproductive biomass partitioning across phenological stages (Moments M1–M4) and cotton accessions. Vegetative biomass: stem, leaves , monopodial branches (MONON); and reproductive biomass: sympodial branches (SYMNN), squares (Sq), flowers (Fw), green bolls (Gb), capsule, seed and fiber (F+S), }
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\fontsize{11}{13}\selectfont
+\begin{tabular}[t]{llrrrl}
+\toprule
+\multicolumn{1}{c}{ } & \multicolumn{5}{c}{ANOVA} \\
+\cmidrule(l{3pt}r{3pt}){2-6}
+\textbf{Trait} & \textbf{Source} & \textbf{numDF} & \textbf{denDF} & \textbf{F-value} & \textbf{p-value}\\
+\midrule
+Total Biomass & (Intercept) & 1 & 189 & 68.56 & <0.0001\\
+ & Momento & 3 & 21 & 96.60 & <0.0001\\
+ & Entradas & 7 & 189 & 5.27 & <0.0001\\
+ & Momento:Entradas & 21 & 189 & 2.14 & 0.0038\\
+1 Vegetative Biomass & (Intercept) & 1 & 189 & 207.54 & <0.0001\\
+\addlinespace
+ & Momento & 3 & 21 & 173.37 & <0.0001\\
+ & Entradas & 7 & 189 & 4.86 & <0.0001\\
+ & Momento:Entradas & 21 & 189 & 1.81 & 0.0203\\
+1.1 Stem & (Intercept) & 1 & 189 & 324.70 & <0.0001\\
+ & Momento & 3 & 21 & 236.76 & <0.0001\\
+\addlinespace
+ & Entradas & 7 & 189 & 5.83 & <0.0001\\
+ & Momento:Entradas & 21 & 189 & 2.49 & 0.0006\\
+1.2 Leaves & (Intercept) & 1 & 189 & 229.43 & <0.0001\\
+ & Momento & 3 & 21 & 40.32 & <0.0001\\
+ & Entradas & 7 & 189 & 1.13 & 0.3468\\
+\addlinespace
+ & Momento:Entradas & 21 & 189 & 1.93 & 0.0113\\
+1.3 MONON & (Intercept) & 1 & 189 & 63.58 & <0.0001\\
+ & Momento & 3 & 21 & 21.54 & <0.0001\\
+ & Entradas & 7 & 189 & 4.83 & <0.0001\\
+ & Momento:Entradas & 21 & 189 & 1.69 & 0.0357\\
+\addlinespace
+2 Reproductive Biomass & (Intercept) & 1 & 189 & 16.17 & <0.0001\\
+ & Momento & 3 & 21 & 63.73 & <0.0001\\
+ & Entradas & 7 & 189 & 1.33 & 0.2365\\
+ & Momento:Entradas & 21 & 189 & 0.81 & 0.7085\\
+2.1 SYMNN & (Intercept) & 1 & 189 & 148.24 & <0.0001\\
+\addlinespace
+ & Momento & 3 & 21 & 122.94 & <0.0001\\
+ & Entradas & 7 & 189 & 2.35 & 0.0255\\
+ & Momento:Entradas & 21 & 189 & 1.43 & 0.1076\\
+2.2 Sq+Fw+Gb & (Intercept) & 1 & 189 & 84.18 & <0.0001\\
+ & Momento & 3 & 21 & 41.99 & <0.0001\\
+\addlinespace
+ & Entradas & 7 & 189 & 1.22 & 0.2913\\
+ & Momento:Entradas & 21 & 189 & 0.68 & 0.8489\\
+2.3 Capsule (M4) & (Intercept) & 1 & 47 & 12.16 & 0.0011\\
+ & Entradas & 7 & 47 & 1.55 & 0.1738\\
+2.4 F+S (M4) & (Intercept) & 1 & 47 & 14.71 & 0.0004\\
+\addlinespace
+ & Entradas & 7 & 47 & 0.68 & 0.6909\\
+\bottomrule
+\end{tabular}}
+\end{table}
 
 \begin{table}[!h]
 \centering\centering
@@ -1213,119 +956,35 @@ Las variables fisiológicas (Fig. 4) mostraron una disminución progresiva de la
 \includegraphics[width=3in]{figure/chap1/Photo_Cond_SPAD} \caption{ }\label{fig:Graficos-photo-cond-spad}
 \end{figure}
 
-\global\setlength{\Oldarrayrulewidth}{\arrayrulewidth}
-
-\global\setlength{\Oldtabcolsep}{\tabcolsep}
-
-\setlength{\tabcolsep}{2pt}
-
-\renewcommand*{\arraystretch}{1.5}
-
-
-
-\providecommand{\ascline}[3]{\noalign{\global\arrayrulewidth #1}\arrayrulecolor[HTML]{#2}\cline{#3}}
-
-\begin{longtable}[c]{|p{0.80in}|p{1.50in}|p{0.75in}|p{0.75in}|p{0.75in}|p{0.75in}}
-
-\caption{Table\ S6.\ Analysis\ of\ variance\ (ANOVA)\ for\ physiological\ parameters,\ net\ photosynthetic\ rate\ (PN),\ stomatal\ conductance\ (gs),\ and\ chlorophyll\ content\ (SPAD),\ measured\ across\ developmental\ stages\ (Moments\ M2,\ M2+15d\ and\ M2+30d)\ in\ eight\ cotton\ accessions.}\label{tab:Anova-fotosintesis-cond-spad}\\
-
-\ascline{1pt}{666666}{1-6}
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 0.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{Trait}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 1.5in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{Source}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{numDF}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{denDF}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{F-value}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{p-value}}}}} \\
-
-\ascline{2.5pt}{000000}{1-6}\endfirsthead \caption[]{Table\ S6.\ Analysis\ of\ variance\ (ANOVA)\ for\ physiological\ parameters,\ net\ photosynthetic\ rate\ (PN),\ stomatal\ conductance\ (gs),\ and\ chlorophyll\ content\ (SPAD),\ measured\ across\ developmental\ stages\ (Moments\ M2,\ M2+15d\ and\ M2+30d)\ in\ eight\ cotton\ accessions.}\label{tab:Anova-fotosintesis-cond-spad}\\
-
-\ascline{1pt}{666666}{1-6}
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 0.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{Trait}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 1.5in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{Source}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{numDF}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{denDF}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{F-value}}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{\textbf{p-value}}}}} \\
-
-\ascline{2.5pt}{000000}{1-6}\endhead
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 0.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{SPAD}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 1.5in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{(Intercept)}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{56}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{139.88}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 0.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 1.5in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Moment}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{56}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{19.76}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 0.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 1.5in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Accession}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1.04}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.4363}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 0.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 1.5in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Moment:Accession}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{56}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.74}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.6355}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 0.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Stomatal\ conductance}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 1.5in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{(Intercept)}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{56}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{26.32}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 0.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 1.5in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Moment}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{56}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1.18}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.2814}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 0.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 1.5in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Accession}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.90}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.5224}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 0.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 1.5in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Moment:Accession}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{56}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.91}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.5085}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 0.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Net\ photosynthetic\ rate}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 1.5in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{(Intercept)}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{56}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{339.17}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 0.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 1.5in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Moment}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{1}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{56}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{122.17}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{<0.0001}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 0.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 1.5in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Accession}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{21}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{3.49}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.0122}}}} \\
-
-
-
-
-
-\multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\centering}m{\dimexpr 0.8in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 1.5in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{Moment:Accession}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{7}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{56}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{3.36}}}} & \multicolumn{1}{>{\centering}m{\dimexpr 0.75in+0\tabcolsep}!{\color[HTML]{666666}\vrule width 1pt}}{\textcolor[HTML]{000000}{\fontsize{9}{9}\selectfont{\global\setmainfont{Arial}{0.0046}}}} \\
-
-\ascline{1pt}{666666}{1-6}
-
-
-
-\end{longtable}
-
-
-
-\arrayrulecolor[HTML]{000000}
-
-\global\setlength{\arrayrulewidth}{\Oldarrayrulewidth}
-
-\global\setlength{\tabcolsep}{\Oldtabcolsep}
-
-\renewcommand*{\arraystretch}{1}
+\begin{table}[!h]
+\centering
+\caption{\label{tab:Anova-fotosintesis-cond-spad}Table S6. Analysis of variance (ANOVA) for physiological parameters, net photosynthetic rate (PN), stomatal conductance (gs), and chlorophyll content (SPAD), measured across developmental stages (Moments M2, M2+15d and M2+30d) in eight cotton accessions.}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\fontsize{11}{13}\selectfont
+\begin{tabular}[t]{llrrrl}
+\toprule
+\multicolumn{1}{c}{ } & \multicolumn{5}{c}{ANOVA} \\
+\cmidrule(l{3pt}r{3pt}){2-6}
+\textbf{Trait} & \textbf{Source} & \textbf{numDF} & \textbf{denDF} & \textbf{F-value} & \textbf{p-value}\\
+\midrule
+SPAD & (Intercept) & 1 & 56 & 139.88 & <0.0001\\
+ & Moment & 1 & 56 & 19.76 & <0.0001\\
+ & Accession & 7 & 21 & 1.04 & 0.4363\\
+ & Moment:Accession & 7 & 56 & 0.74 & 0.6355\\
+Stomatal conductance & (Intercept) & 1 & 56 & 26.32 & <0.0001\\
+\addlinespace
+ & Moment & 1 & 56 & 1.18 & 0.2814\\
+ & Accession & 7 & 21 & 0.90 & 0.5224\\
+ & Moment:Accession & 7 & 56 & 0.91 & 0.5085\\
+Net photosynthetic rate & (Intercept) & 1 & 56 & 339.17 & <0.0001\\
+ & Moment & 1 & 56 & 122.17 & <0.0001\\
+\addlinespace
+ & Accession & 7 & 21 & 3.49 & 0.0122\\
+ & Moment:Accession & 7 & 56 & 3.36 & 0.0046\\
+\bottomrule
+\end{tabular}}
+\end{table}
 
 BGSP-00425 presentó una disminución más pronunciada en P\_N\_, lo que podría explicar su menor acumulación final de biomasa. En contraste, accesiones con perfiles más estables de P\_N\_ mostraron mejor desempeño reproductivo. Estos resultados coinciden con \textcite{li2019}, quienes demostraron que la fotosíntesis neta es un determinante clave del rendimiento en algodón.
 

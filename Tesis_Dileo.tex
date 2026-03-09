@@ -362,14 +362,54 @@ Segundo párrafo del resumen aquí.
 \renewcommand{\headrulewidth}{0.4pt} % Agregar línea en el encabezado
 
 
-\chapter*{Introducción}\label{introducciuxf3n}
-\addcontentsline{toc}{chapter}{Introducción}
+\setcounter{section}{0}
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesubsection}{\roman{subsection}}
+
+\chapter*{Introducción general}\label{introducciuxf3n-general}
+\addcontentsline{toc}{chapter}{Introducción general}
 
 El algodón (\emph{Gossypium hirsutum} L.) se cultiva en más de 80 países y desempeña un papel crucial en la producción textil como fuente de fibra. Argentina es el segundo productor de algodón de América Latina después de Brasil y desempeña un papel clave en los sistemas productivos de la región noreste del país. La producción de fibra cubre la demanda interna a la vez que facilita la exportación a países como Vietnam, Pakistán, Turquía, China, Indonesia, Colombia e India \autocite{icac2023,paytas2013}. Se han desarrollado nuevas variedades y sistemas de producción para adaptarse a diversas condiciones medioambientales. En Argentina, el Instituto Nacional de Tecnología Agropecuaria (INTA) cuenta con un programa de mejora genética del algodón que utiliza el germoplasma disponible para desarrollar variedades que mejoren el rendimiento y la calidad de la fibra. El programa ha logrado aumentar tanto el rendimiento como la calidad de la fibra y también ha incorporado la resistencia genética a enfermedades importantes como mancha angular, enfermedad azul y marchitez por fusarium, en numerosas variedades \autocite{royo2007,scarpin2022,scarpin2023}.
 
-Recientemente, \textcite{scarpin2022} informaron de un progreso genético en el rendimiento de fibra, el porcentaje de desmote, el rendimiento de algodón bruto y el número de cápsulas (NC), mostrando una tasa media de crecimiento anual de 3,24 kg ha\textsuperscript{-1}, 0,05 \%, 4,86 kg ha\textsuperscript{-1} y 0,12 NC, respectivamente. Como resultado, las variedades más modernas tienen un mayor rendimiento de fibra, porcentaje de desmote, rendimiento de algodón bruto y número de cápsulas que las variedades más antiguas. Estos resultados indican que los programas de mejoramiento genético del algodón en Argentina han logrado un progreso genético sustancial para el rendimiento de fibra y sus componentes. Además, \textcite{scarpin2023} enfatizaron que este progreso no resultó en una disminución de la calidad del algodón. Sin embargo, se necesita más investigación para mejorar el rendimiento de fibra, la calidad de la fibra y la adaptabilidad a diferentes ambientes. En la provincia de Santa Fe (Argentina), el cultivo de algodón se concentra en los departamentos de 9 de Julio, Vera y General Obligado, cada uno de los cuales presenta disparidades distintivas en cuanto a la composición del suelo y las condiciones ambientales. El tipo de clima en el norte de la provincia es subtropical según la clasificación climática de Köppen, con una estación seca en la región noroeste y sin estación seca en la región noreste de la provincia \autocite{anida2024}. Debido a estas diferencias, es esencial desarrollar genotipos para estas diferentes condiciones para avanzar en la mejora de los cultivos. Además, se necesitan esfuerzos adicionales para identificar genes o QTLs asociados con rasgos agronómicos y de calidad de fibra en variedades de algodón en Argentina a través de métodos de mapeo genético.
+\section{Origen del cultivo, importancia mundial y regional}\label{origen-del-cultivo-importancia-mundial-y-regional}
 
-En un programa de mejora genética del algodón, combinar un alto rendimiento y calidad de la fibra es un reto clave. El primer paso crucial para un programa de mejora eficaz es caracterizar el germoplasma del algodón. \textcite{kearsey1996} destacaron la importancia de comprender las diferencias genéticas y la heredabilidad de los rasgos al momento de cruzar plantas. La heredabilidad muestra en qué medida los rasgos están influidos por la genética y puede estimarse comparando las varianzas de las generaciones segregantes y no segregantes. En el algodón, se han notificado estimaciones de heredabilidad para varios rasgos, como el rendimiento de fibra, los componentes del rendimiento, la calidad de la fibra, la altura de la planta, el aceite de semilla, el nudo de la primera rama reproductiva, la cápsulas a prueba de tormentas, entre otros \autocite{meredith1984,tang1996,ribeiro2017,decarvalho2022,nidagundi2023}. Estos estimadores ayudan a los mejoradores a decidir la selección individual y a predecir cuánto pueden mejorar ciertos rasgos. Sin embargo, merece la pena tener en cuenta que el nivel de heredabilidad cambia en función del rasgo, la población y el ambiente en el que se cultivan.
+El algodón pertenece al género \emph{Gossypium} L. (familia Malvaceae), que comprende aproximadamente 50 especies distribuidas principalmente en regiones tropicales y subtropicales de África, Asia, Australia y América. Estas especies presentan una notable diversidad genética y citogenética, incluyendo tanto especies diploides como poliploides que se han originado a lo largo de la evolución mediante procesos de divergencia geográfica, hibridación interespecífica y duplicación genómica \autocite{grover2015}. Esta diversidad constituye la base genética del cultivo moderno y ha sido ampliamente utilizada en programas de mejoramiento para incrementar el rendimiento, la calidad de fibra y la adaptación a diferentes ambientes.
+
+Dentro del género Gossypium, cuatro especies fueron domesticadas de forma independiente: dos diploides del Viejo Mundo, \emph{Gossypium arboreum} L. y \emph{Gossypium herbaceum} L., y dos especies tetraploides del Nuevo Mundo, \emph{Gossypium hirsutum} L. y \emph{Gossypium barbadense} L. \autocite{wendel2010}. Los algodones tetraploides cultivados se originaron a partir de un evento de alopoliploidía ocurrido hace aproximadamente 1--2 millones de años, cuando un ancestro diploide del genoma A, originario del Viejo Mundo, se dispersó hacia el continente americano y se hibridó con una especie diploide del genoma D nativa del Nuevo Mundo. Este evento dio lugar a un linaje alopoliploide con genoma AD que posteriormente experimentó una rápida diversificación y expansión en regiones tropicales y subtropicales de América \autocite{grover2015}.
+
+Entre las especies cultivadas, Gossypium hirsutum L., comúnmente denominado algodón ``upland'', es la más importante desde el punto de vista agronómico y económico. Esta especie fue domesticada en Mesoamérica, particularmente en la región comprendida entre el sur de México y Centroamérica, desde donde se difundió progresivamente hacia otras regiones del continente americano \autocite{brubaker1999}. Con el desarrollo de la agricultura moderna y el mejoramiento genético, el cultivo se expandió globalmente y actualmente constituye la base de la producción mundial de fibra de algodón.
+
+En la actualidad, el algodón representa la principal fuente de fibra natural para la industria textil mundial y desempeña un papel clave en la economía agrícola de numerosos países. Según estimaciones del International Cotton Advisory Committee (ICAC), la producción mundial de algodón se sitúa en torno a 25 millones de toneladas de fibra por año, cultivadas en más de 60 países y en aproximadamente 30 millones de hectáreas. Los principales productores incluyen a China, India, Brasil, Estados Unidos y Pakistán, mientras que gran parte del procesamiento industrial y consumo textil se concentra en países asiáticos como China, Bangladesh y Vietnam \autocite{icac2025}.
+
+Las especies tetraploides cultivadas dominan ampliamente el comercio internacional de algodón, siendo Gossypium hirsutum responsable de aproximadamente el 90--95 \% de la producción global de fibra, debido a su alta productividad, amplia adaptación ambiental y buena calidad de fibra \autocite{grover2015}. Por su parte, Gossypium barbadense se cultiva en menor proporción y se destina principalmente a nichos de mercado especializados debido a su fibra extra larga y de alta calidad.
+
+En América Latina, el cultivo de algodón continúa siendo una actividad agrícola de gran relevancia económica y social, particularmente en regiones con condiciones climáticas favorables para su desarrollo. En Argentina, la producción se concentra principalmente en las provincias del norte del país, especialmente en Chaco, Santiago del Estero, Santa Fe y Formosa, donde el cultivo constituye un componente importante de los sistemas productivos regionales y de la cadena agroindustrial textil. Además de su importancia económica, el algodón cumple un papel significativo en la generación de empleo rural y en el desarrollo socioeconómico de estas regiones productivas.
+
+En este contexto, el conocimiento del origen, la diversidad genética y la importancia productiva del algodón resulta fundamental para orientar estrategias de mejoramiento genético y optimizar la adaptación del cultivo a diferentes condiciones ambientales, así como para incrementar el rendimiento y la calidad de la fibra en los sistemas productivos actuales.
+
+\section{El cultivo de algodón}\label{el-cultivo-de-algoduxf3n}
+
+\subsection{Morfología de la planta de algodón}\label{morfologuxeda-de-la-planta-de-algoduxf3n}
+
+\subsection{Componentes del rendimiento}\label{componentes-del-rendimiento}
+
+\section{Mejoramiento genético de algodón en el mundo}\label{mejoramiento-genuxe9tico-de-algoduxf3n-en-el-mundo}
+
+\section{Mejoramiento genético de algodon en Argentina}\label{mejoramiento-genuxe9tico-de-algodon-en-argentina}
+
+\section{Problematica}\label{problematica}
+
+\section{Objetivos}\label{objetivos}
+
+\subsection{Objetivo general}\label{objetivo-general}
+
+\subsection{Objetivos especificos}\label{objetivos-especificos}
+
+\section{Hipótesis}\label{hipuxf3tesis}
+
+\section{Resultados esperados}\label{resultados-esperados}
+
+\texttt{\{=latex\}\ \textbackslash{}renewcommand\{\textbackslash{}thesection\}\{\textbackslash{}thechapter.\textbackslash{}arabic\{section\}\}\ \textbackslash{}renewcommand\{\textbackslash{}thesubsection\}\{\textbackslash{}thesection.\textbackslash{}arabic\{subsection\}\}}u
 
 
 
@@ -427,7 +467,7 @@ En un programa de mejora genética del algodón, combinar un alto rendimiento y 
 
 \chapter{\texorpdfstring{Caracterización de entradas de algodón (\emph{Gossypium hirsutum} L.) del banco de germoplasma de INTA mediante caracteres morfo-fisiológicos}{Caracterización de entradas de algodón (Gossypium hirsutum L.) del banco de germoplasma de INTA mediante caracteres morfo-fisiológicos}}\label{rmd-basics}
 
-\section{Introducción}\label{introducciuxf3n-1}
+\section{Introducción}\label{introducciuxf3n}
 
 El algodón (\emph{Gossypium hirsutum} L.) constituye una de las principales fuentes de fibra natural a nivel mundial y desempeña un papel estratégico en la industria textil global. En América Latina, Argentina se posiciona como el segundo productor de fibra de algodón después de Brasil, concentrando su producción principalmente en las provincias de Santa Fe, Chaco y Santiago del Estero. Además de abastecer la demanda interna, la producción nacional contribuye al mercado exportador, con destinos como Pakistán, Vietnam, Turquía, China, Indonesia y Bangladesh \autocite{paytas2023,icac2025}.
 
@@ -447,24 +487,11 @@ A pesar de los avances logrados en el mejoramiento genético nacional, persiste 
 
 En este contexto, los enfoques estadísticos multivariados, como el análisis de componentes principales (ACP) y el agrupamiento jerárquico utilizando la distancia de Gower, han sido ampliamente empleados para explorar conjuntos de datos fenotípicos complejos \autocite{spoljaric2018,sarwar2021,klein2022,ullah2022,mangi2024,anwar2025}. Estas metodologías permiten la evaluación conjunta de caracteres cuantitativos y cualitativos, facilitando la identificación de patrones de variación y la delimitación de grupos genotípicos con características similares.
 
-\subsection{Hipótesis}\label{hipuxf3tesis}
+En este contexto, el objetivo de este capítulo fue caracterizar la diversidad morfo-fisiológica y productiva de accesiones de algodón del banco de germoplasma del INTA, e identificar genotipos contrastantes para estudios fisiológicos detallados.
+
+\subsection{Hipótesis}\label{hipuxf3tesis-1}
 
 Se plantea como hipótesis que dentro del banco de germoplasma de INTA existe variabilidad morfo-fisiológica significativa entre accesiones de \emph{G. hirsutum}, y que dicha variabilidad permite identificar genotipos con combinaciones favorables de arquitectura compacta, eficiencia fisiológica y rendimiento de fibra, potencialmente adaptados a sistemas de producción mecanizados tipo stripper y a configuraciones de siembra en hileras estrechas del norte argentino.
-
-\subsection{Objetivos}\label{objetivos}
-
-En función de lo expuesto, el presente capítulo tuvo como objetivo general realizar una evaluación integral de accesiones de algodón del banco de germoplasma de INTA.
-
-Los objetivos específicos fueron:
-
-\begin{itemize}
-\item
-  Caracterizar caracteres morfológicos, fenológicos, productivos y de calidad de fibra en un conjunto amplio de accesiones.
-\item
-  Analizar parámetros fisiológicos y patrones de partición de biomasa en genotipos contrastantes seleccionados.
-\item
-  Identificar líneas parentales promisorias para la generación de poblaciones de mejoramiento orientadas a mejorar la adaptación a ambientes contrastantes y a sistemas de producción mecanizados del norte argentino.
-\end{itemize}
 
 \section{Materiales y métodos}\label{materiales-y-muxe9todos}
 
@@ -640,7 +667,7 @@ Los caracteres fisiológicos se analizaron como medidas repetidas en el tiempo, 
 
 Finalmente, se realizó un análisis de componentes principales (ACP) para explorar la diversidad global entre entradas.
 
-\section{Resultados y discusión}\label{resultados-y-discusiuxf3n}
+\section{Resultados}\label{resultados}
 
 \subsection{Diversidad fenotípica del germoplasma de algodón: caracteres morfológicos, de rendimiento y calidad de fibra}\label{diversidad-fenotuxedpica-del-germoplasma-de-algoduxf3n-caracteres-morfoluxf3gicos-de-rendimiento-y-calidad-de-fibra-1}
 
@@ -651,7 +678,7 @@ La distribución de frecuencias de los descriptores morfológicos cualitativos e
 En cuanto al tipo de floración, las plantas semicompactas fueron las más frecuentes (69,2\%), seguidas por no agrupadas (23,1\%) y agrupadas (7,7\%). La lámina foliar fue mayormente plana (96,1\%) y las hojas predominantemente palmeadas (96,1\%), registrándose una pequeña proporción de hojas cóncavas (3,9\%) y tipo okra (3,9\%). La pubescencia fue principalmente intermedia (76,9\%), mientras que los niveles débil y fuerte representaron cada uno el 11,5\%. Finalmente, la forma de planta fue predominantemente cilíndrica (61,5\%) y cónica (38,5\%).
 
 \begin{figure}
-\includegraphics[width=300px]{figure/chap1/Para_compuestas/Graficos_Combinados_Final_recortado} \caption{ }\label{fig:frecuancia-cluster-juntos}
+\includegraphics[width=300px]{figure/chap1/Para_compuestas/Graficos_Combinados_Final_recortado} \caption{Diversidad morfológica y agrupamiento de 26 accesiones de algodón. (1) Distribución de frecuencia de descriptores morfológicos cualitativos: forma de cápsula, tipo de bráctea, tipo de canopia, tipo de floración, tipo de lámina, pubescencia y forma de hoja, y arquitectura de planta. Las barras indican el porcentaje de accesiones por categoría. (2) Mapa de calor y análisis de agrupamiento jerárquico basado en la distancia de Gower, integrando rasgos morfológicos, fenológicos y de rendimiento. Los dendrogramas se generaron mediante el método Ward.D. Los asteriscos señalan las ocho accesiones contrastantes seleccionadas para los análisis fisiológicos y de partición de biomasa.}\label{fig:frecuancia-cluster-juntos}
 \end{figure}
 
 Estos descriptores reflejan diferencias cualitativas observadas bajo condiciones de invernadero y deben interpretarse como indicadores exploratorios de diversidad fenotipica. La combinación de atributos tales como tipo de canopia, arquitectura de floración y morfología foliar sugiere la existencia de variabilidad estructural potencialmente relevante para la intercepción lumínica, ventilación del dosel y adaptación a sistemas de manejo intensivo. El detalle completo de los descriptores evaluados se presenta en la Tabla \ref{tab:tabla-descriptores}.
@@ -772,15 +799,11 @@ En términos de calidad tecnológica, la longitud de fibra (FL) varió entre 25,
 
 Para integrar simultáneamente todos los caracteres evaluados se realizó un análisis de conglomerados jerárquicos utilizando la distancia de Gower. El mapa de calor y los dendrogramas obtenidos mediante el método Ward.D se presentan en la Figura \ref{fig:frecuancia-cluster-juntos}. Se distinguieron dos agrupamientos principales. El primero incluyó accesiones con forma de planta cónica y floración no agrupada, algunas de las cuales exhibieron calidad de fibra superior. El segundo agrupó accesiones con canopia más compacta y floración agrupada, generalmente asociadas con mayor porcentaje de fibra y mayor número de cápsulas.
 
-La necesidad de satisfacer simultáneamente demandas de calidad de fibra, rendimiento y adaptación a prácticas intensivas de manejo requiere ampliar la base genética disponible para los programas de mejoramiento. La colección de germoplasma del INTA, con diversidad documentada en atributos morfológicos, componentes de rendimiento y calidad de fibra \autocite{royo2003,klein2011,spoljaric2018,scarpin2019,arriel2023}, constituye una fuente estratégica de parentales potenciales.
-
-La variabilidad observada en este estudio es consistente con reportes en colecciones de Estados Unidos \autocite{hinze2025} y Asia \autocite{farooq2017}, mientras que análisis genómicos recientes en China han destacado la base genética relativamente estrecha del algodón cultivado \autocite{li2023}. Iniciativas regionales como el proyecto +Algodón \autocite{fao2025} también subrayan la importancia de conservar y utilizar diversidad del germoplasma latinoamericano para mejorar resiliencia climática y calidad de fibra.
-
 \subsection{Análisis de rendimiento, calidad de fibra, variables fisiológicas y partición de biomasa en accesiones contrastantes}\label{anuxe1lisis-de-rendimiento-calidad-de-fibra-variables-fisioluxf3gicas-y-particiuxf3n-de-biomasa-en-accesiones-contrastantes}
 
 \subsubsection{Componentes del rendimiento y calidad de fibra}\label{componentes-del-rendimiento-y-calidad-de-fibra}
 
-Las accesiones seleccionadas para el análisis detallado de rendimiento y calidad de fibra se indican con un asterisco en la Tabla 1. La selección se realizó considerando su pertenencia a distintos grupos identificados en el análisis de conglomerados jerárquicos (Figura \ref{fig:frecuancia-cluster-juntos}), así como los valores extremos observados en la Tabla S2. Se priorizaron accesiones con contrastes marcados en rendimiento de fibra (LY), porcentaje de fibra (LP), número de cápsulas por planta (BN) y atributos tecnológicos, incorporando además genotipos con arquitectura compacta y menor desarrollo monopodial, como BGSP-00166, por su potencial interés agronómico en sistemas mecanizados.
+Las accesiones seleccionadas para el análisis detallado de rendimiento y calidad de fibra se indican con un asterisco en la Tabla 1. La selección se realizó considerando su pertenencia a distintos grupos identificados en el análisis de conglomerados jerárquicos (Figura \ref{fig:frecuancia-cluster-juntos}), así como los valores extremos observados en la Tabla \ref{tab:table-charac} . Se priorizaron accesiones con contrastes marcados en rendimiento de fibra (LY), porcentaje de fibra (LP), número de cápsulas por planta (BN) y atributos tecnológicos, incorporando además genotipos con arquitectura compacta y menor desarrollo monopodial, como BGSP-00166, por su potencial interés agronómico en sistemas mecanizados.
 
 \begin{table}[!h]
 \centering\centering
@@ -826,24 +849,20 @@ En contraste, BGSP-00159 registró el menor SCY (26,2 g planta⁻¹), mientras q
 
 BGSP-00269 presentó los menores valores de BW (3,4 g cápsula⁻¹), número de semillas por cápsula (SNPB = 22,8) y FL (28,3 mm), aunque exhibió los mayores valores de índice de fibra (LI = 6,5 g) y MIC (4,3). Por su parte, BGSP-00425 se destacó por el mayor SNPB (30,6 semillas cápsula⁻¹), pero presentó los valores más bajos de LI (4,0 g) y FU (82,2 \%). BGSP-00207 mostró los valores más bajos de FL (28,3 mm) y FS (29,2 g tex⁻¹). Es particularmente relevante que BGSP-00166 y SP-41255 difirieron significativamente en casi todos los caracteres evaluados, excepto en SNPB, lo que confirma su marcada divergencia fenotípica.
 
-Estos resultados evidencian una amplia variación fenotípica en rendimiento y calidad de fibra, en concordancia con lo reportado por \autocite{mccarty2006}, quienes documentaron amplios rangos para SCY, LY, BW, LP, MIC, FL y FS en colecciones de germoplasma estadounidense. Asimismo, refuerzan la existencia del conocido compromiso parcial entre rendimiento y calidad tecnológica \autocite{li2023}.
-
 El análisis de correlaciones de Spearman (Tabla S3) permitió profundizar en las relaciones entre caracteres. LY mostró una fuerte correlación positiva con BN, confirmando que el número de cápsulas constituye el principal determinante del rendimiento de fibra. También presentó correlaciones positivas moderadas con BW y LP, lo que indica que el incremento del rendimiento puede lograrse tanto por mayor número como por mayor peso individual de cápsulas y mayor proporción de fibra. Sin embargo, LY exhibió correlaciones negativas moderadas con FL, sugiriendo que el aumento del rendimiento puede asociarse a reducciones en longitud de fibra.
 
-LP presentó correlaciones positivas con LY y BN, pero negativas con SI, lo que sugiere que el aumento del porcentaje de fibra puede lograrse a expensas del peso de semilla. \textcite{meredith1984} reportó patrones similares, incluyendo correlaciones negativas entre LP y caracteres como FL y FS, lo que coincide parcialmente con nuestros resultados.
-
-En conjunto, estos hallazgos indican que los programas de mejoramiento orientados a incrementar LY deberían priorizar el aumento de BN, ya que constituye el principal componente asociado al rendimiento. No obstante, el incremento de BN y LP debe manejarse cuidadosamente para evitar deterioros excesivos en calidad de fibra, particularmente en FL y FS. El desafío radica en encontrar un equilibrio fisiológico y genético que permita maximizar rendimiento sin comprometer atributos tecnológicos clave.
+LP presentó correlaciones positivas con LY y BN, pero negativas con SI, lo que sugiere que el aumento del porcentaje de fibra puede lograrse a expensas del peso de semilla.
 
 \subsubsection{Partición de biomasa, retención reproductiva y análisis fisiológico}\label{particiuxf3n-de-biomasa-retenciuxf3n-reproductiva-y-anuxe1lisis-fisioluxf3gico}
 
 La dinámica temporal de acumulación y partición de biomasa en ocho accesiones contrastantes se presenta en la Figura \ref{fig:img-Biomasa-Parcicion} . Durante las etapas tempranas de desarrollo (M1--M2), la biomasa vegetativa (VB), compuesta principalmente por tallos y hojas, representó la mayor proporción de materia seca total. A partir del inicio de floración (M3) y hacia madurez (M4), se observó un desplazamiento progresivo hacia una mayor asignación a estructuras reproductivas, evidenciando el cambio fisiológico desde crecimiento vegetativo hacia reproducción.
 
 \begin{figure}
-\includegraphics[width=400px]{figure/chap1/Para_compuestas/Graficos_Biomasa_Particion} \caption{ }\label{fig:img-Biomasa-Parcicion}
+\includegraphics[width=400px]{figure/chap1/Para_compuestas/Graficos_Biomasa_Particion} \caption{Dinámica temporal y asignación de biomasa por órgano en ocho accesiones contrastantes de algodón. 1) Variación temporal en M1 (primer botón floral), M2 (primera flor), M3 (primera cápsula abierta) y M4 (madurez) de la biomasa total, vegetativa y reproductiva. 2) Partición de biomasa entre órganos de la planta en madurez (M4). VB: biomasa vegetativa (tallo y ramas vegetativas); RB: biomasa reproductiva (ramas reproductivas, cápsula, semilla y fibra). Letras diferentes indican diferencias significativas entre accesiones en M4 según la prueba LSD de Fisher (p ≤ 0,05).}\label{fig:img-Biomasa-Parcicion}
 \end{figure}
 
 \begin{figure}
-\includegraphics[width=400px]{figure/chap1/Para_compuestas/Graficos_Retencion_Combinada} \caption{ }\label{fig:img-Retencion-Combinada}
+\includegraphics[width=350px]{figure/chap1/Para_compuestas/Graficos_Retencion_Combinada} \caption{Patrones de retención reproductiva en ocho accesiones de algodón, mostrando la dinámica temporal y las diferencias finales en la retención global y en primera posición. 1) Dinámica de la retención global (GR) y de primera posición (R1P) a lo largo de las etapas fenológicas M2 (primera flor), M3 (primera cápsula abierta) y M4 (madurez). Los puntos representan valores medios de retención (\%). 2) Retención global y de primera posición en M4. Las barras indican media ± EE. Letras diferentes indican diferencias significativas entre accesiones según la prueba LSD de Fisher (p ≤ 0,05).}\label{fig:img-Retencion-Combinada}
 \end{figure}
 
 \begin{table}[!h]
@@ -944,18 +963,14 @@ El análisis estadístico mostró efectos altamente significativos (p \textless{
 
 En madurez (M4), BGSP-00207 presentó la mayor acumulación en ramas reproductivas, mientras que BGSP-00166 mostró la menor acumulación tanto en ramas vegetativas como reproductivas, consistente con su arquitectura compacta. SP-41255 y BGSP-00126 acumularon mayor biomasa en ramas vegetativas, lo que sugiere una estrategia de crecimiento más expansiva previa a la transición reproductiva.
 
-Estas diferencias en arquitectura y partición coinciden con estudios que indican que la ramificación en algodón está fuertemente determinada por factores genéticos \autocite{mcgarry2016,sun2022,huang2022}. Asimismo, la densidad de siembra modula estos patrones, ya que mayores densidades reducen la ramificación lateral y favorecen asignación reproductiva \autocite{li2019a}.
-
 La retención reproductiva (Figura \ref{fig:img-Retencion-Combinada}) mostró una disminución progresiva desde M2 hasta M4, reflejando competencia creciente por asimilados durante el llenado de cápsulas. Se observaron diferencias claras entre accesiones en retención global (GR) y de primera posición (R1P). BGSP-00269 y SP-41255 mantuvieron mayores valores de GR y R1P, indicando mayor eficiencia en establecimiento y mantenimiento de frutos tempranos, que suelen asociarse a mayor peso y mejor calidad de fibra.
 
 El análisis estadístico (Tabla S5) confirmó efectos significativos de momento y accesión para GR (p = 0,0017) y una interacción significativa momento × accesión (p = 0,0119), lo que indica diferencias genotípicas en la capacidad de retener estructuras reproductivas a lo largo del ciclo.
 
-La posición de las cápsulas dentro del dosel tiene implicancias directas sobre rendimiento y calidad. Estudios previos \autocite{davidonis2004,nie2019,zhang2021} demostraron que cápsulas ubicadas en posiciones intermedias presentan mayor longitud y resistencia de fibra, mientras que posiciones superiores tienden a producir menores valores de micronaire. Por lo tanto, accesiones con mayor retención en posiciones tempranas, como BGSP-00269 y SP-41255, no solo incrementan número de frutos sino que optimizan su calidad potencial.
-
 Las variables fisiológicas (Figura \ref{fig:Graficos-photo-cond-spad} ) mostraron una disminución progresiva de la tasa fotosintética neta (P\_N\_), conductancia estomática (g\_s\_) y SPAD desde M2 en adelante. El efecto del momento fue altamente significativo para P\_N\_ y SPAD (p \textless{} 0,001), mientras que la accesión y la interacción fueron significativas únicamente para P\_N\_ (Tabla S6), lo que indica que las diferencias genotípicas estuvieron principalmente asociadas a capacidad fotosintética.
 
 \begin{figure}
-\includegraphics[width=3in]{figure/chap1/Photo_Cond_SPAD} \caption{ }\label{fig:Graficos-photo-cond-spad}
+\includegraphics[width=5.8in]{figure/chap1/Photo_Cond_SPAD} \caption{Tasa fotosintética neta (P\textsubscript{\emph{N}}: fotosíntesis neta), conductancia estomática (g\textsubscript{\emph{s}}: conductancia estomática) y contenido de clorofila (SPAD) medidos en el momento de primera flor (M2) y a los 15 y 30 días posteriores, en ocho accesiones de algodón.}\label{fig:Graficos-photo-cond-spad}
 \end{figure}
 
 \begin{table}[!h]
@@ -988,9 +1003,7 @@ Tasa fotosintética neta & (Intercept) & 1 & 56 & 339.17 & <0.0001\\
 \end{tabular}}
 \end{table}
 
-BGSP-00425 presentó una disminución más pronunciada en P\_N\_, lo que podría explicar su menor acumulación final de biomasa. En contraste, accesiones con perfiles más estables de P\_N\_ mostraron mejor desempeño reproductivo. Estos resultados coinciden con \textcite{li2019}, quienes demostraron que la fotosíntesis neta es un determinante clave del rendimiento en algodón.
-
-En conjunto, la integración de partición de biomasa, retención reproductiva y fisiología evidencia que el rendimiento no depende exclusivamente de la formación de estructuras reproductivas, sino de la eficiencia en la provisión y asignación de carbono durante el período crítico de llenado. Las diferencias observadas reflejan estrategias genotípicas contrastantes de balance fuente--destino, con implicancias directas para la selección de parentales adaptados a sistemas mecanizados y de alta densidad.
+BGSP-00425 presentó una disminución más pronunciada en P\_N\_, lo que podría explicar su menor acumulación final de biomasa. En contraste, accesiones con perfiles más estables de P\_N\_ mostraron mejor desempeño reproductivo.
 
 \subsubsection{Análisis de Componentes Principales}\label{anuxe1lisis-de-componentes-principales}
 
@@ -1038,6 +1051,26 @@ IU & -.05 & -.06 & -.01 & .09 & -.10 & .40** & .09 & -.14 & .34* & .46*** & -.10
 \end{threeparttable}}
 \end{table}
 
+\section{Discusión}\label{discusiuxf3n}
+
+La necesidad de satisfacer simultáneamente demandas de calidad de fibra, rendimiento y adaptación a prácticas intensivas de manejo requiere ampliar la base genética disponible para los programas de mejoramiento. La colección de germoplasma del INTA, con diversidad documentada en atributos morfológicos, componentes de rendimiento y calidad de fibra \autocite{royo2003,klein2011,spoljaric2018,scarpin2019,arriel2023}, constituye una fuente estratégica de parentales potenciales.
+
+La variabilidad observada en este estudio es consistente con reportes en colecciones de Estados Unidos \autocite{hinze2025} y Asia \autocite{farooq2017}, mientras que análisis genómicos recientes en China han destacado la base genética relativamente estrecha del algodón cultivado \autocite{li2023}. Iniciativas regionales como el proyecto +Algodón \autocite{fao2025} también subrayan la importancia de conservar y utilizar diversidad del germoplasma latinoamericano para mejorar resiliencia climática y calidad de fibra.
+
+Estos resultados evidencian una amplia variación fenotípica en rendimiento y calidad de fibra, en concordancia con lo reportado por \autocite{mccarty2006}, quienes documentaron amplios rangos para SCY, LY, BW, LP, MIC, FL y FS en colecciones de germoplasma estadounidense. Asimismo, refuerzan la existencia del conocido compromiso parcial entre rendimiento y calidad tecnológica \autocite{li2023}.
+
+\textcite{meredith1984} reportó patrones similares, incluyendo correlaciones negativas entre LP y caracteres como FL y FS, lo que coincide parcialmente con nuestros resultados.
+
+En conjunto, estos hallazgos indican que los programas de mejoramiento orientados a incrementar LY deberían priorizar el aumento de BN, ya que constituye el principal componente asociado al rendimiento. No obstante, el incremento de BN y LP debe manejarse cuidadosamente para evitar deterioros excesivos en calidad de fibra, particularmente en FL y FS. El desafío radica en encontrar un equilibrio fisiológico y genético que permita maximizar rendimiento sin comprometer atributos tecnológicos clave.
+
+Estas diferencias en arquitectura y partición coinciden con estudios que indican que la ramificación en algodón está fuertemente determinada por factores genéticos \autocite{mcgarry2016,sun2022,huang2022}. Asimismo, la densidad de siembra modula estos patrones, ya que mayores densidades reducen la ramificación lateral y favorecen asignación reproductiva \autocite{li2019a}.
+
+La posición de las cápsulas dentro del dosel tiene implicancias directas sobre rendimiento y calidad. Estudios previos \autocite{davidonis2004,nie2019,zhang2021} demostraron que cápsulas ubicadas en posiciones intermedias presentan mayor longitud y resistencia de fibra, mientras que posiciones superiores tienden a producir menores valores de micronaire. Por lo tanto, accesiones con mayor retención en posiciones tempranas, como BGSP-00269 y SP-41255, no solo incrementan número de frutos sino que optimizan su calidad potencial.
+
+Estos resultados coinciden con \textcite{li2019}, quienes demostraron que la fotosíntesis neta es un determinante clave del rendimiento en algodón.
+
+En conjunto, la integración de partición de biomasa, retención reproductiva y fisiología evidencia que el rendimiento no depende exclusivamente de la formación de estructuras reproductivas, sino de la eficiencia en la provisión y asignación de carbono durante el período crítico de llenado. Las diferencias observadas reflejan estrategias genotípicas contrastantes de balance fuente--destino, con implicancias directas para la selección de parentales adaptados a sistemas mecanizados y de alta densidad.
+
 El análisis de componentes principales es una herramienta de uso rutinario en la identificación de similitudes y divergencias entre genotipos de algodón en función de múltiples caracteres simultáneamente \autocite{shakeel2015,farooq2017,klein2022}. En el presente estudio, el ACP permitió identificar accesiones contrastantes desde el punto de vista productivo y tecnológico. En particular, BGSP-00166 se asoció fuertemente con mayores valores de calidad de fibra (FL, FS, FU) y mayor tamaño de semilla (SI), mientras que SP-41255 se asoció con mayores valores en caracteres vinculados al rendimiento, tales como SCY, LY, LI, BN y LP.
 
 La accesión SP-41255 se destacó por su desempeño productivo, exhibiendo los mayores valores de LP y BN y los menores valores de BW y SI, en concordancia con lo reportado por \textcite{scarpin2022} en un estudio sobre progreso genético en rendimiento y sus componentes en 20 cultivares de algodón. De manera consistente con nuestras observaciones, SP-41255 se vinculó a caracteres superiores de rendimiento, particularmente mayor porcentaje de fibra y número de cápsulas (Figura \ref{fig:Graficos-photo-cond-spad}). Resultados similares fueron reportados por \textcite{mccarty2006}, quienes observaron que accesiones con mayor expresión de caracteres de rendimiento tendían a presentar valores inferiores en calidad de fibra, confirmando la existencia de un compromiso fisiológico y genético entre ambos grupos de caracteres.
@@ -1060,7 +1093,7 @@ En conjunto, la evaluación integrada de caracteres agronómicos, fisiológicos 
 
 \chapter{Identificación de QTL de importancia agronómica}\label{math-sci}
 
-\section{Introducción}\label{introducciuxf3n-2}
+\section{Introducción}\label{introducciuxf3n-1}
 
 Aquí una breve introducción del capítulo
 
@@ -1108,7 +1141,7 @@ Donde \(\sigma^{2}E\) = Varianza ambiental, \(\sigma^{2}P_1\) = Varianza del par
 
 Para estimar la correlación genética entre rasgos se utilizó la metodología propuesta por \textcite{kearsey1996} .
 
-\section{Resultados}\label{resultados}
+\section{Resultados}\label{resultados-1}
 
 \begin{figure}
 \includegraphics[width=400px]{figure/chap3/Parentales} \caption{Planta de los genotipos parentales SP-41255 y BGSP-00166}\label{fig:img-parental}
@@ -1139,7 +1172,7 @@ F\textasciitilde{}2\textasciitilde{} & 114.1 (1957.2) & 37.5 (227.3) & 37.2 (4.4
 \end{tabular}}
 \end{table}
 
-\section{Discusión}\label{discusiuxf3n}
+\section{Discusión}\label{discusiuxf3n-1}
 
 Aquí la discusión del capítulo 3
 
@@ -1151,7 +1184,7 @@ Aquí la conclusión del capítulo 3\\
 
 \chapter{Si es necesario un tercer capítulo}\label{ref-labels}
 
-\section{Introducción}\label{introducciuxf3n-3}
+\section{Introducción}\label{introducciuxf3n-2}
 
 Aquí una breve introducción del capítulo
 
@@ -1163,7 +1196,7 @@ Aquí objetivo del capítulo 3
 
 Aquí M y M del capítulo 3
 
-\section{Discusión}\label{discusiuxf3n-1}
+\section{Discusión}\label{discusiuxf3n-2}
 
 Aquí la discusión del capítulo 3
 

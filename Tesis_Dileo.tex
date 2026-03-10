@@ -66,7 +66,6 @@
 
 % Added by CII
 \usepackage{caption}
-\captionsetup{width=5in}
 % End of CII addition
 
 % \usepackage{times} % other fonts are available like times, bookman, charter, palatino
@@ -77,7 +76,7 @@
 \title{Caracterización morfológica, fisiológica y molecular de entradas de algodón (\emph{Gossypium hirsutum} L.) e identificación de QTL de importancia agronómica}
 \author{Ing. Agr. Pablo Nahuel Dileo}
 % The month and year that you submit your FINAL draft TO THE LIBRARY (May or December)
-\date{Versión 1.6}
+\date{Versión 1.1}
 \division{Facultad de Ciencias Agrarias}
 \advisor{Dr.~Gustavo Rubén Rodríguez}
 \institution{Universidad Nacional del Nordeste}
@@ -171,6 +170,8 @@ Segundo párrafo del resumen aquí.
     \usepackage{hyperref}
     \usepackage{csquotes}
     \providecommand{\pandocbounded}[1]{#1}
+    \usepackage{caption}
+    \captionsetup{justification=raggedright,singlelinecheck=false,font=small}
     \usepackage{booktabs}
     \usepackage{longtable}
     \usepackage{array}
@@ -205,6 +206,10 @@ Segundo párrafo del resumen aquí.
 
 % Configuración de interlineado general
 \setstretch{1.5}  % Interlineado general de 1.5
+
+% Reducir interlineado SOLO en tablas longtable
+\AtBeginEnvironment{longtable}{\small}
+\AtBeginEnvironment{longtable}{\setstretch{1.0}}
 
 % Configuración del espacio entre títulos y texto
 \titlespacing*{\chapter}{0pt}{20pt}{10pt}  % Ajusta el espacio antes y después de los títulos de capítulos
@@ -357,16 +362,54 @@ Segundo párrafo del resumen aquí.
 \renewcommand{\headrulewidth}{0.4pt} % Agregar línea en el encabezado
 
 
-\chapter*{Introducción}\label{introducciuxf3n}
-\addcontentsline{toc}{chapter}{Introducción}
+\setcounter{section}{0}
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesubsection}{\roman{subsection}}
+
+\chapter*{Introducción general}\label{introducciuxf3n-general}
+\addcontentsline{toc}{chapter}{Introducción general}
 
 El algodón (\emph{Gossypium hirsutum} L.) se cultiva en más de 80 países y desempeña un papel crucial en la producción textil como fuente de fibra. Argentina es el segundo productor de algodón de América Latina después de Brasil y desempeña un papel clave en los sistemas productivos de la región noreste del país. La producción de fibra cubre la demanda interna a la vez que facilita la exportación a países como Vietnam, Pakistán, Turquía, China, Indonesia, Colombia e India \autocite{icac2023,paytas2013}. Se han desarrollado nuevas variedades y sistemas de producción para adaptarse a diversas condiciones medioambientales. En Argentina, el Instituto Nacional de Tecnología Agropecuaria (INTA) cuenta con un programa de mejora genética del algodón que utiliza el germoplasma disponible para desarrollar variedades que mejoren el rendimiento y la calidad de la fibra. El programa ha logrado aumentar tanto el rendimiento como la calidad de la fibra y también ha incorporado la resistencia genética a enfermedades importantes como mancha angular, enfermedad azul y marchitez por fusarium, en numerosas variedades \autocite{royo2007,scarpin2022,scarpin2023}.
 
-Recientemente, \textcite{scarpin2022} informaron de un progreso genético en el rendimiento de fibra, el porcentaje de desmote, el rendimiento de algodón bruto y el número de cápsulas (NC), mostrando una tasa media de crecimiento anual de 3,24 kg ha\textsuperscript{-1}, 0,05 \%, 4,86 kg ha\textsuperscript{-1} y 0,12 NC, respectivamente. Como resultado, las variedades más modernas tienen un mayor rendimiento de fibra, porcentaje de desmote, rendimiento de algodón bruto y número de cápsulas que las variedades más antiguas. Estos resultados indican que los programas de mejoramiento genético del algodón en Argentina han logrado un progreso genético sustancial para el rendimiento de fibra y sus componentes. Además, \textcite{scarpin2023} enfatizaron que este progreso no resultó en una disminución de la calidad del algodón. Sin embargo, se necesita más investigación para mejorar el rendimiento de fibra, la calidad de la fibra y la adaptabilidad a diferentes ambientes. En la provincia de Santa Fe (Argentina), el cultivo de algodón se concentra en los departamentos de 9 de Julio, Vera y General Obligado, cada uno de los cuales presenta disparidades distintivas en cuanto a la composición del suelo y las condiciones ambientales. El tipo de clima en el norte de la provincia es subtropical según la clasificación climática de Köppen, con una estación seca en la región noroeste y sin estación seca en la región noreste de la provincia \autocite{anida2024}. Debido a estas diferencias, es esencial desarrollar genotipos para estas diferentes condiciones para avanzar en la mejora de los cultivos. Además, se necesitan esfuerzos adicionales para identificar genes o QTLs asociados con rasgos agronómicos y de calidad de fibra en variedades de algodón en Argentina a través de métodos de mapeo genético.
+\section{Origen del cultivo, importancia mundial y regional}\label{origen-del-cultivo-importancia-mundial-y-regional}
 
-En un programa de mejora genética del algodón, combinar un alto rendimiento y calidad de la fibra es un reto clave. El primer paso crucial para un programa de mejora eficaz es caracterizar el germoplasma del algodón. \textcite{kearsey1996} destacaron la importancia de comprender las diferencias genéticas y la heredabilidad de los rasgos al momento de cruzar plantas. La heredabilidad muestra en qué medida los rasgos están influidos por la genética y puede estimarse comparando las varianzas de las generaciones segregantes y no segregantes. En el algodón, se han notificado estimaciones de heredabilidad para varios rasgos, como el rendimiento de fibra, los componentes del rendimiento, la calidad de la fibra, la altura de la planta, el aceite de semilla, el nudo de la primera rama reproductiva, la cápsulas a prueba de tormentas, entre otros \autocite{meredith1984,tang1996,ribeiro2017,decarvalho2022,nidagundi2023}. Estos estimadores ayudan a los mejoradores a decidir la
+El algodón pertenece al género \emph{Gossypium} L. (familia Malvaceae), que comprende aproximadamente 50 especies distribuidas principalmente en regiones tropicales y subtropicales de África, Asia, Australia y América. Estas especies presentan una notable diversidad genética y citogenética, incluyendo tanto especies diploides como poliploides que se han originado a lo largo de la evolución mediante procesos de divergencia geográfica, hibridación interespecífica y duplicación genómica \autocite{grover2015}. Esta diversidad constituye la base genética del cultivo moderno y ha sido ampliamente utilizada en programas de mejoramiento para incrementar el rendimiento, la calidad de fibra y la adaptación a diferentes ambientes.
 
-selección individual y a predecir cuánto pueden mejorar ciertos rasgos. Sin embargo, merece la pena tener en cuenta que el nivel de heredabilidad cambia en función del rasgo, la población y el ambiente en el que se cultivan.
+Dentro del género Gossypium, cuatro especies fueron domesticadas de forma independiente: dos diploides del Viejo Mundo, \emph{Gossypium arboreum} L. y \emph{Gossypium herbaceum} L., y dos especies tetraploides del Nuevo Mundo, \emph{Gossypium hirsutum} L. y \emph{Gossypium barbadense} L. \autocite{wendel2010}. Los algodones tetraploides cultivados se originaron a partir de un evento de alopoliploidía ocurrido hace aproximadamente 1--2 millones de años, cuando un ancestro diploide del genoma A, originario del Viejo Mundo, se dispersó hacia el continente americano y se hibridó con una especie diploide del genoma D nativa del Nuevo Mundo. Este evento dio lugar a un linaje alopoliploide con genoma AD que posteriormente experimentó una rápida diversificación y expansión en regiones tropicales y subtropicales de América \autocite{grover2015}.
+
+Entre las especies cultivadas, Gossypium hirsutum L., comúnmente denominado algodón ``upland'', es la más importante desde el punto de vista agronómico y económico. Esta especie fue domesticada en Mesoamérica, particularmente en la región comprendida entre el sur de México y Centroamérica, desde donde se difundió progresivamente hacia otras regiones del continente americano \autocite{brubaker1999}. Con el desarrollo de la agricultura moderna y el mejoramiento genético, el cultivo se expandió globalmente y actualmente constituye la base de la producción mundial de fibra de algodón.
+
+En la actualidad, el algodón representa la principal fuente de fibra natural para la industria textil mundial y desempeña un papel clave en la economía agrícola de numerosos países. Según estimaciones del International Cotton Advisory Committee (ICAC), la producción mundial de algodón se sitúa en torno a 25 millones de toneladas de fibra por año, cultivadas en más de 60 países y en aproximadamente 30 millones de hectáreas. Los principales productores incluyen a China, India, Brasil, Estados Unidos y Pakistán, mientras que gran parte del procesamiento industrial y consumo textil se concentra en países asiáticos como China, Bangladesh y Vietnam \autocite{icac2025}.
+
+Las especies tetraploides cultivadas dominan ampliamente el comercio internacional de algodón, siendo Gossypium hirsutum responsable de aproximadamente el 90--95 \% de la producción global de fibra, debido a su alta productividad, amplia adaptación ambiental y buena calidad de fibra \autocite{grover2015}. Por su parte, Gossypium barbadense se cultiva en menor proporción y se destina principalmente a nichos de mercado especializados debido a su fibra extra larga y de alta calidad.
+
+En América Latina, el cultivo de algodón continúa siendo una actividad agrícola de gran relevancia económica y social, particularmente en regiones con condiciones climáticas favorables para su desarrollo. En Argentina, la producción se concentra principalmente en las provincias del norte del país, especialmente en Chaco, Santiago del Estero, Santa Fe y Formosa, donde el cultivo constituye un componente importante de los sistemas productivos regionales y de la cadena agroindustrial textil. Además de su importancia económica, el algodón cumple un papel significativo en la generación de empleo rural y en el desarrollo socioeconómico de estas regiones productivas.
+
+En este contexto, el conocimiento del origen, la diversidad genética y la importancia productiva del algodón resulta fundamental para orientar estrategias de mejoramiento genético y optimizar la adaptación del cultivo a diferentes condiciones ambientales, así como para incrementar el rendimiento y la calidad de la fibra en los sistemas productivos actuales.
+
+\section{El cultivo de algodón}\label{el-cultivo-de-algoduxf3n}
+
+\subsection{Morfología de la planta de algodón}\label{morfologuxeda-de-la-planta-de-algoduxf3n}
+
+\subsection{Componentes del rendimiento}\label{componentes-del-rendimiento}
+
+\section{Mejoramiento genético de algodón en el mundo}\label{mejoramiento-genuxe9tico-de-algoduxf3n-en-el-mundo}
+
+\section{Mejoramiento genético de algodon en Argentina}\label{mejoramiento-genuxe9tico-de-algodon-en-argentina}
+
+\section{Problematica}\label{problematica}
+
+\section{Objetivos}\label{objetivos}
+
+\subsection{Objetivo general}\label{objetivo-general}
+
+\subsection{Objetivos especificos}\label{objetivos-especificos}
+
+\section{Hipótesis}\label{hipuxf3tesis}
+
+\section{Resultados esperados}\label{resultados-esperados}
+
+\texttt{\{=latex\}\ \textbackslash{}renewcommand\{\textbackslash{}thesection\}\{\textbackslash{}thechapter.\textbackslash{}arabic\{section\}\}\ \textbackslash{}renewcommand\{\textbackslash{}thesubsection\}\{\textbackslash{}thesection.\textbackslash{}arabic\{subsection\}\}}u
 
 
 
@@ -424,29 +467,46 @@ selección individual y a predecir cuánto pueden mejorar ciertos rasgos. Sin em
 
 \chapter{\texorpdfstring{Caracterización de entradas de algodón (\emph{Gossypium hirsutum} L.) del banco de germoplasma de INTA mediante caracteres morfo-fisiológicos}{Caracterización de entradas de algodón (Gossypium hirsutum L.) del banco de germoplasma de INTA mediante caracteres morfo-fisiológicos}}\label{rmd-basics}
 
-\section{Introducción}\label{introducciuxf3n-1}
+\section{Introducción}\label{introducciuxf3n}
 
-Aquí una breve introducción del capítulo\\
+El algodón (\emph{Gossypium hirsutum} L.) constituye una de las principales fuentes de fibra natural a nivel mundial y desempeña un papel estratégico en la industria textil global. En América Latina, Argentina se posiciona como el segundo productor de fibra de algodón después de Brasil, concentrando su producción principalmente en las provincias de Santa Fe, Chaco y Santiago del Estero. Además de abastecer la demanda interna, la producción nacional contribuye al mercado exportador, con destinos como Pakistán, Vietnam, Turquía, China, Indonesia y Bangladesh \autocite{paytas2023,icac2025}.
 
-\section{Objetivos}\label{objetivos}
+Durante la campaña 2024/25, Argentina alcanzó aproximadamente 683.000 hectáreas implantadas con algodón, destacándose la provincia de Santa Fe con un incremento del 26\% respecto de la campaña anterior y representando el 34\% del área nacional sembrada \autocite{icac2025,zorzon2025}. Estos datos evidencian la creciente importancia del cultivo en el sistema productivo regional.
 
-Caracterizar entradas de algodón del banco de germoplasma de INTA con diferente procedencia mediante caracteres morfológicos relacionados al rendimiento.
+Con la creación del Instituto Nacional de Tecnología Agropecuaria (INTA) y la implementación de su programa de mejoramiento genético de algodón en 1956, los esfuerzos se orientaron al incremento del rendimiento potencial, la mejora de la calidad de fibra y la incorporación de resistencia genética frente a enfermedades de relevancia económica, tales como la mancha angular bacteriana (\emph{Xanthomonas citri} subsp. \emph{malvacearum}), el ``azul'' del algodón (Cotton leafroll dwarf virus) y la marchitez por \emph{Fusarium oxysporum} f.~sp. \emph{vasinfectum} \autocite{royo2007,scarpin2022,scarpin2023}. Como resultado, se ha logrado un progreso genético significativo en caracteres como rendimiento de fibra, porcentaje de fibra y número de capullos por planta, sin comprometer la calidad tecnológica \autocite{scarpin2022,scarpin2023}. No obstante, el progreso sostenido continúa siendo necesario para responder a condiciones ambientales contrastantes y a las demandas de sistemas productivos cada vez más mecanizados.
 
-Evaluar procesos fisiológicos que intervienen en la determinación del rendimiento de fibra de entradas de algodón del banco de germoplasma de INTA.
+En el norte de Santa Fe, donde predomina el sistema de cosecha tipo stripper, existe una demanda creciente de cultivares con arquitectura compacta y menor desarrollo vegetativo, que optimicen la eficiencia de cosecha y minimicen la contaminación de la fibra. El desarrollo de la cosechadora stripper ``Javiyú'', generada por INTA Reconquista, representó un avance tecnológico significativo en la mecanización del cultivo \autocite{pilatti2021}. Paralelamente, la adopción de sistemas de siembra en hileras estrechas y altas densidades de población ha modificado la estructura del cultivo. Entre los productores, la configuración más difundida corresponde a espaciamientos de 52 cm entre hileras y densidades cercanas a 200.000 plantas ha⁻¹ \autocite{paytas2011}. Estos cambios tecnológicos subrayan la necesidad de desarrollar y seleccionar cultivares específicamente adaptados a dichos sistemas.
+
+Un paso fundamental en los programas de mejoramiento orientados a satisfacer estas demandas consiste en la caracterización del germoplasma disponible para identificar progenitores con caracteres complementarios. La colección de algodón del INTA, gestionada por la Red Nacional de Recursos Genéticos (REDGEN), conserva actualmente más de 700 accesiones, principalmente de \emph{G. hirsutum}, junto con representaciones de \emph{G. barbadense} y \emph{G. barbadense} var. \emph{brasiliensis} \autocite{arriel2023}. Esta diversidad genética constituye un recurso estratégico para el desarrollo de cultivares adaptados a condiciones agroecológicas locales y a sistemas de producción mecanizados. Su relevancia se ve reforzada por iniciativas regionales como el proyecto +Cotton, coordinado por la Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO) y la Agencia Brasileña de Cooperación (ABC), que resaltan la importancia de conservar y caracterizar germoplasma latinoamericano para fortalecer programas de mejoramiento enfocados en resiliencia climática y calidad de fibra \autocite{fao2025}.
+
+El rendimiento en algodón es un carácter complejo determinado por la interacción de múltiples componentes, entre ellos número de capullos por planta, peso de capullo, porcentaje de fibra e índice de semilla, los cuales están fuertemente influenciados por la arquitectura del dosel, las relaciones fuente--destino y las condiciones ambientales durante el ciclo del cultivo \autocite{pettigrew2004,constable2015}. Los caracteres fisiológicos, como la eficiencia fotosintética, la acumulación de biomasa y la partición de asimilados hacia órganos reproductivos, desempeñan un rol clave en la determinación del rendimiento y la calidad de fibra \autocite{constable2015}.
+
+Parámetros tales como tasa fotosintética, conductancia estomática, contenido de clorofila estimado mediante lecturas SPAD y distribución de biomasa vegetativa y reproductiva aportan información valiosa para interpretar diferencias genotípicas en dinámica de crecimiento y determinación del rendimiento. En consecuencia, la integración de la caracterización morfo-fisiológica con la evaluación agronómica y tecnológica permite una comprensión más integral del desempeño genotípico, particularmente relevante en sistemas productivos del norte argentino donde la estabilidad del rendimiento y la eficiencia de cosecha dependen de una arquitectura optimizada y un adecuado balance reproductivo.
+
+A pesar de los avances logrados en el mejoramiento genético nacional, persiste una disponibilidad limitada de cultivares específicamente adaptados a la cosecha tipo stripper y a configuraciones de surcos estrechos. Asimismo, aunque diversos estudios han caracterizado germoplasma de algodón en función de caracteres agronómicos y de calidad de fibra \autocite{royo1998,royo2003,klein2022,klein2011}, son escasos aquellos que integran atributos morfológicos y fisiológicos directamente vinculados con la adaptación a sistemas mecanizados \autocite{diaz2011}. Esta limitación restringe la identificación eficiente de líneas parentales que combinen alto rendimiento, calidad tecnológica y arquitectura adecuada para producción mecanizada.
+
+En este contexto, los enfoques estadísticos multivariados, como el análisis de componentes principales (ACP) y el agrupamiento jerárquico utilizando la distancia de Gower, han sido ampliamente empleados para explorar conjuntos de datos fenotípicos complejos \autocite{spoljaric2018,sarwar2021,klein2022,ullah2022,mangi2024,anwar2025}. Estas metodologías permiten la evaluación conjunta de caracteres cuantitativos y cualitativos, facilitando la identificación de patrones de variación y la delimitación de grupos genotípicos con características similares.
+
+En este contexto, el objetivo de este capítulo fue caracterizar la diversidad morfo-fisiológica y productiva de accesiones de algodón del banco de germoplasma del INTA, e identificar genotipos contrastantes para estudios fisiológicos detallados.
+
+\subsection{Hipótesis}\label{hipuxf3tesis-1}
+
+Se plantea como hipótesis que dentro del banco de germoplasma de INTA existe variabilidad morfo-fisiológica significativa entre accesiones de \emph{G. hirsutum}, y que dicha variabilidad permite identificar genotipos con combinaciones favorables de arquitectura compacta, eficiencia fisiológica y rendimiento de fibra, potencialmente adaptados a sistemas de producción mecanizados tipo stripper y a configuraciones de siembra en hileras estrechas del norte argentino.
 
 \section{Materiales y métodos}\label{materiales-y-muxe9todos}
 
-Los ensayos se realizaron en invernadero con condiciones controladas en la Estación Experimental INTA Reconquista. Se utilizaron macetas de 5 litros con 2,2 Kg de suelo de monte (pH: 6,7, P disp: 165,7 mg Kg\textsuperscript{-1}, Na\textsuperscript{+} 0,6 cmol\textsuperscript{+}Kg\textsuperscript{-1}, K\textsuperscript{+}: 0,8 cmol\textsuperscript{+}Kg\textsuperscript{-1}, Ca\textsuperscript{+2}: 27,0 cmol\textsuperscript{+}Kg\textsuperscript{-1}, Mg\textsuperscript{+2}: 2,2 cmol\textsuperscript{+}Kg\textsuperscript{-1}, NH\textsubscript{4}: 76,30 mg kg\textsuperscript{-1}, NO\textsubscript{3}: 86,1 mg Kg\textsuperscript{-1}) y de 400 g de sustrato comercial (GrowMix Multipro), en el cual se colocó una planta por maceta.
+\subsection{Sitio experimental y material vegetal}\label{sitio-experimental-y-material-vegetal}
 
-\subsection{\texorpdfstring{Caracterización morfológica de 26 entradas de algodón (\emph{Gossypium hirsutum} L.)}{Caracterización morfológica de 26 entradas de algodón (Gossypium hirsutum L.)}}\label{caracterizaciuxf3n-morfoluxf3gica-de-26-entradas-de-algoduxf3n-gossypium-hirsutum-l.}
+El estudio se llevó a cabo en la Estación Experimental Agropecuaria Reconquista del Instituto Nacional de Tecnología Agropecuaria (INTA), ubicada en la provincia de Santa Fe, Argentina (29°15' S; 59°44' O; 50 m s.n.m.). Los ensayos se desarrollaron durante las campañas 2018--2020 bajo condiciones de invernadero.
 
-En este estudio se realizó una caracterización inicial de 26 entradas (Tabla \ref{tab:tablaEntradas}) de algodón (Gossypium hirsutum L.) provenientes del banco de germoplasma, siguiendo un diseño experimental en bloques completos al azar con tres repeticiones. La selección de las accesiones se llevó a cabo considerando la diversidad de sus orígenes geográficos, incluyendo países como Argentina, Australia, Camerún, Chad, China, Costa de Marfil, Estados Unidos, Pakistán y Senegal. Además, se tomó en cuenta la presencia de características morfológicas contrastantes, según los datos proporcionados por el banco de germoplasma.
+Se evaluaron 26 entradas de algodón pertenecientes al banco de germoplasma de INTA, conservado en la Estación Experimental Sáenz Peña (Chaco, Argentina). La selección de estos materiales se realizó considerando su diversidad de origen geográfico y su desempeño contrastante en rendimiento y calidad de fibra, según la información disponible en el banco de germoplasma. El conjunto incluyó materiales provenientes de Argentina, Australia, Camerún, Chad, China, Costa de Marfil, Pakistán, Senegal y Estados Unidos (Tabla \ref{tab:tablaEntradas}).
 
 \begin{table}[!h]
 \centering
-\caption{\label{tab:tablaEntradas}Entradas de \emph{Gossypium hirsutum} L. y su procedencia}
+\caption{\label{tab:tablaEntradas}Entradas de \emph{Gossypium hirsutum} L. usadas en el presente estudio y su procedencia}
 \centering
 \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\fontsize{11}{13}\selectfont
 \begin{threeparttable}
 \begin{tabular}[t]{>{\raggedright\arraybackslash}p{8em}>{\raggedright\arraybackslash}p{12em}ll}
 \toprule
@@ -476,69 +536,156 @@ BGSP-00070 & Chad & BGSP-00126* & Senegal\\
 \end{threeparttable}}
 \end{table}
 
-\subsubsection{Variables medidas}\label{variables-medidas}
+Las plantas se cultivaron en macetas de 5 L conteniendo 2200 g de suelo sin disturbio (pH 6,7; P disponible: 165,7 mg kg⁻¹; Na⁺: 0,6 cmol⁺ kg⁻¹; K⁺: 0,8 cmol⁺ kg⁻¹; Ca²⁺: 27,0 cmol⁺ kg⁻¹; Mg²⁺: 2,2 cmol⁺ kg⁻¹; NH₄⁺: 76,3 mg kg⁻¹; NO₃⁻: 86,1 mg kg⁻¹) mezclado con 400 g de sustrato comercial (GrowMix® Multipro). El riego se realizó de manera regular con el fin de mantener la humedad próxima a capacidad de campo.
 
-Las variables que se mencionan a continuación fueron registradas en todas las plantas de las 26 entradas:
+Los experimentos se dispusieron bajo un diseño en bloques completos aleatorizados (DBCA), considerando cada maceta con una planta como unidad experimental. Este diseño permitió minimizar posibles gradientes espaciales dentro del invernadero, particularmente aquellos asociados a luz y temperatura. Se establecieron tres repeticiones independientes por entrada.
 
-\begin{enumerate}
-\def\labelenumi{\roman{enumi})}
-\item
-  Características morfológicas cualitativas: Estas variables se registraron durante la etapa de floración de las plantas según los descriptores de INASE \texttt{(colocar\ cita)}. Forma de la planta, aspecto de la canopia, tipo de floraciones, forma y pubescencia de la hoja, tipo de bráctea y forma de cápsula.
-\item
-  Características morfológicas cuantitativas: Las mediciones se realizaron en la etapa de final de ciclo de las plantas, siguiendo estos métodos: Altura de planta (AP en cm, medido desde la base del tallo hasta el ápice), Altura a la primera rama reproductiva (A1RR en cm, medido desde la base del tallo hasta la primera rama reproductiva), número de nudos (NN, número de nudos presentes en el tallo), número de ramas vegetativas (NRV) y reproductivas (NRR), nudo de inserción de la primera rama reproductiva (N1RR, nudo donde se inserta la 1º rama reproductiva en la planta), y distancia de la primera posición al tallo principal (D1P en cm, distancia que existe entre el tallo principal y la primera posición de la primera rama reproductiva de la planta).
-\item
-  Rendimiento y sus componentes: Para calcular el rendimiento de las diferentes entradas y sus componentes se efectuaron las siguientes mediciones: Rendimiento bruto de algodón (RB, en g): se recolectó la fibra-semilla de algodón de todas las cápsulas presentes en las plantas. Las muestras obtenidas fueron pesadas en balanzas de precisión y se realizó medición de la humedad de cada una de ellas; Rendimiento de fibra al desmote (RFD, en \%): se tomó cada muestra de algodón proveniente de las mediciones de rendimiento bruto, se realizó el desmote en una mini-desmotadora experimental y se pesó en una balanza de precisión la fibra y semillas por separado. El rendimiento de fibra al desmote fue la relación entre el peso de la fibra sobre el peso de la fibra más la semilla; Rendimiento de fibra (RF en g): se multiplicó el rendimiento bruto de algodón por el rendimiento de fibra al desmote obtenido; Nº de cápsulas por planta (NC): se determinó mediante recuento de todas las cápsulas presentes en las plantas; Peso de cápsulas (PC): se dividió el rendimiento bruto de algodón por planta por el número de cápsula por plantas
-\item
-  Parámetros de calidad tecnológica de fibra de algodón: con el total de plantas de cada entrada se hizo un pool de muestras para obtener una medición debido a los requisitos de peso mínimo de muestra de fibra del instrumento de medición. Las muestras de fibra de algodón obtenidas se enviaron al laboratorio de HVI (Uster 1000) de la Asociación para la Promoción de la Producción (APPA) en Reconquista, Santa Fe. Los parámetros de calidad tecnológica de fibra registrados fueron: Índice de Hilabilidad (SCI, por sus siglas en inglés), Micronaire (Mic), Índice de madurez (Mac), longitud promedio de la mitad superior (UHML en mm, por sus siglas en inglés), longitud media (ML, por sus siglas en inglés), índice de uniformidad (UI en \%, por sus siglas en inglés), índice de fibras cortas (SFI, por sus siglas en inglés), resistencia de fibra (Str en g tex\textsuperscript{-1}), elongación (Elg en \%), contenido de humedad de la muestra, color (Rd y +b), grado de color (C.G) y contenido de basura.
-\item
-  Fenología: Tiempo en días desde la emergencia para alcanzar los estados de primer pimpollo (DPP), primera flor abierta (DPF), cut out (DCO), primera bocha abierta (DPCA) y fin de ciclo (DFC). El estado de cut out o fin de floración efectiva se determina cuando el número de nudos por encima de la última flor blanca en el tallo sea menor que 4 \autocite{bourland1992}.
-\end{enumerate}
+\subsection{Diversidad fenotípica del germoplasma de algodón: caracteres morfológicos, de rendimiento y calidad de fibra}\label{diversidad-fenotuxedpica-del-germoplasma-de-algoduxf3n-caracteres-morfoluxf3gicos-de-rendimiento-y-calidad-de-fibra}
 
-\subsection{\texorpdfstring{Caracterización de ocho entradas seleccionadas de algodón (\emph{Gossypium hirsutum} L.)}{Caracterización de ocho entradas seleccionadas de algodón (Gossypium hirsutum L.)}}\label{caracterizaciuxf3n-de-ocho-entradas-seleccionadas-de-algoduxf3n-gossypium-hirsutum-l.}
+Se realizó una caracterización inicial de las 26 entradas, evaluándose caracteres morfológicos, fenológicos, de rendimiento y de calidad de fibra (Tabla \ref{tab:tableVariables26Entradas})
 
-Las ocho entradas fueron seleccionadas por sus características contrastantes en rendimiento, sus componentes (principalmente RFD) y calidad de fibra. También se incluyeron algunas con bajo número de RV y canopia compacta. Estas entradas, identificadas con un asterisco en la Tabla \ref{tab:tablaEntradas}, también fueron evaluadas para analizar procesos fisiológicos involucrados en la determinación del rendimiento de fibra en algodón.
+\begingroup\fontsize{10}{12}\selectfont
 
-\subsubsection{Variables medidas}\label{variables-medidas-1}
+\begin{longtable}[t]{p{2.8cm}p{2.8cm}p{1.8cm}p{1.3cm}p{4.1cm}}
+\caption{\label{tab:tableVariables26Entradas}Caracteres morfológicos, fenológicos, componentes del rendimiento y atributos de calidad de fibra evaluados en 26 entradas de algodón (\emph{Gossypium hirsutum})}\\
+\toprule
+Categoría del rasgo & Rasgo & Abreviatura & Unidad & Descripción\\
+\midrule
+\endfirsthead
+\caption[]{\label{tab:tableVariables26Entradas}Caracteres morfológicos, fenológicos, componentes del rendimiento y atributos de calidad de fibra evaluados en 26 entradas de algodón (\emph{Gossypium hirsutum}) (Continuación)}\\
+\toprule
+Categoría del rasgo & Rasgo & Abreviatura & Unidad & Descripción\\
+\midrule
+\endhead
 
-Las variables que se mencionan a continuación fueron registradas con la siguiente metodología:
+\endfoot
+\bottomrule
+\endlastfoot
+Morfológicos (Cualitativos) & Forma de planta, aspecto de canopia, tipo de floración, forma de hoja, pubescencia, tipo de bráctea, forma de cápsula & - & - & Evaluado de acuerdo con los descriptores de algodón tipo Upland\\
+Morfológicos (Cuantitativos) & Altura de planta & HP & cm & Altura de la planta a madurez en cm\\
+ & Nudos del tallo principal & STEMNN & número & Número de nudos en el tallo principal\\
+ & Ramas monopodiales & MONON & número & Número de ramas monopodiales (vegetativas)\\
+ & Nudos de ramas simpodiales & SYMNN & número & Número de nudos en ramas simpodiales\\
+\addlinespace
+ & Posición de la primera rama fructífera (nudo) & FFBN & número & Posición de la primera rama fructífera medida por número de nudo del tallo\\
+ & Posición de la primera rama fructífera (altura) & FFBH & cm & Posición de la primera rama fructífera medida en altura (cm)\\
+ & Distancia a la primera posición reproductiva & DFRP & cm & Distancia desde la primera posición reproductiva al tallo principal (cm)\\
+Fenológicos & Días a primer pimpollo & DFS & días & Desde emergencia hasta primer pimpollo\\
+ & Días a primera flor & DFF & días & Desde emergencia hasta primera flor\\
+\addlinespace
+ & Días a cut-out & DCO & días & Desde emergencia hasta cut-out (Bourland et al., 1992)\\
+ & Días a apertura de primera cápsula & DBO & días & Desde emergencia hasta apertura de la primera cápsula\\
+ & Días a madurez & DM & días & Desde emergencia hasta madurez fisiológica\\
+Componentes del rendimiento & Rendimiento de algodón en bruto & SCY & g planta⁻¹ & Peso total de algodón en bruto por planta\\
+ & Rendimiento de fibra & LY & g planta⁻¹ & Peso total de fibra por planta\\
+\addlinespace
+ & Rendimiento de fibra al desmote & LP & \% & (Peso de fibra / Peso de algodón en bruto) × 100\\
+ & Peso de cápsula & BW & g & Peso promedio de cápsulas cosechadas\\
+ & Número de cápsulas por planta & BN & cápsulas planta⁻¹ & Número total de cápsulas por planta\\
+Calidad de fibra & Longitud de fibra & FL & mm & Longitud media de la mitad superior (UHML), medida con HVI\\
+ & Resistencia de fibra & FS & g tex⁻¹ & Medida con HVI\\
+\addlinespace
+ & Micronaire & MIC & - & Medido con HVI\\
+ & Uniformidad de fibra & FU & \% & Índice de uniformidad, medido con HVI\\*
+\end{longtable}
+\endgroup{}
 
-\begin{enumerate}
-\def\labelenumi{\roman{enumi})}
-\item
-  La medición de las variables fisiológicas, como fotosíntesis, contenido de clorofila y apertura y cierre estomático, se llevaron a cabo en tres momentos durante el ciclo de la planta, correspondiente a 55, 70 y 85 días después de la emergencia. Fue realizado en un solo año de evaluación con un diseño experimental en bloques completos al azar, con cuatro repeticiones. Los equipos utilizados para las mediciones propuestas fueron a) Fotosíntesis: LICOR 6400; b) Contenido de clorofila: Minolta SPAD 502; c) Apertura y cierre estomático: LICOR 6400.
-\item
-  Para profundizar el análisis, se realizaron experimentos adicionales repetidos en dos momentos, con nueve repeticiones cada vez, utilizando un diseño en bloques completos al azar. Se aumentó la cantidad de bloques para mejorar la representatividad de los parámetros de calidad de fibra y permitir un análisis estadístico más preciso. Se registraron las variables de rendimiento y calidad de fibra mencinado anteriormente en el apartado ``Caracterización morfológica de 26 entradas de algodón'' sumado las siguientes variables: número de semillas por cápsula (NSC)\autocite{worley1974}, índice de fibra (IF en g, peso de la fibra proveniente de 100 semillas) y el índice de semillas (IS en g, peso de 100 semillas de cada muestra) \autocite{pettigrew2013}.
-\item
-  Por otra parte, se realizaron muestreos destructivos de plantas para la determinación de materia seca y partición de los asimilados. Los cortes se realizaron en cuatro momentos, correspondientes a los estados fenológicos primer pimpollo, primera flor, primera bocha abierta y fin de ciclo. En cada uno de estos momentos se seccionaron las plantas en tallo, ramas reproductivas, ramas vegetativas, pimpollos y flores, bochas cerradas, capsulas abiertas, fibra y rebrote de tallo según el momento de muestreo. Todas las muestras de las partes de la planta fueron llevadas a estufa a 65 º C hasta peso constante (96 horas). El ensayo se realizó en un diseño en bloques al azar con arreglo en parcelas divididas, con los 4 momentos de corte como parcela principal y las entradas como subparcela, con cuatro repeticiones. En estos cuatros momentos mencionados también se midieron las siguientes variables: Área foliar: para el cálculo de esta variable, se midieron todas las hojas de las plantas a través de los equipos LICOR 3000 y LICOR 3050; viii) Dinámica de la floración: se realizaron mapeos de dinámica de floración en todas las plantas seleccionadas para la partición de asimilados. Este procedimiento se realiza registrando en cada una de las posiciones reproductivas que genera la planta, la presencia de un pimpollo, una flor, una bocha verde, una cápsula abierta o un aborto \autocite{kerby1996monitoring}. Con estos datos se realizó la dinámica de floración de las diferentes entradas y porcentaje de retención final a la que llegan cada una de las plantas seleccionadas para el mapeo.
-\end{enumerate}
+En el estado reproductivo de cut-out ---definido cuando el número de nudos por encima de la última flor blanca en el tallo principal fue menor a cuatro \autocite{bourland1992}--- se registraron caracteres morfológicos cualitativos tales como forma de planta, tipo de arquitectura de canopia, tipo de floración (observado en la primera rama fructífera y clasificado según proximidad de cápsulas), forma de hoja, densidad de tricomas, tipo de bráctea (en la primera posición fructífera) y forma de cápsula, empleando los descriptores estandarizados para algodón upland \autocite{upov2018}.
+
+A madurez fisiológica (cuando todas las cápsulas se encontraban abiertas), se determinaron caracteres cuantitativos, incluyendo altura de planta (HP), número de nudos en el tallo principal (STEMNN), número de ramas monopodiales (MONON), número de nudos en ramas simpódicas (SYMNN), distancia desde la primera posición reproductiva al tallo principal (DFRP), así como la posición de la primera rama fructífera tanto en número de nudo (FFBN) como en altura (FFBH).
+
+Cada planta fue cosechada individualmente para determinar rendimiento de algodón en bruto (SCY), rendimiento de fibra (LY), porcentaje de fibra (LP), peso de cápsula (BW) y número de cápsulas por planta (BN). La calidad de fibra ---longitud (FL), resistencia (FS), micronaire (MIC) e índice de uniformidad (FU)--- fue evaluada mediante un equipo High Volume Instrument (HVI Uster 1000, APPA -- Reconquista, Santa Fe), utilizando muestras compuestas de las tres repeticiones.
+
+Los caracteres fenológicos se determinaron como el número de días desde la emergencia hasta los siguientes estadios: primer pimpollo (DFS), primera flor (DFF), cut-out (DCO), primera cápsula abierta (DBO) y madurez (DM).
+
+\subsection{Análisis de rendimiento, calidad de fibra, variables fisiológicas y partición de biomasa en accesiones contrastantes de algodón}\label{anuxe1lisis-de-rendimiento-calidad-de-fibra-variables-fisioluxf3gicas-y-particiuxf3n-de-biomasa-en-accesiones-contrastantes-de-algoduxf3n}
+
+A partir de la caracterización inicial, se seleccionaron ocho entradas contrastantes en función de su desempeño en componentes del rendimiento ---especialmente porcentaje de fibra (LP)---, calidad de fibra y arquitectura de planta (particularmente bajo número de ramas monopodiales). Estas entradas fueron sometidas a una evaluación más exhaustiva (Tabla \ref{tab:tableVariables8Entradas}).
+
+\begingroup\fontsize{10}{12}\selectfont
+
+\begin{longtable}[t]{p{2.8cm}p{2.8cm}p{1.8cm}p{1.3cm}p{4.1cm}}
+\caption{\label{tab:tableVariables8Entradas}Caracteres fisiológicos y de partición de biomasa evaluados en ocho entradas contrastantes de algodón (\emph{Gossypium hirsutum})}\\
+\toprule
+Categoría del rasgo & Rasgo & Abreviatura & Unidad & Método\\
+\midrule
+\endfirsthead
+\caption[]{\label{tab:tableVariables8Entradas}Caracteres fisiológicos y de partición de biomasa evaluados en ocho entradas contrastantes de algodón (\emph{Gossypium hirsutum}) (Continuación)}\\
+\toprule
+Categoría del rasgo & Rasgo & Abreviatura & Unidad & Método\\
+\midrule
+\endhead
+
+\endfoot
+\bottomrule
+\endlastfoot
+Partición de biomasa & Biomasa total & TB & g planta⁻¹ & Suma de la biomasa vegetativa y reproductiva\\
+ & Biomasa vegetativa & VB & g planta⁻¹ & Suma de tallo, ramas vegetativas y hojas\\
+ & Biomasa reproductiva & RB & g planta⁻¹ & Suma de ramas simpodiales, pimpollos, flores, cápsulas verdes y abiertas, semilla y fibra\\
+Fisiológicos & Tasa neta de fotosíntesis & PN & µmol CO₂ m⁻² s⁻¹ & Sistema de intercambio gaseoso LICOR 6400\\
+ & Conductancia estomática & gs & mol H₂O m⁻² s⁻¹ & Sistema de intercambio gaseoso LICOR 6400\\
+\addlinespace
+ & Contenido de clorofila & SPAD & unidades SPAD & Minolta SPAD 502\\
+Dinámica reproductiva & Retención global & GR & \% & Mapeo según Kerby et al. (2010). Retención global como la relación entre el número total de estructuras reproductivas retenidas y el número total de posiciones reproductivas generadas por planta\\
+ & Retención en primera posición & R1P & \% & Mapeo según Kerby et al. (2010). Retención como la relación entre el número total de estructuras reproductivas retenidas en las primeras posiciones y el número total de posiciones reproductivas generadas en esas mismas posiciones por planta\\
+Otros rasgos de rendimiento & Número de semillas por cápsula & NSPB & número & Número de semillas por cápsula\\
+ & Índice de fibra & LI & g & Peso de la fibra obtenida de 100 semillas\\
+\addlinespace
+ & Índice de semilla & SI & g & Peso de 100 semillas\\*
+\end{longtable}
+\endgroup{}
+
+Se realizaron dos experimentos independientes en distintos momentos, cada uno con nueve repeticiones por entrada, con el objetivo de incrementar la representatividad de los parámetros de calidad de fibra y mejorar la precisión estadística. Además de las variables previamente descriptas, se registraron número de semillas por cápsula (SNPB), índice de fibra (LI) e índice de semilla (SI).
+
+\subsection{Partición de biomasa y dinámica reproductiva}\label{particiuxf3n-de-biomasa-y-dinuxe1mica-reproductiva}
+
+Las ocho entradas seleccionadas fueron evaluadas para partición de biomasa en cuatro momentos fenológicos: primer pimpollo (M1), primera flor (M2), primera cápsula abierta (M3) y madurez (M4). Se realizó muestreo destructivo, separando cada planta en componentes vegetativos (tallo, ramas vegetativas y hojas) y estructuras reproductivas (ramas simpódicas, pimpollos, flores, cápsulas verdes y abiertas, semillas y fibra). Las muestras fueron secadas en estufa a 65 °C hasta peso constante para determinar biomasa total y su distribución relativa.
+
+El diseño experimental correspondió a un DBCA con arreglo en parcelas divididas, considerando los momentos fenológicos como parcelas principales y las entradas como subparcelas.
+
+La dinámica de floración y retención de estructuras reproductivas se determinó mediante mapeo detallado de posiciones fructíferas siguiendo la metodología propuesta por \textcite{kerby2010} .
+
+\subsection{Evaluación de caracteres fisiológicos}\label{evaluaciuxf3n-de-caracteres-fisioluxf3gicos}
+
+La tasa fotosintética neta (PN), conductancia estomática (gs) y contenido relativo de clorofila (SPAD) se midieron en tres momentos: en primera flor (M2) y a los 15 y 30 días posteriores. Las determinaciones de PN y gs se realizaron con un sistema LI-COR 6400, mientras que SPAD se registró con un medidor Minolta SPAD-502.
+
+Se evaluaron cuatro repeticiones por entrada. Se seleccionaron cuatro hojas completamente expandidas del estrato superior de la canopia, las cuales fueron marcadas al inicio del experimento y medidas sucesivamente en cada fecha. Las mediciones se realizaron entre las 11:00 y 13:00 h bajo intensidades lumínicas de 900--1500 μmol fotones m⁻² s⁻¹.
 
 \subsection{Análisis estadístico}\label{anuxe1lisis-estaduxedstico}
 
-\subsubsection{Caracterización morfológica de 26 entradas de algodón}\label{caracterizaciuxf3n-morfoluxf3gica-de-26-entradas-de-algoduxf3n}
+Todos los análisis estadísticos se realizaron mediante el software R \autocite{R2024}, adoptándose un nivel de significancia del 5\% (p ≤ 0,05).
 
-Para las características morfológicas cualitativas, se analizaron las frecuencias relativas de cada descriptor evaluado en las entradas del banco de germoplasma. En las características cuantitativas, se realizó un análisis de varianza (ANOVA) para determinar la significancia de las diferencias observadas entre las entradas en los parámetros evaluados. Los parámetros con diferencias significativas fueron sometidos a comparaciones múltiples mediante la prueba L.S.D. de Fisher (p ≤ 0.05). Además, se llevó a cabo un análisis de conglomerados jerárquicos utilizando la métrica de distancia de Gower y el método Ward.D, integrando las características cualitativas y cuantitativas. Este análisis permitió identificar agrupaciones homogéneas de entradas, lo cual se visualizó en dendrogramas. Para facilitar la interpretación de las relaciones entre las entradas, se utilizó un mapa de calor que incluye clustering en filas y columnas. Los análisis fueron realizados empleando el software estadístico R (versión 4.4.2) junto con paquetes como cluster, dplyr y ComplexHeatmap.
+Para la caracterización de las 26 entradas, se verificó la normalidad de los caracteres cuantitativos mediante la prueba de Shapiro--Wilk. Posteriormente se aplicó análisis de varianza (ANOVA) y, cuando correspondió, comparación de medias mediante la prueba LSD de Fisher \autocite{predictmeans}.
 
-\subsubsection{Caracterización de ocho entradas seleccionadas de algodón}\label{caracterizaciuxf3n-de-ocho-entradas-seleccionadas-de-algoduxf3n}
+Los caracteres cualitativos se analizaron mediante frecuencias relativas. Asimismo, se realizó un análisis de conglomerados jerárquicos empleando la distancia de Gower y el método Ward.D, integrando variables cualitativas y cuantitativas. Los resultados se representaron mediante dendrogramas y mapas de calor utilizando los paquetes cluster, dplyr y ComplexHeatmap \autocite{ComplexHeatmapPackage,dplyrPackage,clusterPackage}.
 
-Para evaluar las diferencias entre las entradas seleccionadas de algodón (Gossypium hirsutum L.) en términos de rendimiento, componentes del rendimiento y calidad de fibra, se utilizaron modelos lineales mixtos (LMM, por sus siglas en inglés). El análisis de varianza (ANOVA) se llevó a cabo con el paquete nlme en R, empleando la metodología de Máxima Verosimilitud Restringida (REML). Los modelos incluyeron las entradas como efecto fijo y consideraron como efectos aleatorios el experimento y la repetición, con el propósito de controlar la variabilidad inherente a estas fuentes. Para identificar diferencias significativas entre las medias de las entradas (p ≤ 0.05), se realizaron comparaciones múltiples mediante el método de Mínima Diferencia Significativa (LSD, por sus siglas en inglés), utilizando la biblioteca predictmeans.
+Para las ocho entradas seleccionadas, los datos de rendimiento, componentes del rendimiento y calidad de fibra se analizaron mediante modelos lineales mixtos (LMM), utilizando el paquete nlme y el método REML \autocite{nlmePackage}. Las entradas se consideraron efectos fijos, mientras que experimento y repetición se modelaron como efectos aleatorios. Cuando se detectaron diferencias significativas, se aplicó la prueba LSD de Fisher. Las asociaciones entre variables se evaluaron mediante coeficientes de correlación de Spearman \autocite{corx}.
 
-Además, para explorar las asociaciones entre los caracteres medidos y reducir la dimensionalidad de los datos, se llevó a cabo un análisis de componentes principales (PCA). Las correlaciones entre caracteres se evaluaron mediante el coeficiente de correlación de Spearman, clasificándolas como fuertes, moderadas o bajas según su magnitud.
+La partición de biomasa y retención reproductiva se analizaron mediante modelos mixtos adaptados a un diseño en parcelas divididas, incluyendo momento, entrada y su interacción como efectos fijos. Se incorporaron estructuras de varianza específicas (varIdent) cuando se detectó heterogeneidad entre momentos.
 
-Para evaluar la influencia de las entradas y los momentos de medición sobre la biomasa total, su partición y la retención de estructuras reproductivas, se emplearon modelos lineales mixtos (LMM) adaptados para un diseño en bloques en parcelas divididas, utilizando el paquete nlme en R. Los factores Momento, Entradas y su interacción (Momento:Entradas) se incluyeron como efectos fijos, mientras que los efectos aleatorios consideraron el experimento, los bloques y los momentos (parcela principal). Este enfoque permitió capturar adecuadamente la variabilidad en los datos y modelar las diferencias entre parcelas y subparcelas. Además, se implementaron estructuras de varianza específicas (varIdent) para abordar la heterogeneidad entre los momentos de medición.
+Los caracteres fisiológicos se analizaron como medidas repetidas en el tiempo, considerando momento, entrada y su interacción como efectos fijos, y bloque e individuo (maceta) como efectos aleatorios.
 
-Para el análisis de rasgos fisiológicos, se abordaron como medidas repetidas en el tiempo. Los modelos evaluaron la influencia de los días después de la emergencia (DDE), las entradas y su interacción (DDE:Entradas) como efectos fijos, mientras que los efectos aleatorios incluyeron bloque e individuo para capturar la variabilidad experimental. Este análisis permitió estudiar las diferencias entre entradas y su comportamiento dinámico a lo largo del tiempo, incorporando estructuras específicas para manejar datos longitudinales.
+Finalmente, se realizó un análisis de componentes principales (ACP) para explorar la diversidad global entre entradas.
 
 \section{Resultados}\label{resultados}
 
-\subsection{\texorpdfstring{Caracterización morfológica de 26 entradas de algodón (\emph{Gossypium hirsutum} L.)}{Caracterización morfológica de 26 entradas de algodón (Gossypium hirsutum L.)}}\label{caracterizaciuxf3n-morfoluxf3gica-de-26-entradas-de-algoduxf3n-gossypium-hirsutum-l.-1}
+\subsection{Diversidad fenotípica del germoplasma de algodón: caracteres morfológicos, de rendimiento y calidad de fibra}\label{diversidad-fenotuxedpica-del-germoplasma-de-algoduxf3n-caracteres-morfoluxf3gicos-de-rendimiento-y-calidad-de-fibra-1}
 
-\subsubsection{Características morfológicas cualitativas}\label{caracteruxedsticas-morfoluxf3gicas-cualitativas}
+\subsubsection{Caracteres morfológicos cualitativos}\label{caracteres-morfoluxf3gicos-cualitativos}
 
-La tabla \ref{tab:tabla-descriptores} detalla las características de las entradas del banco de germoplasma de algodón evaluadas. En términos de la forma de la planta, el 61,5\% fueron cilíndricas y el 38,5\% fueron cónicas. En cuanto al aspecto de la canopia, se destacaron las categorías ``medio'' (69,2\%) y ``abierta'' (23,1\%). Sin embargo, algunas antradas presentaron una canopia ``compacta'' (7,7\%), como los genotipos BGSP-00166 y BGSP-00194. El tipo de floración varió entre individual (23,1\%), agrupada (7,7\%) o medio agrupada (69,2\%). Las hojas se presentan principalmente en forma palmada (96,1\%) y plana (96,1\%), y el resto en forma digitada (3,9\%) y en copa (3,9\%) , con niveles variados de pubescencia (11,5\% para pubescencia escasa y fuerte, y 76,9\% para pubescencia media). Solo la entrada BGSP-00514 presentó forma digitada o también conocida como tipo ``Okra''. En todas las entradas, el tipo de bráctea es normal, mientras que la forma de la bocha varió entre cónica (88,5\%), elíptica (7,7\%) y redonda (3,8\%).
+La distribución de frecuencias de los descriptores morfológicos cualitativos evaluados entre las accesiones se presenta en la Figura \ref{fig:frecuancia-cluster-juntos}. La forma de cápsula fue predominantemente ovoide (88,5\%), seguida por circular (7,7\%) y elíptica ancha (3,8\%). Todas las accesiones presentaron brácteas normales. El tipo de canopia fue mayormente intermedio (69,2\%) y abierto (23,1\%), observándose escasas formas compactas (7,7\%).
+
+En cuanto al tipo de floración, las plantas semicompactas fueron las más frecuentes (69,2\%), seguidas por no agrupadas (23,1\%) y agrupadas (7,7\%). La lámina foliar fue mayormente plana (96,1\%) y las hojas predominantemente palmeadas (96,1\%), registrándose una pequeña proporción de hojas cóncavas (3,9\%) y tipo okra (3,9\%). La pubescencia fue principalmente intermedia (76,9\%), mientras que los niveles débil y fuerte representaron cada uno el 11,5\%. Finalmente, la forma de planta fue predominantemente cilíndrica (61,5\%) y cónica (38,5\%).
+
+\begin{figure}
+\includegraphics[width=300px]{figure/chap1/Para_compuestas/Graficos_Combinados_Final_recortado} \caption{Diversidad morfológica y agrupamiento de 26 accesiones de algodón. (1) Distribución de frecuencia de descriptores morfológicos cualitativos: forma de cápsula, tipo de bráctea, tipo de canopia, tipo de floración, tipo de lámina, pubescencia y forma de hoja, y arquitectura de planta. Las barras indican el porcentaje de accesiones por categoría. (2) Mapa de calor y análisis de agrupamiento jerárquico basado en la distancia de Gower, integrando rasgos morfológicos, fenológicos y de rendimiento. Los dendrogramas se generaron mediante el método Ward.D. Los asteriscos señalan las ocho accesiones contrastantes seleccionadas para los análisis fisiológicos y de partición de biomasa.}\label{fig:frecuancia-cluster-juntos}
+\end{figure}
+
+Estos descriptores reflejan diferencias cualitativas observadas bajo condiciones de invernadero y deben interpretarse como indicadores exploratorios de diversidad fenotipica. La combinación de atributos tales como tipo de canopia, arquitectura de floración y morfología foliar sugiere la existencia de variabilidad estructural potencialmente relevante para la intercepción lumínica, ventilación del dosel y adaptación a sistemas de manejo intensivo. El detalle completo de los descriptores evaluados se presenta en la Tabla \ref{tab:tabla-descriptores}.
 
 \begin{table}[!h]
 \centering\centering
-\caption{\label{tab:tabla-descriptores}Descriptores}
+\caption{\label{tab:tabla-descriptores}Descriptores morfológicos evaluados en 26 accesiones de algodón (\emph{Gossypium hirsutum}), incluyendo caracteres cualitativos asociados a características de la planta, la hoja, las brácteas y la cápsula.}
 \centering
 \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
 \fontsize{12}{14}\selectfont
@@ -583,15 +730,13 @@ SP 6565 & Cilíndrica & Medio & Medio Agrupada & Palmada & Plana & Media & Norma
 \end{tabular}}
 \end{table}
 
-\subsubsection{Características morfológicas cuantitativas, rendimiento y sus componentes y calidad de fibra}\label{caracteruxedsticas-morfoluxf3gicas-cuantitativas-rendimiento-y-sus-componentes-y-calidad-de-fibra}
+\subsubsection{Caracteres morfológicos cuantitativos, rendimiento, sus componentes y calidad de fibra}\label{caracteres-morfoluxf3gicos-cuantitativos-rendimiento-sus-componentes-y-calidad-de-fibra}
 
-La tabla \ref{tab:tabla-datos-conjuntos} muestra los valores medios de las características morfológicas evaluadas de las entradas del banco de germoplasma de algodón (\emph{Gossypium hirsutum} L.), incluyendo la altura de planta (AP), número de nudos (NN), número de ramas vegetativas (NRV), número de ramas reproductivas (NRR), nudos a la primera rama reproductiva (N1RR), altura a la primera rama reproductiva (A1RR) y distancia de la primera posición al tallo principal (D1P). Los valores de estos parámetros variaron significativamente entre las entradas, con alturas de planta que oscilaron entre 89,0 cm y 126,3 cm, y números de nudos entre 13,0 y 17,0. El número de ramas vegetativas fluctuaron entre 0,3 y 2,7, mientras que el número de ramas reproductivas varió entre 9,7 y 13,3. Los nudos a la primera rama reproductiva estuvieron entre 3,7 a 5,7, y la altura a la primera rama reproductiva varió de 25,0 cm a 40,7 cm. La distancia de la primera posición al tallo principal osciló entre 3,9 cm y 14,3 cm.
-
-La tabla \ref{tab:tabla-datos-conjuntos} también presenta un resumen de las características de rendimiento, calidad de fibra y fenología de las entradas. Los parámetros medidos incluyen rendimiento bruto de algodón (RB), rendimiento de fibra (RF), rendimiento de fibra al desmote (RFD), peso promedio de capullos (PC), número de capullos (NC), longitud promedio de fibra de la mitad superior (UHML), resistencia de las fibras (Str), micronaire (Mic), índice de uniformidad de fibras (IU), días a primer pimpollo (DPP), días a primera flor (DPF), días a cut out (DCO), días a primera cápsula abierta (DPCA) y días a fin de ciclo (DFC). Los valores muestran una amplia variabilidad entre las entradas, con rendimientos brutos de algodón que oscilaron entre 14,3 g planta\textsuperscript{-1} y 33,5 g planta\textsuperscript{-1}, rendimientos de fibra que varió de 4,6 g planta\textsuperscript{-1} a 12,3 g planta\textsuperscript{-1}, peso promedio de capullo entre 2,6 g a 4,7 g y número de capullos entre 4,7 a 8,7. La calidad de la fibra se refleja en características como UHML, que varió de 25,1 mm a 33,9 mm, y la resistencia de las fibras, que osciló entre 21,5 g tex\textsuperscript{-1} y 37,6 g tex\textsuperscript{-1}. En términos fenológicos, los días a primer pimpollo varió de 22 a 27 días, los días a primera flor de 49 a 55 días, los días a cut out de 73 a 80 días, los días a primera cápsula abierta de 113 a 137 días, y los días a fin de ciclo de 161 a 164 días.
+Los valores medios de los caracteres morfológicos cuantitativos se presentan en la Tabla \ref{tab:tabla-datos-conjuntos}. Se detectaron diferencias significativas entre accesiones para todos los caracteres evaluados.
 
 \begin{landscape}\begin{table}[!h]
 \centering
-\caption{\label{tab:tabla-datos-conjuntos}Datos conjuntos...}
+\caption{\label{tab:tabla-datos-conjuntos}Caracteres morfológicos cuantitativos, fenológicos, componentes del rendimiento y atributos de calidad de fibra evaluados en 26 accesiones de algodón (\emph{Gossypium hirsutum}), mostrando valores medios, errores estándar (entre paréntesis) y la prueba de diferencia mínima significativa (L.S.D) de Fisher.}
 \centering
 \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
 \begin{threeparttable}
@@ -602,37 +747,37 @@ La tabla \ref{tab:tabla-datos-conjuntos} también presenta un resumen de las car
 Entradas & AP & NN & NRV & NRR & N1RR & A1RR & D1P & RB & RF & RFD & PC & NC & UHML & Str & Mic & IU & DPP & DPF & DCO & DPCA & DFC\\
 \midrule
  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \vphantom{1} & \\
-BGSP-00028 & 106,3 (5,5) & 13,3 (0,9) & 1,0 (0,6) & 10,7 (0,7) & 3,7 (0,3) & 25,3 (0,7) & 9,3 (0,7) & 24,1 (2,0) & 8,7 (0,6) & 36,5 (0,7) & 4,3 (0,3) & 5,7 (0,3) & 30,7 & 34,0 & 3,1 & 84,1 & 25 & 51 & 74 & 118 & 163\\
-BGSP-00067 & 102,0 (4,0) & 14,7 (0,7) & 1,3 (0,3) & 11,0 (0,6) & 4,7 (0,3) & 27,0 (1,7) & 11,0 (1,5) & 23,3 (3,3) & 8,2 (1,0) & 36,0 (1,9) & 2,8 (0,2) & 8,3 (1,2) & 26,8 & 37,0 & 2,9 & 80,8 & 25 & 54 & 74 & 128 & 163\\
-BGSP-00070 & 109,3 (0,3) & 14,3 (0,3) & 1,3 (0,3) & 9,7 (0,3) & 5,7 (0,7) & 40,7 (4,2) & 9,7 (1,9) & 19,9 (1,3) & 7,7 (0,8) & 39,6 (0,8) & 3,4 (0,3) & 6,0 (0,6) & 32,5 & 31,0 & 3,8 & 84,6 & 27 & 53 & 76 & 128 & 163\\
-BGSP-00072 & 113,3 (4,3) & 17,0 (0,0) & 1,3 (0,3) & 13,3 (0,3) & 4,7 (0,3) & 27,3 (3,2) & 7,3 (1,8) & 26,3 (2,2) & 9,8 (0,9) & 38,3 (0,6) & 3,5 (0,4) & 7,7 (0,3) & 28,1 & 28,2 & 4,3 & 82,6 & 25 & 54 & 80 & 130 & 162\\
+BGSP-00028 & 106,3 (5,5) & 13,3 (0,9) & 1,0 (0,6) & 10,7 (0,7) & 3,7 (0,3) & 25,3 (0,7) & 9,3 (0,7) & 24,1 (2,0) & 8,7 (0,6) & 36,5 (0,7) & 4,3 (0,3) & 5,7 (0,3) & 30,7 & 34,0 & 3,1 & 84,1 & 24 & 54 & 72 & 101 & 126\\
+BGSP-00067 & 102,0 (4,0) & 14,7 (0,7) & 1,3 (0,3) & 11,0 (0,6) & 4,7 (0,3) & 27,0 (1,7) & 11,0 (1,5) & 23,3 (3,3) & 8,2 (1,0) & 36,0 (1,9) & 2,8 (0,2) & 8,3 (1,2) & 26,8 & 37,0 & 2,9 & 80,8 & 21 & 53 & 72 & 101 & 133\\
+BGSP-00070 & 109,3 (0,3) & 14,3 (0,3) & 1,3 (0,3) & 9,7 (0,3) & 5,7 (0,7) & 40,7 (4,2) & 9,7 (1,9) & 19,9 (1,3) & 7,7 (0,8) & 39,6 (0,8) & 3,4 (0,3) & 6,0 (0,6) & 32,5 & 31,0 & 3,8 & 84,6 & 25 & 52 & 76 & 104 & 123\\
+BGSP-00072 & 113,3 (4,3) & 17,0 (0,0) & 1,3 (0,3) & 13,3 (0,3) & 4,7 (0,3) & 27,3 (3,2) & 7,3 (1,8) & 26,3 (2,2) & 9,8 (0,9) & 38,3 (0,6) & 3,5 (0,4) & 7,7 (0,3) & 28,1 & 28,2 & 4,3 & 82,6 & 24 & 48 & 69 & 100 & 122\\
 \addlinespace
-BGSP-00088 & 104,3 (5,8) & 14,3 (0,7) & 1,7 (0,3) & 10,7 (0,3) & 4,7 (0,3) & 28,3 (2,7) & 14,3 (1,2) & 31,0 (3,2) & 11,3 (1,1) & 37,1 (0,4) & 4,4 (0,2) & 7,0 (0,6) & 31,6 & 36,5 & 3,5 & 86,2 & 25 & 54 & 78 & 135 & 163\\
-BGSP-00126 & 126,3 (3,8) & 14,9 (0,2) & 1,5 (0,2) & 11,3 (0,3) & 4,6 (0,1) & 37,4 (1,4) & 8,9 (0,9) & 16,0 (0,6) & 6,6 (0,3) & 42,9 (0,3) & 2,7 (0,2) & 6,0 (0,3) & 29,9 & 32,4 & 2,8 & 83,5 & 25 & 54 & 79 & 132 & 163\\
-BGSP-00145 & 89,0 (4,5) & 14,3 (0,3) & 1,0 (0,6) & 11,3 (0,3) & 4,0 (0,0) & 25,7 (0,9) & 9,7 (1,8) & 16,1 (3,1) & 6,1 (1,1) & 38,6 (0,7) & 3,6 (0,6) & 4,7 (0,9) & 26,9 & 26,6 & 3,5 & 80,8 & 25 & 52 & 73 & 121 & 163\\
-BGSP-00159 & 104,3 (3,6) & 14,3 (0,3) & 1,1 (0,2) & 11,0 (0,2) & 4,3 (0,2) & 31,8 (1,9) & 11,4 (0,6) & 14,3 (0,6) & 5,1 (0,2) & 36,8 (0,6) & 2,7 (0,1) & 5,2 (0,2) & 30,0 & 34,4 & 2,5 & 82,7 & 22 & 49 & 74 & 114 & 161\\
-BGSP-00166 & 109,0 (3,0) & 15,2 (0,2) & 0,8 (0,2) & 11,8 (0,3) & 4,4 (0,2) & 30,6 (1,2) & 3,9 (0,6) & 18,2 (0,5) & 5,5 (0,2) & 31,1 (0,4) & 3,6 (0,1) & 5,1 (0,2) & 33,9 & 37,6 & 2,5 & 86,1 & 23 & 52 & 74 & 124 & 163\\
+BGSP-00088 & 104,3 (5,8) & 14,3 (0,7) & 1,7 (0,3) & 10,7 (0,3) & 4,7 (0,3) & 28,3 (2,7) & 14,3 (1,2) & 31,0 (3,2) & 11,3 (1,1) & 37,1 (0,4) & 4,4 (0,2) & 7,0 (0,6) & 31,6 & 36,5 & 3,5 & 86,2 & 27 & 52 & 72 & 101 & 123\\
+BGSP-00126 & 126,3 (3,8) & 14,9 (0,2) & 1,5 (0,2) & 11,3 (0,3) & 4,6 (0,1) & 37,4 (1,4) & 8,9 (0,9) & 16,0 (0,6) & 6,6 (0,3) & 42,9 (0,3) & 2,7 (0,2) & 6,0 (0,3) & 29,9 & 32,4 & 2,8 & 83,5 & 21 & 51 & 76 & 105 & 122\\
+BGSP-00145 & 89,0 (4,5) & 14,3 (0,3) & 1,0 (0,6) & 11,3 (0,3) & 4,0 (0,0) & 25,7 (0,9) & 9,7 (1,8) & 16,1 (3,1) & 6,1 (1,1) & 38,6 (0,7) & 3,6 (0,6) & 4,7 (0,9) & 26,9 & 26,6 & 3,5 & 80,8 & 21 & 54 & 69 & 100 & 126\\
+BGSP-00159 & 104,3 (3,6) & 14,3 (0,3) & 1,1 (0,2) & 11,0 (0,2) & 4,3 (0,2) & 31,8 (1,9) & 11,4 (0,6) & 14,3 (0,6) & 5,1 (0,2) & 36,8 (0,6) & 2,7 (0,1) & 5,2 (0,2) & 30,0 & 34,4 & 2,5 & 82,7 & 21 & 47 & 70 & 98 & 119\\
+BGSP-00166 & 109,0 (3,0) & 15,2 (0,2) & 0,8 (0,2) & 11,8 (0,3) & 4,4 (0,2) & 30,6 (1,2) & 3,9 (0,6) & 18,2 (0,5) & 5,5 (0,2) & 31,1 (0,4) & 3,6 (0,1) & 5,1 (0,2) & 33,9 & 37,6 & 2,5 & 86,1 & 22 & 50 & 68 & 100 & 122\\
 \addlinespace
-BGSP-00177 & 103,7 (3,3) & 14,3 (0,3) & 1,7 (0,3) & 10,7 (0,3) & 4,7 (0,3) & 32,7 (3,4) & 13,7 (1,7) & 24,5 (2,2) & 7,9 (0,8) & 33,0 (0,4) & 4,2 (0,8) & 6,0 (0,6) & 29,2 & 30,7 & 4,2 & 82,9 & 26 & 53 & 75 & 127 & 164\\
-BGSP-00192 & 101,3 (5,8) & 15,0 (0,0) & 1,7 (0,3) & 11,0 (0,0) & 5,0 (0,0) & 29,0 (2,1) & 11,3 (0,9) & 18,7 (3,3) & 7,1 (1,1) & 37,9 (2,0) & 3,3 (0,4) & 5,7 (0,3) & 28,2 & 31,9 & 3,5 & 83,3 & 25 & 54 & 76 & 124 & 162\\
-BGSP-00193 & 106,7 (5,5) & 15,3 (0,3) & 2,7 (0,3) & 11,3 (0,3) & 5,0 (0,0) & 30,7 (0,9) & 8,0 (1,7) & 29,4 (3,9) & 10,9 (1,4) & 38,1 (1,8) & 4,2 (0,6) & 7,0 (0,0) & 30,2 & 33,8 & 3,5 & 85,5 & 25 & 55 & 78 & 137 & 162\\
-BGSP-00194 & 92,7 (3,2) & 14,7 (0,3) & 2,3 (0,3) & 10,7 (0,3) & 5,0 (0,0) & 31,3 (0,7) & 5,7 (3,2) & 24,0 (3,1) & 9,6 (1,4) & 40,9 (0,8) & 3,7 (0,4) & 6,7 (0,9) & 29,9 & 32,6 & 3,7 & 85,0 & 25 & 55 & 75 & 118 & 163\\
-BGSP-00207 & 105,0 (8,5) & 15,3 (0,2) & 0,7 (0,2) & 12,2 (0,2) & 4,2 (0,1) & 29,4 (0,8) & 10,1 (1,0) & 16,2 (0,6) & 6,7 (0,2) & 43,6 (0,5) & 2,8 (0,1) & 5,8 (0,2) & 28,6 & 28,4 & 2,8 & 83,2 & 23 & 52 & 79 & 135 & 164\\
+BGSP-00177 & 103,7 (3,3) & 14,3 (0,3) & 1,7 (0,3) & 10,7 (0,3) & 4,7 (0,3) & 32,7 (3,4) & 13,7 (1,7) & 24,5 (2,2) & 7,9 (0,8) & 33,0 (0,4) & 4,2 (0,8) & 6,0 (0,6) & 29,2 & 30,7 & 4,2 & 82,9 & 24 & 52 & 69 & 103 & 123\\
+BGSP-00192 & 101,3 (5,8) & 15,0 (0,0) & 1,7 (0,3) & 11,0 (0,0) & 5,0 (0,0) & 29,0 (2,1) & 11,3 (0,9) & 18,7 (3,3) & 7,1 (1,1) & 37,9 (2,0) & 3,3 (0,4) & 5,7 (0,3) & 28,2 & 31,9 & 3,5 & 83,3 & 22 & 51 & 69 & 103 & 123\\
+BGSP-00193 & 106,7 (5,5) & 15,3 (0,3) & 2,7 (0,3) & 11,3 (0,3) & 5,0 (0,0) & 30,7 (0,9) & 8,0 (1,7) & 29,4 (3,9) & 10,9 (1,4) & 38,1 (1,8) & 4,2 (0,6) & 7,0 (0,0) & 30,2 & 33,8 & 3,5 & 85,5 & 27 & 54 & 72 & 101 & 133\\
+BGSP-00194 & 92,7 (3,2) & 14,7 (0,3) & 2,3 (0,3) & 10,7 (0,3) & 5,0 (0,0) & 31,3 (0,7) & 5,7 (3,2) & 24,0 (3,1) & 9,6 (1,4) & 40,9 (0,8) & 3,7 (0,4) & 6,7 (0,9) & 29,9 & 32,6 & 3,7 & 85,0 & 23 & 55 & 72 & 100 & 133\\
+BGSP-00207 & 105,0 (8,5) & 15,3 (0,2) & 0,7 (0,2) & 12,2 (0,2) & 4,2 (0,1) & 29,4 (0,8) & 10,1 (1,0) & 16,2 (0,6) & 6,7 (0,2) & 43,6 (0,5) & 2,8 (0,1) & 5,8 (0,2) & 28,6 & 28,4 & 2,8 & 83,2 & 25 & 54 & 76 & 99 & 124\\
 \addlinespace
-BGSP-00269 & 113,0 (3,7) & 14,7 (0,2) & 1,2 (0,2) & 11,2 (0,2) & 4,4 (0,1) & 34,2 (1,6) & 8,3 (0,8) & 16,9 (0,5) & 7,1 (0,3) & 43,7 (0,5) & 2,9 (0,2) & 6,1 (0,3) & 29,2 & 33,4 & 3,9 & 84,1 & 23 & 52 & 75 & 133 & 163\\
-BGSP-00425 & 105,2 (3,3) & 13,8 (0,1) & 0,9 (0,3) & 10,8 (0,1) & 4,0 (0,0) & 25,5 (0,7) & 8,4 (0,9) & 15,1 (0,5) & 4,6 (0,2) & 31,5 (0,3) & 2,6 (0,1) & 5,8 (0,3) & 32,1 & 32,6 & 2,3 & 82,2 & 25 & 53 & 73 & 130 & 163\\
-BGSP-00428 & 105,3 (7,3) & 15,3 (0,3) & 0,7 (0,3) & 12,0 (0,6) & 4,3 (0,3) & 28,0 (2,9) & 8,7 (2,4) & 21,4 (3,6) & 8,7 (1,4) & 40,1 (0,4) & 4,3 (0,7) & 5,0 (0,6) & 25,1 & 23,1 & 4,0 & 80,0 & 23 & 49 & 74 & 113 & 163\\
-BGSP-00514 & 99,0 (8,0) & 16,0 (0,0) & 2,7 (0,3) & 12,3 (0,3) & 4,7 (0,3) & 25,0 (1,5) & 11,7 (1,7) & 28,0 (2,8) & 11,7 (1,2) & 42,3 (0,4) & 4,2 (0,2) & 6,7 (0,9) & 29,0 & 32,0 & 2,7 & 83,6 & 23 & 52 & 76 & 117 & 161\\
-BGSP-00715 & 102,0 (8,5) & 14,7 (0,9) & 0,3 (0,3) & 11,7 (0,9) & 4,0 (0,0) & 27,3 (2,3) & 13,0 (1,2) & 24,0 (3,6) & 9,8 (1,2) & 41,6 (1,2) & 3,4 (0,4) & 7,0 (0,6) & 27,2 & 31,7 & 4,0 & 83,5 & 24 & 55 & 78 & 134 & 163\\
+BGSP-00269 & 113,0 (3,7) & 14,7 (0,2) & 1,2 (0,2) & 11,2 (0,2) & 4,4 (0,1) & 34,2 (1,6) & 8,3 (0,8) & 16,9 (0,5) & 7,1 (0,3) & 43,7 (0,5) & 2,9 (0,2) & 6,1 (0,3) & 29,2 & 33,4 & 3,9 & 84,1 & 19 & 51 & 71 & 100 & 124\\
+BGSP-00425 & 105,2 (3,3) & 13,8 (0,1) & 0,9 (0,3) & 10,8 (0,1) & 4,0 (0,0) & 25,5 (0,7) & 8,4 (0,9) & 15,1 (0,5) & 4,6 (0,2) & 31,5 (0,3) & 2,6 (0,1) & 5,8 (0,3) & 32,1 & 32,6 & 2,3 & 82,2 & 20 & 50 & 71 & 101 & 122\\
+BGSP-00428 & 105,3 (7,3) & 15,3 (0,3) & 0,7 (0,3) & 12,0 (0,6) & 4,3 (0,3) & 28,0 (2,9) & 8,7 (2,4) & 21,4 (3,6) & 8,7 (1,4) & 40,1 (0,4) & 4,3 (0,7) & 5,0 (0,6) & 25,1 & 23,1 & 4,0 & 80,0 & 21 & 47 & 72 & 97 & 118\\
+BGSP-00514 & 99,0 (8,0) & 16,0 (0,0) & 2,7 (0,3) & 12,3 (0,3) & 4,7 (0,3) & 25,0 (1,5) & 11,7 (1,7) & 28,0 (2,8) & 11,7 (1,2) & 42,3 (0,4) & 4,2 (0,2) & 6,7 (0,9) & 29,0 & 32,0 & 2,7 & 83,6 & 21 & 55 & 72 & 101 & 133\\
+BGSP-00715 & 102,0 (8,5) & 14,7 (0,9) & 0,3 (0,3) & 11,7 (0,9) & 4,0 (0,0) & 27,3 (2,3) & 13,0 (1,2) & 24,0 (3,6) & 9,8 (1,2) & 41,6 (1,2) & 3,4 (0,4) & 7,0 (0,6) & 27,2 & 31,7 & 4,0 & 83,5 & 21 & 52 & 72 & 101 & 123\\
 \addlinespace
-BGSP-00748 & 105,7 (0,9) & 15,0 (0,0) & 1,7 (0,3) & 12,0 (0,0) & 4,0 (0,0) & 25,7 (1,2) & 12,0 (0,6) & 33,5 (1,8) & 12,3 (1,0) & 39,0 (2,4) & 4,4 (0,1) & 7,7 (0,3) & 26,3 & 21,5 & 3,9 & 80,9 & 23 & 52 & 74 & 135 & 164\\
-BGSP-00752 & 103,3 (5,2) & 15,3 (0,3) & 2,7 (0,3) & 11,3 (0,3) & 5,0 (0,0) & 29,3 (0,7) & 10,3 (0,9) & 27,2 (2,1) & 11,3 (1,2) & 42,1 (1,9) & 4,1 (0,1) & 6,7 (0,3) & 31,8 & 26,7 & 3,6 & 84,1 & 25 & 55 & 79 & 135 & 162\\
-BGSP-00755 & 97,3 (3,3) & 13,0 (0,0) & 2,7 (0,3) & 10,0 (0,0) & 4,0 (0,0) & 28,7 (0,3) & 10,3 (0,7) & 26,3 (2,0) & 10,0 (0,7) & 38,5 (0,8) & 4,7 (0,2) & 5,7 (0,7) & 29,8 & 31,4 & 3,3 & 84,2 & 25 & 53 & 75 & 124 & 163\\
-BGSP-00759 & 108,3 (5,0) & 14,0 (0,6) & 1,0 (0,6) & 10,0 (1,0) & 5,0 (0,6) & 38,3 (5,5) & 9,7 (2,4) & 24,6 (3,6) & 8,7 (1,5) & 38,3 (1,1) & 4,7 (0,6) & 5,7 (1,5) & 27,8 & 23,9 & 4,1 & 82,3 & 25 & 54 & 77 & 134 & 163\\
-BGSP-00779 & 112,3 (1,9) & 16,0 (0,0) & 1,3 (0,3) & 12,3 (0,3) & 4,7 (0,3) & 30,3 (1,8) & 11,7 (0,7) & 26,3 (1,5) & 10,4 (0,5) & 40,5 (0,7) & 3,0 (0,1) & 8,7 (0,3) & 30,2 & 31,5 & 2,7 & 84,4 & 25 & 55 & 76 & 126 & 161\\
+BGSP-00748 & 105,7 (0,9) & 15,0 (0,0) & 1,7 (0,3) & 12,0 (0,0) & 4,0 (0,0) & 25,7 (1,2) & 12,0 (0,6) & 33,5 (1,8) & 12,3 (1,0) & 39,0 (2,4) & 4,4 (0,1) & 7,7 (0,3) & 26,3 & 21,5 & 3,9 & 80,9 & 24 & 52 & 75 & 101 & 123\\
+BGSP-00752 & 103,3 (5,2) & 15,3 (0,3) & 2,7 (0,3) & 11,3 (0,3) & 5,0 (0,0) & 29,3 (0,7) & 10,3 (0,9) & 27,2 (2,1) & 11,3 (1,2) & 42,1 (1,9) & 4,1 (0,1) & 6,7 (0,3) & 31,8 & 26,7 & 3,6 & 84,1 & 24 & 52 & 75 & 101 & 123\\
+BGSP-00755 & 97,3 (3,3) & 13,0 (0,0) & 2,7 (0,3) & 10,0 (0,0) & 4,0 (0,0) & 28,7 (0,3) & 10,3 (0,7) & 26,3 (2,0) & 10,0 (0,7) & 38,5 (0,8) & 4,7 (0,2) & 5,7 (0,7) & 29,8 & 31,4 & 3,3 & 84,2 & 24 & 53 & 72 & 101 & 123\\
+BGSP-00759 & 108,3 (5,0) & 14,0 (0,6) & 1,0 (0,6) & 10,0 (1,0) & 5,0 (0,6) & 38,3 (5,5) & 9,7 (2,4) & 24,6 (3,6) & 8,7 (1,5) & 38,3 (1,1) & 4,7 (0,6) & 5,7 (1,5) & 27,8 & 23,9 & 4,1 & 82,3 & 27 & 55 & 75 & 101 & 133\\
+BGSP-00779 & 112,3 (1,9) & 16,0 (0,0) & 1,3 (0,3) & 12,3 (0,3) & 4,7 (0,3) & 30,3 (1,8) & 11,7 (0,7) & 26,3 (1,5) & 10,4 (0,5) & 40,5 (0,7) & 3,0 (0,1) & 8,7 (0,3) & 30,2 & 31,5 & 2,7 & 84,4 & 20 & 51 & 75 & 103 & 123\\
 \addlinespace
-SP 41255 & 122,3 (2,9) & 15,2 (0,1) & 1,2 (0,2) & 11,8 (0,2) & 4,4 (0,1) & 32,7 (1,1) & 11,2 (0,8) & 20,7 (0,7) & 8,8 (0,4) & 44,7 (0,5) & 2,8 (0,1) & 7,3 (0,3) & 30,9 & 32,3 & 3,0 & 84,1 & 23 & 52 & 76 & 124 & 162\\
-SP 6565 & 120,8 (1,9) & 15,7 (0,2) & 1,3 (0,2) & 12,2 (0,2) & 4,5 (0,2) & 35,8 (1,6) & 8,4 (0,6) & 17,3 (0,5) & 6,9 (0,2) & 41,2 (0,3) & 2,6 (0,1) & 6,8 (0,3) & 29,9 & 33,3 & 3,0 & 84,6 & 25 & 55 & 79 & 131 & 162\\
+SP 41255 & 122,3 (2,9) & 15,2 (0,1) & 1,2 (0,2) & 11,8 (0,2) & 4,4 (0,1) & 32,7 (1,1) & 11,2 (0,8) & 20,7 (0,7) & 8,8 (0,4) & 44,7 (0,5) & 2,8 (0,1) & 7,3 (0,3) & 30,9 & 32,3 & 3,0 & 84,1 & 19 & 47 & 74 & 98 & 121\\
+SP 6565 & 120,8 (1,9) & 15,7 (0,2) & 1,3 (0,2) & 12,2 (0,2) & 4,5 (0,2) & 35,8 (1,6) & 8,4 (0,6) & 17,3 (0,5) & 6,9 (0,2) & 41,2 (0,3) & 2,6 (0,1) & 6,8 (0,3) & 29,9 & 33,3 & 3,0 & 84,6 & 20 & 50 & 71 & 100 & 124\\
  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \\
 p-valor & <0,001 & <0,001 & <0,001 & <0,001 & <0,001 & <0,001 & <0,001 & <0,001 & <0,001 & <0,001 & <0,001 & <0,001 & - & - & - & - & - & - & - & - & -\\
 L.S.D Fisher & 17,96 & 1 & 0,99 & 1,05 & 0,74 & 6,29 & 3,89 & 4,3 & 1,76 & 2,46 & 0,76 & 1,42 & - & - & - & - & - & - & - & - & -\\
@@ -646,23 +791,23 @@ L.S.D Fisher & 17,96 & 1 & 0,99 & 1,05 & 0,74 & 6,29 & 3,89 & 4,3 & 1,76 & 2,46 
 \end{table}
 \end{landscape}
 
-En la Figura \ref{fig:cluster} se muestra un \emph{heatmap} que representa las distancias calculadas mediante la métrica de \emph{Gower}, acompañado de los dendrogramas correspondientes, los cuales fueron generados mediante el análisis jerárquico de conglomerados utilizando el método de agrupamiento \emph{Ward.D}. Esta herramienta fue utilizada para la identificación y selección de entradas contrastantes para profundizar el estudio. A partir de los patrones observados, se distinguieron dos agrupamientos principales, y se seleccionaron ocho accesiones señaladas con un asterisco: cuatro provenientes de un agrupamiento y las otras cuatro del segundo, asegurando una representación adecuada de la diversidad morfológica presente en las entradas evaluadas.
+La altura de planta (HP) varió entre 89,0 y 126,3 cm, mientras que el número de nudos en el tallo principal (STEMNN) osciló entre 13,0 y 17,0. El número de ramas monopodiales (MONON) presentó un rango de 0,3 a 2,7, en tanto que el número de nudos en ramas simpódicas (SYMNN) varió entre 9,7 y 13,3. La posición de la primera rama fructífera en número de nudo (FFBN) fluctuó entre 3,7 y 5,7, mientras que su altura (FFBH) varió entre 25,0 y 40,7 cm. La distancia desde la primera posición reproductiva al tallo principal (DFRP) osciló entre 3,9 y 14,3 cm.
 
-\begin{figure}
-\centering
-\pandocbounded{\includegraphics[keepaspectratio]{Tesis_Dileo_files/figure-latex/cluster-1.pdf}}
-\caption{\label{fig:cluster}Heatmap que muestra las distancias calculadas entre los datos utilizando la métrica de Gower.}
-\end{figure}
+El rendimiento en algodón en bruto (SCY) mostró valores entre 14,3 y 33,5 g planta⁻¹, mientras que el rendimiento de fibra (LY) varió entre 4,6 y 12,3 g planta⁻¹. El peso de cápsula (BW) osciló entre 2,6 y 4,7 g y el número de cápsulas por planta (BN) entre 4,7 y 8,7.
 
-\subsection{\texorpdfstring{Caracterización de ocho entradas seleccionadas de algodón (\emph{Gossypium hirsutum} L.)}{Caracterización de ocho entradas seleccionadas de algodón (Gossypium hirsutum L.)}}\label{caracterizaciuxf3n-de-ocho-entradas-seleccionadas-de-algoduxf3n-gossypium-hirsutum-l.-1}
+En términos de calidad tecnológica, la longitud de fibra (FL) varió entre 25,1 y 33,9 mm y la resistencia (FS) entre 21,5 y 37,6 g tex⁻¹. Los caracteres fenológicos evidenciaron también amplia variabilidad, con rangos de 19--27 días a primer pimpollo (DFS), 47--55 días a primera flor (DFF), 68--76 días a \emph{cut-out} (DCO), 97--105 días a primera cápsula abierta (DBO) y 118--133 días a madurez (DM).
 
-\subsubsection{Características de rendimiento y sus componentes y calidad de fibra}\label{caracteruxedsticas-de-rendimiento-y-sus-componentes-y-calidad-de-fibra}
+Para integrar simultáneamente todos los caracteres evaluados se realizó un análisis de conglomerados jerárquicos utilizando la distancia de Gower. El mapa de calor y los dendrogramas obtenidos mediante el método Ward.D se presentan en la Figura \ref{fig:frecuancia-cluster-juntos}. Se distinguieron dos agrupamientos principales. El primero incluyó accesiones con forma de planta cónica y floración no agrupada, algunas de las cuales exhibieron calidad de fibra superior. El segundo agrupó accesiones con canopia más compacta y floración agrupada, generalmente asociadas con mayor porcentaje de fibra y mayor número de cápsulas.
 
-Las entradas seleccionadas para una evaluación más detallada de las características de rendimiento y calidad de fibra se indican con un asterisco en la Tabla \ref{tab:tablaEntradas}. La selección se llevó a cabo considerando principalmente aquellas entradas que pertenecen a agrupamientos distintos según el análisis jerárquico de conglomerados (Figura \ref{fig:cluster}), así como los datos presentados en la Tabla \ref{tab:tabla-datos-conjuntos}. Se priorizó la elección de entradas con contrastes significativos en términos de rendimiento y sus componentes, especialmente RFD, además de calidad de fibra. Asimismo, se incluyeron algunas accesiones con baja NRV y una estructura de canopia compacta, como en el caso de la entrada BGSP-00166.
+\subsection{Análisis de rendimiento, calidad de fibra, variables fisiológicas y partición de biomasa en accesiones contrastantes}\label{anuxe1lisis-de-rendimiento-calidad-de-fibra-variables-fisioluxf3gicas-y-particiuxf3n-de-biomasa-en-accesiones-contrastantes}
+
+\subsubsection{Componentes del rendimiento y calidad de fibra}\label{componentes-del-rendimiento-y-calidad-de-fibra}
+
+Las accesiones seleccionadas para el análisis detallado de rendimiento y calidad de fibra se indican con un asterisco en la Tabla 1. La selección se realizó considerando su pertenencia a distintos grupos identificados en el análisis de conglomerados jerárquicos (Figura \ref{fig:frecuancia-cluster-juntos}), así como los valores extremos observados en la Tabla \ref{tab:table-charac} . Se priorizaron accesiones con contrastes marcados en rendimiento de fibra (LY), porcentaje de fibra (LP), número de cápsulas por planta (BN) y atributos tecnológicos, incorporando además genotipos con arquitectura compacta y menor desarrollo monopodial, como BGSP-00166, por su potencial interés agronómico en sistemas mecanizados.
 
 \begin{table}[!h]
 \centering\centering
-\caption{\label{tab:table-charac}Valores medios, error estándar (entre paréntesis) y prueba L.S.D. (diferencia mínima significativa) de Fisher para rendimiento de fibra, sus componentes y calidad.}
+\caption{\label{tab:table-charac}Valores medios, error estándar (entre paréntesis) y prueba de diferencia mínima significativa (L.S.D) de Fisher para rendimiento de fibra, sus componentes y calidad en ocho entradas contrastantes de algodon}
 \centering
 \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
 \fontsize{14}{16}\selectfont
@@ -696,21 +841,183 @@ Fisher’s L.S.D & 3,68 & 1,91 & 1,99 & 0,57 & 1,19 & 1,35 & 0,75 & 4,04 & 1,38 
 \end{threeparttable}}
 \end{table}
 
-Las entradas de algodón mostraron diferencias significativas en todos los rasgos relacionados con el rendimiento y la calidad de la fibra (p \textless{} 0,05, Tabla \ref{tab:table-charac}).
+El análisis estadístico evidenció diferencias significativas (p \textless{} 0,05) entre accesiones para todos los caracteres vinculados al rendimiento y calidad de fibra (Tabla 4), lo que confirma la existencia de variabilidad genética aprovechable dentro del germoplasma evaluado.
 
-La entrada SP-41255 presentó los valores medios más elevados para RB, RF, RFD y NC, con valores de 34,2 g planta\textsuperscript{-1}, 15,8 g planta\textsuperscript{-1}, 45,8 \%, y 9,2 capullos planta\textsuperscript{-1} respectivamente, sin embargo, presentó el valor medio más bajo de IS, con 7,7 g. BGSP-00159 tuvo la media más baja de RB con 26,2 g planta\textsuperscript{-1}. BGSP-00166 tuvo los valores medios más bajos para RF, RFD, MIC y NC con valores de 8,6 g planta\textsuperscript{-1}, 31,1 \%, 3,2 y 5,8 capullos planta\textsuperscript{-1} respectivamente, no obstante, presentó los valores medios más elevados de PC, IS, UHML, Str y IU con valores de 4,6 g capullo\textsuperscript{-1}, 11,5 g, 33,2 mm, 37,3 g tex\textsuperscript{-1} y 85,8 \% respectivamente. BGSP-00269 presentó los valores medios más bajos de PC, NSC y UHML, con valores de 3,4 g capullo\textsuperscript{-1}, 22,8 semilla capullo\textsuperscript{-1}, y 28,3 mm respectivamente, mientras que tuvo el valor medio más alto para IF y Mic con valores de 6,5 g y 4,3. BGSP-00425 tuvo la NSC media mas alta, con un 30,6 semillas cápsula\textsuperscript{-1} mientras que los valores medios más bajos para IF y IU con valores de 4,0 g y 82,2 \%, respectivamente. BGSP-00207 presentó los valores medios más bajos de UHML y Str con valores de 28,3 mm y 29,2 g tex\textsuperscript{-1} respectivamente. En particular, las accesiones BGSP-00166 y SP-41255 fueron significativamente diferentes para casi todos los caracteres estudiados excepto para NSC (p \textless{} 0,01).
+La accesión SP-41255 presentó los mayores valores medios para SCY (34,2 g planta⁻¹), LY (15,8 g planta⁻¹), LP (45,8 \%) y BN (9,2 cápsulas planta⁻¹), lo que refleja una estrategia productiva orientada a maximizar tanto la producción total como la eficiencia de desmote. Sin embargo, esta accesión exhibió el menor índice de semilla (SI = 7,7 g), indicando una mayor proporción de fibra respecto al peso de semilla.
 
-Estos resultados indican que existe variación fenotípica entre las accesiones de algodón tanto en términos de rendimiento como de calidad de la fibra.
+En contraste, BGSP-00159 registró el menor SCY (26,2 g planta⁻¹), mientras que BGSP-00166 presentó los valores más bajos de LY (8,6 g planta⁻¹), LP (31,1 \%), MIC (3,2) y BN (5,8 cápsulas planta⁻¹). No obstante, esta misma accesión mostró los valores más elevados de peso de cápsula (BW = 4,6 g cápsula⁻¹), SI (11,5 g), longitud de fibra (FL = 33,2 mm), resistencia (FS = 37,3 g tex⁻¹) y uniformidad (FU = 85,8 \%), configurando un perfil de alta calidad tecnológica asociado a menor productividad.
 
-En el análisis de componentes principales incluyendo todas las variables, el primer componente principal explicó el 45,6\% de la varianza de los datos, mientras que el segundo componente principal explicó el 21,9\% (Figura \ref{fig:img-PC}). Los rasgos más asociados con el primer componente fueron RB, Mic, RF, IF y NC, mientras que UHML, Str, IU, IS, NSC, PC y RFD fueron los más asociados con el segundo componente. Las entradas situadas en el cuadrante superior izquierdo fueron BGSP-00166, BGSP-00159 y BGSP-00425, estando estas entradas asociadas con valores más altos de calidad de fibra (UHML, Str, IU) y tamaño de semilla (IS) y valores más bajos en caracteres relacionados con el rendimiento como RB, RF, IF, NC, RFD. Las entradas situadas en el cuadrante inferior derecho como SP-41255, BGSP-00269, BGSP-00207 y BGSP-00126, mostraron un comportamiento opuesto a las descritas.
+BGSP-00269 presentó los menores valores de BW (3,4 g cápsula⁻¹), número de semillas por cápsula (SNPB = 22,8) y FL (28,3 mm), aunque exhibió los mayores valores de índice de fibra (LI = 6,5 g) y MIC (4,3). Por su parte, BGSP-00425 se destacó por el mayor SNPB (30,6 semillas cápsula⁻¹), pero presentó los valores más bajos de LI (4,0 g) y FU (82,2 \%). BGSP-00207 mostró los valores más bajos de FL (28,3 mm) y FS (29,2 g tex⁻¹). Es particularmente relevante que BGSP-00166 y SP-41255 difirieron significativamente en casi todos los caracteres evaluados, excepto en SNPB, lo que confirma su marcada divergencia fenotípica.
+
+El análisis de correlaciones de Spearman (Tabla S3) permitió profundizar en las relaciones entre caracteres. LY mostró una fuerte correlación positiva con BN, confirmando que el número de cápsulas constituye el principal determinante del rendimiento de fibra. También presentó correlaciones positivas moderadas con BW y LP, lo que indica que el incremento del rendimiento puede lograrse tanto por mayor número como por mayor peso individual de cápsulas y mayor proporción de fibra. Sin embargo, LY exhibió correlaciones negativas moderadas con FL, sugiriendo que el aumento del rendimiento puede asociarse a reducciones en longitud de fibra.
+
+LP presentó correlaciones positivas con LY y BN, pero negativas con SI, lo que sugiere que el aumento del porcentaje de fibra puede lograrse a expensas del peso de semilla.
+
+\subsubsection{Partición de biomasa, retención reproductiva y análisis fisiológico}\label{particiuxf3n-de-biomasa-retenciuxf3n-reproductiva-y-anuxe1lisis-fisioluxf3gico}
+
+La dinámica temporal de acumulación y partición de biomasa en ocho accesiones contrastantes se presenta en la Figura \ref{fig:img-Biomasa-Parcicion} . Durante las etapas tempranas de desarrollo (M1--M2), la biomasa vegetativa (VB), compuesta principalmente por tallos y hojas, representó la mayor proporción de materia seca total. A partir del inicio de floración (M3) y hacia madurez (M4), se observó un desplazamiento progresivo hacia una mayor asignación a estructuras reproductivas, evidenciando el cambio fisiológico desde crecimiento vegetativo hacia reproducción.
 
 \begin{figure}
-\includegraphics[width=400px]{figure/chap1/Para_compuestas/PCA_juntas} \caption{Biplot del análisis de componentes principales con puntos que representan las proyecciones de las accesiones (1) y las variables (2) en el espacio definido por las dos primeras dimensiones (Dim) o componentes principales. RB: rendimiento de algodón en bruto en g; RF: rendimiento de fibra en g; RFD: porcentaje de fibra en \%; PC: peso de capullo en g; NC: número de capullos por planta; IS: índice de semilla en g; IF: índice de fibra en g; NSC: número de semillas por capullo. UHML: longitud de fibra en mm; Str: resistencia de fibra en g tex-1; Mic: micronaire; IU: uniformidad de fibra en \%.}\label{fig:img-PC}
+\includegraphics[width=400px]{figure/chap1/Para_compuestas/Graficos_Biomasa_Particion} \caption{Dinámica temporal y asignación de biomasa por órgano en ocho accesiones contrastantes de algodón. 1) Variación temporal en M1 (primer botón floral), M2 (primera flor), M3 (primera cápsula abierta) y M4 (madurez) de la biomasa total, vegetativa y reproductiva. 2) Partición de biomasa entre órganos de la planta en madurez (M4). VB: biomasa vegetativa (tallo y ramas vegetativas); RB: biomasa reproductiva (ramas reproductivas, cápsula, semilla y fibra). Letras diferentes indican diferencias significativas entre accesiones en M4 según la prueba LSD de Fisher (p ≤ 0,05).}\label{fig:img-Biomasa-Parcicion}
 \end{figure}
 
-En particular, las entradas BGSP-00166 y SP-41255 presentaron más contraste en cuanto a los rasgos medidos. Estas accesiones mostraron valores diferentes para la mayoría de los rasgos medidos relacionados tanto con el rendimiento como con la calidad de la fibra. Por lo tanto, seleccionamos estas accesiones para realizar un cruce biparental y generar una población segregante para estimar los parámetros genéticos y, a continuación, seleccionar fenotipos prometedores para el rendimiento y los rasgos relacionados con la calidad.
+\begin{figure}
+\includegraphics[width=350px]{figure/chap1/Para_compuestas/Graficos_Retencion_Combinada} \caption{Patrones de retención reproductiva en ocho accesiones de algodón, mostrando la dinámica temporal y las diferencias finales en la retención global y en primera posición. 1) Dinámica de la retención global (GR) y de primera posición (R1P) a lo largo de las etapas fenológicas M2 (primera flor), M3 (primera cápsula abierta) y M4 (madurez). Los puntos representan valores medios de retención (\%). 2) Retención global y de primera posición en M4. Las barras indican media ± EE. Letras diferentes indican diferencias significativas entre accesiones según la prueba LSD de Fisher (p ≤ 0,05).}\label{fig:img-Retencion-Combinada}
+\end{figure}
 
-En la Tabla \ref{tab:correlation-greenhouse} se muestran los valores de correlación de Spearman para las caracteristicas de rendimiento de fibra, sus componentes y calidad de fibra.
+\begin{table}[!h]
+\centering
+\caption{\label{tab:AnovaBiomasaParticionRep2}Análisis de varianza (ANOVA) de la partición de biomasa total, vegetativa y reproductiva a lo largo de las etapas fenológicas (momentos M1–M4) en ocho entradas contrastantes de algodon. La biomasa vegetativa incluye tallo, hojas y ramas monopodiales (RMONO); mientras que la biomasa reproductiva incluye ramas simpodiales (RSIM), pimpollos (Pim), flores (F), bochas o cápsula verde (B), cápsula, semilla y fibra (F+S).}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\fontsize{11}{13}\selectfont
+\begin{tabular}[t]{llrrrl}
+\toprule
+\multicolumn{1}{c}{ } & \multicolumn{5}{c}{ANOVA} \\
+\cmidrule(l{3pt}r{3pt}){2-6}
+\textbf{Rasgo} & \textbf{Fuente} & \textbf{gl (num)} & \textbf{gl (den)} & \textbf{F} & \textbf{p-valor}\\
+\midrule
+Biomasa total & (Intercept) & 1 & 189 & 68.56 & <0.0001\\
+ & Momento & 3 & 21 & 96.60 & <0.0001\\
+ & Entradas & 7 & 189 & 5.27 & <0.0001\\
+ & Momento:Entradas & 21 & 189 & 2.14 & 0.0038\\
+1 Biomasa vegetativa & (Intercept) & 1 & 189 & 207.54 & <0.0001\\
+\addlinespace
+ & Momento & 3 & 21 & 173.37 & <0.0001\\
+ & Entradas & 7 & 189 & 4.86 & <0.0001\\
+ & Momento:Entradas & 21 & 189 & 1.81 & 0.0203\\
+1.1 Tallo & (Intercept) & 1 & 189 & 324.70 & <0.0001\\
+ & Momento & 3 & 21 & 236.76 & <0.0001\\
+\addlinespace
+ & Entradas & 7 & 189 & 5.83 & <0.0001\\
+ & Momento:Entradas & 21 & 189 & 2.49 & 0.0006\\
+1.2 Hojas & (Intercept) & 1 & 189 & 229.43 & <0.0001\\
+ & Momento & 3 & 21 & 40.32 & <0.0001\\
+ & Entradas & 7 & 189 & 1.13 & 0.3468\\
+\addlinespace
+ & Momento:Entradas & 21 & 189 & 1.93 & 0.0113\\
+1.3 RMONO & (Intercept) & 1 & 189 & 63.58 & <0.0001\\
+ & Momento & 3 & 21 & 21.54 & <0.0001\\
+ & Entradas & 7 & 189 & 4.83 & <0.0001\\
+ & Momento:Entradas & 21 & 189 & 1.69 & 0.0357\\
+\addlinespace
+2 Biomasa reproductiva & (Intercept) & 1 & 189 & 16.17 & <0.0001\\
+ & Momento & 3 & 21 & 63.73 & <0.0001\\
+ & Entradas & 7 & 189 & 1.33 & 0.2365\\
+ & Momento:Entradas & 21 & 189 & 0.81 & 0.7085\\
+2.1 RSIM & (Intercept) & 1 & 189 & 148.24 & <0.0001\\
+\addlinespace
+ & Momento & 3 & 21 & 122.94 & <0.0001\\
+ & Entradas & 7 & 189 & 2.35 & 0.0255\\
+ & Momento:Entradas & 21 & 189 & 1.43 & 0.1076\\
+2.2 Pim+F+B & (Intercept) & 1 & 189 & 84.18 & <0.0001\\
+ & Momento & 3 & 21 & 41.99 & <0.0001\\
+\addlinespace
+ & Entradas & 7 & 189 & 1.22 & 0.2913\\
+ & Momento:Entradas & 21 & 189 & 0.68 & 0.8489\\
+2.3 Capsula (M4) & (Intercept) & 1 & 47 & 12.16 & 0.0011\\
+ & Entradas & 7 & 47 & 1.55 & 0.1738\\
+2.4 F+S (M4) & (Intercept) & 1 & 47 & 14.71 & 0.0004\\
+\addlinespace
+ & Entradas & 7 & 47 & 0.68 & 0.6909\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\caption{\label{tab:Anova-retencion}Análisis de varianza (ANOVA) de la retención de estructuras reproductivas, incluyendo la retención global y la retención por posición (posiciones 1–3), evaluada a lo largo de los estadios fenológicos (Momentos M2–M4) en ocho entradas contrastantes de algodon}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\fontsize{11}{13}\selectfont
+\begin{tabular}[t]{llrrrl}
+\toprule
+\multicolumn{1}{c}{ } & \multicolumn{5}{c}{ANOVA} \\
+\cmidrule(l{3pt}r{3pt}){2-6}
+\textbf{Rasgo} & \textbf{Fuente} & \textbf{gl (num)} & \textbf{gl (den)} & \textbf{F} & \textbf{p-valor}\\
+\midrule
+Retención global & (Intercept) & 1 & 140 & 88.80 & <0.0001\\
+ & Momento & 2 & 14 & 52.48 & <0.0001\\
+ & Entradas & 7 & 140 & 3.50 & 0.0017\\
+ & Momento:Entradas & 14 & 140 & 2.16 & 0.0119\\
+Retencion de primeras posiciones & (Intercept) & 1 & 140 & 421.93 & <0.0001\\
+\addlinespace
+ & Momento & 2 & 14 & 89.19 & <0.0001\\
+ & Entradas & 7 & 140 & 1.48 & 0.1788\\
+ & Momento:Entradas & 14 & 140 & 1.93 & 0.0281\\
+Retencion de segundas posiciones & (Intercept) & 1 & 140 & 20.48 & <0.0001\\
+ & Momento & 2 & 14 & 9.15 & 0.0029\\
+\addlinespace
+ & Entradas & 7 & 140 & 2.71 & 0.0116\\
+ & Momento:Entradas & 14 & 140 & 1.18 & 0.2938\\
+Retencion de terceras posiciones & (Intercept) & 1 & 140 & 13.96 & 0.0003\\
+ & Momento & 2 & 14 & 6.54 & 0.0099\\
+ & Entradas & 7 & 140 & 1.08 & 0.3821\\
+\addlinespace
+ & Momento:Entradas & 14 & 140 & 0.97 & 0.4843\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+El análisis estadístico mostró efectos altamente significativos (p \textless{} 0,001) del momento, la accesión y su interacción (Tabla S4), lo que indica que las accesiones no solo difieren en magnitud de acumulación de biomasa, sino también en su patrón temporal de asignación.
+
+En madurez (M4), BGSP-00207 presentó la mayor acumulación en ramas reproductivas, mientras que BGSP-00166 mostró la menor acumulación tanto en ramas vegetativas como reproductivas, consistente con su arquitectura compacta. SP-41255 y BGSP-00126 acumularon mayor biomasa en ramas vegetativas, lo que sugiere una estrategia de crecimiento más expansiva previa a la transición reproductiva.
+
+La retención reproductiva (Figura \ref{fig:img-Retencion-Combinada}) mostró una disminución progresiva desde M2 hasta M4, reflejando competencia creciente por asimilados durante el llenado de cápsulas. Se observaron diferencias claras entre accesiones en retención global (GR) y de primera posición (R1P). BGSP-00269 y SP-41255 mantuvieron mayores valores de GR y R1P, indicando mayor eficiencia en establecimiento y mantenimiento de frutos tempranos, que suelen asociarse a mayor peso y mejor calidad de fibra.
+
+El análisis estadístico (Tabla S5) confirmó efectos significativos de momento y accesión para GR (p = 0,0017) y una interacción significativa momento × accesión (p = 0,0119), lo que indica diferencias genotípicas en la capacidad de retener estructuras reproductivas a lo largo del ciclo.
+
+Las variables fisiológicas (Figura \ref{fig:Graficos-photo-cond-spad} ) mostraron una disminución progresiva de la tasa fotosintética neta (P\_N\_), conductancia estomática (g\_s\_) y SPAD desde M2 en adelante. El efecto del momento fue altamente significativo para P\_N\_ y SPAD (p \textless{} 0,001), mientras que la accesión y la interacción fueron significativas únicamente para P\_N\_ (Tabla S6), lo que indica que las diferencias genotípicas estuvieron principalmente asociadas a capacidad fotosintética.
+
+\begin{figure}
+\includegraphics[width=5.8in]{figure/chap1/Photo_Cond_SPAD} \caption{Tasa fotosintética neta (P\textsubscript{\emph{N}}: fotosíntesis neta), conductancia estomática (g\textsubscript{\emph{s}}: conductancia estomática) y contenido de clorofila (SPAD) medidos en el momento de primera flor (M2) y a los 15 y 30 días posteriores, en ocho accesiones de algodón.}\label{fig:Graficos-photo-cond-spad}
+\end{figure}
+
+\begin{table}[!h]
+\centering
+\caption{\label{tab:Anova-fotosintesis-cond-spad}Análisis de varianza (ANOVA) de los parámetros fisiológicos: tasa fotosintética neta (PN), conductancia estomática (gs) y contenido de clorofila (SPAD), evaluados en diferentes etapas de desarrollo (momentos M2, M2+15d y M2+30d) en ocho entradas contrastantes de algodon}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\fontsize{11}{13}\selectfont
+\begin{tabular}[t]{llrrrl}
+\toprule
+\multicolumn{1}{c}{ } & \multicolumn{5}{c}{ANOVA} \\
+\cmidrule(l{3pt}r{3pt}){2-6}
+\textbf{Rasgo} & \textbf{Fuente} & \textbf{gl (num)} & \textbf{gl (den)} & \textbf{F} & \textbf{p-valor}\\
+\midrule
+SPAD & (Intercept) & 1 & 56 & 139.88 & <0.0001\\
+ & Momento & 1 & 56 & 19.76 & <0.0001\\
+ & Entradas & 7 & 21 & 1.04 & 0.4363\\
+ & Momento:Entradas & 7 & 56 & 0.74 & 0.6355\\
+Conductancia estomática & (Intercept) & 1 & 56 & 26.32 & <0.0001\\
+\addlinespace
+ & Momento & 1 & 56 & 1.18 & 0.2814\\
+ & Entradas & 7 & 21 & 0.90 & 0.5224\\
+ & Momento:Entradas & 7 & 56 & 0.91 & 0.5085\\
+Tasa fotosintética neta & (Intercept) & 1 & 56 & 339.17 & <0.0001\\
+ & Momento & 1 & 56 & 122.17 & <0.0001\\
+\addlinespace
+ & Entradas & 7 & 21 & 3.49 & 0.0122\\
+ & Momento:Entradas & 7 & 56 & 3.36 & 0.0046\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+BGSP-00425 presentó una disminución más pronunciada en P\_N\_, lo que podría explicar su menor acumulación final de biomasa. En contraste, accesiones con perfiles más estables de P\_N\_ mostraron mejor desempeño reproductivo.
+
+\subsubsection{Análisis de Componentes Principales}\label{anuxe1lisis-de-componentes-principales}
+
+El análisis de componentes principales (ACP) realizado a partir de las variables significativas permitió sintetizar la variabilidad fenotípica observada entre las accesiones evaluadas. El primer componente principal (CP1) explicó el 55,89 \% de la variación total, mientras que el segundo componente (CP2) explicó el 14,54 \% (Figura \ref{fig:img-PC} ), concentrando en conjunto más del 70 \% de la variabilidad del conjunto de datos. Esto indica que una proporción sustancial de la estructura fenotípica puede interpretarse mediante la combinación lineal de estos dos ejes principales.
+
+\begin{figure}
+\includegraphics[width=400px]{figure/chap1/Para_compuestas/PCA_juntas_con_fisiologico} \caption{Biplot del análisis de componentes principales con puntos que representan las proyecciones de las accesiones (1) y las variables (2) en el espacio definido por las dos primeras dimensiones (Dim) o componentes principales. RB: rendimiento de algodón en bruto en g; RF: rendimiento de fibra en g; RFD: porcentaje de fibra en \%; PC: peso de capullo en g; NC: número de capullos por planta; IS: índice de semilla en g; IF: índice de fibra en g; NSC: número de semillas por capullo. UHML: longitud de fibra en mm; Str: resistencia de fibra en g tex-1; Mic: micronaire; IU: uniformidad de fibra en \%.}\label{fig:img-PC}
+\end{figure}
+
+La distribución de las accesiones en el biplot evidenció un claro gradiente asociado a la relación entre rendimiento y calidad de fibra. Las accesiones ubicadas en los cuadrantes izquierdos del gráfico, tales como BGSP-00166, BGSP-00159 y BGSP-00425, se asociaron con mayores valores de calidad de fibra, particularmente longitud de fibra (FL), resistencia de fibra (FS) y uniformidad (FU), así como con mayor índice de semilla (SI). Sin embargo, estas accesiones presentaron valores inferiores en caracteres vinculados al rendimiento, tales como rendimiento de algodón en bruto (SCY), rendimiento de fibra (LY), índice de fibra (LI), número de cápsulas por planta (BN) y porcentaje de fibra (LP). Este patrón sugiere un perfil genotípico orientado hacia calidad tecnológica, aunque con menor expresión de componentes productivos.
+
+En contraste, las accesiones posicionadas en el lado derecho del biplot, incluyendo SP-41255, SP-6565, BGSP-00269, BGSP-00207 y BGSP-00126, se asociaron con mayor producción de biomasa (tallo, biomasa total, ramas monopodiales y simpodiales) y con un mejor desempeño en caracteres de rendimiento. Estas accesiones mostraron mayores valores de SCY, LY, LI, BN y LP, aunque con valores relativamente menores en atributos de calidad de fibra. Este comportamiento resulta coherente con los patrones previamente observados en el análisis de partición de biomasa (Figura \ref{fig:img-Biomasa-Parcicion}) y en la dinámica de retención reproductiva (Figura \ref{fig:img-Retencion-Combinada}), donde estos genotipos presentaron mayor acumulación de biomasa reproductiva y mayor retención global (GR) y de primera posición (R1P). Asimismo, variables fisiológicas como la tasa fotosintética neta (P\_N\_) contribuyeron positivamente al eje derecho del CP1, reforzando su asociación con el desempeño productivo.
+
+Tanto el ACP como los coeficientes de correlación de Spearman (Tabla S3) permitieron identificar relaciones estructurales entre los caracteres evaluados. En particular, el rendimiento de fibra (LY) mostró una fuerte correlación positiva con el número de cápsulas (BN), una correlación positiva moderada con el peso de cápsula (BW) y el porcentaje de fibra (LP), y una correlación negativa moderada con la longitud de fibra (FL). Este patrón confirma la existencia de una relación antagónica parcial entre rendimiento y calidad de fibra, fenómeno ampliamente documentado en algodón.
 
 \begin{table}[!h]
 \centering
@@ -744,159 +1051,49 @@ IU & -.05 & -.06 & -.01 & .09 & -.10 & .40** & .09 & -.14 & .34* & .46*** & -.10
 \end{threeparttable}}
 \end{table}
 
-Varias correlaciones fenotípicas fueron estadísticamente significativas (Tabla \ref{tab:correlation-greenhouse}). Para el análisis, se consideraron correlaciones fuertes los valores superiores a 0,80, moderadas las comprendidas entre 0,40 y 0,80, y bajas las inferiores a 0,40. El RF mostró una fuerte correlación positiva con el NC. También mostró una correlación positiva moderada con PC. La RFD mostró una correlación positiva moderada con el RF y el NC. Sin embargo, mostró una correlación negativa moderada con IS. El UHML mostró correlaciones negativas moderadas con el RF, lo que indica que, a medida que aumenta el rendimiento de fibra, disminuye la longitud de la misma.
-
-\subsubsection{Procesos fisiológicos que intervienen en la determinación del rendimiento de fibra}\label{procesos-fisioluxf3gicos-que-intervienen-en-la-determinaciuxf3n-del-rendimiento-de-fibra}
-
-Biomasa total y particionada
-
-\begin{table}[!h]
-\centering\centering
-\caption{\label{tab:Anova-biomasa-particion-rep2}Acumulacion de biomasa en estructuras vegetativas, tallo, hojas, peciolos, ramas vegetativas, rebrote, biomasa reproductiva, pimpollo, flor, bocha, cápsula, semilla}
-\centering
-\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
-\fontsize{12}{14}\selectfont
-\begin{tabular}[t]{llrrrl}
-\toprule
-\multicolumn{1}{c}{ } & \multicolumn{5}{c}{ANOVA} \\
-\cmidrule(l{3pt}r{3pt}){2-6}
-\begingroup\fontsize{12}{14}\selectfont \textbf{Rasgos}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{Fuente}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{GLNum}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{GLDen}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{F}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{p-valor}\endgroup\\
-\midrule
-Biomasa Total & (Intercept) & 1 & 193 & 62.54 & <0.0001\\
- & Momento & 3 & 21 & 92.71 & <0.0001\\
- & Entradas & 7 & 193 & 6.34 & <0.0001\\
- & Momento:Entradas & 21 & 193 & 2.37 & 0.0011\\
-1 Biomasa Vegetativa & (Intercept) & 1 & 193 & 210.27 & <0.0001\\
-\addlinespace
- & Momento & 3 & 21 & 196.04 & <0.0001\\
- & Entradas & 7 & 193 & 4.55 & 0.0001\\
- & Momento:Entradas & 21 & 193 & 1.65 & 0.0416\\
-1.1 Tallo & (Intercept) & 1 & 193 & 332.03 & <0.0001\\
- & Momento & 3 & 21 & 249.72 & <0.0001\\
-\addlinespace
- & Entradas & 7 & 193 & 6.30 & <0.0001\\
- & Momento:Entradas & 21 & 193 & 2.41 & 0.0009\\
-1.2 Hoja & (Intercept) & 1 & 193 & 211.00 & <0.0001\\
- & Momento & 3 & 21 & 39.10 & <0.0001\\
- & Entradas & 7 & 193 & 0.70 & 0.6741\\
-\addlinespace
- & Momento:Entradas & 21 & 193 & 1.81 & 0.0195\\
-1.3 Peciolo+Ramas & (Intercept) & 1 & 193 & 148.48 & <0.0001\\
- & Momento & 3 & 21 & 123.02 & <0.0001\\
- & Entradas & 7 & 193 & 2.73 & 0.0102\\
- & Momento:Entradas & 21 & 193 & 1.46 & 0.0956\\
-\addlinespace
-1.4 RV+Rebrote & (Intercept) & 1 & 193 & 63.81 & <0.0001\\
- & Momento & 3 & 21 & 21.61 & <0.0001\\
- & Entradas & 7 & 193 & 4.02 & 0.0004\\
- & Momento:Entradas & 21 & 193 & 1.49 & 0.0829\\
-2 Biomasa Reproductiva & (Intercept) & 1 & 193 & 10.52 & 0.0014\\
-\addlinespace
- & Momento & 3 & 21 & 62.70 & <0.0001\\
- & Entradas & 7 & 193 & 3.15 & 0.0035\\
- & Momento:Entradas & 21 & 193 & 1.45 & 0.0992\\
-2.1 Prim+Flor+Bocha & (Intercept) & 1 & 193 & 132.53 & <0.0001\\
- & Momento & 3 & 21 & 94.71 & <0.0001\\
-\addlinespace
- & Entradas & 7 & 193 & 0.94 & 0.4797\\
- & Momento:Entradas & 21 & 193 & 0.63 & 0.8961\\
-2.2 Cápsula (M4) & (Intercept) & 1 & 47 & 10.82 & 0.0019\\
- & Entradas & 7 & 47 & 3.85 & 0.0022\\
-2.3 Fibra+Semilla (M4) & (Intercept) & 1 & 47 & 13.01 & 0.0007\\
-\addlinespace
- & Entradas & 7 & 47 & 2.36 & 0.0373\\
-\bottomrule
-\end{tabular}}
-\end{table}
-
-\pandocbounded{\includegraphics[keepaspectratio]{Tesis_Dileo_files/figure-latex/Graficos-biomasa-1.pdf}}
-
-Retención global
-
-\begin{table}[!h]
-\centering\centering
-\caption{\label{tab:Anova-retencion}Retención global, y en posiciones 1, 2 y 3, en los momentos M2, M3, y M4}
-\centering
-\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
-\fontsize{12}{14}\selectfont
-\begin{tabular}[t]{llrrrl}
-\toprule
-\multicolumn{1}{c}{ } & \multicolumn{5}{c}{ANOVA} \\
-\cmidrule(l{3pt}r{3pt}){2-6}
-\begingroup\fontsize{12}{14}\selectfont \textbf{Rasgos}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{Fuente}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{GLNum}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{GLDen}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{F}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{p-valor}\endgroup\\
-\midrule
-Ret\_Global & (Intercept) & 1 & 144 & 90.21 & <0.0001\\
- & Momento & 2 & 14 & 52.91 & <0.0001\\
- & Entradas & 7 & 144 & 3.48 & 0.0018\\
- & Momento:Entradas & 14 & 144 & 2.21 & 0.0098\\
-Ret\_P1 & (Intercept) & 1 & 144 & 338.14 & <0.0001\\
-\addlinespace
- & Momento & 2 & 14 & 89.26 & <0.0001\\
- & Entradas & 7 & 144 & 1.47 & 0.1810\\
- & Momento:Entradas & 14 & 144 & 3.05 & 0.0004\\
-Ret\_P2 & (Intercept) & 1 & 144 & 22.78 & <0.0001\\
- & Momento & 2 & 14 & 8.89 & 0.0032\\
-\addlinespace
- & Entradas & 7 & 144 & 2.65 & 0.0131\\
- & Momento:Entradas & 14 & 144 & 1.29 & 0.2206\\
-Ret\_P3 & (Intercept) & 1 & 144 & 13.92 & 0.0003\\
- & Momento & 2 & 14 & 6.59 & 0.0096\\
- & Entradas & 7 & 144 & 1.06 & 0.3914\\
-\addlinespace
- & Momento:Entradas & 14 & 144 & 0.92 & 0.5359\\
-\bottomrule
-\end{tabular}}
-\end{table}
-
-\pandocbounded{\includegraphics[keepaspectratio]{Tesis_Dileo_files/figure-latex/Anova-retencion-1.pdf}}
-
-Fotosíntesis, conductancia estomática y SPAD
-
-\begin{table}[!h]
-\centering\centering
-\caption{\label{tab:Anova-fotosintesis-cond-spad}Fotosintesis, conductancia estomatica y SPAD}
-\centering
-\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
-\fontsize{12}{14}\selectfont
-\begin{tabular}[t]{llrrrl}
-\toprule
-\multicolumn{1}{c}{ } & \multicolumn{5}{c}{ANOVA} \\
-\cmidrule(l{3pt}r{3pt}){2-6}
-\begingroup\fontsize{12}{14}\selectfont \textbf{Rasgos}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{Fuente}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{GLNum}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{GLDen}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{F}\endgroup & \begingroup\fontsize{12}{14}\selectfont \textbf{p-valor}\endgroup\\
-\midrule
-SPAD & (Intercept) & 1 & 56 & 139.88 & <0.0001\\
- & DDE & 1 & 56 & 19.76 & <0.0001\\
- & Entradas & 7 & 21 & 1.04 & 0.4363\\
- & DDE:Entradas & 7 & 56 & 0.74 & 0.6355\\
-Cond & (Intercept) & 1 & 56 & 26.32 & <0.0001\\
-\addlinespace
- & DDE & 1 & 56 & 1.18 & 0.2814\\
- & Entradas & 7 & 21 & 0.90 & 0.5224\\
- & DDE:Entradas & 7 & 56 & 0.91 & 0.5085\\
-Photo & (Intercept) & 1 & 56 & 339.17 & <0.0001\\
- & DDE & 1 & 56 & 122.17 & <0.0001\\
-\addlinespace
- & Entradas & 7 & 21 & 3.49 & 0.0122\\
- & DDE:Entradas & 7 & 56 & 3.36 & 0.0046\\
-\bottomrule
-\end{tabular}}
-\end{table}
-
-\pandocbounded{\includegraphics[keepaspectratio]{Tesis_Dileo_files/figure-latex/Anova-fotosintesis-cond-spad-1.pdf}}
-
 \section{Discusión}\label{discusiuxf3n}
 
-Aquí la discusión del capítulo 1
+La necesidad de satisfacer simultáneamente demandas de calidad de fibra, rendimiento y adaptación a prácticas intensivas de manejo requiere ampliar la base genética disponible para los programas de mejoramiento. La colección de germoplasma del INTA, con diversidad documentada en atributos morfológicos, componentes de rendimiento y calidad de fibra \autocite{royo2003,klein2011,spoljaric2018,scarpin2019,arriel2023}, constituye una fuente estratégica de parentales potenciales.
 
-plant mapping specifically refers to the recording and evaluating of plant structure and the distribution and retention of fruit on plants at a specific time \autocite{kerby2010}
+La variabilidad observada en este estudio es consistente con reportes en colecciones de Estados Unidos \autocite{hinze2025} y Asia \autocite{farooq2017}, mientras que análisis genómicos recientes en China han destacado la base genética relativamente estrecha del algodón cultivado \autocite{li2023}. Iniciativas regionales como el proyecto +Algodón \autocite{fao2025} también subrayan la importancia de conservar y utilizar diversidad del germoplasma latinoamericano para mejorar resiliencia climática y calidad de fibra.
+
+Estos resultados evidencian una amplia variación fenotípica en rendimiento y calidad de fibra, en concordancia con lo reportado por \autocite{mccarty2006}, quienes documentaron amplios rangos para SCY, LY, BW, LP, MIC, FL y FS en colecciones de germoplasma estadounidense. Asimismo, refuerzan la existencia del conocido compromiso parcial entre rendimiento y calidad tecnológica \autocite{li2023}.
+
+\textcite{meredith1984} reportó patrones similares, incluyendo correlaciones negativas entre LP y caracteres como FL y FS, lo que coincide parcialmente con nuestros resultados.
+
+En conjunto, estos hallazgos indican que los programas de mejoramiento orientados a incrementar LY deberían priorizar el aumento de BN, ya que constituye el principal componente asociado al rendimiento. No obstante, el incremento de BN y LP debe manejarse cuidadosamente para evitar deterioros excesivos en calidad de fibra, particularmente en FL y FS. El desafío radica en encontrar un equilibrio fisiológico y genético que permita maximizar rendimiento sin comprometer atributos tecnológicos clave.
+
+Estas diferencias en arquitectura y partición coinciden con estudios que indican que la ramificación en algodón está fuertemente determinada por factores genéticos \autocite{mcgarry2016,sun2022,huang2022}. Asimismo, la densidad de siembra modula estos patrones, ya que mayores densidades reducen la ramificación lateral y favorecen asignación reproductiva \autocite{li2019a}.
+
+La posición de las cápsulas dentro del dosel tiene implicancias directas sobre rendimiento y calidad. Estudios previos \autocite{davidonis2004,nie2019,zhang2021} demostraron que cápsulas ubicadas en posiciones intermedias presentan mayor longitud y resistencia de fibra, mientras que posiciones superiores tienden a producir menores valores de micronaire. Por lo tanto, accesiones con mayor retención en posiciones tempranas, como BGSP-00269 y SP-41255, no solo incrementan número de frutos sino que optimizan su calidad potencial.
+
+Estos resultados coinciden con \textcite{li2019}, quienes demostraron que la fotosíntesis neta es un determinante clave del rendimiento en algodón.
+
+En conjunto, la integración de partición de biomasa, retención reproductiva y fisiología evidencia que el rendimiento no depende exclusivamente de la formación de estructuras reproductivas, sino de la eficiencia en la provisión y asignación de carbono durante el período crítico de llenado. Las diferencias observadas reflejan estrategias genotípicas contrastantes de balance fuente--destino, con implicancias directas para la selección de parentales adaptados a sistemas mecanizados y de alta densidad.
+
+El análisis de componentes principales es una herramienta de uso rutinario en la identificación de similitudes y divergencias entre genotipos de algodón en función de múltiples caracteres simultáneamente \autocite{shakeel2015,farooq2017,klein2022}. En el presente estudio, el ACP permitió identificar accesiones contrastantes desde el punto de vista productivo y tecnológico. En particular, BGSP-00166 se asoció fuertemente con mayores valores de calidad de fibra (FL, FS, FU) y mayor tamaño de semilla (SI), mientras que SP-41255 se asoció con mayores valores en caracteres vinculados al rendimiento, tales como SCY, LY, LI, BN y LP.
+
+La accesión SP-41255 se destacó por su desempeño productivo, exhibiendo los mayores valores de LP y BN y los menores valores de BW y SI, en concordancia con lo reportado por \textcite{scarpin2022} en un estudio sobre progreso genético en rendimiento y sus componentes en 20 cultivares de algodón. De manera consistente con nuestras observaciones, SP-41255 se vinculó a caracteres superiores de rendimiento, particularmente mayor porcentaje de fibra y número de cápsulas (Figura \ref{fig:Graficos-photo-cond-spad}). Resultados similares fueron reportados por \textcite{mccarty2006}, quienes observaron que accesiones con mayor expresión de caracteres de rendimiento tendían a presentar valores inferiores en calidad de fibra, confirmando la existencia de un compromiso fisiológico y genético entre ambos grupos de caracteres.
+
+En conjunto, el análisis multivariado respalda la identificación de líneas parentales complementarias para programas de mejoramiento genético. Los perfiles contrastantes de BGSP-00166 y SP-41255 representan una oportunidad estratégica para combinar calidad de fibra y potencial de rendimiento mediante esquemas de recombinación dirigida, contribuyendo al desarrollo de ideotipos adaptados a sistemas de producción mecanizados y de alta densidad.
+
+Este enfoque integrador, que combina la evaluación agronómica, fisiológica y tecnológica de la fibra, fortalece la caracterización temprana del germoplasma y aporta criterios objetivos para la selección de parentales en programas de mejoramiento orientados a sistemas de producción mecanizados y de alta eficiencia.
 
 \section{Conclusión}\label{conclusiuxf3n}
 
-Aquí la conclusión del capítulo 1
+El presente estudio evidenció una amplia variabilidad fenotípica, fisiológica y agronómica entre las accesiones de algodón evaluadas, confirmando la diversidad conservada en el banco de germoplasma del INTA y su elevado potencial para programas de mejoramiento genético del cultivo. Los descriptores morfológicos, los componentes del rendimiento y los caracteres tecnológicos de la fibra presentaron rangos amplios de variación, lo que permitió identificar accesiones con perfiles contrastantes y, a la vez, complementarios desde el punto de vista productivo y de calidad.
+
+Entre las ocho accesiones seleccionadas para el análisis detallado, SP-41255 se destacó consistentemente por su superior desempeño en rendimiento de fibra (LY), porcentaje de fibra (LP) y número de cápsulas por planta (BN), evidenciando una estrategia de crecimiento orientada a maximizar la producción reproductiva. En contraste, BGSP-00166 combinó una arquitectura vegetal compacta ---caracterizada por menor desarrollo de ramas monopodiales--- con los valores más elevados de longitud (FL), resistencia (FS) y uniformidad de fibra (FU), atributos de alta relevancia para la calidad industrial. Estas diferencias reflejan estrategias de asignación de recursos contrastantes, en las que las accesiones de mayor rendimiento destinaron una mayor proporción de asimilados a estructuras reproductivas y presentaron mayor retención de frutos, mientras que aquellas asociadas a mayor calidad tecnológica mostraron patrones de crecimiento más moderados y equilibrados.
+
+El análisis de partición de biomasa y retención reproductiva permitió evidenciar que las diferencias en rendimiento no se explican únicamente por el número de estructuras formadas, sino por la eficiencia en su mantenimiento y llenado, estrechamente vinculada a la dinámica fuente--destino. En este sentido, las mediciones fisiológicas indicaron que la variabilidad en la tasa fotosintética neta (P\_N\_), más que en la conductancia estomática o en el contenido relativo de clorofila (SPAD), fue el principal factor asociado a las diferencias en acumulación de biomasa y formación del rendimiento. Este hallazgo refuerza la importancia de integrar variables fisiológicas en la caracterización temprana del germoplasma.
+
+El análisis multivariado consolidó estos resultados al separar las accesiones principalmente a lo largo de un gradiente rendimiento--calidad de fibra, confirmando la existencia de relaciones antagónicas parciales entre ambos grupos de caracteres. En este contexto, los perfiles contrastantes de BGSP-00166 y SP-41255 representan una combinación parental promisoria para integrar calidad de fibra y potencial de rendimiento mediante esquemas de recombinación dirigida.
+
+En conjunto, la evaluación integrada de caracteres agronómicos, fisiológicos y tecnológicos aporta un marco robusto para la identificación temprana de parentales candidatos en programas de mejoramiento orientados a sistemas de producción mecanizados y de alta densidad. No obstante, será necesario complementar estos resultados con ensayos multilocales y multianuales a campo que permitan confirmar la estabilidad de los caracteres, su interacción con el ambiente y su desempeño bajo condiciones reales de cosecha mecanizada.
 
 \chapter{Identificación de QTL de importancia agronómica}\label{math-sci}
 
-\section{Introducción}\label{introducciuxf3n-2}
+\section{Introducción}\label{introducciuxf3n-1}
 
 Aquí una breve introducción del capítulo
 
@@ -987,7 +1184,7 @@ Aquí la conclusión del capítulo 3\\
 
 \chapter{Si es necesario un tercer capítulo}\label{ref-labels}
 
-\section{Introducción}\label{introducciuxf3n-3}
+\section{Introducción}\label{introducciuxf3n-2}
 
 Aquí una breve introducción del capítulo
 
